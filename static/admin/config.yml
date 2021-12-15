@@ -9,31 +9,26 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - label: 'About Page'
-        name: 'about'
-        file: 'content/about.yml'
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Position, name: position, widget: string }
-              - { label: Photo, name: photo, widget: image }
       - label: 'Home'
         name: 'home'
-        file: 'content/home.yml'
+        file: 'content/pages/home.yml'
+        fields:
+          - { label: Document Title (SEO), name: docTitle, widget: string }
+          - label: Section 1
+            name: section1
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Title3, name: title3, widget: string }
+              - { label: Description, name: description, widget: string }
+      - label: 'About Page'
+        name: 'about'
+        file: 'content/pages/about.yml'
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
-          - label: Locations
-            name: locations
-            widget: list
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Address, name: address, widget: string }
+      
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
