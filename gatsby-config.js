@@ -6,10 +6,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `montserrat`,
-          'ExtraBold, Bold, SemiBold, Medium, Regular\: 400, 500,600,700,800',
-        ],
+        fonts: ['Montserrat:wght@400,500,600,700,800'],
         display: 'swap',
       },
     },
