@@ -1,6 +1,15 @@
 docTitle: Home
 section1:
-  title1: Welcome
-  title2: on board
-  title3: Mr. Anderson
-  description: Matrix coming
+  title1: Unleash the potential of
+  title2: Open Banking
+  title3: for your business
+  description: Incorporate Open Banking into your payment checkout.  
+  description2: Receive payments directly into your bank account with instant fund settlement.
+  description3: Get access to aggregated financial data with a single API.
+
+section2:
+  title1: Affordable payments
+  title2: Seamless Access to Open
+  title3: Banking via APIs
+  description: Quickly and easily integrate account-to-account  
+  description2: payments and data APIs into any app or website.
