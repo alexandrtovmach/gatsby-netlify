@@ -2,25 +2,39 @@ import React from 'react';
 import styled from 'styled-components';
 import imgItem1 from 'src/assets/img/imgItem1.svg';
 import section2Bg from 'src/assets/img/section2_bg.svg';
-import aboutContent from '../../content/pages/home.yml';
+import section2img from 'src/assets/img/section2img.png';
+import homeContent from '../../content/pages/home.yml';
 
 const Main = styled.main`
   background-color: rgb(244, 247, 249);
 `;
 
 const FirstSection = styled.section`
-  padding: 6.5em 8.4em;
+  /* padding: 6.5em 0 0 8.4em; */
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+  /* flex-wrap: wrap; */
 `;
 const LeftSideContent = styled.div`
-  width: 50%;
-  margin-top: 3em;
+  /* padding-left: 8em;
+  padding-top: 10em; */
+  padding-left: 5rem;
+  flex-basis: 50%;
+  flex-grow: 1;
 `;
 
 const Title = styled.h1`
   font-size: 50px;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-top: 1.5em;
+`;
+
+const Description = styled.p`
+  line-height: 1.2em;
+  margin-top: 1.7rem;
 `;
 
 const Register = styled.button`
@@ -32,22 +46,44 @@ const Register = styled.button`
   text-transform: uppercase;
   margin-top: 44px;
 `;
-const RightSideContent = styled.div`
-  width: 50%;
-`;
-const PhoneImage = styled.div`
-  padding: 25em 23.5em;
-  background-image: ${(props) => `url(${props.resource})`};
-  background-repeat: no-repeat;
-  overflow: visible;
+
+const PhoneImage = styled.img`
+  /* padding: 25em 23.5em; */
+  flex: 0 1 30%;
+  margin-bottom: -20%;
 `;
 
 const SecondSection = styled.section`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
   background-size: cover;
-  height: 430px;
-  margin-top: -15.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 40vh;
+`;
+
+const Section2LeftSide = styled(LeftSideContent)``;
+
+const GreenP = styled.p`
+  color: green;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+`;
+
+const StyledH2 = styled.h2`
+  font-size: 36px;
+  font-weight: bold;
+`;
+
+const StyledP = styled.p`
+  line-height: 1.6em;
+`;
+
+const Section2Img = styled.img`
+  flex: 0 1 30%;
+  height: 60%;
+  width: 30%;
 `;
 
 interface HomePageContent {
@@ -60,8 +96,6 @@ interface HomePageContent {
     description2: string;
     description3: string;
   };
-}
-interface HomePageContentSection2 {
   section2: {
     title1: string;
     title2: string;
@@ -70,9 +104,9 @@ interface HomePageContentSection2 {
     description2: string;
   };
 }
+
 const Home: React.FunctionComponent = () => {
-  const { section1 } = aboutContent as unknown as HomePageContent;
-  const { section2 } = aboutContent as unknown as HomePageContentSection2;
+  const { section1, section2 } = homeContent as unknown as HomePageContent;
   return (
     <Main>
       <FirstSection>
@@ -82,21 +116,24 @@ const Home: React.FunctionComponent = () => {
             <span style={{ color: `green` }}>{section1.title2}</span>&nbsp;
             {section1.title3}
           </Title>
-          <p>{section1.description}</p>
-          <p>{section1.description2}</p>
-          <p>{section1.description3}</p>
+          <Description>{section1.description}</Description>
+          <Description>{section1.description2}</Description>
+          <Description>{section1.description3}</Description>
           <Register>Register Now</Register>
         </LeftSideContent>
-        <RightSideContent>
-          <PhoneImage resource={imgItem1} />
-        </RightSideContent>
+
+        <PhoneImage src={imgItem1} alt="application screnshot" />
       </FirstSection>
       <SecondSection resource={section2Bg}>
-        <p>{section2.title1}</p>
-        <h2>{section2.title2}</h2>
-        <h2>{section2.title3}</h2>
-        <p>{section2.description}</p>
-        <p>{section2.description2}</p>
+        <Section2LeftSide>
+          <GreenP>{section2.title1}</GreenP>
+          <StyledH2>{section2.title2}</StyledH2>
+          <StyledH2>{section2.title3}</StyledH2>
+          <StyledP>{section2.description}</StyledP>
+          <StyledP>{section2.description2}</StyledP>
+        </Section2LeftSide>
+
+        <Section2Img src={section2img} alt="section2 screenshot" />
       </SecondSection>
     </Main>
   );

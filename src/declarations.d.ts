@@ -3,3 +3,5 @@ declare module '*.yml' {
   const data: string;
   export default data;
 }
+declare module '*.svg';
+declare module '*.png';
