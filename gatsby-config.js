@@ -8,7 +8,7 @@ module.exports = {
       options: {
         fonts: [
           `montserrat`,
-          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+          'ExtraBold, Bold, SemiBold, Medium, Regular\: 400, 500,600,700,800',
         ],
         display: 'swap',
       },

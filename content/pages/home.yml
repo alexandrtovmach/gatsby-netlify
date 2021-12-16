@@ -9,7 +9,5 @@ section1:
 
 section2:
   title1: Affordable payments
-  title2: Seamless Access to Open
-  title3: Banking via APIs
-  description: Quickly and easily integrate account-to-account  
-  description2: payments and data APIs into any app or website.
+  title2: Seamless Access to Open Banking via APIs
+  description: Quickly and easily integrate account-to-account payments and data APIs into any app or website.  
