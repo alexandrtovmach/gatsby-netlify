@@ -47,7 +47,14 @@ collections:
               - { label: card4Text, name: card4Text, widget: string }
               - { label: card5Title, name: card5Title, widget: string }
               - { label: card5Text, name: card5Text, widget: string }
-            
+            - label: Section 4
+            name: section4
+            widget: object
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: title2, name: title2, widget: string }
+              - { label: title3, name: title3, widget: string }
+              - { label: description, name: description, widget: string }
 
       - label: 'About Page'
         name: 'about'
