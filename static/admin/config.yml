@@ -28,11 +28,9 @@ collections:
             name: section2
             widget: object
             fields:
-              - { label: Title1, name: title1, widget: string }
-              - { label: Title2, name: title2, widget: string }
-              - { label: Title3, name: title3, widget: string }
+              - { label: label, name: label, widget: string }
+              - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: string }
-              - { label: Description_2, name: description2, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'

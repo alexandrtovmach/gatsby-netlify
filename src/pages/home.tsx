@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import Main from '../containers/Layout';
 import imgItem1 from '../assets/img/imgItem1.svg';
 import section2Bg from '../assets/img/section2_bg.svg';
-import section2img from '../assets/img/section2img.png';
+import section2Img from '../assets/img/section2Img.png';
 import homeContent from '../../content/pages/home.yml';
-import { H1, H2 } from '../components/Typography';
+import { H1, H2, P } from '../components/Typography';
 
 const FirstSection = styled.section`
   display: flex;
@@ -18,13 +18,6 @@ const LeftSideContent = styled.div`
   flex-basis: 50%;
   flex-grow: 1;
 `;
-
-// const Title = styled.h1`
-//   font-size: 50px;
-//   font-weight: bold;
-//   line-height: 1.2em;
-//   margin-top: 1.5em;
-// `;
 
 const Description = styled.p`
   line-height: 1.2em;
@@ -51,32 +44,25 @@ const SecondSection = styled.section`
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  min-height: 40vh;
+  align-items: flex-end;
+  padding: 8rem 8rem 8rem 0;
 `;
 
 const Section2LeftSide = styled(LeftSideContent)``;
 
-const GreenP = styled.p`
+const GreenP = styled(P)`
   color: green;
   font-weight: bold;
-  margin-bottom: 1.5rem;
 `;
 
-// const StyledH2 = styled.h2`
-//   font-size: 36px;
-//   font-weight: bold;
-// `;
-
-const StyledP = styled.p`
-  line-height: 1.6em;
+const Sect2Title = styled(H2)`
+  margin: 1rem 0 1rem 0;
 `;
 
 const Section2Img = styled.img`
-  flex: 0 1 30%;
-  height: 60%;
-  width: 30%;
+  width: 40%;
+  flex: 0 1 45%;
+  margin-bottom: -2rem;
 `;
 
 interface HomePageContent {
@@ -90,11 +76,9 @@ interface HomePageContent {
     description3: string;
   };
   section2: {
-    title1: string;
-    title2: string;
-    title3: string;
+    label: string;
+    title: string;
     description: string;
-    description2: string;
   };
 }
 
@@ -119,12 +103,11 @@ const Home: React.FunctionComponent = () => {
       </FirstSection>
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
-          <GreenP>{section2.title1}</GreenP>
-          <H2>{section2.title2}</H2>
-          <StyledP>{section2.description}</StyledP>
+          <GreenP>{section2.label}</GreenP>
+          <Sect2Title>{section2.title}</Sect2Title>
+          <P>{section2.description}</P>
         </Section2LeftSide>
-
-        <Section2Img src={section2img} alt="section2 screenshot" />
+        <Section2Img src={section2Img} alt="section2 screenshot" />
       </SecondSection>
     </Main>
   );

@@ -17,3 +17,8 @@ export const H3 = styled.h3`
   line-height: 40px;
   font-weight: bold;
 `;
+
+export const P = styled.p`
+  font-size: 16px;
+  line-height: 26px;
+`;
