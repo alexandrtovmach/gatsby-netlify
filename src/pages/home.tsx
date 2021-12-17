@@ -4,8 +4,16 @@ import Main from '../containers/Layout';
 import imgItem1 from '../assets/img/imgItem1.svg';
 import section2Bg from '../assets/img/section2_bg.svg';
 import section2Img from '../assets/img/section2Img.png';
+import card1Img from '../assets/img/card1Img.svg';
+import card2Img from '../assets/img/card2Img.svg';
+import card3Img from '../assets/img/card3Img.svg';
+import card4Img from '../assets/img/card4Img.svg';
+import card5Img from '../assets/img/card5Img.svg';
+import section3Img1 from '../assets/img/section3Img1.svg';
+import section3Img2 from '../assets/img/section3Img2.svg';
 import homeContent from '../../content/pages/home.yml';
-import { H1, H2, P } from '../components/Typography';
+import { H1, H2, H3, P } from '../components/Typography';
+import SolutionComponent from '../components/SolutionCard';
 
 const FirstSection = styled.section`
   display: flex;
@@ -65,6 +73,23 @@ const Section2Img = styled.img`
   margin-bottom: -2rem;
 `;
 
+const ThirdSection = styled.section`
+  padding: 8rem 5rem 8rem 5rem;
+`;
+
+const CardBox = styled.div`
+  margin: 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+`;
+
+const ImgBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+`;
+
 interface HomePageContent {
   docTitle: string;
   section1: {
@@ -80,10 +105,25 @@ interface HomePageContent {
     title: string;
     description: string;
   };
+  section3: {
+    label: string;
+    label2: string;
+    card1Title: string;
+    card1Text: string;
+    card2Title: string;
+    card2Text: string;
+    card3Title: string;
+    card3Text: string;
+    card4Title: string;
+    card4Text: string;
+    card5Title: string;
+    card5Text: string;
+  };
 }
 
 const Home: React.FunctionComponent = () => {
-  const { section1, section2 } = homeContent as unknown as HomePageContent;
+  const { section1, section2, section3 } =
+    homeContent as unknown as HomePageContent;
   return (
     <Main>
       <FirstSection>
@@ -109,6 +149,41 @@ const Home: React.FunctionComponent = () => {
         </Section2LeftSide>
         <Section2Img src={section2Img} alt="section2 screenshot" />
       </SecondSection>
+      <ThirdSection>
+        <H3>{section3.label}</H3>
+        <CardBox>
+          <SolutionComponent
+            title={section3.card1Title}
+            text={section3.card1Text}
+            cardImgSrc={card1Img}
+          />
+          <SolutionComponent
+            title={section3.card2Title}
+            text={section3.card2Text}
+            cardImgSrc={card2Img}
+          />
+          <SolutionComponent
+            title={section3.card3Title}
+            text={section3.card3Text}
+            cardImgSrc={card3Img}
+          />
+          <SolutionComponent
+            title={section3.card4Title}
+            text={section3.card4Text}
+            cardImgSrc={card4Img}
+          />
+          <SolutionComponent
+            title={section3.card5Title}
+            text={section3.card5Text}
+            cardImgSrc={card5Img}
+          />
+        </CardBox>
+        <H3>{section3.label2}</H3>
+        <ImgBox>
+          <img src={section3Img1} alt="section3 screenshot1" />
+          <img src={section3Img2} alt="section3 screenshot2" />
+        </ImgBox>
+      </ThirdSection>
     </Main>
   );
 };

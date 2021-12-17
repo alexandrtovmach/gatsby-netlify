@@ -22,3 +22,9 @@ export const P = styled.p`
   font-size: 16px;
   line-height: 26px;
 `;
+
+export const Subtitle5 = styled.p`
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bold;
+`;

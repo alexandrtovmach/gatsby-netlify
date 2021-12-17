@@ -3,11 +3,26 @@ section1:
   title1: Unleash the potential of
   title2: Open Banking
   title3: for your business
-  description: Incorporate Open Banking into your payment checkout.  
+  description: Incorporate Open Banking into your payment checkout.
   description2: Receive payments directly into your bank account with instant fund settlement.
   description3: Get access to aggregated financial data with a single API.
 
 section2:
   label: Affordable payments
   title: Seamless Access to Open Banking via APIs
-  description: Quickly and easily integrate account-to-account payments and data APIs into any app or website.  
+  description: Quickly and easily integrate account-to-account payments and data APIs into any app or website.
+
+section3:
+  label: Payment solutions
+  label2: Business solutions
+  card1Title: Payments APP
+  card1Text: Initiate payments within your app or website using Open Banking payments.
+  card2Title: In-store and in-person payments
+  card2Text: Accept bank transfers as seamlessly as card payments from just 0.3% per transaction.
+  card3Title: eCommerce payments
+  card3Text: Initiate payments within your app or website using Open Banking payments. 
+  card4Title: QR code payments
+  card4Text: Simple contactless payments with QR codes. Take payments from anywhere – scan and pay.
+  card5Title: Invoice payments
+  card5Text: Place the fena payment QR code on your invoices and get paid in just a few taps.
+
