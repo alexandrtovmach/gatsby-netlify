@@ -32,3 +32,20 @@ export const Subtitle5 = styled.p`
   line-height: 28px;
   font-weight: bold;
 `;
+export const Body2 = styled.p`
+  font-size: 16px;
+  line-height: 26px;
+`;
+export const Body3 = styled.p`
+  font-size: 14px;
+  line-height: 18px;
+`;
+export const Body4 = styled.p`
+  font-size: 14px;
+  line-height: 20px;
+`;
+export const Body5 = styled.p`
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+`;

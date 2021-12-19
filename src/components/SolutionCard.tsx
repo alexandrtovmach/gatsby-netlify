@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   width: 25rem;
   align-items: flex-start;
+  margin: 0 1.3rem 4rem 0;
 `;
 const Img = styled.img`
   margin-right: 1.5rem;

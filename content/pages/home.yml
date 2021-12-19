@@ -44,3 +44,19 @@ section5:
   carouselText4: Easy top-ups by instant bank transfer for digital wallets
   carouselTitle5: Crypto exchanges
   carouselText5: Low-cost, easy top ups with account-to-account payments.
+
+section6:
+  label: What our clients say about us
+  description: "Don’t take our word for it – here’s what our clients say:"
+  reviewer1Name: Hari Ramamurthy
+  reviewer1Position: CTO, Kuflink
+  review1: I was looking for an easier and affordable way of topping up the Kuflink account. fena sounded like a no-brainer to integrate it with our platform.
+  reviewer2Name: Yotam Spenser
+  reviewer2Position: Data Engineer, WalkMe
+  review2: Banking apps that offer fantastic “first impressions” and establish customer trust within daily routines. Customer experience is the heart of innovative digital business, and apps that create useful, enjoyable experiences for people will always win out.
+  reviewer3Name: Mark Harper
+  reviewer3Position: Manager, Deloitte
+  review3: Great experience! This banking app work well with my phone. It feels like I am speaking directly to the bank via Fena app and get immediate answers, just as if they were talking to me in person.
+  bannerLabel: Get paid fast and fair with Fena
+  bannerDescription: Download the Fena merchant app to take in-store or in-person payments
+
