@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import Main from '../containers/Layout';
 import imgItem1 from '../assets/img/imgItem1.svg';
 import section2Bg from '../assets/img/section2_bg.svg';
@@ -15,10 +12,16 @@ import card5Img from '../assets/img/card5Img.svg';
 import section3Img1 from '../assets/img/section3Img1.svg';
 import section3Img2 from '../assets/img/section3Img2.svg';
 import section4Img from '../assets/img/section4Img.svg';
+import carouselImg1 from '../assets/img/carouselImg1.svg';
+import carouselImg2 from '../assets/img/carouselImg2.svg';
+import carouselImg3 from '../assets/img/carouselImg3.svg';
+import carouselImg4 from '../assets/img/carouselImg4.svg';
+import carouselImg5 from '../assets/img/carouselImg5.svg';
 import homeContent from '../../content/pages/home.yml';
 import { GreenTitle, H1, H2, H3, P } from '../components/Typography';
 import SolutionComponent from '../components/SolutionCard';
 import ButtonDefault from '@/components/ButtonDefault';
+import Carousel from '../components/Carousel';
 
 const FirstSection = styled.section`
   display: flex;
@@ -104,6 +107,15 @@ const Section4LeftSide = styled.div`
 const Section4Img = styled.img`
   flex: 0 1 50%;
 `;
+
+const FifthSection = styled.section`
+  padding: 8rem 5rem;
+  background-color: #ffff;
+`;
+
+const Section5H3 = styled(H3)`
+  width: 40%;
+`;
 interface HomePageContent {
   docTitle: string;
   section1: {
@@ -139,18 +151,24 @@ interface HomePageContent {
     title3: string;
     description: string;
   };
+  section5: {
+    title: string;
+    carouselTitle1: string;
+    carouselText1: string;
+    carouselTitle2: string;
+    carouselText2: string;
+    carouselTitle3: string;
+    carouselText3: string;
+    carouselTitle4: string;
+    carouselText4: string;
+    carouselTitle5: string;
+    carouselText5: string;
+  };
 }
 
 const Home: React.FunctionComponent = () => {
-  const { section1, section2, section3, section4 } =
+  const { section1, section2, section3, section4, section5 } =
     homeContent as unknown as HomePageContent;
-  const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-  };
   return (
     <Main>
       <FirstSection>
@@ -223,28 +241,38 @@ const Home: React.FunctionComponent = () => {
         </Section4LeftSide>
         <Section4Img src={section4Img} alt="section4 screenshot1" />
       </FourthSection>
-      <div>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div>
+      <FifthSection>
+        <Section5H3>{section5.title}</Section5H3>
+        <Carousel
+          items={[
+            {
+              title: section5.carouselTitle1,
+              text: section5.carouselText1,
+              icon: carouselImg1,
+            },
+            {
+              title: section5.carouselTitle2,
+              text: section5.carouselText2,
+              icon: carouselImg2,
+            },
+            {
+              title: section5.carouselTitle3,
+              text: section5.carouselText3,
+              icon: carouselImg3,
+            },
+            {
+              title: section5.carouselTitle4,
+              text: section5.carouselText4,
+              icon: carouselImg4,
+            },
+            {
+              title: section5.carouselTitle5,
+              text: section5.carouselText5,
+              icon: carouselImg5,
+            },
+          ]}
+        />
+      </FifthSection>
     </Main>
   );
 };

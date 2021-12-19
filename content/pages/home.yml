@@ -31,3 +31,16 @@ section4:
   title2: account-to-account 
   title3: payments swiftly and securely 
   description: Sign up in minutes
+
+section5:
+  title: Give your business a boost with Open Banking payments and data
+  carouselTitle1: Marketplaces
+  carouselText1: Reduce basket drop-outs with seamless bank transfer payments powered by fena.
+  carouselTitle2: eCommerce
+  carouselText2: Minimise friction with ‘Instant Bank Transfers’ at checkout, saving up to 85% on payment processing fees.
+  carouselTitle3: iGaming
+  carouselText3: Provide seamless payments for low-cost top ups.
+  carouselTitle4: Digital wallets
+  carouselText4: Easy top-ups by instant bank transfer for digital wallets
+  carouselTitle5: Crypto exchanges
+  carouselText5: Low-cost, easy top ups with account-to-account payments.

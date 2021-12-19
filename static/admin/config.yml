@@ -55,7 +55,21 @@ collections:
               - { label: title2, name: title2, widget: string }
               - { label: title3, name: title3, widget: string }
               - { label: description, name: description, widget: string }
-
+            - label: Section 5
+            name: section5
+            widget: object
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: carouselTitle1, name: carouselTitle1, widget: string }
+              - { label: carouselText1, name: carouselText1, widget: string }
+              - { label: carouselTitle2, name: carouselTitle2, widget: string }
+              - { label: carouselText2, name: carouselText2, widget: string }
+              - { label: carouselTitle3, name: carouselTitle3, widget: string }
+              - { label: carouselText3, name: carouselText3, widget: string }
+              - { label: carouselTitle4, name: carouselTitle4, widget: string }
+              - { label: carouselText4, name: carouselText4, widget: string }
+              - { label: carouselTitle5, name: carouselTitle5, widget: string }
+              - { label: carouselText5, name: carouselText5, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'
