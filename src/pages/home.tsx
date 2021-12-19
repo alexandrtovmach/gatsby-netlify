@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Main from '../containers/Layout';
 import imgItem1 from '../assets/img/imgItem1.svg';
 import section2Bg from '../assets/img/section2_bg.svg';
-import section2Img from '../assets/img/section2Img.png';
+import section2Img from '../assets/img/section2Img.svg';
 import card1Img from '../assets/img/card1Img.svg';
 import card2Img from '../assets/img/card2Img.svg';
 import card3Img from '../assets/img/card3Img.svg';
@@ -23,7 +23,7 @@ import reviewer2Avatar from '../assets/img/reviewer2Avatar.svg';
 import reviewer3Avatar from '../assets/img/reviewer3Avatar.svg';
 import bannerHomePageBg from '../assets/img/bannerHomePageBg.svg';
 import homeContent from '../../content/pages/home.yml';
-import { GreenTitle, H1, H2, H3, P } from '../components/Typography';
+import { H1, H2, H3, P } from '../components/Typography';
 import SolutionComponent from '../components/SolutionCard';
 import ButtonDefault from '@/components/ButtonDefault';
 import Carousel from '../components/Carousel';
@@ -65,12 +65,12 @@ const SecondSection = styled.section`
 
 const Section2LeftSide = styled.div`
   padding-left: 8rem;
-  flex-basis: 50%;
+  flex-basis: 47%;
   flex-grow: 1;
 `;
 
 const GreenP = styled(P)`
-  color: green;
+  color: #2cd19e;
   font-weight: bold;
 `;
 
@@ -136,6 +136,15 @@ const ReviewBox = styled.div`
   flex-wrap: wrap;
   margin-bottom: 7.5rem;
 `;
+
+const LowerTextBox = styled.div`
+  margin-top: 5rem;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+`;
 interface HomePageContent {
   docTitle: string;
   section1: {
@@ -198,6 +207,10 @@ interface HomePageContent {
     review3: string;
     bannerLabel: string;
     bannerDescription: string;
+    lowerTitle1: string;
+    lowerTitle2: string;
+    lowerTitle3: string;
+    lowerText: string;
   };
 }
 
@@ -210,7 +223,7 @@ const Home: React.FunctionComponent = () => {
         <LeftSideContent>
           <H1>
             {section1.title1}&nbsp;
-            <span style={{ color: `green` }}>{section1.title2}</span>&nbsp;
+            <span style={{ color: `#2cd19e` }}>{section1.title2}</span>&nbsp;
             {section1.title3}
           </H1>
           <Description>{section1.description}</Description>
@@ -268,7 +281,7 @@ const Home: React.FunctionComponent = () => {
         <Section4LeftSide>
           <SectionTitle>
             {section4.title}&nbsp;
-            <GreenTitle>{section4.title2}</GreenTitle>
+            <span style={{ color: `#2cd19e` }}>{section4.title2}</span>&nbsp;
             {section4.title3}
           </SectionTitle>
           <Description>{section4.description}</Description>
@@ -336,6 +349,16 @@ const Home: React.FunctionComponent = () => {
           label={section6.bannerLabel}
           description={section6.bannerDescription}
         />
+        <LowerTextBox>
+          <H2>
+            {section6.lowerTitle1}&nbsp;
+            <span style={{ color: `#2cd19e` }}>{section6.lowerTitle2}</span>
+            &nbsp;
+            {section6.lowerTitle3}
+          </H2>
+          <p>{section6.lowerText}</p>
+          <ButtonDefault text="get in touch" />
+        </LowerTextBox>
       </SixthSection>
     </Main>
   );

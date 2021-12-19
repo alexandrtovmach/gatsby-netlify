@@ -37,7 +37,6 @@ const SampleNextArrow = (props) => {
 };
 const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
-  console.log(props);
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <div
@@ -51,7 +50,7 @@ const SamplePrevArrow = (props) => {
         alignItems: `center`,
         borderRadius: `5px`,
         top: 0,
-        left: `90%`,
+        left: `93%`,
         background: `#13273f`,
       }}
       onClick={onClick}
