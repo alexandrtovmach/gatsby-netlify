@@ -7,15 +7,7 @@ import section2Img from '../assets/img/section2Img.svg';
 import section3Img1 from '../assets/img/section3Img1.svg';
 import section3Img2 from '../assets/img/section3Img2.svg';
 import section4Img from '../assets/img/section4Img.svg';
-import carouselImg1 from '../assets/img/carouselImg1.svg';
-import carouselImg2 from '../assets/img/carouselImg2.svg';
-import carouselImg3 from '../assets/img/carouselImg3.svg';
-import carouselImg4 from '../assets/img/carouselImg4.svg';
-import carouselImg5 from '../assets/img/carouselImg5.svg';
 import section6Bg from '../assets/img/section6_bg.svg';
-import reviewer1Avatar from '../assets/img/reviewer1Avatar.svg';
-import reviewer2Avatar from '../assets/img/reviewer2Avatar.svg';
-import reviewer3Avatar from '../assets/img/reviewer3Avatar.svg';
 import bannerHomePageBg from '../assets/img/bannerHomePageBg.svg';
 import homeContent from '../../content/pages/home.yml';
 import { H1, H2, H3, P, StrongP } from '../components/Typography';
@@ -163,29 +155,21 @@ interface HomePageContent {
   };
   section5: {
     title: string;
-    carouselTitle1: string;
-    carouselText1: string;
-    carouselTitle2: string;
-    carouselText2: string;
-    carouselTitle3: string;
-    carouselText3: string;
-    carouselTitle4: string;
-    carouselText4: string;
-    carouselTitle5: string;
-    carouselText5: string;
+    carouselItems: {
+      carouselTitle: string;
+      carouselText: string;
+      image: string;
+    }[];
   };
   section6: {
     label: string;
     description: string;
-    reviewer1Name: string;
-    reviewer1Position: string;
-    review1: string;
-    reviewer2Name: string;
-    reviewer2Position: string;
-    review2: string;
-    reviewer3Name: string;
-    reviewer3Position: string;
-    review3: string;
+    reviews: {
+      reviewerName: string;
+      reviewerPosition: string;
+      review: string;
+      image: string;
+    }[];
     bannerLabel: string;
     bannerDescription: string;
     lowerTitle1: string;
@@ -251,57 +235,50 @@ const Home: React.FunctionComponent = () => {
       <FifthSection>
         <Section5H3>{section5.title}</Section5H3>
         <Carousel
-          items={[
-            {
-              title: section5.carouselTitle1,
-              text: section5.carouselText1,
-              icon: carouselImg1,
-            },
-            {
-              title: section5.carouselTitle2,
-              text: section5.carouselText2,
-              icon: carouselImg2,
-            },
-            {
-              title: section5.carouselTitle3,
-              text: section5.carouselText3,
-              icon: carouselImg3,
-            },
-            {
-              title: section5.carouselTitle4,
-              text: section5.carouselText4,
-              icon: carouselImg4,
-            },
-            {
-              title: section5.carouselTitle5,
-              text: section5.carouselText5,
-              icon: carouselImg5,
-            },
-          ]}
+          items={section5.carouselItems}
+          // items={[
+          //   {
+          //     title: section5.carouselTitle1,
+          //     text: section5.carouselText1,
+          //     icon: carouselImg1,
+          //   },
+          //   {
+          //     title: section5.carouselTitle2,
+          //     text: section5.carouselText2,
+          //     icon: carouselImg2,
+          //   },
+          //   {
+          //     title: section5.carouselTitle3,
+          //     text: section5.carouselText3,
+          //     icon: carouselImg3,
+          //   },
+          //   {
+          //     title: section5.carouselTitle4,
+          //     text: section5.carouselText4,
+          //     icon: carouselImg4,
+          //   },
+          //   {
+          //     title: section5.carouselTitle5,
+          //     text: section5.carouselText5,
+          //     icon: carouselImg5,
+          //   },
+          // ]}
         />
       </FifthSection>
       <SixthSection resource={section6Bg}>
         <H2 style={{ textAlign: `center` }}>{section6.label}</H2>
         <P style={{ textAlign: `center` }}>{section6.description}</P>
         <ReviewBox>
-          <ReviewCard
-            revierName={section6.reviewer1Name}
-            reviewerPosition={section6.reviewer1Position}
-            review={section6.review1}
-            avatar={reviewer1Avatar}
-          />
-          <ReviewCard
-            revierName={section6.reviewer2Name}
-            reviewerPosition={section6.reviewer2Position}
-            review={section6.review2}
-            avatar={reviewer2Avatar}
-          />
-          <ReviewCard
-            revierName={section6.reviewer3Name}
-            reviewerPosition={section6.reviewer3Position}
-            review={section6.review3}
-            avatar={reviewer3Avatar}
-          />
+          {section6.reviews.map(
+            ({ reviewerName, reviewerPosition, review, image }) => (
+              <ReviewCard
+                revierName={reviewerName}
+                reviewerPosition={reviewerPosition}
+                review={review}
+                avatar={image}
+              />
+            ),
+          )}
         </ReviewBox>
         <Banner
           bgSrc={bannerHomePageBg}
