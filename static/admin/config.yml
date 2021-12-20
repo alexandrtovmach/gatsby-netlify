@@ -73,7 +73,7 @@ collections:
                 fields:
                   - { label: title, name: title, widget: string }
                   - { label: text, name: text, widget: string }
-                  - { label: image, name: image, widget: string }
+                  - { label: image, name: image, widget: image }
           - label: Section 6
             name: section6
             widget: object
