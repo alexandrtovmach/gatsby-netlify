@@ -18,44 +18,47 @@ import SolutionComponent from '../components/SolutionCard';
 import { H1, H2, H3, P, StrongP } from '../components/Typography';
 import Main from '../containers/Layout';
 
-const FirstSection = styled.section`
+const Section = styled.section`
+  padding: 5rem 8rem;
+`;
+
+const FirstSection = styled(Section)`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
+  height: calc(100vh - 5rem * 2);
+  padding-right: 0;
 `;
 
 const LeftSideContent = styled.div`
-  padding: 10rem 0 5rem 8rem;
-  flex-basis: 50%;
-  flex-grow: 1;
+  flex: 1 1 30%;
 `;
 
 const Description = styled(P)`
-  margin-top: 1.7rem;
+  margin: 1rem 0;
   &:last-of-type {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
+  }
+  &:first-of-type {
+    margin-top: 2em;
   }
 `;
 
 const PhoneImage = styled.img`
-  flex: 0 1 30%;
-  margin-bottom: -20%;
+  height: 100%;
 `;
 
-const SecondSection = styled.section`
+const SecondSection = styled(Section)`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  align-items: flex-end;
-  padding: 8rem 8rem 8rem 0;
+  align-items: center;
+  padding: 2rem 5rem;
 `;
 
 const Section2LeftSide = styled.div`
-  padding-left: 8rem;
-  flex-basis: 47%;
-  flex-grow: 1;
+  flex: 1 0 50%;
 `;
 
 const SectionTitle = styled(H2)`
@@ -63,33 +66,32 @@ const SectionTitle = styled(H2)`
 `;
 
 const Section2Img = styled.img`
-  width: 40%;
-  flex: 0 1 45%;
+  flex: 0 1 50%;
   margin-bottom: -2rem;
 `;
 
-const ThirdSection = styled.section`
-  padding: 8rem;
+const ThirdSection = styled(Section)`
+  padding: 5rem;
 `;
 
 const CardBox = styled.div`
   margin: 5rem 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const ImgBox = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 3rem 0;
 `;
-const FourthSection = styled.section`
+
+const FourthSection = styled(Section)`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
-  padding: 0 8rem;
 `;
 const Section4LeftSide = styled.div`
   flex: 0 1 50%;
@@ -98,8 +100,8 @@ const Section4Img = styled.img`
   flex: 0 1 50%;
 `;
 
-const FifthSection = styled.section`
-  padding: 8rem 8rem;
+const FifthSection = styled(Section)`
+  padding: 5rem;
   background-color: #ffff;
 `;
 
@@ -107,11 +109,11 @@ const Section5H3 = styled(H3)`
   width: 40%;
 `;
 
-const SixthSection = styled.section`
+const SixthSection = styled(Section)`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 8rem 8rem;
+  padding: 5rem;
 `;
 
 const ReviewBox = styled.div`
