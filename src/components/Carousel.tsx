@@ -4,7 +4,36 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import styled from 'styled-components';
 import CarouselCard from './CarouselCard';
+
+const NextArrow = styled.div`
+  position: absolute;
+  top: 0%;
+  left: 95%;
+  padding: 0.2rem 1.1rem;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 21px -4px rgba(34, 60, 80, 0.2);
+  color: black;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 300ms;
+  &:hover {
+    background-color: #13273f;
+    color: white;
+  }
+`;
+
+const PrevArrow = styled(NextArrow)`
+  top: 0;
+  left: 90%;
+  transition: 300ms;
+  &:hover {
+    background-color: #13273f;
+    color: white;
+  }
+`;
 
 interface Item {
   title: string;
@@ -16,45 +45,14 @@ interface CarouselProps {
 }
 
 const SampleNextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: `flex`,
-        justifyContent: `center`,
-        alignItems: `center`,
-        width: `49px`,
-        height: `49px`,
-        borderRadius: `5px`,
-        top: 0,
-        background: `#13273f`,
-      }}
-      onClick={onClick}
-    />
-  );
+  const { onClick } = props;
+  return <NextArrow onClick={onClick}>&rsaquo;</NextArrow>;
 };
 const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
+  const { onClick } = props;
   return (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-    <div
-      className={className}
-      style={{
-        ...style,
-        width: `49px`,
-        height: `49px`,
-        display: `flex`,
-        justifyContent: `center`,
-        alignItems: `center`,
-        borderRadius: `5px`,
-        top: 0,
-        left: `93%`,
-        background: `#13273f`,
-      }}
-      onClick={onClick}
-    />
+    <PrevArrow onClick={onClick}>&lsaquo;</PrevArrow>
   );
 };
 

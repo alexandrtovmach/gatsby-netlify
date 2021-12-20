@@ -23,7 +23,7 @@ import reviewer2Avatar from '../assets/img/reviewer2Avatar.svg';
 import reviewer3Avatar from '../assets/img/reviewer3Avatar.svg';
 import bannerHomePageBg from '../assets/img/bannerHomePageBg.svg';
 import homeContent from '../../content/pages/home.yml';
-import { H1, H2, H3, P } from '../components/Typography';
+import { H1, H2, H3, P, StrongP } from '../components/Typography';
 import SolutionComponent from '../components/SolutionCard';
 import ButtonDefault from '@/components/ButtonDefault';
 import Carousel from '../components/Carousel';
@@ -67,11 +67,6 @@ const Section2LeftSide = styled.div`
   padding-left: 8rem;
   flex-basis: 47%;
   flex-grow: 1;
-`;
-
-const GreenP = styled(P)`
-  color: #2cd19e;
-  font-weight: bold;
 `;
 
 const SectionTitle = styled(H2)`
@@ -223,20 +218,20 @@ const Home: React.FunctionComponent = () => {
         <LeftSideContent>
           <H1>
             {section1.title1}&nbsp;
-            <span style={{ color: `#2cd19e` }}>{section1.title2}</span>&nbsp;
+            <span className="accent-text">{section1.title2}</span>&nbsp;
             {section1.title3}
           </H1>
           <Description>{section1.description}</Description>
           <Description>{section1.description2}</Description>
           <Description>{section1.description3}</Description>
-          <ButtonDefault text="register now" />
+          <ButtonDefault>REGISTER NOW</ButtonDefault>
         </LeftSideContent>
 
         <PhoneImage src={imgItem1} alt="application screnshot" />
       </FirstSection>
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
-          <GreenP>{section2.label}</GreenP>
+          <StrongP className="accent-text">{section2.label}</StrongP>
           <SectionTitle>{section2.title}</SectionTitle>
           <P>{section2.description}</P>
         </Section2LeftSide>
@@ -281,11 +276,11 @@ const Home: React.FunctionComponent = () => {
         <Section4LeftSide>
           <SectionTitle>
             {section4.title}&nbsp;
-            <span style={{ color: `#2cd19e` }}>{section4.title2}</span>&nbsp;
+            <span className="accent-text">{section4.title2}</span>&nbsp;
             {section4.title3}
           </SectionTitle>
           <Description>{section4.description}</Description>
-          <ButtonDefault text="get started" />
+          <ButtonDefault>GET STARTED</ButtonDefault>
         </Section4LeftSide>
         <Section4Img src={section4Img} alt="section4 screenshot1" />
       </FourthSection>
@@ -352,12 +347,12 @@ const Home: React.FunctionComponent = () => {
         <LowerTextBox>
           <H2>
             {section6.lowerTitle1}&nbsp;
-            <span style={{ color: `#2cd19e` }}>{section6.lowerTitle2}</span>
+            <span className="accent-text">{section6.lowerTitle2}</span>
             &nbsp;
             {section6.lowerTitle3}
           </H2>
           <p>{section6.lowerText}</p>
-          <ButtonDefault text="get in touch" />
+          <ButtonDefault>GET IN TOUCH</ButtonDefault>
         </LowerTextBox>
       </SixthSection>
     </Main>
