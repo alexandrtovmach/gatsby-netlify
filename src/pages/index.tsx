@@ -19,7 +19,11 @@ import { H1, H2, H3, P, StrongP } from '../components/Typography';
 import Main from '../containers/Layout';
 
 const Section = styled.section`
-  padding: 5rem 8rem;
+  padding: 5rem calc((100vw - 1400px) / 2);
+
+  @media (max-width: 1440px) {
+    padding: 5rem calc((100vw - 900px) / 2);
+  }
 `;
 
 const FirstSection = styled(Section)`
@@ -54,7 +58,6 @@ const SecondSection = styled(Section)`
   background-size: cover;
   display: flex;
   align-items: center;
-  padding: 2rem 5rem;
 `;
 
 const Section2LeftSide = styled.div`
@@ -70,15 +73,12 @@ const Section2Img = styled.img`
   margin-bottom: -2rem;
 `;
 
-const ThirdSection = styled(Section)`
-  padding: 5rem;
-`;
+const ThirdSection = styled(Section)``;
 
 const CardBox = styled.div`
   margin: 5rem 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 `;
 
 const ImgBox = styled.div`
@@ -92,6 +92,8 @@ const FourthSection = styled(Section)`
   background-size: cover;
   display: flex;
   align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
 `;
 const Section4LeftSide = styled.div`
   flex: 0 1 50%;
@@ -101,7 +103,6 @@ const Section4Img = styled.img`
 `;
 
 const FifthSection = styled(Section)`
-  padding: 5rem;
   background-color: #ffff;
 `;
 
@@ -113,7 +114,6 @@ const SixthSection = styled(Section)`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 5rem;
 `;
 
 const ReviewBox = styled.div`
