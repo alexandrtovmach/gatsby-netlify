@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/images
+public_folder: /images
 
 collections:
   - name: 'pages'
@@ -52,7 +52,6 @@ collections:
                       label: Card Image,
                       name: image,
                       widget: image,
-                      media_folder: /static/images,
                     }
           - label: Section 4
             name: section4
@@ -68,40 +67,39 @@ collections:
             fields:
               - { label: title, name: title, widget: string }
           - label: Carousel Items
-                name: carouselItems
-                widget: list
-                summary: '{{fields.title}}'
-                fields:
-              - { label: carouselTitle, name: carouselTitle, widget: string }
-              - { label: carouselText, name: carouselText, widget: string }
+            name: carouselItems
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: text, name: text, widget: string }
               - { label: image, name: image, widget: string }
           - label: Section 6
             name: section6
             widget: object
             fields:
               - label: label
-              - name: label
-              - widget: string
+                name: label
+                widget: string
               - label: description
-              - name: description
-              - widget: string
+                name: description
+                widget: string
               - label: reviews
                 name: reviews
                 widget: list
                 summary: '{{fields.title}}'
                 fields:
-                  - { label: Reviewer Name, name: reviewerName, widget: string }
+                  - { label: Reviewer Name, name: name, widget: string }
                   - {
                       label: Reviewer Position,
-                      name: reviewerPosition,
+                      name: position,
                       widget: string,
                     }
-                  - { label: Review, name: review, widget: string }
+                  - { label: Review Text, name: text, widget: string }
                   - {
                       label: Review Image,
                       name: image,
                       widget: image,
-                      media_folder: /static/images,
                     }
               - {
                   label: bannerDescription,

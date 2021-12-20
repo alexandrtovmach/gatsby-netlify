@@ -19,27 +19,27 @@ section3:
     - {
         title: Payments APP,
         text: Initiate payments within your app or website using Open Banking payments.,
-        image: ./card1Img.svg,
+        image: images/card1Img.svg,
       }
     - {
         title: In-store and in-person payments,
         text: Accept bank transfers as seamlessly as card payments from just 0.3% per transaction.,
-        image: ./card2Img.svg,
+        image: images/card2Img.svg,
       }
     - {
         title: eCommerce payments,
         text: Initiate payments within your app or website using Open Banking payments.,
-        image: ./card3Img.svg,
+        image: images/card3Img.svg,
       }
     - {
         title: QR code payments,
         text: Simple contactless payments with QR codes. Take payments from anywhere – scan and pay.,
-        image: ./card4Img.svg,
+        image: images/card4Img.svg,
       }
     - {
         title: Invoice payments,
         text: Place the fena payment QR code on your invoices and get paid in just a few taps.,
-        image: ./card5Img.svg,
+        image: images/card5Img.svg,
       }
 
 section4:
@@ -52,29 +52,29 @@ section5:
   title: Give your business a boost with Open Banking payments and data
   carouselItems:
     - {
-        carouselTitle: Marketplaces,
-        carouselText: 'Reduce basket drop-outs with seamless bank transfer payments powered by fena.',
-        image: ./carouselImg1,
+        title: Marketplaces,
+        text: 'Reduce basket drop-outs with seamless bank transfer payments powered by fena.',
+        image: images/carouselImg1.svg,
       }
     - {
-        carouselTitle: eCommerce,
-        carouselText: 'Minimise friction with ‘Instant Bank Transfers’ at checkout, saving up to 85% on payment processing fees.',
-        image: ./carouselImg2,
+        title: eCommerce,
+        text: 'Minimise friction with ‘Instant Bank Transfers’ at checkout, saving up to 85% on payment processing fees.',
+        image: images/carouselImg2.svg,
       }
     - {
-        carouselTitle: iGaming,
-        carouselText: 'Provide seamless payments for low-cost top ups.',
-        image: ./carouselImg3,
+        title: iGaming,
+        text: 'Provide seamless payments for low-cost top ups.',
+        image: images/carouselImg3.svg,
       }
     - {
-        carouselTitle: Digital wallets,
-        carouselText: 'Easy top-ups by instant bank transfer for digital wallets',
-        image: ./carouselImg4,
+        title: Digital wallets,
+        text: 'Easy top-ups by instant bank transfer for digital wallets',
+        image: images/carouselImg4.svg,
       }
     - {
-        carouselTitle: Crypto exchanges,
-        carouselText: 'Low-cost, easy top ups with account-to-account payments.',
-        image: ./carouselImg5,
+        title: Crypto exchanges,
+        text: 'Low-cost, easy top ups with account-to-account payments.',
+        image: images/carouselImg5.svg,
       }
 
 section6:
@@ -82,22 +82,22 @@ section6:
   description: 'Don’t take our word for it – here’s what our clients say:'
   reviews:
     - {
-        reviewerName: Hari Ramamurthy,
-        reviewerPosition: 'CTO, Kuflink',
-        review: 'I was looking for an easier and affordable way of topping up the Kuflink account. fena sounded like a no-brainer to integrate it with our platform.',
-        image: ./reviewer1Avatar.svg,
+        name: Hari Ramamurthy,
+        position: 'CTO, Kuflink',
+        text: 'I was looking for an easier and affordable way of topping up the Kuflink account. fena sounded like a no-brainer to integrate it with our platform.',
+        image: images/reviewer1Avatar.svg,
       }
     - {
-        reviewerName: Yotam Spenser,
-        reviewerPosition: 'Data Engineer, WalkMe',
-        review: 'Banking apps that offer fantastic “first impressions” and establish customer trust within daily routines. Customer experience is the heart of innovative digital business, and apps that create useful, enjoyable experiences for people will always win out.',
-        image: ./reviewer2Avatar.svg,
+        name: Yotam Spenser,
+        position: 'Data Engineer, WalkMe',
+        text: 'Banking apps that offer fantastic “first impressions” and establish customer trust within daily routines. Customer experience is the heart of innovative digital business, and apps that create useful, enjoyable experiences for people will always win out.',
+        image: images/reviewer2Avatar.svg,
       }
     - {
-        reviewerName: Mark Harper,
-        reviewerPosition: 'Manager, Deloitte,',
-        review: 'Great experience! This banking app work well with my phone. It feels like I am speaking directly to the bank via Fena app and get immediate answers, just as if they were talking to me in person.',
-        image: ./reviewer3Avatar.svg,
+        name: Mark Harper,
+        position: 'Manager, Deloitte,',
+        text: 'Great experience! This banking app work well with my phone. It feels like I am speaking directly to the bank via Fena app and get immediate answers, just as if they were talking to me in person.',
+        image: images/reviewer3Avatar.svg,
       }
 
   bannerLabel: Get paid fast and fair with Fena

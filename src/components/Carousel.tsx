@@ -36,8 +36,8 @@ const PrevArrow = styled(NextArrow)`
 `;
 
 interface Item {
-  carouselTitle: string;
-  carouselText: string;
+  title: string;
+  text: string;
   image: string;
 }
 interface CarouselProps {
@@ -69,8 +69,8 @@ const Carousel: React.FunctionComponent<CarouselProps> = ({ items }) => {
     <Slider {...settings}>
       {items.map((item) => (
         <CarouselCard
-          title={item.carouselTitle}
-          text={item.carouselText}
+          title={item.title}
+          text={item.text}
           cardImgSrc={item.image}
         />
       ))}

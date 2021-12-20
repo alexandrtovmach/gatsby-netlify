@@ -34,14 +34,14 @@ const Review = styled(Body3)`
 `;
 interface ReviewCardProps {
   revierName: string;
-  reviewerPosition: string;
-  review: string;
+  position: string;
+  text: string;
   avatar: string;
 }
 const ReviewCard: React.FunctionComponent<ReviewCardProps> = ({
   revierName,
-  reviewerPosition,
-  review,
+  position,
+  text,
   avatar,
 }) => (
   <Wrapper>
@@ -49,10 +49,10 @@ const ReviewCard: React.FunctionComponent<ReviewCardProps> = ({
       <Img src={avatar} alt="card logo" />
       <Info>
         <Name>{revierName}</Name>
-        <Position>{reviewerPosition}</Position>
+        <Position>{position}</Position>
       </Info>
     </Top>
-    <Review>{review}</Review>
+    <Review>{text}</Review>
   </Wrapper>
 );
 

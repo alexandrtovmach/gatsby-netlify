@@ -156,8 +156,8 @@ interface HomePageContent {
   section5: {
     title: string;
     carouselItems: {
-      carouselTitle: string;
-      carouselText: string;
+      title: string;
+      text: string;
       image: string;
     }[];
   };
@@ -165,9 +165,9 @@ interface HomePageContent {
     label: string;
     description: string;
     reviews: {
-      reviewerName: string;
-      reviewerPosition: string;
-      review: string;
+      name: string;
+      position: string;
+      text: string;
       image: string;
     }[];
     bannerLabel: string;
@@ -238,28 +238,28 @@ const Home: React.FunctionComponent = () => {
           items={section5.carouselItems}
           // items={[
           //   {
-          //     title: section5.carouselTitle1,
-          //     text: section5.carouselText1,
+          //     title: section5.title1,
+          //     text: section5.text1,
           //     icon: carouselImg1,
           //   },
           //   {
-          //     title: section5.carouselTitle2,
-          //     text: section5.carouselText2,
+          //     title: section5.title2,
+          //     text: section5.text2,
           //     icon: carouselImg2,
           //   },
           //   {
-          //     title: section5.carouselTitle3,
-          //     text: section5.carouselText3,
+          //     title: section5.title3,
+          //     text: section5.text3,
           //     icon: carouselImg3,
           //   },
           //   {
-          //     title: section5.carouselTitle4,
-          //     text: section5.carouselText4,
+          //     title: section5.title4,
+          //     text: section5.text4,
           //     icon: carouselImg4,
           //   },
           //   {
-          //     title: section5.carouselTitle5,
-          //     text: section5.carouselText5,
+          //     title: section5.title5,
+          //     text: section5.text5,
           //     icon: carouselImg5,
           //   },
           // ]}
@@ -269,16 +269,14 @@ const Home: React.FunctionComponent = () => {
         <H2 style={{ textAlign: `center` }}>{section6.label}</H2>
         <P style={{ textAlign: `center` }}>{section6.description}</P>
         <ReviewBox>
-          {section6.reviews.map(
-            ({ reviewerName, reviewerPosition, review, image }) => (
-              <ReviewCard
-                revierName={reviewerName}
-                reviewerPosition={reviewerPosition}
-                review={review}
-                avatar={image}
-              />
-            ),
-          )}
+          {section6.reviews.map(({ name, position, text, image }) => (
+            <ReviewCard
+              revierName={name}
+              position={position}
+              text={text}
+              avatar={image}
+            />
+          ))}
         </ReviewBox>
         <Banner
           bgSrc={bannerHomePageBg}
