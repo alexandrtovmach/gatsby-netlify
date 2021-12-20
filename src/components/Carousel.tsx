@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -7,18 +5,20 @@ import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
 import CarouselCard from './CarouselCard';
 
-const NextArrow = styled.div`
+const NextArrow = styled.button`
   position: absolute;
   top: 0%;
   left: 95%;
-  padding: 0.2rem 1.1rem;
+  padding: 0.1rem 1rem 0.2rem 1rem;
   border-radius: 5px;
   background-color: #ffffff;
-  box-shadow: 0px 0px 21px -4px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 4px 30px rgba(129, 129, 165, 0.35);
   color: black;
   font-size: 40px;
+  border: none;
   cursor: pointer;
   transition: 300ms;
+  z-index: 5;
   &:hover {
     background-color: #13273f;
     color: white;
@@ -50,10 +50,7 @@ const SampleNextArrow = (props) => {
 };
 const SamplePrevArrow = (props) => {
   const { onClick } = props;
-  return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-    <PrevArrow onClick={onClick}>&lsaquo;</PrevArrow>
-  );
+  return <PrevArrow onClick={onClick}>&lsaquo;</PrevArrow>;
 };
 
 const Carousel: React.FunctionComponent<CarouselProps> = ({ items }) => {

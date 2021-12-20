@@ -234,36 +234,7 @@ const Home: React.FunctionComponent = () => {
       </FourthSection>
       <FifthSection>
         <Section5H3>{section5.title}</Section5H3>
-        <Carousel
-          items={section5.carouselItems}
-          // items={[
-          //   {
-          //     title: section5.title1,
-          //     text: section5.text1,
-          //     icon: carouselImg1,
-          //   },
-          //   {
-          //     title: section5.title2,
-          //     text: section5.text2,
-          //     icon: carouselImg2,
-          //   },
-          //   {
-          //     title: section5.title3,
-          //     text: section5.text3,
-          //     icon: carouselImg3,
-          //   },
-          //   {
-          //     title: section5.title4,
-          //     text: section5.text4,
-          //     icon: carouselImg4,
-          //   },
-          //   {
-          //     title: section5.title5,
-          //     text: section5.text5,
-          //     icon: carouselImg5,
-          //   },
-          // ]}
-        />
+        <Carousel items={section5.carouselItems} />
       </FifthSection>
       <SixthSection resource={section6Bg}>
         <H2 style={{ textAlign: `center` }}>{section6.label}</H2>
