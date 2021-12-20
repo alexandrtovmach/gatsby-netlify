@@ -5,13 +5,12 @@ import { P, Subtitle5 } from './Typography';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(16.5rem - 1.8rem);
-  height: calc(22rem - 2.8rem);
+  width: calc(16.5rem - 2rem);
   justify-content: flex-start;
   background-color: #f2f4f7;
   border-radius: 10px;
-  padding: 2.8rem 1.8rem;
-  margin-top: 3.8rem;
+  padding: 2rem;
+  margin: auto;
 `;
 const Img = styled.img`
   width: 30%;

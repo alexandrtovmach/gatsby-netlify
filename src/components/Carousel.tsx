@@ -7,8 +7,8 @@ import CarouselCard from './CarouselCard';
 
 const NextArrow = styled.button`
   position: absolute;
-  top: 0%;
-  left: 95%;
+  top: 45%;
+  right: 0;
   padding: 0.1rem 1rem 0.2rem 1rem;
   border-radius: 5px;
   background-color: #ffffff;
@@ -26,13 +26,16 @@ const NextArrow = styled.button`
 `;
 
 const PrevArrow = styled(NextArrow)`
-  top: 0;
-  left: 90%;
+  left: 0;
   transition: 300ms;
   &:hover {
     background-color: #13273f;
     color: white;
   }
+`;
+
+const StyledSlider = styled(Slider)`
+  margin: 3rem 0;
 `;
 
 interface Item {
@@ -63,7 +66,7 @@ const Carousel: React.FunctionComponent<CarouselProps> = ({ items }) => {
     prevArrow: <SamplePrevArrow />,
   };
   return (
-    <Slider {...settings}>
+    <StyledSlider {...settings}>
       {items.map((item) => (
         <CarouselCard
           title={item.title}
@@ -71,7 +74,7 @@ const Carousel: React.FunctionComponent<CarouselProps> = ({ items }) => {
           cardImgSrc={item.image}
         />
       ))}
-    </Slider>
+    </StyledSlider>
   );
 };
 
