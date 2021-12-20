@@ -16,11 +16,11 @@ section3:
   label: Payment solutions
   title: Business solutions
   cards:
-    - { title: Payments APP, text: Initiate payments within your app or website using Open Banking payments. }
-    - { title: In-store and in-person payments, text: Accept bank transfers as seamlessly as card payments from just 0.3% per transaction. }
-    - { title: eCommerce payments, text: Initiate payments within your app or website using Open Banking payments. }
-    - { title: QR code payments, text: Simple contactless payments with QR codes. Take payments from anywhere – scan and pay. }
-    - { title: Invoice payments, text: Place the fena payment QR code on your invoices and get paid in just a few taps. }
+    - { title: Payments APP, text: Initiate payments within your app or website using Open Banking payments., image: ./card1Img.svg }
+    - { title: In-store and in-person payments, text: Accept bank transfers as seamlessly as card payments from just 0.3% per transaction., image: ./card2Img.svg }
+    - { title: eCommerce payments, text: Initiate payments within your app or website using Open Banking payments., image: ./card3Img.svg }
+    - { title: QR code payments, text: Simple contactless payments with QR codes. Take payments from anywhere – scan and pay., image: ./card4Img.svg }
+    - { title: Invoice payments, text: Place the fena payment QR code on your invoices and get paid in just a few taps., image: ./card5Img.svg }
 
 section4:
   title: Accept 

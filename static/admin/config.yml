@@ -44,13 +44,11 @@ collections:
               - label: cards
                 name: cards
                 widget: list
-                field:
-                  label: card
-                  name: card
-                  widget: object
-                  fields:
-                    - { label: title, name: title, widget: string }
-                    - { label: text, name: text, widget: string }
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Card title, name: title, widget: string }
+                  - { label: Card text, name: text, widget: string }
+                  - { label: Card Image, name: image, widget: image, media_folder: /static/images }
           - label: Section 4
             name: section4
             widget: object
