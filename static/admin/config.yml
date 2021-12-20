@@ -28,18 +28,94 @@ collections:
             name: section2
             widget: object
             fields:
-              - { label: Title1, name: title1, widget: string }
-              - { label: Title2, name: title2, widget: string }
-              - { label: Title3, name: title3, widget: string }
+              - { label: label, name: label, widget: string }
+              - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: string }
-              - { label: Description_2, name: description2, widget: string }
+          - label: Section 3
+            name: section3
+            widget: object
+            fields:
+              - label: label
+                name: label
+                widget: string
+              - label: title
+                name: title
+                widget: string
+              - label: cards
+                name: cards
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Card title, name: title, widget: string }
+                  - { label: Card text, name: text, widget: string }
+                  - { label: Card Image, name: image, widget: image, media_folder: /static/images }
+          - label: Section 4
+            name: section4
+            widget: object
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: title2, name: title2, widget: string }
+              - { label: title3, name: title3, widget: string }
+              - { label: description, name: description, widget: string }
+          - label: Section 5
+            name: section5
+            widget: object
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: carouselTitle1, name: carouselTitle1, widget: string }
+              - { label: carouselText1, name: carouselText1, widget: string }
+              - { label: carouselTitle2, name: carouselTitle2, widget: string }
+              - { label: carouselText2, name: carouselText2, widget: string }
+              - { label: carouselTitle3, name: carouselTitle3, widget: string }
+              - { label: carouselText3, name: carouselText3, widget: string }
+              - { label: carouselTitle4, name: carouselTitle4, widget: string }
+              - { label: carouselText4, name: carouselText4, widget: string }
+              - { label: carouselTitle5, name: carouselTitle5, widget: string }
+              - { label: carouselText5, name: carouselText5, widget: string }
+          - label: Section 6
+            name: section6
+            widget: object
+            fields:
+              - { label: label, name: label, widget: string }
+              - { label: description, name: description, widget: string }
+              - { label: reviewer1Name, name: reviewer1Name, widget: string }
+              - {
+                  label: reviewer1Position,
+                  name: reviewer1Position,
+                  widget: string,
+                }
+              - { label: review1, name: review1, widget: string }
+              - { label: reviewer2Name, name: reviewer2Name, widget: string }
+              - {
+                  label: reviewer2Position,
+                  name: reviewer2Position,
+                  widget: string,
+                }
+              - { label: review2, name: review2, widget: string }
+              - { label: reviewerName3, name: reviewerName3, widget: string }
+              - {
+                  label: reviewerPosition3,
+                  name: reviewerPosition3,
+                  widget: string,
+                }
+              - { label: review3, name: review3, widget: string }
+              - { label: bannerLabel, name: bannerLabel, widget: string }
+              - {
+                  label: bannerDescription,
+                  name: bannerDescription,
+                  widget: string,
+                }
+              - { label: lowerTitle1, name: lowerTitle1, widget: string }
+              - { label: lowerTitle2, name: lowerTitle2, widget: string }
+              - { label: lowerTitle3, name: lowerTitle3, widget: string }
+              - { label: lowerText, name: lowerText, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
-      
+
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
