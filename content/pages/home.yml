@@ -58,7 +58,7 @@ section5:
       }
     - {
         title: eCommerce,
-        text: 'Minimise friction with ‘Instant Bank Transfers’ at checkout, saving up to 85% on payment processing fees.',
+        text: "Minimise friction with 'Instant Bank Transfers' at checkout, saving up to 85% on payment processing fees.",
         image: images/carouselImg2.svg,
       }
     - {
@@ -79,7 +79,7 @@ section5:
 
 section6:
   label: What our clients say about us
-  description: 'Don’t take our word for it – here’s what our clients say:'
+  description: "Don't take our word for it – here's what our clients say:"
   reviews:
     - {
         name: Hari Ramamurthy,
@@ -105,4 +105,4 @@ section6:
   lowerTitle1: Do you process more than
   lowerTitle2: £100,000
   lowerTitle3: a year?
-  lowerText: If so, we’d love to have a chat with you about how we could tailor our service to you.
+  lowerText: "If so, we'd love to have a chat with you about how we could tailor our service to you."
