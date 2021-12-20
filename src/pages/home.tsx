@@ -5,10 +5,10 @@ import imgItem1 from '../assets/img/imgItem1.svg';
 import section2Bg from '../assets/img/section2_bg.svg';
 import section2Img from '../assets/img/section2Img.svg';
 import card1Img from '../assets/img/card1Img.svg';
-import card2Img from '../assets/img/card2Img.svg';
-import card3Img from '../assets/img/card3Img.svg';
-import card4Img from '../assets/img/card4Img.svg';
-import card5Img from '../assets/img/card5Img.svg';
+// import card2Img from '../assets/img/card2Img.svg';
+// import card3Img from '../assets/img/card3Img.svg';
+// import card4Img from '../assets/img/card4Img.svg';
+// import card5Img from '../assets/img/card5Img.svg';
 import section3Img1 from '../assets/img/section3Img1.svg';
 import section3Img2 from '../assets/img/section3Img2.svg';
 import section4Img from '../assets/img/section4Img.svg';
@@ -158,16 +158,7 @@ interface HomePageContent {
   section3: {
     label: string;
     label2: string;
-    card1Title: string;
-    card1Text: string;
-    card2Title: string;
-    card2Text: string;
-    card3Title: string;
-    card3Text: string;
-    card4Title: string;
-    card4Text: string;
-    card5Title: string;
-    card5Text: string;
+    cards: { title: string; text: string }[];
   };
   section4: {
     title: string;
@@ -240,12 +231,14 @@ const Home: React.FunctionComponent = () => {
       <ThirdSection>
         <H3>{section3.label}</H3>
         <CardBox>
-          <SolutionComponent
-            title={section3.card1Title}
-            text={section3.card1Text}
-            cardImgSrc={card1Img}
-          />
-          <SolutionComponent
+          {section3.cards.map(({ title, text }) => (
+            <SolutionComponent
+              title={title}
+              text={text}
+              cardImgSrc={card1Img}
+            />
+          ))}
+          {/* <SolutionComponent
             title={section3.card2Title}
             text={section3.card2Text}
             cardImgSrc={card2Img}
@@ -264,7 +257,7 @@ const Home: React.FunctionComponent = () => {
             title={section3.card5Title}
             text={section3.card5Text}
             cardImgSrc={card5Img}
-          />
+          /> */}
         </CardBox>
         <H3>{section3.label2}</H3>
         <ImgBox>

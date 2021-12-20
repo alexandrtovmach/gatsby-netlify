@@ -9,6 +9,7 @@ export const StyledButton = styled.button`
   text-transform: uppercase;
   font-weight: bolder;
   transition: 200ms;
+  border: none;
   cursor: pointer;
   &:hover {
     background-color: rgb(25, 56, 93);

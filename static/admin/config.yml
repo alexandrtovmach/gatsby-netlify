@@ -35,19 +35,23 @@ collections:
             name: section3
             widget: object
             fields:
-              - { label: label, name: label, widget: string }
-              - { label: label2, name: label2, widget: string }
-              - { label: card1Title, name: card1Title, widget: string }
-              - { label: card1Text, name: card1Text, widget: string }
-              - { label: card2Title, name: card2Title, widget: string }
-              - { label: card2Text, name: card2Text, widget: string }
-              - { label: card3Title, name: card3Title, widget: string }
-              - { label: card3Text, name: card3Text, widget: string }
-              - { label: card4Title, name: card4Title, widget: string }
-              - { label: card4Text, name: card4Text, widget: string }
-              - { label: card5Title, name: card5Title, widget: string }
-              - { label: card5Text, name: card5Text, widget: string }
-            - label: Section 4
+              - label: label
+                name: label
+                widget: string
+              - label: title
+                name: title
+                widget: string
+              - label: cards
+                name: cards
+                widget: list
+                field:
+                  label: card
+                  name: card
+                  widget: object
+                  fields:
+                    - { label: title, name: title, widget: string }
+                    - { label: text, name: text, widget: string }
+          - label: Section 4
             name: section4
             widget: object
             fields:
@@ -55,7 +59,7 @@ collections:
               - { label: title2, name: title2, widget: string }
               - { label: title3, name: title3, widget: string }
               - { label: description, name: description, widget: string }
-            - label: Section 5
+          - label: Section 5
             name: section5
             widget: object
             fields:
@@ -70,23 +74,39 @@ collections:
               - { label: carouselText4, name: carouselText4, widget: string }
               - { label: carouselTitle5, name: carouselTitle5, widget: string }
               - { label: carouselText5, name: carouselText5, widget: string }
-            - label: Section 6
+          - label: Section 6
             name: section6
             widget: object
             fields:
               - { label: label, name: label, widget: string }
               - { label: description, name: description, widget: string }
               - { label: reviewer1Name, name: reviewer1Name, widget: string }
-              - { label: reviewer1Position, name: reviewer1Position, widget: string }
+              - {
+                  label: reviewer1Position,
+                  name: reviewer1Position,
+                  widget: string,
+                }
               - { label: review1, name: review1, widget: string }
               - { label: reviewer2Name, name: reviewer2Name, widget: string }
-              - { label: reviewer2Position, name: reviewer2Position, widget: string }
+              - {
+                  label: reviewer2Position,
+                  name: reviewer2Position,
+                  widget: string,
+                }
               - { label: review2, name: review2, widget: string }
               - { label: reviewerName3, name: reviewerName3, widget: string }
-              - { label: reviewerPosition3, name: reviewerPosition3, widget: string }
+              - {
+                  label: reviewerPosition3,
+                  name: reviewerPosition3,
+                  widget: string,
+                }
               - { label: review3, name: review3, widget: string }
               - { label: bannerLabel, name: bannerLabel, widget: string }
-              - { label: bannerDescription, name: bannerDescription, widget: string }
+              - {
+                  label: bannerDescription,
+                  name: bannerDescription,
+                  widget: string,
+                }
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerTitle3, name: lowerTitle3, widget: string }
