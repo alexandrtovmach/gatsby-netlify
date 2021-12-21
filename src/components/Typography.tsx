@@ -31,7 +31,11 @@ export const StrongP = styled.p`
   font-size: 16px;
   font-weight: bold;
 `;
-
+export const Subtitle1 = styled.p`
+  font-size: 45px;
+  line-height: 56px;
+  font-weight: 700;
+`;
 export const Subtitle5 = styled.p`
   font-size: 18px;
   line-height: 28px;
