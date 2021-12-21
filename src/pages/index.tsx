@@ -107,17 +107,26 @@ const ImgBox = styled.div`
   flex-wrap: wrap;
   margin-top: 2rem;
 `;
-const SolutionCardLeft = styled.div`
-  background-image: ${(props) => `url(${props.resource})`};
+const SolutionCard = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
-  height: calc(30rem - 5rem);
   width: calc(35rem - 5rem);
-  padding: 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+const SolutionCardLeft = styled(SolutionCard)`
+  background-color: #13273f;
+`;
+const SolutionCardRight = styled(SolutionCard)`
+  background-color: #2cd19e;
 `;
 
 const SolutionCardLabel = styled.p`
+  padding-top: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   font-size: 20px;
   line-height: 43px;
   font-weight: bold;
@@ -126,13 +135,19 @@ const SolutionCardLabel = styled.p`
 `;
 
 const SolutionCardDescription = styled.p`
+  padding-left: 5rem;
+  padding-right: 5rem;
   font-size: 15px;
   line-height: 22px;
   text-align: center;
   color: white;
 `;
 
-const SolutionCardRight = styled(SolutionCardLeft)``;
+const CodeImg = styled.img`
+  padding-top: 2rem;
+  align-self: flex-end;
+  width: 90%;
+`;
 
 const FourthSection = styled(Section)`
   background-image: ${(props) => `url(${props.resource})`};
@@ -286,7 +301,7 @@ const Home: React.FunctionComponent = () => {
         </CardBox>
         <H3>{section3.title2}</H3>
         <ImgBox>
-          <SolutionCardLeft resource={solutionCardLeft}>
+          <SolutionCardLeft>
             <SolutionCardLabel>
               {section3.labelLeft}&nbsp;
               <span className="accent-text">{section3.labelLeft2}</span>
@@ -294,8 +309,9 @@ const Home: React.FunctionComponent = () => {
             <SolutionCardDescription>
               {section3.descriptionLeft}
             </SolutionCardDescription>
+            <CodeImg src={solutionCardLeft} alt="code screenshot" />
           </SolutionCardLeft>
-          <SolutionCardRight resource={solutionCardRight}>
+          <SolutionCardRight>
             <SolutionCardLabel>
               <span className="accent-text-black">{section3.labelRight}</span>
               &nbsp;
@@ -304,6 +320,7 @@ const Home: React.FunctionComponent = () => {
             <SolutionCardDescription>
               {section3.descriptionRight}
             </SolutionCardDescription>
+            <CodeImg src={solutionCardRight} alt="app screenshot" />
           </SolutionCardRight>
         </ImgBox>
       </ThirdSection>
