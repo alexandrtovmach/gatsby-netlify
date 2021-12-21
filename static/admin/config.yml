@@ -31,15 +31,37 @@ collections:
               - { label: label, name: label, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: string }
+              - { label: box1Label, name: box1Label, widget: string }
+              - { label: box1Text, name: box1Text, widget: string }
+              - { label: box2Label, name: box2Label, widget: string }
+              - { label: box2Text, name: box2Text, widget: string }
           - label: Section 3
             name: section3
             widget: object
             fields:
-              - label: label
-                name: label
-                widget: string
               - label: title
                 name: title
+                widget: string
+              - label: title2
+                name: title2
+                widget: string
+              - label: labelLeft
+                name: labelLeft
+                widget: string
+              - label: labelLeft2
+                name: labelLeft2
+                widget: string
+              - label: descriptionLeft
+                name: descriptionLeft
+                widget: string
+              - label: labelRight
+                name: labelRight
+                widget: string
+              - label: labelRight2
+                name: labelRight2
+                widget: string
+              - label: descriptionRight
+                name: descriptionRight
                 widget: string
               - label: cards
                 name: cards
