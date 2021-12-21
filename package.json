@@ -31,6 +31,7 @@
     ]
   },
   "dependencies": {
+    "@szhsin/react-menu": "2.3.0",
     "gatsby": "4.3.0",
     "gatsby-plugin-google-fonts": "1.0.1",
     "gatsby-plugin-netlify-cms": "6.4.0",

@@ -1,3 +1,13 @@
+@import "node_modules/@szhsin/react-menu/dist/index.css";
+@import "node_modules/@szhsin/react-menu/dist/transitions/slide.css";
+
 .accent-text {
-  color:  #2cd19e;
+  color: #2cd19e;
+}
+.accent-text-blue {
+  color: #38b6ff;
+}
+
+.accent-text-black {
+  color: #000000;
 }

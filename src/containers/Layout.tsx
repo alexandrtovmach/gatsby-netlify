@@ -1,7 +1,8 @@
 import { Link } from 'gatsby';
+import { Menu, MenuButton, MenuItem, SubMenu } from '@szhsin/react-menu';
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { slide as Menu } from 'react-burger-menu';
+import { slide as BurgerMenu } from 'react-burger-menu';
 import logo from '../assets/img/logo.svg';
 
 const Main = styled.main`
@@ -158,7 +159,7 @@ const Layout: React.FunctionComponent = ({ children }) => {
         <a href="/">
           <img src={logo} alt="company logo" />
         </a>
-        <Menu styles={styles} right width="30%">
+        <BurgerMenu styles={styles} right width="30%">
           <StyledLink to="/">Accept Payments</StyledLink>
           <StyledLink to="/">Manage The Business</StyledLink>
           <StyledLink to="/">Pricing</StyledLink>
@@ -169,8 +170,21 @@ const Layout: React.FunctionComponent = ({ children }) => {
             <LogInButton>Login</LogInButton>
             <RegisterButton>Register</RegisterButton>
           </div>
-        </Menu>
+        </BurgerMenu>
         <Nav>
+          <Menu menuButton={<MenuButton>Open menu</MenuButton>}>
+            <MenuItem>New File</MenuItem>
+            <SubMenu label="Open">
+              <MenuItem>index.html</MenuItem>
+              <MenuItem>example.js</MenuItem>
+              <SubMenu label="Styles">
+                <MenuItem>about.css</MenuItem>
+                <MenuItem>home.css</MenuItem>
+                <MenuItem>index.css</MenuItem>
+              </SubMenu>
+            </SubMenu>
+            <MenuItem>Save</MenuItem>
+          </Menu>
           <StyledLink to="/">Accept Payments</StyledLink>
           <StyledLink to="/">Manage The Business</StyledLink>
           <StyledLink to="/">Pricing</StyledLink>
