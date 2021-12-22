@@ -154,6 +154,7 @@ const Footer = styled.div`
   border-top: 1px solid #d9d9d9;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 const FooterSection = styled.div`
@@ -201,6 +202,7 @@ const FooterButtons = styled.div`
 
 const ButtonFooterLink = styled.a`
   margin-right: 1rem;
+  margin-top: 1rem;
 `;
 interface LayoutHeaderContent {
   header: {
