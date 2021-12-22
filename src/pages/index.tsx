@@ -171,6 +171,10 @@ const LowerTextBox = styled.div`
   align-items: center;
   justify-content: space-around;
 `;
+
+const LowerText = styled(P)`
+  font-size: 18px;
+`;
 interface HomePageContent {
   docTitle: string;
   section1: {
@@ -329,7 +333,7 @@ const Home: React.FunctionComponent = () => {
             &nbsp;
             {section6.lowerTitle3}
           </H2>
-          <p>{section6.lowerText}</p>
+          <LowerText>{section6.lowerText}</LowerText>
           <ButtonDefault>GET IN TOUCH</ButtonDefault>
         </LowerTextBox>
       </SixthSection>

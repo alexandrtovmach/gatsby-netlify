@@ -31,6 +31,7 @@ const Position = styled(Body4)`
 `;
 const Review = styled(Body3)`
   line-height: 25px;
+  font-weight: 500;
 `;
 interface ReviewCardProps {
   revierName: string;
