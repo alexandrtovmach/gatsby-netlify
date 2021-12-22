@@ -36,7 +36,7 @@ const Description = styled(P)`
 `;
 
 interface ViewportProps {
-  section1: {
+  content: {
     title1: string;
     title2: string;
     title3: string;
@@ -47,19 +47,19 @@ interface ViewportProps {
   img: string;
 }
 const FirstViewport: React.FunctionComponent<ViewportProps> = ({
-  section1,
+  content,
   img,
 }) => (
   <FirstViewportWrapper>
     <LeftSideContent>
       <H1>
-        {section1.title1}&nbsp;
-        <span className="accent-text">{section1.title2}</span>&nbsp;
-        {section1.title3}
+        {content.title1}&nbsp;
+        <span className="accent-text">{content.title2}</span>&nbsp;
+        {content.title3}
       </H1>
-      <Description>{section1.description}</Description>
-      <Description>{section1.description2}</Description>
-      <Description>{section1.description3}</Description>
+      <Description>{content.description}</Description>
+      <Description>{content.description2}</Description>
+      <Description>{content.description3}</Description>
       <ButtonDefault>REGISTER NOW</ButtonDefault>
     </LeftSideContent>
 

@@ -173,7 +173,7 @@ const Home: React.FunctionComponent = () => {
     homeContent as unknown as HomePageContent;
   return (
     <Main>
-      <FirstViewport section1={section1} img={imgItem1} />
+      <FirstViewport content={section1} img={imgItem1} />
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
           <StrongP className="accent-text">{section2.label}</StrongP>

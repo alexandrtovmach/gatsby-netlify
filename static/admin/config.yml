@@ -110,6 +110,18 @@ collections:
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerTitle3, name: lowerTitle3, widget: string }
               - { label: lowerText, name: lowerText, widget: string }
+      - label: 'Accept payments account-to-account payment'
+        name: 'AcceptPaymentsAccountToAccountPayment'
+        file: 'content/pages/accept-payments-account-to-account-payment.yml'
+        fields:
+          - label: Viewport 1
+            name: viewport1
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Description_2, name: description2, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'
