@@ -1,10 +1,9 @@
-header:
-  link1: Accept payments
-  link2: Open Banking Data APIs
-  link3: Pricing
-  link4: Company
-  link5: Blog
-  link6: Contact
+link1: Accept payments
+link2: Open Banking Data APIs
+link3: Pricing
+link4: Company
+link5: Blog
+link6: Contact
 dropdownLinks:
   link1: Account-To-Account Payment APIs
   description1: Customer payments settled faster

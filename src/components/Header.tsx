@@ -148,14 +148,12 @@ const styles = {
 };
 
 interface LayoutHeaderContent {
-  header: {
-    link1: string;
-    link2: string;
-    link3: string;
-    link4: string;
-    link5: string;
-    link6: string;
-  };
+  link1: string;
+  link2: string;
+  link3: string;
+  link4: string;
+  link5: string;
+  link6: string;
   dropdownLinks: {
     link1: string;
     description1: string;
@@ -173,18 +171,18 @@ interface LayoutHeaderContent {
 }
 
 const Header: React.FunctionComponent = () => {
-  const { header, dropdownLinks } =
+  const { link1, link2, link3, link4, link5, link6, dropdownLinks } =
     headerContent as unknown as LayoutHeaderContent;
   return (
     <>
       <HeaderWrapper>
         <BurgerMenu styles={styles} right width="60%">
-          <StyledLink to="/">{header.link1}</StyledLink>
-          <StyledLink to="/">{header.link2}</StyledLink>
-          <StyledLink to="/">{header.link3}</StyledLink>
-          <StyledLink to="/">{header.link4}</StyledLink>
-          <StyledLink to="/">{header.link5}</StyledLink>
-          <StyledLink to="/">{header.link6}</StyledLink>
+          <StyledLink to="/">{link1}</StyledLink>
+          <StyledLink to="/">{link2}</StyledLink>
+          <StyledLink to="/">{link3}</StyledLink>
+          <StyledLink to="/">{link4}</StyledLink>
+          <StyledLink to="/">{link5}</StyledLink>
+          <StyledLink to="/">{link6}</StyledLink>
           <div>
             <LogInButton>Login</LogInButton>
             <RegisterButton>Register</RegisterButton>
@@ -196,16 +194,13 @@ const Header: React.FunctionComponent = () => {
               <img src={logo} alt="company logo" />
             </Link>
             <NavItem>
-              <DropdownMenu
-                buttonText={header.link1}
-                dropdownLinks={dropdownLinks}
-              />
+              <DropdownMenu buttonText={link1} dropdownLinks={dropdownLinks} />
             </NavItem>
-            <StyledLink to="/">{header.link2}</StyledLink>
-            <StyledLink to="/">{header.link3}</StyledLink>
-            <StyledLink to="/">{header.link4}</StyledLink>
-            <StyledLink to="/">{header.link5}</StyledLink>
-            <StyledLink to="/">{header.link6}</StyledLink>
+            <StyledLink to="/">{link2}</StyledLink>
+            <StyledLink to="/">{link3}</StyledLink>
+            <StyledLink to="/">{link4}</StyledLink>
+            <StyledLink to="/">{link5}</StyledLink>
+            <StyledLink to="/">{link6}</StyledLink>
           </NavLeft>
           <NavRight>
             <LogInButton>Login</LogInButton>

@@ -68,12 +68,10 @@ const ButtonFooterLink = styled.a`
 `;
 
 interface LayoutFooterContent {
-  footer: {
-    label1: string;
-    phone: string;
-    label2: string;
-    email: string;
-  };
+  label1: string;
+  phone: string;
+  label2: string;
+  email: string;
   productsSection: {
     title: string;
     link1: string;
@@ -100,16 +98,23 @@ interface LayoutFooterContent {
 }
 
 const Footer: React.FunctionComponent = () => {
-  const { footer, productsSection, resourcesSection, legalSection } =
-    footerContent as unknown as LayoutFooterContent;
+  const {
+    label1,
+    phone,
+    label2,
+    email,
+    productsSection,
+    resourcesSection,
+    legalSection,
+  } = footerContent as unknown as LayoutFooterContent;
   return (
     <FooterWrapper>
       <div>
         <img src={logo} alt="logo" />
-        <FooterContactLabel>{footer.label1}</FooterContactLabel>
-        <FooterContact>{footer.phone}</FooterContact>
-        <FooterContactLabel>{footer.label2}</FooterContactLabel>
-        <FooterContact>{footer.email}</FooterContact>
+        <FooterContactLabel>{label1}</FooterContactLabel>
+        <FooterContact>{phone}</FooterContact>
+        <FooterContactLabel>{label2}</FooterContactLabel>
+        <FooterContact>{email}</FooterContact>
         <div>
           <a href="/">
             <ContactIcon src={fbIcon} alt="facebook icon" />
