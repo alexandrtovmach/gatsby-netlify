@@ -40,7 +40,6 @@ const LinkDescription = styled(LinkTitle)`
 `;
 const StyledMenuButton = styled(MenuButton)`
   font-family: 'montserrat';
-  margin-left: 1rem;
   background: none;
   border: none;
   font-weight: 600;
@@ -49,6 +48,7 @@ const StyledMenuButton = styled(MenuButton)`
   text-align: center;
   transition: 200ms;
   color: black;
+  padding: 0;
   cursor: pointer;
   &:hover {
     color: #2cd19e;
@@ -77,50 +77,52 @@ const DropdownMenu: React.FunctionComponent<DropdownProps> = ({
   buttonText,
   dropdownLinks,
 }) => (
-  <StyledMenu
-    transition
-    menuButton={<StyledMenuButton>{buttonText}</StyledMenuButton>}
-  >
-    <StyledMenuItem>
-      <DropdownLink to="/">
-        {/* <Icon>
+  <div>
+    <StyledMenu
+      transition
+      menuButton={<StyledMenuButton>{buttonText}</StyledMenuButton>}
+    >
+      <StyledMenuItem>
+        <DropdownLink to="/">
+          {/* <Icon>
           <img src={dropdownIcon1} alt="icon" />
         </Icon> */}
-        <LinkTitle>{dropdownLinks.link1}</LinkTitle>
-        <LinkDescription>{dropdownLinks.description1}</LinkDescription>
-      </DropdownLink>
-    </StyledMenuItem>
-    <StyledMenuItem>
-      <DropdownLink to="/">
-        <LinkTitle>{dropdownLinks.link2}</LinkTitle>
-        <LinkDescription>{dropdownLinks.description2}</LinkDescription>
-      </DropdownLink>
-    </StyledMenuItem>
-    <StyledMenuItem>
-      <DropdownLink to="/">
-        <LinkTitle>{dropdownLinks.link3}</LinkTitle>
-        <LinkDescription>{dropdownLinks.description3}</LinkDescription>
-      </DropdownLink>
-    </StyledMenuItem>
-    <StyledMenuItem>
-      <DropdownLink to="/">
-        <LinkTitle>{dropdownLinks.link4}</LinkTitle>
-        <LinkDescription>{dropdownLinks.description4}</LinkDescription>
-      </DropdownLink>
-    </StyledMenuItem>
-    <StyledMenuItem>
-      <DropdownLink to="/">
-        <LinkTitle>{dropdownLinks.link5}</LinkTitle>
-        <LinkDescription>{dropdownLinks.description5}</LinkDescription>
-      </DropdownLink>
-    </StyledMenuItem>
-    <StyledMenuItem>
-      <DropdownLink to="/">
-        <LinkTitle> {dropdownLinks.link6} </LinkTitle>
-        <LinkDescription>{dropdownLinks.description6}</LinkDescription>
-      </DropdownLink>
-    </StyledMenuItem>
-  </StyledMenu>
+          <LinkTitle>{dropdownLinks.link1}</LinkTitle>
+          <LinkDescription>{dropdownLinks.description1}</LinkDescription>
+        </DropdownLink>
+      </StyledMenuItem>
+      <StyledMenuItem>
+        <DropdownLink to="/">
+          <LinkTitle>{dropdownLinks.link2}</LinkTitle>
+          <LinkDescription>{dropdownLinks.description2}</LinkDescription>
+        </DropdownLink>
+      </StyledMenuItem>
+      <StyledMenuItem>
+        <DropdownLink to="/">
+          <LinkTitle>{dropdownLinks.link3}</LinkTitle>
+          <LinkDescription>{dropdownLinks.description3}</LinkDescription>
+        </DropdownLink>
+      </StyledMenuItem>
+      <StyledMenuItem>
+        <DropdownLink to="/">
+          <LinkTitle>{dropdownLinks.link4}</LinkTitle>
+          <LinkDescription>{dropdownLinks.description4}</LinkDescription>
+        </DropdownLink>
+      </StyledMenuItem>
+      <StyledMenuItem>
+        <DropdownLink to="/">
+          <LinkTitle>{dropdownLinks.link5}</LinkTitle>
+          <LinkDescription>{dropdownLinks.description5}</LinkDescription>
+        </DropdownLink>
+      </StyledMenuItem>
+      <StyledMenuItem>
+        <DropdownLink to="/">
+          <LinkTitle> {dropdownLinks.link6} </LinkTitle>
+          <LinkDescription>{dropdownLinks.description6}</LinkDescription>
+        </DropdownLink>
+      </StyledMenuItem>
+    </StyledMenu>
+  </div>
 );
 
 export default DropdownMenu;

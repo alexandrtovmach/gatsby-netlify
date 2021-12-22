@@ -29,19 +29,16 @@ const Header = styled.div`
   height: 70px;
   background-color: white;
   padding: 0 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   box-shadow: 0px 2px 18px rgba(108, 108, 138, 0.199);
   position: fixed;
   width: calc(100% - 5rem * 2);
 `;
 
 const Nav = styled.nav`
-  padding-left: 3rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  height: 100%;
   width: 100%;
   @media (max-width: 1080px) {
     display: none;
@@ -60,6 +57,7 @@ const StyledLink = styled(Link)`
   line-height: 30px;
   text-align: center;
   transition: 200ms;
+  margin-left: 3rem;
   color: black;
   a:visited {
     color: inherit;
@@ -69,15 +67,24 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const NavItem = styled.div`
+  margin-left: 3rem;
+`;
+
+const NavLeft = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+`;
+const NavRight = styled.div``;
+
 const LogInButton = styled.button`
   background-color: rgb(255, 255, 255);
   border: 1px solid #dbe3eb;
   border-radius: 5px;
-  width: 99px;
-  height: 40px;
+  padding: 0.5rem 1rem;
   font-size: 14px;
   transition: 200ms;
-  margin-right: 1rem;
   cursor: pointer;
   &:hover {
     background-color: rgb(243, 243, 243);
@@ -87,6 +94,7 @@ const LogInButton = styled.button`
 
 const RegisterButton = styled(LogInButton)`
   background-color: rgb(19, 39, 63);
+  margin-left: 1rem;
   color: white;
   &:hover {
     background-color: rgb(25, 56, 93);
@@ -269,9 +277,6 @@ const Layout: React.FunctionComponent = ({ children }) => {
   return (
     <>
       <Header>
-        <a href="/">
-          <img src={logo} alt="company logo" />
-        </a>
         <BurgerMenu styles={styles} right width="60%">
           <StyledLink to="/">{header.link1}</StyledLink>
           <StyledLink to="/">{header.link2}</StyledLink>
@@ -285,21 +290,26 @@ const Layout: React.FunctionComponent = ({ children }) => {
           </div>
         </BurgerMenu>
         <Nav>
-          <div>
-            <DropdownMenu
-              buttonText={header.link1}
-              dropdownLinks={dropdownLinks}
-            />
-          </div>
-          <StyledLink to="/">{header.link2}</StyledLink>
-          <StyledLink to="/">{header.link3}</StyledLink>
-          <StyledLink to="/">{header.link4}</StyledLink>
-          <StyledLink to="/">{header.link5}</StyledLink>
-          <StyledLink to="/">{header.link6}</StyledLink>
-          <div>
+          <NavLeft>
+            <Link to="/">
+              <img src={logo} alt="company logo" />
+            </Link>
+            <NavItem>
+              <DropdownMenu
+                buttonText={header.link1}
+                dropdownLinks={dropdownLinks}
+              />
+            </NavItem>
+            <StyledLink to="/">{header.link2}</StyledLink>
+            <StyledLink to="/">{header.link3}</StyledLink>
+            <StyledLink to="/">{header.link4}</StyledLink>
+            <StyledLink to="/">{header.link5}</StyledLink>
+            <StyledLink to="/">{header.link6}</StyledLink>
+          </NavLeft>
+          <NavRight>
             <LogInButton>Login</LogInButton>
             <RegisterButton>Register</RegisterButton>
-          </div>
+          </NavRight>
         </Nav>
       </Header>
       <HeaderCompensator />
