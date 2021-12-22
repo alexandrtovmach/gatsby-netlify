@@ -6,6 +6,75 @@ media_folder: static/images
 public_folder: /images
 
 collections:
+  - name: 'components'
+    label: 'Components'
+    files:
+      - label: 'Header'
+        name: 'header'
+        file: 'content/components/header.yml'
+        widget: object
+        fields:
+          - { label: link1, name: link1, widget: string }
+          - { label: link2, name: link2, widget: string }
+          - { label: link3, name: link3, widget: string }
+          - { label: link4, name: link4, widget: string }
+          - { label: link5, name: link5, widget: string }
+          - { label: link6, name: link6, widget: string }
+          - label: DropdownLinks
+            name: dropdownLinks
+            widget: object
+            fields:
+              - { label: link1, name: link1, widget: string }
+              - { label: description1, name: description1, widget: string }
+              - { label: link2, name: link2, widget: string }
+              - { label: description2, name: description2, widget: string }
+              - { label: link3, name: link3, widget: string }
+              - { label: description3, name: description3, widget: string }
+              - { label: link4, name: link4, widget: string }
+              - { label: description4, name: description4, widget: string }
+              - { label: link5, name: link5, widget: string }
+              - { label: description5, name: description5, widget: string }
+              - { label: link6, name: link6, widget: string }
+              - { label: description6, name: description6, widget: string }
+      - label: 'Footer'
+        name: 'footer'
+        file: 'content/components/footer.yml'
+        widget: object
+        fields:
+          - { label: label1, name: label1, widget: string }
+          - { label: phone, name: phone, widget: string }
+          - { label: label2, name: label2, widget: string }
+          - { label: email, name: email, widget: string }
+          - label: 'Products Section'
+            name: 'productsSection'
+            widget: object
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: link1, name: link1, widget: string }
+              - { label: link2, name: link2, widget: string }
+              - { label: link3, name: link3, widget: string }
+              - { label: link4, name: link4, widget: string }
+              - { label: link5, name: link5, widget: string }
+              - { label: link6, name: link6, widget: string }
+          - label: 'Resources Section'
+            name: 'resourcesSection'
+            widget: object
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: link1, name: link1, widget: string }
+              - { label: link2, name: link2, widget: string }
+              - { label: link3, name: link3, widget: string }
+              - { label: link4, name: link4, widget: string }
+              - { label: link5, name: link5, widget: string }
+          - label: 'Legal Section'
+            name: 'legalSection'
+            widget: object
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: link1, name: link1, widget: string }
+              - { label: link2, name: link2, widget: string }
+              - { label: link3, name: link3, widget: string }
+
   - name: 'pages'
     label: 'Pages'
     files:
@@ -70,11 +139,7 @@ collections:
                 fields:
                   - { label: Card title, name: title, widget: string }
                   - { label: Card text, name: text, widget: string }
-                  - {
-                      label: Card Image,
-                      name: image,
-                      widget: image,
-                    }
+                  - { label: Card Image, name: image, widget: image }
           - label: Section 4
             name: section4
             widget: object
@@ -112,17 +177,9 @@ collections:
                 summary: '{{fields.name}}'
                 fields:
                   - { label: Reviewer Name, name: name, widget: string }
-                  - {
-                      label: Reviewer Position,
-                      name: position,
-                      widget: string,
-                    }
+                  - { label: Reviewer Position, name: position, widget: string }
                   - { label: Review Text, name: text, widget: string }
-                  - {
-                      label: Review Image,
-                      name: image,
-                      widget: image,
-                    }
+                  - { label: Review Image, name: image, widget: image }
               - {
                   label: bannerDescription,
                   name: bannerDescription,
@@ -132,72 +189,6 @@ collections:
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerTitle3, name: lowerTitle3, widget: string }
               - { label: lowerText, name: lowerText, widget: string }
-      - label: 'Header'
-        name: 'header'
-        file: 'content/pages/header.yml'
-        widget: object
-        fields:
-          - { label: link1, name: link1, widget: string }
-          - { label: link2, name: link2, widget: string }
-          - { label: link3, name: link3, widget: string }
-          - { label: link4, name: link4, widget: string }
-          - { label: link5, name: link5, widget: string }
-          - { label: link6, name: link6, widget: string }
-      - label: DropdownLinks
-        name: dropdownLinks
-        widget: object
-        fields:
-          - { label: link1, name: link1, widget: string }
-          - { label: description1, name: description1, widget: string }
-          - { label: link2, name: link2, widget: string }
-          - { label: description2, name: description2, widget: string }
-          - { label: link3, name: link3, widget: string }
-          - { label: description3, name: description3, widget: string }
-          - { label: link4, name: link4, widget: string }
-          - { label: description4, name: description4, widget: string }
-          - { label: link5, name: link5, widget: string }
-          - { label: description5, name: description5, widget: string }
-          - { label: link6, name: link6, widget: string }
-          - { label: description6, name: description6, widget: string }
-      - label: 'Footer'
-        name: 'footer'
-        file: 'content/pages/footer.yml'
-        widget: object
-        fields:
-          - { label: label1, name: label1, widget: string }
-          - { label: phone, name: phone, widget: string }
-          - { label: label2, name: label2, widget: string }
-          - { label: email, name: email, widget: string }
-      - label: 'Products Section'
-        name: 'productsSection'
-        widget: object
-        fields:
-          - { label: title, name: title, widget: string }
-          - { label: link1, name: link1, widget: string }
-          - { label: link2, name: link2, widget: string }
-          - { label: link3, name: link3, widget: string }
-          - { label: link4, name: link4, widget: string }
-          - { label: link5, name: link5, widget: string }
-          - { label: link6, name: link6, widget: string }
-      - label: 'Resources Section'
-        name: 'resourcesSection'
-        widget: object
-        fields:
-          - { label: title, name: title, widget: string }
-          - { label: link1, name: link1, widget: string }
-          - { label: link2, name: link2, widget: string }
-          - { label: link3, name: link3, widget: string }
-          - { label: link4, name: link4, widget: string }
-          - { label: link5, name: link5, widget: string }
-      - label: 'Legal Section'
-        name: 'legalSection'
-        widget: object
-        fields:
-          - { label: title, name: title, widget: string }
-          - { label: link1, name: link1, widget: string }
-          - { label: link2, name: link2, widget: string }
-          - { label: link3, name: link3, widget: string }
-
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'
