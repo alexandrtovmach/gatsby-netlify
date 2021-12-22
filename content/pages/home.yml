@@ -11,10 +11,20 @@ section2:
   label: Affordable payments
   title: Seamless Access to Open Banking via APIs
   description: Quickly and easily integrate account-to-account payments and data APIs into any app or website.
+  box1Label: £0
+  box1Text: Monthly costs
+  box2Label: 0.3%
+  box2Text: Transaction fee
 
 section3:
-  label: Payment solutions
-  title: Business solutions
+  title: Payment solutions
+  title2: Business solutions
+  labelLeft: Open Banking 
+  labelLeft2: Data APIs
+  descriptionLeft: User insights through Open Banking APIs, powered by fena. Get access to enriched data that fuels informed business decisions.
+  labelRight: Invoice APIs
+  labelRight2: payments
+  descriptionRight: Place the Fena payment QR code on your invoices and get paid in just a few taps. Up the ante with fena Invoice QR Code Payments.
   cards:
     - {
         title: Payments APP,
