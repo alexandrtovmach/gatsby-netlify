@@ -8,8 +8,8 @@ import linkedInIcon from '../assets/img/linkedInIcon.svg';
 import instagramIcon from '../assets/img/instagramIcon.svg';
 import logo from '../assets/img/logo.svg';
 import DropdownMenu from '../components/DropdownMenu';
-import headerContent from '../../content/pages/header.yml';
-import footerContent from '../../content/pages/footer.yml';
+import headerContent from '../../content/components/header.yml';
+import footerContent from '../../content/components/footer.yml';
 import ButtonAppStore from '@/components/ButtonAppStore';
 import ButtonGooglePlay from '@/components/ButtonGooglePlay';
 
