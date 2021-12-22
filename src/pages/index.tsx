@@ -37,7 +37,7 @@ const FirstSection = styled(Section)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: calc(100vh - 5rem * 2);
+  height: calc(100vh - 5rem * 2 - 70px);
   padding-right: 0;
 `;
 
