@@ -1,7 +1,8 @@
-label1: Call us
-phone: +44 20 3190 8798
-label2: Email us
-email: sales@fena.co
+footer:
+  label1: Call us
+  phone: +44 20 3190 8798
+  label2: Email us
+  email: sales@fena.co
 productsSection:
   title: Products
   link1: Pricing
