@@ -5,7 +5,7 @@ import { Subtitle5 } from './Typography';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  flex-basis: 50%;
+  flex-basis: 30%;
 `;
 const ImgWrapper = styled.div`
   background-color: #ffffff;
@@ -13,7 +13,6 @@ const ImgWrapper = styled.div`
   padding: 3rem;
   border: 1px solid #dbe3eb;
   height: 100%;
-  margin-right: 5rem;
   display: flex;
   align-items: center;
 `;
