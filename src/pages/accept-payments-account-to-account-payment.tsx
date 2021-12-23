@@ -71,12 +71,16 @@ const StyledLi = styled.li`
   font-size: 16px;
   color: #13273f;
   line-height: 35px;
-&:before {
+  /* &:before {
       content: '·';
       font-size: 80px;
-      color: #2cd19e;
       vertical-align:middle;
     }
+  } */
+  list-style: initial;
+  &::marker {
+    color: #2cd19e;
+    font-size: 1.5em;
   }
   &:first-of-type {
     margin-top: 1em;
@@ -148,7 +152,6 @@ const BenefitCardWrapper = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
-  padding-right: 4rem;
   margin-top: 4rem;
 `;
 
@@ -246,7 +249,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           </H1>
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
-          <ButtonDefault white={false}>REGISTER NOW</ButtonDefault>
+          <ButtonDefault>REGISTER NOW</ButtonDefault>
         </LeftSideContent>
         <PhoneImage src={page2viewport1} alt="application screnshot" />
       </FirstViewport>
@@ -265,7 +268,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           </P>
           <ButtonContainer>
             <ButtonLink to="/">
-              <ButtonDefault white={false}>GET STARTED</ButtonDefault>
+              <ButtonDefault>GET STARTED</ButtonDefault>
             </ButtonLink>
             <ButtonLink to="/">
               <ButtonDefault white>
@@ -306,7 +309,6 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               label={item.label}
               title={item.title}
               description={item.description}
-              icon={item.icon}
             />
           ))}
         </StepCardWrapper>
@@ -341,7 +343,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             &nbsp;
           </H2>
           <LowerText>{viewport7.lowerText}</LowerText>
-          <ButtonDefault white={false}>GET IN TOUCH</ButtonDefault>
+          <ButtonDefault>GET IN TOUCH</ButtonDefault>
         </LowerTextBox>
       </SeventhViewport>
     </Main>

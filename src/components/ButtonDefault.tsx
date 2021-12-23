@@ -31,7 +31,7 @@ export const StyledButtonWhite = styled.button`
   }
 `;
 interface ButtonProps {
-  white: boolean;
+  white?: boolean;
 }
 const ButtonDefault: React.FunctionComponent<ButtonProps> = ({
   children,

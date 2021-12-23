@@ -5,12 +5,12 @@ import { Body3, Body4, Body5 } from './Typography';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(23rem - 1.8rem);
+  flex-basis: 25%;
   height: 100%;
   background-color: #fff;
   border-radius: 10px;
-  padding: 2.8rem 1.8rem;
-  margin-top: 3.8rem;
+  padding: 3rem 2rem;
+  margin-top: 3rem;
   box-shadow: 0px 0px 31px 2px rgba(34, 60, 80, 0.2);
 `;
 const Img = styled.img`

@@ -5,7 +5,7 @@ import { P, Subtitle5 } from './Typography';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(35rem - 2rem);
+  flex-basis: 40%;
   justify-content: flex-start;
   border-radius: 10px;
   padding: 2rem 0;

@@ -88,7 +88,7 @@ const SolutionCard = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
-  width: calc(35rem - 5rem);
+  flex-basis: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -300,7 +300,7 @@ const Home: React.FunctionComponent = () => {
             {section4.title3}
           </SectionTitle>
           <Description>{section4.description}</Description>
-          <ButtonDefault white={false}>GET STARTED</ButtonDefault>
+          <ButtonDefault>GET STARTED</ButtonDefault>
         </Section4LeftSide>
         <Section4Img src={section4Img} alt="section4 screenshot1" />
       </FourthSection>
@@ -334,7 +334,7 @@ const Home: React.FunctionComponent = () => {
             {section6.lowerTitle3}
           </H2>
           <LowerText>{section6.lowerText}</LowerText>
-          <ButtonDefault white={false}>GET IN TOUCH</ButtonDefault>
+          <ButtonDefault>GET IN TOUCH</ButtonDefault>
         </LowerTextBox>
       </SixthSection>
     </Main>

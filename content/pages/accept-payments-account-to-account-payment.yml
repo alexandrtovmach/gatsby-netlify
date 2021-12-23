@@ -40,19 +40,16 @@ viewport4:
         label: Step 1,
         title: 'The user commits to making a payment ',
         description: 'The user chooses ‘Instant Bank Transfer’ as a payment method, followed by the bank they want to pay with.',
-        icon: /images/stepIcon.svg,
       }
     - {
         label: Step 2,
         title: 'Fena initiates the payment with redirection ',
         description: 'The user is redirected to their banking app to authorise the transaction. The payment is processed by the bank.',
-        icon: /images/stepIcon.svg,
       }
     - {
         label: Step 3,
         title: 'Digital wallet and account top up',
         description: 'Let users initiate payments or move money between accounts effortlessly.',
-        icon: /images/stepIcon.svg,
       }
 viewport5:
   title: Key benefits
