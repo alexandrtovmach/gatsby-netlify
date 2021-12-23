@@ -14,7 +14,7 @@ const responsiveCSS = css`
     }
   }
 `;
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.header`
   ${responsiveCSS}
   height: 70px;
   background-color: white;

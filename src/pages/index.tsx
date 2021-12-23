@@ -14,7 +14,15 @@ import section4Img from '../assets/img/section4Img.svg';
 import section6Bg from '../assets/img/section6_bg.svg';
 import Carousel from '../components/Carousel';
 import SolutionComponent from '../components/SolutionCard';
-import { Body3, H2, H3, P, StrongP, Subtitle1 } from '../components/Typography';
+import {
+  Body3,
+  H1,
+  H2,
+  H3,
+  P,
+  StrongP,
+  Subtitle1,
+} from '../components/Typography';
 import Main from '../containers/Layout';
 import FirstViewport from '@/components/FirstViewport';
 
@@ -242,7 +250,17 @@ const Home: React.FunctionComponent = () => {
     homeContent as unknown as HomePageContent;
   return (
     <Main>
-      <FirstViewport content={section1} img={imgItem1} />
+      <FirstViewport img={imgItem1}>
+        <H1>
+          {section1.title1}&nbsp;
+          <span className="accent-text">{section1.title2}</span>&nbsp;
+          {section1.title3}
+        </H1>
+        <Description>{section1.description}</Description>
+        <Description>{section1.description2}</Description>
+        <Description>{section1.description3}</Description>
+        <ButtonDefault>REGISTER NOW</ButtonDefault>
+      </FirstViewport>
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
           <StrongP className="accent-text">{section2.label}</StrongP>

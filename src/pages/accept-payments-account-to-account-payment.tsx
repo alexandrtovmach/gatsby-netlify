@@ -15,6 +15,7 @@ import Carousel from '@/components/Carousel';
 import Banner from '@/components/Banner';
 import bannerBg from '../assets/img/bannerAccountToaccountPageBg.svg';
 import tickIconSrc from '../assets/img/tickIcon.svg';
+import FirstViewport from '../components/FirstViewport';
 
 const Section = styled.section`
   padding: 5rem calc((100vw - 1400px) / 2);
@@ -24,20 +25,6 @@ const Section = styled.section`
   }
 `;
 
-const FirstViewport = styled(Section)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: calc(100vh - 5rem * 2);
-  padding-right: 0;
-`;
-
-const LeftSideContent = styled.div`
-  flex: 1 1 30%;
-`;
-const PhoneImage = styled.img`
-  height: 100%;
-`;
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
@@ -101,7 +88,6 @@ const Section2BoxLeft = styled.div`
   flex: 0 1 50%;
   margin-bottom: -2rem;
   margin-left: 4rem;
-  margin-right: 4rem;
 `;
 
 const ButtonLink = styled(Link)`
@@ -242,17 +228,14 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
   } = accountToAccountPaymentsContent as unknown as AcceptPaymentsAccountToAccountPageContent;
   return (
     <Main>
-      <FirstViewport>
-        <LeftSideContent>
-          <H1>
-            <span className="accent-text"> {viewport1.title1}</span>&nbsp;
-            {viewport1.title2}
-          </H1>
-          <BoldDescription>{viewport1.description1}</BoldDescription>
-          <Description>{viewport1.description2}</Description>
-          <ButtonDefault>REGISTER NOW</ButtonDefault>
-        </LeftSideContent>
-        <PhoneImage src={page2viewport1} alt="application screnshot" />
+      <FirstViewport img={page2viewport1}>
+        <H1>
+          <span className="accent-text"> {viewport1.title1}</span>&nbsp;
+          {viewport1.title2}
+        </H1>
+        <BoldDescription>{viewport1.description1}</BoldDescription>
+        <Description>{viewport1.description2}</Description>
+        <ButtonDefault>REGISTER NOW</ButtonDefault>
       </FirstViewport>
 
       <SecondViewport resource={section2Bg}>
