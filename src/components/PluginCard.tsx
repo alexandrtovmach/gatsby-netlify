@@ -14,8 +14,12 @@ const ImgWrapper = styled.div`
   border: 1px solid #dbe3eb;
   height: 100%;
   margin-right: 5rem;
+  display: flex;
+  align-items: center;
 `;
 const Img = styled.img`
+  display: flex;
+  align-items: center;
   width: 100%;
 `;
 const Title = styled(Subtitle5)`
