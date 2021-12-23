@@ -184,6 +184,7 @@ collections:
                   label: bannerDescription,
                   name: bannerDescription,
                   widget: string,
+                  
                 }
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
@@ -257,6 +258,28 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: string }
               - { label: Icon, name: icon, widget: string }
+          - label: Viewport 6
+            name: viewport6
+            widget: object
+            fields:
+              - { label: title, name: title, widget: string }
+              - label: Carousel Items
+                name: carouselItems
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: title, name: title, widget: string }
+                  - { label: text, name: text, widget: string }
+                  - { label: image, name: image, widget: image }
+          - label: Viewport 7
+            name: viewport7
+            widget: object
+            fields:
+              - { label: bannerLabel, name: bannerLabel, widget: string }
+              - { label: bannerDescription, name: bannerDescription, widget: string }
+              - { label: lowerTitle1, name: lowerTitle1, widget: string }
+              - { label: lowerTitle2, name: lowerTitle2, widget: string }
+              - { label: lowerText, name: lowerText, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'

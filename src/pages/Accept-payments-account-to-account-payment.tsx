@@ -11,6 +11,9 @@ import arrowIcon from '../assets/img/arrowIcon.svg';
 import CarouselCard from '@/components/CarouselCard';
 import StepCard from '@/components/StepCard';
 import BenefitCard from '@/components/BenefitCard';
+import Carousel from '@/components/Carousel';
+import Banner from '@/components/Banner';
+import bannerBg from '../assets/img/bannerAccountToaccountPageBg.svg';
 
 const Section = styled.section`
   padding: 5rem calc((100vw - 1400px) / 2);
@@ -132,6 +135,14 @@ const FifthViewport = styled(Section)`
   background-color: #f4f7f9;
 `;
 
+const SixthViewport = styled(Section)`
+  background-color: #ffff;
+`;
+
+const Viewport6H3 = styled(H3)`
+  width: 40%;
+`;
+
 const BenefitCardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -139,6 +150,23 @@ const BenefitCardWrapper = styled.div`
   gap: 2rem;
   padding-right: 4rem;
   margin-top: 4rem;
+`;
+
+const SeventhViewport = styled(Section)`
+  background-color: white;
+  padding-top: 0;
+`;
+
+const LowerTextBox = styled.div`
+  margin-top: 5rem;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+`;
+const LowerText = styled(P)`
+  font-size: 18px;
 `;
 interface AcceptPaymentsAccountToAccountPageContent {
   viewport1: {
@@ -182,10 +210,32 @@ interface AcceptPaymentsAccountToAccountPageContent {
       icon: string;
     }[];
   };
+  viewport6: {
+    title: string;
+    carouselItems: {
+      title: string;
+      text: string;
+      image: string;
+    }[];
+  };
+  viewport7: {
+    bannerLabel: string;
+    bannerDescription: string;
+    lowerTitle1: string;
+    lowerTitle2: string;
+    lowerText: string;
+  };
 }
 const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
-  const { viewport1, viewport2, viewport3, viewport4, viewport5 } =
-    accountToAccountPaymentsContent as unknown as AcceptPaymentsAccountToAccountPageContent;
+  const {
+    viewport1,
+    viewport2,
+    viewport3,
+    viewport4,
+    viewport5,
+    viewport6,
+    viewport7,
+  } = accountToAccountPaymentsContent as unknown as AcceptPaymentsAccountToAccountPageContent;
   return (
     <Main>
       <FirstViewport>
@@ -274,6 +324,26 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           ))}
         </BenefitCardWrapper>
       </FifthViewport>
+      <SixthViewport>
+        <Viewport6H3>{viewport6.title}</Viewport6H3>
+        <Carousel items={viewport6.carouselItems} />
+      </SixthViewport>
+      <SeventhViewport>
+        <Banner
+          bgSrc={bannerBg}
+          label={viewport7.bannerLabel}
+          description={viewport7.bannerDescription}
+        />
+        <LowerTextBox>
+          <H2>
+            {viewport7.lowerTitle1}&nbsp;
+            <span className="accent-text">{viewport7.lowerTitle2}</span>
+            &nbsp;
+          </H2>
+          <LowerText>{viewport7.lowerText}</LowerText>
+          <ButtonDefault white={false}>GET IN TOUCH</ButtonDefault>
+        </LowerTextBox>
+      </SeventhViewport>
     </Main>
   );
 };
