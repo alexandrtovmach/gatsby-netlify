@@ -23,7 +23,7 @@ const WhiteButton = styled(StyledButton)`
 `;
 
 interface ButtonProps {
-  white: boolean;
+  white?: boolean;
 }
 const ButtonAppStore: React.FunctionComponent<ButtonProps> = ({ white }) =>
   white ? <WhiteButton /> : <BlackButton />;
