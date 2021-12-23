@@ -14,6 +14,7 @@ import BenefitCard from '@/components/BenefitCard';
 import Carousel from '@/components/Carousel';
 import Banner from '@/components/Banner';
 import bannerBg from '../assets/img/bannerAccountToaccountPageBg.svg';
+import tickIconSrc from '../assets/img/tickIcon.svg';
 
 const Section = styled.section`
   padding: 5rem calc((100vw - 1400px) / 2);
@@ -321,7 +322,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             <BenefitCard
               title={item.title}
               description={item.description}
-              icon={item.icon}
+              icon={tickIconSrc}
             />
           ))}
         </BenefitCardWrapper>

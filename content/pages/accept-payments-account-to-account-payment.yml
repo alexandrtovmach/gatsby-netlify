@@ -58,32 +58,26 @@ viewport5:
     - {
         title: 'Increase conversion',
         description: 'With seamless bank transfer payments, you can reduce basket drop-outs. No card number or personal details required.',
-        icon: /images/tickIcon.svg,
       }
     - {
         title: 'Reduce costs',
         description: 'Slash the costs of card and interchange fees. fena uses the Open Banking framework to reduce payment processing fees by 0.85%.',
-        icon: /images/tickIcon.svg,
       }
     - {
         title: 'Customisable design',
         description: 'Design your customer journey end-to-end. Easily customise your payment checkout page to match your brand.',
-        icon: /images/tickIcon.svg,
       }
     - {
         title: 'Eliminate fraud',
         description: 'Enable direct payments through your customer’s bank, slashing fraud and chargebacks and saving you up to 1% of revenues.',
-        icon: /images/tickIcon.svg,
       }
     - {
         title: 'Bank-level security',
         description: 'Our APIs are Open Banking and PSD2 compliant, ensuring secure access to the financial system.',
-        icon: /images/tickIcon.svg,
       }
     - {
         title: 'Quick and easy implementation',
         description: 'Integrate with fena Open Banking Payment APIs using SDKs or direct APIs.',
-        icon: /images/tickIcon.svg,
       }
 viewport6:
   title: Seamless payment services for your industry
