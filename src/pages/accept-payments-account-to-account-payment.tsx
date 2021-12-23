@@ -16,6 +16,7 @@ import Banner from '@/components/Banner';
 import bannerBg from '../assets/img/bannerAccountToaccountPageBg.svg';
 import tickIconSrc from '../assets/img/tickIcon.svg';
 import FirstViewport from '../components/FirstViewport';
+import BottomMessage from '@/components/BottomMessage';
 
 const Section = styled.section`
   padding: 5rem calc((100vw - 1400px) / 2);
@@ -147,17 +148,6 @@ const SeventhViewport = styled(Section)`
   padding-top: 0;
 `;
 
-const LowerTextBox = styled.div`
-  margin-top: 5rem;
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-`;
-const LowerText = styled(P)`
-  font-size: 18px;
-`;
 interface AcceptPaymentsAccountToAccountPageContent {
   viewport1: {
     title1: string;
@@ -320,15 +310,11 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           label={viewport7.bannerLabel}
           description={viewport7.bannerDescription}
         />
-        <LowerTextBox>
-          <H2>
-            {viewport7.lowerTitle1}&nbsp;
-            <span className="accent-text">{viewport7.lowerTitle2}</span>
-            &nbsp;
-          </H2>
-          <LowerText>{viewport7.lowerText}</LowerText>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
-        </LowerTextBox>
+        <BottomMessage
+          title1={viewport7.lowerTitle1}
+          title2={viewport7.lowerTitle2}
+          text={viewport7.lowerText}
+        />
       </SeventhViewport>
     </Main>
   );

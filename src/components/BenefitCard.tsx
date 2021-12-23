@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   border-radius: 10px;
   padding: 2rem 0;
-  height: 100%;
 `;
 
 const TopSection = styled.div`
