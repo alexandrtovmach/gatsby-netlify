@@ -24,6 +24,7 @@ import {
   Subtitle1,
 } from '../components/Typography';
 import Main from '../containers/Layout';
+import FirstViewport from '@/components/FirstViewport';
 
 const Section = styled.section`
   padding: 5rem calc((100vw - 1400px) / 2);
@@ -31,18 +32,6 @@ const Section = styled.section`
   @media (max-width: 1440px) {
     padding: 5rem calc((100vw - 900px) / 2);
   }
-`;
-
-const FirstSection = styled(Section)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: calc(100vh - 5rem * 2 - 70px);
-  padding-right: 0;
-`;
-
-const LeftSideContent = styled.div`
-  flex: 1 1 30%;
 `;
 
 const Description = styled(P)`
@@ -53,10 +42,6 @@ const Description = styled(P)`
   &:first-of-type {
     margin-top: 2em;
   }
-`;
-
-const PhoneImage = styled.img`
-  height: 100%;
 `;
 
 const SecondSection = styled(Section)`
@@ -111,7 +96,7 @@ const SolutionCard = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
-  width: calc(35rem - 5rem);
+  flex-basis: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -194,6 +179,10 @@ const LowerTextBox = styled.div`
   align-items: center;
   justify-content: space-around;
 `;
+
+const LowerText = styled(P)`
+  font-size: 18px;
+`;
 interface HomePageContent {
   docTitle: string;
   section1: {
@@ -261,20 +250,17 @@ const Home: React.FunctionComponent = () => {
     homeContent as unknown as HomePageContent;
   return (
     <Main>
-      <FirstSection>
-        <LeftSideContent>
-          <H1>
-            {section1.title1}&nbsp;
-            <span className="accent-text">{section1.title2}</span>&nbsp;
-            {section1.title3}
-          </H1>
-          <Description>{section1.description}</Description>
-          <Description>{section1.description2}</Description>
-          <Description>{section1.description3}</Description>
-          <ButtonDefault>REGISTER NOW</ButtonDefault>
-        </LeftSideContent>
-        <PhoneImage src={imgItem1} alt="application screnshot" />
-      </FirstSection>
+      <FirstViewport img={imgItem1}>
+        <H1>
+          {section1.title1}&nbsp;
+          <span className="accent-text">{section1.title2}</span>&nbsp;
+          {section1.title3}
+        </H1>
+        <Description>{section1.description}</Description>
+        <Description>{section1.description2}</Description>
+        <Description>{section1.description3}</Description>
+        <ButtonDefault>REGISTER NOW</ButtonDefault>
+      </FirstViewport>
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
           <StrongP className="accent-text">{section2.label}</StrongP>
@@ -365,7 +351,7 @@ const Home: React.FunctionComponent = () => {
             &nbsp;
             {section6.lowerTitle3}
           </H2>
-          <p>{section6.lowerText}</p>
+          <LowerText>{section6.lowerText}</LowerText>
           <ButtonDefault>GET IN TOUCH</ButtonDefault>
         </LowerTextBox>
       </SixthSection>

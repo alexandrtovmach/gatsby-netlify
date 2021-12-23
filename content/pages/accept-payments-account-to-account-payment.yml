@@ -1,0 +1,115 @@
+viewport1:
+  title1: Payments API
+  title2: for instant payments
+  description1: No cards, reduced fraud, no chargebacks, low fees.
+  description2: Initiate payments within your app or website using Open Banking payments.
+viewport2:
+  label: Save your money
+  title: Low fees, instant deposits
+  description1: Let your customers easily deposit funds from any device, no accounts or registration required.
+  description2: Save up to 85%
+  description3: on payment processing fees.
+  box1Title: A suite of SDKs for easy integration
+  boxListItem1: Direct APIs available
+  boxListItem2: Biometric authentication supported
+  boxListItem3: Instant settlement
+  boxListItem4: Easy reconciliation
+viewport3:
+  title: Use cases
+  viewport3Cards:
+    - {
+        title: eCommerce and online payments,
+        text: 'Frictionless online payments with low fees, from just 0.3%. Bank-level security and reduced fraud.',
+        image: /images/carouselImg2.svg,
+      }
+    - {
+        title: Invoice and bill payments,
+        text: 'An easy, secure, low-cost way to get paid for bills and invoices.',
+        image: /images/card5Img.svg,
+      }
+    - {
+        title: Digital wallet and account top up,
+        text: 'Let users initiate payments or move money between accounts effortlessly.',
+        image: /images/carouselImg4.svg,
+      }
+viewport4:
+  title: How does it work?
+  description: Facilitate instant bank payments from within your app or on website
+  stepCards:
+    - {
+        label: Step 1,
+        title: 'The user commits to making a payment ',
+        description: 'The user chooses ‘Instant Bank Transfer’ as a payment method, followed by the bank they want to pay with.',
+      }
+    - {
+        label: Step 2,
+        title: 'Fena initiates the payment with redirection ',
+        description: 'The user is redirected to their banking app to authorise the transaction. The payment is processed by the bank.',
+      }
+    - {
+        label: Step 3,
+        title: 'Digital wallet and account top up',
+        description: 'Let users initiate payments or move money between accounts effortlessly.',
+      }
+viewport5:
+  title: Key benefits
+  description: Key benefits of instant bank payments powered by fena
+  benefitCards:
+    - {
+        title: 'Increase conversion',
+        description: 'With seamless bank transfer payments, you can reduce basket drop-outs. No card number or personal details required.',
+      }
+    - {
+        title: 'Reduce costs',
+        description: 'Slash the costs of card and interchange fees. fena uses the Open Banking framework to reduce payment processing fees by 0.85%.',
+      }
+    - {
+        title: 'Customisable design',
+        description: 'Design your customer journey end-to-end. Easily customise your payment checkout page to match your brand.',
+      }
+    - {
+        title: 'Eliminate fraud',
+        description: 'Enable direct payments through your customer’s bank, slashing fraud and chargebacks and saving you up to 1% of revenues.',
+      }
+    - {
+        title: 'Bank-level security',
+        description: 'Our APIs are Open Banking and PSD2 compliant, ensuring secure access to the financial system.',
+      }
+    - {
+        title: 'Quick and easy implementation',
+        description: 'Integrate with fena Open Banking Payment APIs using SDKs or direct APIs.',
+      }
+viewport6:
+  title: Seamless payment services for your industry
+  carouselItems:
+    - {
+        title: Marketplaces,
+        text: 'Reduce basket drop-outs with seamless bank transfer payments powered by fena.',
+        image: /images/carouselImg1.svg,
+      }
+    - {
+        title: eCommerce,
+        text: "Minimise friction with 'Instant Bank Transfers' at checkout, saving up to 85% on payment processing fees.",
+        image: /images/carouselImg2.svg,
+      }
+    - {
+        title: iGaming,
+        text: 'Provide seamless payments for low-cost top ups.',
+        image: /images/carouselImg3.svg,
+      }
+    - {
+        title: Digital wallets,
+        text: 'Easy top-ups by instant bank transfer for digital wallets',
+        image: /images/carouselImg4.svg,
+      }
+    - {
+        title: Crypto exchanges,
+        text: 'Low-cost, easy top ups with account-to-account payments.',
+        image: /images/carouselImg5.svg,
+      }
+viewport7:
+  bannerLabel: Get paid fast and fair with Fena
+  bannerDescription: Download the Fena merchant app to take in-store or in-person payments
+  lowerTitle1: We are eager to
+  lowerTitle2: help you
+  lowerText: 'Contact us and one of our payment experts will be in touch soon.'

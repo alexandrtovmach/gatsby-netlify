@@ -20,7 +20,7 @@ const WhiteButton = styled(StyledButton)`
   cursor: pointer;
 `;
 interface ButtonProps {
-  white: boolean;
+  white?: boolean;
 }
 const ButtonGooglePlay: React.FunctionComponent<ButtonProps> = ({ white }) =>
   white ? <WhiteButton /> : <BlackButton />;

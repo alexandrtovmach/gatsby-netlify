@@ -3,14 +3,20 @@ import styled from 'styled-components';
 import { P, Subtitle5 } from './Typography';
 
 const Wrapper = styled.div`
+  flex-basis: 30%;
   display: flex;
   flex-direction: column;
-  width: calc(16.5rem - 2rem);
   justify-content: flex-start;
-  background-color: #f2f4f7;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 2rem;
-  margin: auto;
+  margin: 0 1rem;
+  border: 1px solid #dbe3eb;
+  cursor: pointer;
+  transition: 0.4s;
+  &:hover {
+    box-shadow: 0px 4px 30px rgba(194, 206, 219, 0.6);
+  }
 `;
 const Img = styled.img`
   width: 30%;

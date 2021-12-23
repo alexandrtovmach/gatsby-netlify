@@ -44,8 +44,8 @@ const Banner: React.FunctionComponent<BannerProps> = ({
     <Content>
       <Label>{label}</Label>
       <Description>{description}</Description>
-      <ButtonAppStore white={false} />
-      <ButtonGooglePlay white={false} />
+      <ButtonAppStore />
+      <ButtonGooglePlay />
     </Content>
   </Wrapper>
 );
