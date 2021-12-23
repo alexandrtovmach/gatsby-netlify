@@ -4,7 +4,89 @@ viewport1:
   description1: No cards, reduced fraud, no chargebacks, low fees.
   description2: Initiate payments within your app or website using Open Banking payments.
 viewport2:
-  title1: Payments API 
-  title2: for instant payments
-  description1: No cards, reduced fraud, no chargebacks, low fees.
-  description2: Initiate payments within your app or website using Open Banking payments.
+  label: Save your money
+  title: Low fees, instant deposits
+  description1: Let your customers easily deposit funds from any device, no accounts or registration required.  
+  description2: Save up to 85%
+  description3: on payment processing fees.
+  box1Title: A suite of SDKs for easy integration
+  boxListItem1: Direct APIs available
+  boxListItem2: Biometric authentication supported
+  boxListItem3: Instant settlement
+  boxListItem4: Easy reconciliation
+viewport3:
+  title: Use cases 
+  viewport3Cards:
+    - {
+        title: eCommerce and online payments,
+        text: 'Frictionless online payments with low fees, from just 0.3%. Bank-level security and reduced fraud.',
+        image: /images/carouselImg2.svg,
+      }
+    - {
+        title: Invoice and bill payments,
+        text: 'An easy, secure, low-cost way to get paid for bills and invoices.',
+        image: /images/card5Img.svg,
+      }
+    - {
+        title: Digital wallet and account top up,
+        text: 'Let users initiate payments or move money between accounts effortlessly.',
+        image: /images/carouselImg4.svg,
+      }
+viewport4:
+  title: How does it work?
+  description: Facilitate instant bank payments from within your app or on website
+  stepCards:
+    - {
+        label: Step 1,
+        title: 'The user commits to making a payment ',
+        description: 'The user chooses ‘Instant Bank Transfer’ as a payment method, followed by the bank they want to pay with.' ,
+        icon: /images/stepIcon.svg
+      }
+    - {
+        label: Step 2,
+        title: 'Fena initiates the payment with redirection ',
+        description: 'The user is redirected to their banking app to authorise the transaction. The payment is processed by the bank.',
+        icon: /images/stepIcon.svg
+      }
+    - {
+        label: Step 3,
+        title: 'Digital wallet and account top up',
+        description: 'Let users initiate payments or move money between accounts effortlessly.' ,
+        icon: /images/stepIcon.svg
+      }
+viewport5:
+  title: Key benefits
+  description: Key benefits of instant bank payments powered by fena
+  benefitCards:
+    - {
+        title: 'Increase conversion',
+        description: 'With seamless bank transfer payments, you can reduce basket drop-outs. No card number or personal details required.' ,
+        icon: /images/tickIcon.svg
+      }
+    - {
+        title: 'Reduce costs',
+        description: 'Slash the costs of card and interchange fees. fena uses the Open Banking framework to reduce payment processing fees by 0.85%.' ,
+        icon: /images/tickIcon.svg
+      }
+    - {
+        title: 'Customisable design',
+        description: 'Design your customer journey end-to-end. Easily customise your payment checkout page to match your brand.',
+        icon: /images/tickIcon.svg
+      }
+    - {
+        title: 'Eliminate fraud',
+        description: 'Enable direct payments through your customer’s bank, slashing fraud and chargebacks and saving you up to 1% of revenues.' ,
+        icon: /images/tickIcon.svg
+      }
+    - {
+        title: 'Bank-level security',
+        description: 'Our APIs are Open Banking and PSD2 compliant, ensuring secure access to the financial system.' ,
+        icon: /images/tickIcon.svg
+      }
+    - {
+        title: 'Quick and easy implementation',
+        description: 'Integrate with fena Open Banking Payment APIs using SDKs or direct APIs.',
+        icon: /images/tickIcon.svg
+      }
+  
+    

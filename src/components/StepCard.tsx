@@ -5,43 +5,48 @@ import { P, Subtitle5 } from './Typography';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(16.5rem - 2rem);
+  width: calc(25rem - 2rem);
   justify-content: flex-start;
-  background-color: #ffffff;
   border-radius: 10px;
-  padding: 2rem;
-  margin: auto;
-  border: 1px solid #dbe3eb;
-  cursor: pointer;
-  &:hover {
-    box-shadow: 0px 4px 30px rgba(194, 206, 219, 0.6);
-  }
+  padding: 2rem 0;
+  height: 100%;
+`;
+
+const TopSection = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 `;
 const Img = styled.img`
-  width: 30%;
-  margin-bottom: 2rem;
+  width: 25%;
 `;
 const Info = styled.div``;
 const Title = styled(Subtitle5)`
   margin-bottom: 0.5rem;
 `;
 interface SolutionComponentProps {
+  label: string;
   title: string;
-  text: string;
-  cardImgSrc: string;
+  description: string;
+  icon: string;
 }
-const CarouselCard: React.FunctionComponent<SolutionComponentProps> = ({
+const StepCard: React.FunctionComponent<SolutionComponentProps> = ({
+  label,
   title,
-  text,
-  cardImgSrc,
+  description,
+  icon,
 }) => (
   <Wrapper>
-    <Img src={cardImgSrc} alt="card logo" />
+    <TopSection>
+      <Img src={icon} alt="card logo" />
+      <p>{label}</p>
+    </TopSection>
+
     <Info>
       <Title>{title}</Title>
-      <P>{text}</P>
+      <P>{description}</P>
     </Info>
   </Wrapper>
 );
 
-export default CarouselCard;
+export default StepCard;

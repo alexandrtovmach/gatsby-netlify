@@ -201,6 +201,62 @@ collections:
               - { label: Title2, name: title2, widget: string }
               - { label: Description, name: description, widget: string }
               - { label: Description_2, name: description2, widget: string }
+          - label: Viewport 2
+            name: viewport2
+            widget: object
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description_1, name: description1, widget: string }
+              - { label: Description_2, name: description2, widget: string }
+              - { label: Description_3, name: description3, widget: string }
+              - { label: BoxTitle1, name: boxTitle1, widget: string }
+              - { label: BoxListItem1, name: boxListItem1, widget: string }
+              - { label: BoxListItem2, name: boxListItem2, widget: string }
+              - { label: BoxListItem3, name: boxListItem3, widget: string }
+              - { label: BoxListItem4, name: boxListItem4, widget: string }
+          - label: Viewport 3
+            name: viewport3
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+          - label: Viewport 3 cards
+            name: viewport3Cards
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: text, name: text, widget: string }
+              - { label: image, name: image, widget: image }
+          - label: Viewport 4
+            name: viewport4
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: Step cards
+            name: stepCards
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Label, name: Label, widget: string }
+              - { label: Title, name: Title, widget: string }
+              - { label: Description, name: Description, widget: string }
+              - { label: Icon, name: Icon, widget: string }
+          - label: Viewport 5
+            name: viewport5
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: Benefit Cards
+            name: benefitCards
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: string }
+              - { label: Icon, name: icon, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'

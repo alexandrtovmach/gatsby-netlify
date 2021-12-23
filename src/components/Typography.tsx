@@ -28,7 +28,7 @@ export const H3 = styled.h3`
 export const P = styled.p`
   font-size: 16px;
   line-height: 26px;
-  color: #495b6c;
+  color: #0e233e;
 `;
 
 export const StrongP = styled.p`

@@ -11,3 +11,8 @@
 .accent-text-black {
   color: #000000;
 }
+
+.accent-text-black-bold {
+  color: #000000;
+  font-weight: 600;
+}

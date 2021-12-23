@@ -300,7 +300,7 @@ const Home: React.FunctionComponent = () => {
             {section4.title3}
           </SectionTitle>
           <Description>{section4.description}</Description>
-          <ButtonDefault>GET STARTED</ButtonDefault>
+          <ButtonDefault white={false}>GET STARTED</ButtonDefault>
         </Section4LeftSide>
         <Section4Img src={section4Img} alt="section4 screenshot1" />
       </FourthSection>
@@ -334,7 +334,7 @@ const Home: React.FunctionComponent = () => {
             {section6.lowerTitle3}
           </H2>
           <LowerText>{section6.lowerText}</LowerText>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+          <ButtonDefault white={false}>GET IN TOUCH</ButtonDefault>
         </LowerTextBox>
       </SixthSection>
     </Main>
