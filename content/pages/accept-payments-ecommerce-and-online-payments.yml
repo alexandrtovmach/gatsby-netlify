@@ -1,0 +1,63 @@
+viewport1:
+  title1: Get paid online with
+  title2: Fena
+  description1: Our online payment products are easy to install. You only need a few lines of code to integrate with your website.
+  description2: And with only
+  description3: 0.3% fees
+  description4: on transactions made, you save over 85% vs traditional card payments.
+benefitCards:
+  - {
+      title: 'Low fees',
+      description: 'From only 0.3% of transaction value in fees. No setup costs. No terminal cost',
+    }
+  - {
+      title: 'Instant settlement',
+      description: 'Payments are instantaneous.Your funds are deposited into your account the moment payments are made.',
+    }
+  - { title: 'Easy setup', description }
+  - {
+      title: 'Bank-level security',
+      description: 'Our APIs are Open Banking and PSD2 compliant, ensuring secure access to the financial system.',
+    }
+viewport3:
+  title1: Plug’n’Play
+  title2: Solution for ecommerce businesses
+  description: We support plug-ins for popular e-commerce solutions. The plugins can be added to your website via the respective marketplaces and linked to your fena account.
+pluginCards:
+  - { title: 'WooCommerce', image: /images/wooComerceLogo.svg }
+  - { title: 'Instant settlement', image: /images/magentoLogo.svg }
+  - { title: 'Easy setup', image: /images/opencartLogo.svg }
+viewport4:
+  title: Seamless payment services for your industry
+  carouselItems:
+    - {
+        title: Marketplaces,
+        text: 'Reduce basket drop-outs with seamless bank transfer payments powered by fena.',
+        image: /images/carouselImg1.svg,
+      }
+    - {
+        title: eCommerce,
+        text: "Minimise friction with 'Instant Bank Transfers' at checkout, saving up to 85% on payment processing fees.",
+        image: /images/carouselImg2.svg,
+      }
+    - {
+        title: iGaming,
+        text: 'Provide seamless payments for low-cost top ups.',
+        image: /images/carouselImg3.svg,
+      }
+    - {
+        title: Digital wallets,
+        text: 'Easy top-ups by instant bank transfer for digital wallets',
+        image: /images/carouselImg4.svg,
+      }
+    - {
+        title: Crypto exchanges,
+        text: 'Low-cost, easy top ups with account-to-account payments.',
+        image: /images/carouselImg5.svg,
+      }
+viewport5:
+  bannerLabel: Get paid fast and fair with Fena
+  bannerDescription: Download the Fena merchant app to take in-store or in-person payments
+  lowerTitle1: We are eager to
+  lowerTitle2: help you
+  lowerText: 'Contact us and one of our payment experts will be in touch soon.'

@@ -22,6 +22,7 @@ const HeaderWrapper = styled.header`
   box-shadow: 0px 2px 18px rgba(108, 108, 138, 0.199);
   position: fixed;
   width: calc(100% - 5rem * 2);
+  z-index: 6;
 `;
 
 const Nav = styled.nav`
@@ -120,6 +121,7 @@ const styles = {
   bmMenu: {
     background: `#000000`,
     padding: `2.5em 2em 0`,
+    zIndex: 6,
   },
   bmMorphShape: {
     fill: `#373a47`,
