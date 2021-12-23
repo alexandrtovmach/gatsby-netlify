@@ -60,7 +60,7 @@ const FirstViewport: React.FunctionComponent<ViewportProps> = ({
       <Description>{content.description}</Description>
       <Description>{content.description2}</Description>
       <Description>{content.description3}</Description>
-      <ButtonDefault>REGISTER NOW</ButtonDefault>
+      <ButtonDefault white={false}>REGISTER NOW</ButtonDefault>
     </LeftSideContent>
 
     <PhoneImage src={img} alt="application screnshot" />
