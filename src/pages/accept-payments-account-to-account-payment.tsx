@@ -13,7 +13,7 @@ import StepCard from '@/components/StepCard';
 import BenefitCard from '@/components/BenefitCard';
 import Carousel from '@/components/Carousel';
 import Banner from '@/components/Banner';
-import bannerBg from '../assets/img/bannerAccountToaccountPageBg.svg';
+import bannerBg from '../assets/img/bannerAccountToaccountPageBg.png';
 import tickIconSrc from '../assets/img/tickIcon.svg';
 import FirstViewport from '../components/FirstViewport';
 import BottomMessage from '@/components/BottomMessage';
