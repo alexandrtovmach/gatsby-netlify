@@ -186,7 +186,6 @@ collections:
                   label: bannerDescription,
                   name: bannerDescription,
                   widget: string,
-                  
                 }
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
@@ -276,7 +275,11 @@ collections:
             widget: object
             fields:
               - { label: bannerLabel, name: bannerLabel, widget: string }
-              - { label: bannerDescription, name: bannerDescription, widget: string }
+              - {
+                  label: bannerDescription,
+                  name: bannerDescription,
+                  widget: string,
+                }
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerText, name: lowerText, widget: string }
@@ -292,7 +295,7 @@ collections:
               - { label: Title2, name: title2, widget: string }
               - { label: Description, name: description, widget: string }
               - { label: Description_2, name: description2, widget: string }
-          - label: Benefit Cards 
+          - label: Benefit Cards
             name: benefitCards
             widget: list
             summary: '{{fields.title}}'
@@ -306,7 +309,7 @@ collections:
               - { label: Title1, name: title1, widget: string }
               - { label: Title2, name: title2, widget: string }
               - { label: Description, name: Description, widget: string }
-          - label: Plugin Cards 
+          - label: Plugin Cards
             name: pluginCards
             widget: list
             summary: '{{fields.title}}'
@@ -331,10 +334,25 @@ collections:
             widget: object
             fields:
               - { label: bannerLabel, name: bannerLabel, widget: string }
-              - { label: bannerDescription, name: bannerDescription, widget: string }
+              - {
+                  label: bannerDescription,
+                  name: bannerDescription,
+                  widget: string,
+                }
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerText, name: lowerText, widget: string }
+      - label: 'Accept payments - QR code Payments'
+        name: 'acceptPaymentsQrCodePyments'
+        file: 'content/pages/accept-payments-qr-code-payments.yml'
+        fields:
+          - label: Viewport 1
+            name: viewport1
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Description, name: description, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'

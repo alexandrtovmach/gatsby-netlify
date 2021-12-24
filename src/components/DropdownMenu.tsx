@@ -110,7 +110,7 @@ const DropdownMenu: React.FunctionComponent<DropdownProps> = ({
         </DropdownLink>
       </StyledMenuItem>
       <StyledMenuItem>
-        <DropdownLink to="/">
+        <DropdownLink to="/accept-payments-qr-code-payments">
           <LinkTitle>{dropdownLinks.link5}</LinkTitle>
           <LinkDescription>{dropdownLinks.description5}</LinkDescription>
         </DropdownLink>
