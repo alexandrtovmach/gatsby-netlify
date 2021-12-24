@@ -13,7 +13,7 @@ import StepCard from '@/components/StepCard';
 import BenefitCard from '@/components/BenefitCard';
 import Carousel from '@/components/Carousel';
 import Banner from '@/components/Banner';
-import bannerBg from '../assets/img/bannerAccountToaccountPageBg.svg';
+import bannerBg from '../assets/img/bannerAccountToaccountPageBg.png';
 import tickIconSrc from '../assets/img/tickIcon.svg';
 import FirstViewport from '../components/FirstViewport';
 import BottomMessage from '@/components/BottomMessage';
@@ -60,12 +60,6 @@ const StyledLi = styled.li`
   font-size: 16px;
   color: #13273f;
   line-height: 35px;
-  /* &:before {
-      content: '·';
-      font-size: 80px;
-      vertical-align:middle;
-    }
-  } */
   list-style: initial;
   &::marker {
     color: #2cd19e;
