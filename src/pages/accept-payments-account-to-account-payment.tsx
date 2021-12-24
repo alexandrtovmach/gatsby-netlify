@@ -60,12 +60,6 @@ const StyledLi = styled.li`
   font-size: 16px;
   color: #13273f;
   line-height: 35px;
-  /* &:before {
-      content: '·';
-      font-size: 80px;
-      vertical-align:middle;
-    }
-  } */
   list-style: initial;
   &::marker {
     color: #2cd19e;
