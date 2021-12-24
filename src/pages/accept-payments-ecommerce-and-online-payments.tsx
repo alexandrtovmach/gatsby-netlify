@@ -14,7 +14,7 @@ import page3Vp3Bg from '../assets/img/page3Vp3Bg.svg';
 import PluginCard from '@/components/PluginCard';
 import Carousel from '../components/Carousel';
 import Banner from '@/components/Banner';
-import bannerBg from '../assets/img/bannerEcommercePageBg.svg';
+import bannerBg from '../assets/img/bannerEcommercePageBg.png';
 import BottomMessage from '@/components/BottomMessage';
 
 const Section = styled.section`

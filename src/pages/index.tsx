@@ -5,7 +5,7 @@ import Banner from '../components/Banner';
 import ButtonDefault from '../components/ButtonDefault';
 import ReviewCard from '../components/ReviewCard';
 import homeContent from '../../content/pages/home.yml';
-import bannerHomePageBg from '../assets/img/bannerHomePageBg.svg';
+import bannerHomePageBg from '../assets/img/bannerHomePageBg.png';
 import imgItem1 from '../assets/img/imgItem1.svg';
 import section2Bg from '../assets/img/section2_bg.svg';
 import solutionCardLeft from '../assets/img/solutionCardLeft.svg';
