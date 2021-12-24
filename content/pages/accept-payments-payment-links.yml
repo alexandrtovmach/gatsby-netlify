@@ -10,17 +10,17 @@ viewport2:
     - {
         title: 'Sell anywhere',
         text: 'Share links with your customers via SMS, WhatApp, email or other messaging apps and get paid.',
-        image: /images/messengerImg.png,
+        image: /images/messenger.svg,
       }
     - {
         title: 'Customer-friendly',
         text: 'Customers pay using a secure url – no need to download an app or create an account.',
-        image: /images/cardDataImg.png,
+        image: /images/card.svg,
       }
     - {
         title: 'Track your payments',
         text: 'Check the status of your payments. If one’s outstanding, you can resend the link to remind your customer to pay.',
-        image: /images/orderImg.png,
+        image: /images/order.svg,
       }
 viewport3:
   title: Seamless payment services for your industry

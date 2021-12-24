@@ -11,9 +11,14 @@ const Wrapper = styled.div`
   border-radius: 10px;
   border: 1px solid #dbe3eb;
 `;
-const Img = styled.img`
+const Img = styled.div`
   width: 100%;
   height: 14rem;
+  background-color: #e7edf3;
+  background-image: ${(props) => `url(${props.resource})`};
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 `;
 const Info = styled.div`
   padding: 2rem;
@@ -32,7 +37,7 @@ const LinkCard: React.FunctionComponent<SolutionComponentProps> = ({
   imageSrc,
 }) => (
   <Wrapper>
-    <Img src={imageSrc} alt="card logo" />
+    <Img resource={imageSrc} />
     <Info>
       <Title>{title}</Title>
       <P>{text}</P>
