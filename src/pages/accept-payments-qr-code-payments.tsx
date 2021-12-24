@@ -2,18 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import Main from '../containers/Layout';
 import qrCodePaymentsContent from '../../content/pages/accept-payments-qr-code-payments.yml';
-import { H1, P } from '@/components/Typography';
+import { H1, H2, H3, P } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import page3viewport1 from '../assets/img/page3viewport1.svg';
+import page6Vp1 from '../assets/img/page6Vp1.svg';
 import FirstViewport from '../components/FirstViewport';
+import CarouselCard from '@/components/CarouselCard';
+import SolutionComponent from '@/components/SolutionCard';
+import StepCard from '@/components/StepCard';
+import Banner from '@/components/Banner';
+import BottomMessage from '@/components/BottomMessage';
+import bannerBg from '../assets/img/bannerQrCodePageBg.png';
 
-// const Section = styled.section`
-//   padding: 5rem calc((100vw - 1400px) / 2);
+const Section = styled.section`
+  padding: 5rem calc((100vw - 1400px) / 2);
 
-//   @media (max-width: 1440px) {
-//     padding: 5rem calc((100vw - 900px) / 2);
-//   }
-// `;
+  @media (max-width: 1440px) {
+    padding: 5rem calc((100vw - 900px) / 2);
+  }
+`;
 
 const Description = styled(P)`
   margin: 1rem 0;
@@ -24,64 +30,62 @@ const Description = styled(P)`
     margin-top: 2em;
   }
 `;
+const SecondViewport = styled(Section)`
+  background-color: #ffff;
+`;
+const CardWrapper = styled.div`
+  display: flex;
+  margin-top: 2rem;
+`;
 
-// const SecondViewport = styled(Section)`
-//   background-image: ${(props) => `url(${props.resource})`};
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   display: flex;
-//   padding-bottom: 0;
-// `;
+const ThirdViewport = styled(Section)``;
 
-// const ThirdViewport = styled(Section)`
-//   background-image: ${(props) => `url(${props.resource})`};
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// `;
-// const BenefitCardsLeft = styled.div``;
-// const BenefitCardsRight = styled(BenefitCardsLeft)``;
-// const PluginCardWrapper = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   margin-top: 5rem;
-// `;
-
-// const TextWrapper = styled.div`
-//   width: 50%;
-// `;
-
-// const FourthViewport = styled(Section)`
-//   background-color: #ffff;
-// `;
-// const FifthViewport = styled(Section)`
-//   padding-top: 0;
-//   background-color: #ffff;
-// `;
+const CardWrapperVp3 = styled.div`
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+const FourthViewport = styled(Section)`
+  background-color: #ffff;
+`;
+const StepCardWrapper = styled(CardWrapper)`
+  width: 100%;
+  justify-content: space-between;
+`;
+const FifthViewport = styled(Section)`
+  background-color: #ffff;
+  padding-top: 0;
+`;
 interface QrCodePaymentsContent {
   viewport1: {
     title1: string;
     title2: string;
     description: string;
   };
-  benefitCards: {
+  viewport2: {
     title: string;
-    description: string;
-  }[];
-  viewport3: {
-    title1: string;
-    title2: string;
-    description: string;
-  };
-  pluginCards: {
-    title: string;
-    image: string;
-  }[];
-  viewport4: {
-    title: string;
-    carouselItems: {
+    viewport2Cards: {
       title: string;
       text: string;
       image: string;
+    }[];
+  };
+  viewport3: {
+    title: string;
+    viewport3Cards: {
+      title: string;
+      text: string;
+      image: string;
+    }[];
+  };
+  viewport4: {
+    title: string;
+    description: string;
+    stepCards: {
+      label: string;
+      description: string;
+      icon: string;
     }[];
   };
   viewport5: {
@@ -92,12 +96,12 @@ interface QrCodePaymentsContent {
     lowerText: string;
   };
 }
-const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
-  const { viewport1 } =
+const QrCodePayments: React.FunctionComponent = () => {
+  const { viewport1, viewport2, viewport3, viewport4, viewport5 } =
     qrCodePaymentsContent as unknown as QrCodePaymentsContent;
   return (
     <Main>
-      <FirstViewport withRightPadding img={page3viewport1}>
+      <FirstViewport withRightPadding img={page6Vp1}>
         <H1>
           {viewport1.title1}&nbsp;
           <span className="accent-text"> {viewport1.title2}</span>
@@ -105,8 +109,49 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <Description>{viewport1.description}</Description>
         <ButtonDefault>REGISTER NOW</ButtonDefault>
       </FirstViewport>
+      <SecondViewport>
+        <H3>{viewport2.title}</H3>
+        <CardWrapper>
+          {viewport2.viewport2Cards.map((item) => (
+            <CarouselCard
+              title={item.title}
+              text={item.text}
+              cardImgSrc={item.image}
+            />
+          ))}
+        </CardWrapper>
+      </SecondViewport>
+      <ThirdViewport>
+        <H3>{viewport2.title}</H3>
+        <CardWrapperVp3>
+          {viewport3.viewport3Cards.map(({ title, text, image }) => (
+            <SolutionComponent title={title} text={text} cardImgSrc={image} />
+          ))}
+        </CardWrapperVp3>
+      </ThirdViewport>
+      <FourthViewport>
+        <H2>{viewport4.title}</H2>
+        <P>{viewport4.description}</P>
+        <StepCardWrapper>
+          {viewport4.stepCards.map((item) => (
+            <StepCard label={item.label} description={item.description} />
+          ))}
+        </StepCardWrapper>
+      </FourthViewport>
+      <FifthViewport>
+        <Banner
+          bgSrc={bannerBg}
+          label={viewport5.bannerLabel}
+          description={viewport5.bannerDescription}
+        />
+        <BottomMessage
+          title1={viewport5.lowerTitle1}
+          title2={viewport5.lowerTitle2}
+          text={viewport5.lowerText}
+        />
+      </FifthViewport>
     </Main>
   );
 };
 
-export default AcceptPaymentsAccountToAccount;
+export default QrCodePayments;
