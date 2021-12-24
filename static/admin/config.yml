@@ -335,6 +335,77 @@ collections:
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerText, name: lowerText, widget: string }
+      - label: 'Accept payments invoice payments'
+        name: 'acceptPaymentsInvoicePayments'
+        file: 'content/pages/accept-payments-invoice-payments.yml'
+        fields:
+          - label: Viewport 1
+            name: viewport1
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Description_1, name: description1, widget: string }
+              - { label: Description_2, name: description2, widget: string }
+          - label: Viewport 2
+            name: viewport2
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Viewport_2_cards
+                name: viewport2Cards
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Card title, name: title, widget: string }
+                  - { label: Card text, name: text, widget: string }
+                  - { label: Card Image, name: image, widget: image }
+          - label: Viewport 3
+            name: viewport3
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Viewport_3_cards
+                name: viewport3Cards
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Card title, name: title, widget: string }
+                  - { label: Card text, name: text, widget: string }
+                  - { label: Card Image, name: image, widget: image }
+          - label: Viewport 4
+            name: viewport4
+            widget: object
+            fields:
+              - { label: LeftTitle1, name: leftTitle1, widget: string }
+              - { label: LeftTitle2, name: leftTitle2, widget: string }
+              - { label: LeftDescription, name: leftDescription, widget: string }
+              - { label: RightTitle1, name: rightTitle1, widget: string }
+              - { label: RightDescription1, name: rightDescription1, widget: string }
+              - { label: RightDescription2, name: rightDescription2, widget: string }
+              - { label: RightDescription3, name: rightDescription3, widget: string }
+          - label: Viewport 5
+            name: viewport5
+            widget: object
+            fields:
+              - { label: title, name: title, widget: string }
+              - label: Carousel Items
+                name: carouselItems
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: title, name: title, widget: string }
+                  - { label: text, name: text, widget: string }
+                  - { label: image, name: image, widget: image }
+          - label: Viewport 6
+            name: viewport6
+            widget: object
+            fields:
+              - { label: bannerLabel, name: bannerLabel, widget: string }
+              - { label: bannerDescription, name: bannerDescription, widget: string }
+              - { label: lowerTitle1, name: lowerTitle1, widget: string }
+              - { label: lowerTitle2, name: lowerTitle2, widget: string }
+              - { label: lowerText, name: lowerText, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'
