@@ -1,0 +1,76 @@
+viewport1:
+  title1: Simple contactless payments with
+  title2: QR codes
+  description: Take payments from anywhere in your business – customers can just scan and pay.
+viewport2:
+  title: Why use Fena QR code Payments?
+  viewport2Cards:
+    - {
+        title: Truly contactless,
+        text: Your customers can complete the entire process using their phone – that means no fumbling around for cards or cash.,
+        image: /images/bluePhone.svg,
+      }
+    - {
+        title: Friction-free for customers,
+        text: Customers pay using their bank app – no need to download an app or create an account.,
+        image: /images/greenPhonePound.svg,
+      }
+    - {
+        title: Track your payments,
+        text: Check the status of your payments. If one’s outstanding,
+        you can resend the link to remind your customer to pay.,
+        image: /images/yellowList.svg,
+      }
+viewport3:
+  title: Why use Fena Invoice Payments?
+  viewport3Cards:
+    - {
+        title: Billing,
+        text: Collect bill payments from your customers by attaching payment links to emails or messages.,
+        image: /images/greenInvoice.svg,
+      }
+    - {
+        title: Phone orders,
+        text: Accept orders over the phone and send your customer a payment link to the same number via text.,
+        image: /images/phoneLink.svg,
+      }
+    - {
+        title: Click-and-collect,
+        text: Let customers order online and pick up their order from your shop. They can pay in advance or at the door.,
+        image: /images/tShirt.svg,
+      }
+    - {
+        title: Social media selling,
+        text: Turn your social media account into an online store. Simply post products and send payment links via the same channel.,
+        image: /images/shop.svg,
+      }
+    - {
+        title: Service providers,
+        text: Perfect for any in-person service providers that need instant payments after providing the services.,
+        image: /images/menu.svg,
+      }
+
+    - {
+        title: Home delivery,
+        text: Ready to start offering food for delivery? Take orders online or over the phone – then customers can pay by link.,
+        image: /images/delivery.svg,
+      }
+viewport4:
+  title: Scan to pay
+  description: Simple contactless payments with QR codes
+  stepCards:
+    - { label: Scan, description: 'Your customer uses their phone to scan the QR code.' }
+    - {
+        label: Pay,
+        description: 'A browser page opens up and customers can pick the bank they want to pay from.',
+      }
+    - {
+        label: Confirm,
+        description: 'Your customer can either show you their success screen to confirm the payment, or you can check your Transaction history.',
+      }
+viewport5:
+  bannerLabel: Download the App to get started
+  bannerDescription: Take payments from anywhere in your business – customers can just scan and pay.
+  lowerTitle1: We are eager to
+  lowerTitle2: help you
+  lowerText: 'Contact us and one of our payment experts will be in touch soon.'

@@ -41,10 +41,11 @@ const Title = styled(Subtitle5)`
 const Label = styled(P)`
   padding: 0.5rem;
   background: white;
+  font-weight: 600;
 `;
 interface SolutionComponentProps {
   label: string;
-  title: string;
+  title?: string;
   description: string;
 }
 const StepCard: React.FunctionComponent<SolutionComponentProps> = ({
