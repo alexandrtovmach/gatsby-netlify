@@ -112,7 +112,7 @@ const OpenBankingDataApis: React.FunctionComponent = () => {
           </H1>
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
-          <ButtonDefault>REGISTER NOW</ButtonDefault>
+          <ButtonDefault>GET IN TOUCH</ButtonDefault>
         </FirstViewport>
       </FirstViewportWrapper>
       <SecondViewport>
