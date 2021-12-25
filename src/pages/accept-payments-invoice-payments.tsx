@@ -12,6 +12,7 @@ import Carousel from '@/components/Carousel';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerInvoicePaymentPageBg.png';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
 
 const Section = styled.section`
   padding: 5rem calc((100vw - 1400px) / 2);
@@ -20,7 +21,11 @@ const Section = styled.section`
     padding: 5rem calc((100vw - 900px) / 2);
   }
 `;
-
+const FirstViewportWrapper = styled.div`
+  background-image: ${(props) => `url(${props.resource})`};
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
@@ -158,15 +163,18 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
     invoicePaymentsPageContent as unknown as InvoicePaymentsPageContent;
   return (
     <Main>
-      <FirstViewport withRightPadding img={page5Vp1}>
-        <H1>
-          {viewport1.title1}&nbsp;
-          <span className="accent-text"> {viewport1.title2}</span>
-        </H1>
-        <BoldDescription>{viewport1.description1}</BoldDescription>
-        <Description>{viewport1.description2}</Description>
-        <ButtonDefault>REGISTER NOW</ButtonDefault>
-      </FirstViewport>
+      <FirstViewportWrapper resource={page4Vp1Bg}>
+        <FirstViewport withRightPadding img={page5Vp1}>
+          <H1>
+            {viewport1.title1}&nbsp;
+            <span className="accent-text"> {viewport1.title2}</span>
+          </H1>
+          <BoldDescription>{viewport1.description1}</BoldDescription>
+          <Description>{viewport1.description2}</Description>
+          <ButtonDefault>REGISTER NOW</ButtonDefault>
+        </FirstViewport>
+      </FirstViewportWrapper>
+
       <SecondViewport>
         <H3>{viewport2.title}</H3>
         <CardBox>
