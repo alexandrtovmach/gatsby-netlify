@@ -180,7 +180,7 @@ const Header: React.FunctionComponent = () => {
       <HeaderWrapper>
         <BurgerMenu styles={styles} right width="60%">
           <StyledLink to="/">{link1}</StyledLink>
-          <StyledLink to="/">{link2}</StyledLink>
+          <StyledLink to="/open-banking-data-apis">{link2}</StyledLink>
           <StyledLink to="/">{link3}</StyledLink>
           <StyledLink to="/">{link4}</StyledLink>
           <StyledLink to="/">{link5}</StyledLink>
@@ -198,7 +198,7 @@ const Header: React.FunctionComponent = () => {
             <NavItem>
               <DropdownMenu buttonText={link1} dropdownLinks={dropdownLinks} />
             </NavItem>
-            <StyledLink to="/">{link2}</StyledLink>
+            <StyledLink to="/open-banking-data-apis">{link2}</StyledLink>
             <StyledLink to="/">{link3}</StyledLink>
             <StyledLink to="/">{link4}</StyledLink>
             <StyledLink to="/">{link5}</StyledLink>

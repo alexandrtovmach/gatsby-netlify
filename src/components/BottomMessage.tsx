@@ -13,6 +13,9 @@ const LowerTextBox = styled.div`
 `;
 const LowerText = styled(P)`
   font-size: 18px;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 1rem;
 `;
 
 interface ComponentProps {
