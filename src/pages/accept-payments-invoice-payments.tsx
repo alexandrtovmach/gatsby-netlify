@@ -104,7 +104,7 @@ const SixthViewport = styled(Section)`
   background-color: #ffff;
   padding-top: 0;
 `;
-interface invoicePaymentsPageContent {
+interface InvoicePaymentsPageContent {
   viewport1: {
     title1: string;
     title2: string;
@@ -155,7 +155,7 @@ interface invoicePaymentsPageContent {
 
 const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
   const { viewport1, viewport2, viewport3, viewport4, viewport5, viewport6 } =
-    invoicePaymentsPageContent as unknown as invoicePaymentsPageContent;
+    invoicePaymentsPageContent as unknown as InvoicePaymentsPageContent;
   return (
     <Main>
       <FirstViewport withRightPadding img={page5Vp1}>
