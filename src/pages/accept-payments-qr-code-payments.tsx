@@ -110,7 +110,7 @@ const QrCodePayments: React.FunctionComponent = () => {
         <FirstViewport withRightPadding img={page6Vp1}>
           <H1>
             {viewport1.title1}&nbsp;
-            <span className="accent-text"> {viewport1.title2}</span>
+            <span className="accent-text">{viewport1.title2}</span>
           </H1>
           <Description>{viewport1.description}</Description>
           <ButtonDefault>REGISTER NOW</ButtonDefault>
