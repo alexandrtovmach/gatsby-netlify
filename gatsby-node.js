@@ -1,7 +1,8 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
-
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
+const BlogPostTemplate = path.resolve(`./src/templates/post.tsx`);
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -13,10 +14,6 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
-
-  // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/post.js`);
-
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
@@ -58,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: post.fields.slug,
-        component: blogPost,
+        component: BlogPostTemplate,
         context: {
           id: post.id,
           previousPostId,

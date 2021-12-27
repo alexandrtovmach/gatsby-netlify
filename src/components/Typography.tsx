@@ -31,7 +31,7 @@ export const P = styled.p`
   color: #0e233e;
 `;
 
-export const StrongP = styled.p`
+export const Strong = styled.span`
   font-size: 16px;
   font-weight: bold;
 `;

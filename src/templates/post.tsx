@@ -3,12 +3,16 @@ import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '@/containers/Layout';
 import { H3 } from '@/components/Typography';
+import Markdown from '../containers/Markdown';
 
-const Content = styled.div`
-  background-color: #ffff;
-  padding: 0 25rem;
-  padding-bottom: 5rem;
+const Article = styled.article`
+  padding: 5rem calc((100vw - 700px) / 2);
+
+  @media (max-width: 1440px) {
+    padding: 5rem calc((100vw - 900px) / 2);
+  }
 `;
+
 const Header = styled.header`
   display: flex;
   justify-content: center;
@@ -28,7 +32,7 @@ const CoverImage = styled.img`
   border: 1px solid #dbe3eb;
   border-radius: 20px;
 `;
-const Body = styled.section``;
+// const Body = styled.section``;
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;
@@ -49,22 +53,15 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Content
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
+      <Article>
         <Header>
           <PageTitle itemProp="headline">{post.frontmatter.title}</PageTitle>
           <Date>{post.frontmatter.date}</Date>
           <CoverImage src={post.frontmatter.coverImage} alt="cover" />
         </Header>
-        <Body
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
-      </Content>
-      <StyledNav className="blog-post-nav">
+        <Markdown>{post.rawMarkdownBody}</Markdown>
+      </Article>
+      <StyledNav>
         <ul
           style={{
             display: `flex`,
@@ -109,8 +106,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 160)
-      html
+      rawMarkdownBody
       frontmatter {
         coverImage
         title
