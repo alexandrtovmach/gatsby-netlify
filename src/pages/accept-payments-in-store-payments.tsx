@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Main from '../containers/Layout';
 import inStorePaymentsContent from '../../content/pages/accept-payments-in-store-payments.yml';
-import { H1, H2, P, StrongP } from '@/components/Typography';
+import { H1, H2, P, Strong } from '@/components/Typography';
 import page7Vp1 from '../assets/img/page7Vp1.svg';
 import FirstViewport from '../components/FirstViewport';
 import Banner from '@/components/Banner';
@@ -68,7 +68,7 @@ const ThirdViewport = styled(Section)`
   background-size: cover;
 `;
 
-const GreenP = styled(StrongP)`
+const GreenP = styled(Strong)`
   margin: 1rem 0;
 `;
 interface InStorePaymentsContent {

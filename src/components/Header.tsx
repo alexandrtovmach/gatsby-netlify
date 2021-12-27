@@ -183,7 +183,7 @@ const Header: React.FunctionComponent = () => {
           <StyledLink to="/open-banking-data-apis">{link2}</StyledLink>
           <StyledLink to="/">{link3}</StyledLink>
           <StyledLink to="/">{link4}</StyledLink>
-          <StyledLink to="/">{link5}</StyledLink>
+          <StyledLink to="/posts">{link5}</StyledLink>
           <StyledLink to="/">{link6}</StyledLink>
           <div>
             <LogInButton>Login</LogInButton>
@@ -201,7 +201,7 @@ const Header: React.FunctionComponent = () => {
             <StyledLink to="/open-banking-data-apis">{link2}</StyledLink>
             <StyledLink to="/">{link3}</StyledLink>
             <StyledLink to="/">{link4}</StyledLink>
-            <StyledLink to="/">{link5}</StyledLink>
+            <StyledLink to="/posts">{link5}</StyledLink>
             <StyledLink to="/">{link6}</StyledLink>
           </NavLeft>
           <NavRight>

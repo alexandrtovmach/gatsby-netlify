@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import Main from '../containers/Layout';
 import accountToAccountPaymentsContent from '../../content/pages/accept-payments-account-to-account-payment.yml';
-import { H1, H2, H3, P, StrongP, Subtitle5 } from '@/components/Typography';
+import { H1, H2, H3, P, Strong, Subtitle5 } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
 import page2viewport1 from '../assets/img/page2viewport1.svg';
 import section2Bg from '../assets/img/section2_bg.svg';
@@ -224,7 +224,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
 
       <SecondViewport resource={section2Bg}>
         <Section2LeftSide>
-          <StrongP className="accent-text">{viewport2.label}</StrongP>
+          <Strong className="accent-text">{viewport2.label}</Strong>
           <SectionTitle>{viewport2.title}</SectionTitle>
           <P>
             {viewport2.description1}&nbsp;
