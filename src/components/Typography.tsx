@@ -31,7 +31,7 @@ export const P = styled.p`
   color: #0e233e;
 `;
 
-export const StrongP = styled(P)`
+export const Strong = styled(P)`
   font-weight: bold;
 `;
 export const Subtitle1 = styled.p`

@@ -20,7 +20,7 @@ import {
   H2,
   H3,
   P,
-  StrongP,
+  Strong,
   Subtitle1,
 } from '../components/Typography';
 import Main from '../containers/Layout';
@@ -290,7 +290,7 @@ const Home: React.FunctionComponent = () => {
       </FirstViewport>
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
-          <StrongP className="accent-text">{section2.label}</StrongP>
+          <Strong className="accent-text">{section2.label}</Strong>
           <H2>{section2.title}</H2>
           <Description>{section2.description}</Description>
         </Section2LeftSide>
