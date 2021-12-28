@@ -14,10 +14,18 @@ const Wrapper = styled.div`
   padding: 4rem 6rem;
   display: flex;
   align-items: center;
+  @media (max-width: 1200px) {
+    height: auto;
+    padding: 2.5rem 2rem;
+    background-position: left;
+  }
 `;
 
 const Content = styled.div`
   width: 35%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 const Label = styled.p`
   font-size: 40px;
@@ -29,6 +37,14 @@ const Label = styled.p`
 const Description = styled(Body2)`
   color: white;
   margin-bottom: 2rem;
+`;
+
+const Buttons = styled.div`
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 `;
 interface BannerProps {
   bgSrc: string;
@@ -44,8 +60,10 @@ const Banner: React.FunctionComponent<BannerProps> = ({
     <Content>
       <Label>{label}</Label>
       <Description>{description}</Description>
-      <ButtonAppStore />
-      <ButtonGooglePlay />
+      <Buttons>
+        <ButtonAppStore />
+        <ButtonGooglePlay />
+      </Buttons>
     </Content>
   </Wrapper>
 );

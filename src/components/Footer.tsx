@@ -17,11 +17,17 @@ const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media (max-width: 1200px) {
+    padding: 2rem;
+  }
 `;
 
 const FooterSection = styled.div`
   display: flex;
   flex-direction: column;
+  @media (max-width: 1200px) {
+    margin-top: 2rem;
+  }
 `;
 
 const FooterTitle = styled.p`

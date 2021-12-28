@@ -12,6 +12,9 @@ const Wrapper = styled.div`
   padding: 3rem 2rem;
   margin-top: 3rem;
   box-shadow: 0px 0px 31px 2px rgba(34, 60, 80, 0.2);
+  @media (max-width: 1200px) {
+    flex-basis: 100%;
+  }
 `;
 const Img = styled.img`
   width: 20%;

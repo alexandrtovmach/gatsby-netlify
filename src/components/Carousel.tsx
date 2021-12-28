@@ -3,6 +3,13 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 import CarouselCard from './CarouselCard';
 
+const StyledSlider = styled(Slider)`
+  margin: 2rem 0;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+`;
 const NextArrow = styled.button`
   position: absolute;
   top: 45%;
@@ -32,10 +39,6 @@ const PrevArrow = styled(NextArrow)`
   }
 `;
 
-const StyledSlider = styled(Slider)`
-  margin: 3rem 0;
-`;
-
 interface Item {
   title: string;
   text: string;
@@ -55,10 +58,14 @@ const SamplePrevArrow = (props) => {
 };
 
 const Carousel: React.FunctionComponent<CarouselProps> = ({ items }) => {
+  let slidesCount = 4;
+  if (window.innerWidth < 1200) {
+    slidesCount = 1;
+  }
   const settings = {
     arrows: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: slidesCount,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
