@@ -25,14 +25,7 @@ import {
 } from '../components/Typography';
 import Main from '../containers/Layout';
 import FirstViewport from '@/components/FirstViewport';
-
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
+import Section from '@/components/Section';
 
 const Description = styled(P)`
   margin: 1rem 0;
@@ -50,18 +43,26 @@ const SecondSection = styled(Section)`
   background-size: cover;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const Section2LeftSide = styled.div`
-  flex: 1 0 50%;
+  flex: 1 1 50%;
 `;
 
-const SectionTitle = styled(H2)`
-  margin: 1rem 0 1rem 0;
+const Boxes = styled.div`
+  display: flex;
+  flex: 1 1 40%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  @media (max-width: 1200px) {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
 `;
-
 const Section2BoxLeft = styled.div`
-  padding: 3rem 0;
   background-color: white;
   border: 1px solid #dbe3eb;
   border-radius: 15px;
@@ -69,11 +70,10 @@ const Section2BoxLeft = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex: 0 1 50%;
-  margin-bottom: -2rem;
-  margin-left: 4rem;
-  margin-right: 2rem;
+  justify-content: space-between;
+  flex: 1 1 20%;
+  margin: 0.5rem;
+  padding: 2rem 3rem;
 `;
 
 const Section2BoxRight = styled(Section2BoxLeft)``;
@@ -81,9 +81,10 @@ const Section2BoxRight = styled(Section2BoxLeft)``;
 const ThirdSection = styled(Section)``;
 
 const CardBox = styled.div`
-  margin: 5rem 0;
+  margin: 2rem 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
 `;
 
 const ImgBox = styled.div`
@@ -92,6 +93,7 @@ const ImgBox = styled.div`
   flex-wrap: wrap;
   margin-top: 2rem;
 `;
+
 const SolutionCard = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,6 +102,10 @@ const SolutionCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 1200px) {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
 `;
 const SolutionCardLeft = styled(SolutionCard)`
   background-color: #13273f;
@@ -117,6 +123,10 @@ const SolutionCardLabel = styled.p`
   font-weight: bold;
   text-align: center;
   color: white;
+  @media (max-width: 1200px) {
+    padding: 2rem 2rem 0 2rem;
+    line-height: 30px;
+  }
 `;
 
 const SolutionCardDescription = styled.p`
@@ -126,6 +136,9 @@ const SolutionCardDescription = styled.p`
   line-height: 22px;
   text-align: center;
   color: white;
+  @media (max-width: 1200px) {
+    padding: 1rem 2rem 0 2rem;
+  }
 `;
 
 const CodeImg = styled.img`
@@ -142,12 +155,20 @@ const FourthSection = styled(Section)`
   align-items: center;
   padding-top: 0;
   padding-bottom: 0;
+  @media (max-width: 1200px) {
+    padding-top: 5rem;
+  }
 `;
+
 const Section4LeftSide = styled.div`
-  flex: 0 1 50%;
+  flex: 1 1 50%;
 `;
 const Section4Img = styled.img`
-  flex: 0 1 50%;
+  height: 100%;
+  @media (max-width: 1200px) {
+    height: auto;
+    width: 100%;
+  }
 `;
 
 const FifthSection = styled(Section)`
@@ -156,6 +177,9 @@ const FifthSection = styled(Section)`
 
 const Section5H3 = styled(H3)`
   width: 40%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 const SixthSection = styled(Section)`
@@ -169,6 +193,9 @@ const ReviewBox = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 7.5rem;
+  @media (max-width: 1200px) {
+    margin-bottom: 5rem;
+  }
 `;
 
 const LowerTextBox = styled.div`
@@ -178,11 +205,11 @@ const LowerTextBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1200px) {
+    height: auto;
+  }
 `;
 
-const LowerText = styled(P)`
-  font-size: 18px;
-`;
 interface HomePageContent {
   docTitle: string;
   section1: {
@@ -264,19 +291,21 @@ const Home: React.FunctionComponent = () => {
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
           <Strong className="accent-text">{section2.label}</Strong>
-          <SectionTitle>{section2.title}</SectionTitle>
-          <P>{section2.description}</P>
+          <H2>{section2.title}</H2>
+          <Description>{section2.description}</Description>
         </Section2LeftSide>
-        <Section2BoxLeft>
-          <Subtitle1 className="accent-text">{section2.box1Label}</Subtitle1>
-          <Body3>{section2.box1Text}</Body3>
-        </Section2BoxLeft>
-        <Section2BoxRight>
-          <Subtitle1 className="accent-text-blue">
-            {section2.box2Label}
-          </Subtitle1>
-          <Body3>{section2.box2Text}</Body3>
-        </Section2BoxRight>
+        <Boxes>
+          <Section2BoxLeft>
+            <Subtitle1 className="accent-text">{section2.box1Label}</Subtitle1>
+            <Body3>{section2.box1Text}</Body3>
+          </Section2BoxLeft>
+          <Section2BoxRight>
+            <Subtitle1 className="accent-text-blue">
+              {section2.box2Label}
+            </Subtitle1>
+            <Body3>{section2.box2Text}</Body3>
+          </Section2BoxRight>
+        </Boxes>
       </SecondSection>
       <ThirdSection>
         <H3>{section3.title}</H3>
@@ -312,11 +341,13 @@ const Home: React.FunctionComponent = () => {
       </ThirdSection>
       <FourthSection resource={section2Bg}>
         <Section4LeftSide>
-          <SectionTitle>
-            {section4.title}&nbsp;
-            <span className="accent-text">{section4.title2}</span>&nbsp;
+          <H2>
+            {section4.title}
+            {` `}
+            <span className="accent-text">{section4.title2}</span>
+            {` `}
             {section4.title3}
-          </SectionTitle>
+          </H2>
           <Description>{section4.description}</Description>
           <ButtonDefault>GET STARTED</ButtonDefault>
         </Section4LeftSide>
@@ -351,7 +382,7 @@ const Home: React.FunctionComponent = () => {
             &nbsp;
             {section6.lowerTitle3}
           </H2>
-          <LowerText>{section6.lowerText}</LowerText>
+          <Description>{section6.lowerText}</Description>
           <ButtonDefault>GET IN TOUCH</ButtonDefault>
         </LowerTextBox>
       </SixthSection>

@@ -1,13 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
+import Section from './Section';
 
 const FirstViewportWrapper = styled(Section)<{ withRightPadding: boolean }>`
   display: flex;
@@ -15,6 +8,9 @@ const FirstViewportWrapper = styled(Section)<{ withRightPadding: boolean }>`
   align-items: center;
   height: calc(100vh - 70px - 5rem * 2);
   padding-right: ${(props) => (props.withRightPadding ? `` : 0)};
+  @media (max-width: 1200px) {
+    height: auto;
+  }
 `;
 
 const LeftSideContent = styled.div`
@@ -22,6 +18,11 @@ const LeftSideContent = styled.div`
 `;
 const RightImage = styled.img`
   height: 100%;
+  @media (max-width: 1200px) {
+    height: auto;
+    width: 100%;
+    margin-top: 3rem;
+  }
 `;
 interface ViewportProps {
   img: string;

@@ -9,7 +9,7 @@ import DropdownMenu from './DropdownMenu';
 const responsiveCSS = css`
   .bm-burger-button {
     display: none;
-    @media (max-width: 1080px) {
+    @media (max-width: 1200px) {
       display: initial;
     }
   }
@@ -31,7 +31,7 @@ const Nav = styled.nav`
   align-items: center;
   height: 100%;
   width: 100%;
-  @media (max-width: 1080px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 `;
@@ -96,7 +96,7 @@ const styles = {
     position: `absolute`,
     width: `36px`,
     height: `30px`,
-    right: `5rem`,
+    right: `2rem`,
     top: `20px`,
   },
   bmBurgerBars: {
@@ -110,7 +110,7 @@ const styles = {
     width: `24px`,
   },
   bmCross: {
-    background: `#bdc3c7`,
+    background: `#010a11`,
   },
   bmMenuWrap: {
     position: `fixed`,
@@ -119,16 +119,16 @@ const styles = {
     top: 0,
   },
   bmMenu: {
-    background: `#000000`,
-    padding: `2.5em 2em 0`,
+    background: `#f4f7f9`,
+    padding: `2.5em 0 0 0`,
     zIndex: 6,
   },
   bmMorphShape: {
     fill: `#373a47`,
   },
   bmItemList: {
-    color: `#b8b7ad`,
-    padding: `0.8em`,
+    color: `#f4f7f9`,
+    padding: `1rem`,
     height: `calc(100% - 0.8em * 2)`,
     display: `flex`,
     flexDirection: `column`,
@@ -136,9 +136,9 @@ const styles = {
   bmItem: {
     display: `inline-block`,
     textDecoration: `none`,
-    color: `white`,
-    fontSize: `40px`,
-    lineHeight: `3em`,
+    color: `#13273f`,
+    fontSize: `20px`,
+    lineHeight: `2em`,
     textAlign: `left`,
   },
   bmOverlay: {
@@ -178,13 +178,13 @@ const Header: React.FunctionComponent = () => {
   return (
     <>
       <HeaderWrapper>
-        <BurgerMenu styles={styles} right width="60%">
-          <StyledLink to="/">{link1}</StyledLink>
-          <StyledLink to="/open-banking-data-apis">{link2}</StyledLink>
-          <StyledLink to="/">{link3}</StyledLink>
-          <StyledLink to="/">{link4}</StyledLink>
-          <StyledLink to="/posts">{link5}</StyledLink>
-          <StyledLink to="/">{link6}</StyledLink>
+        <BurgerMenu styles={styles} right width="80%">
+          <Link to="/">{link1}</Link>
+          <Link to="/open-banking-data-apis">{link2}</Link>
+          <Link to="/">{link3}</Link>
+          <Link to="/">{link4}</Link>
+          <Link to="/">{link5}</Link>
+          <Link to="/">{link6}</Link>
           <div>
             <LogInButton>Login</LogInButton>
             <RegisterButton>Register</RegisterButton>

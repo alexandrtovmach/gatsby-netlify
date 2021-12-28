@@ -4,9 +4,12 @@ import { P, Subtitle5 } from './Typography';
 
 const Wrapper = styled.div`
   display: flex;
-  width: 25rem;
   align-items: flex-start;
-  margin: 0 1.3rem 4rem 0;
+  margin: 0 1rem 3rem 0;
+  flex: 1 0 30%;
+  @media (max-width: 1200px) {
+    margin-bottom: 5;
+  }
 `;
 const Img = styled.img`
   margin-right: 1.5rem;

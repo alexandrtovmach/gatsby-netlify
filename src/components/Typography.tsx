@@ -9,7 +9,7 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-size: 36px;
-  line-height: 54px;
+  line-height: 45px;
   font-weight: bold;
   color: #13273f;
 `;
@@ -31,8 +31,7 @@ export const P = styled.p`
   color: #0e233e;
 `;
 
-export const Strong = styled.span`
-  font-size: 16px;
+export const Strong = styled(P)`
   font-weight: bold;
 `;
 export const Subtitle1 = styled.p`
