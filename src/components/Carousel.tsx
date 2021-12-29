@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import CarouselCard from './CarouselCard';
@@ -58,10 +58,12 @@ const SamplePrevArrow = (props) => {
 };
 
 const Carousel: React.FunctionComponent<CarouselProps> = ({ items }) => {
-  let slidesCount = 4;
-  if (window.innerWidth < 1200) {
-    slidesCount = 1;
-  }
+  const [slidesCount, onSlidesCountChange] = useState(4);
+  useEffect(() => {
+    if (window.innerWidth < 1200) {
+      onSlidesCountChange(1);
+    }
+  }, []);
   const settings = {
     arrows: true,
     speed: 500,
