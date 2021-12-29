@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Menu, MenuButton, MenuItem } from '@szhsin/react-menu';
 import { menuSelector } from '@szhsin/react-menu/style-utils';
-import '@szhsin/react-menu/dist/core.css';
 import { Link } from 'gatsby';
 // import dropdownIcon1 from '../assets/img/dropdownIcon1.svg';
 
