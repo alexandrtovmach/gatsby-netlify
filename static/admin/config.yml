@@ -21,7 +21,7 @@ collections:
             summary: '{{fields.label}}'
             fields:
               - { label: Navigation Label, name: label, widget: string }
-              - { label: Navigation URL, name: link, widget: string, required: false }
+              - { label: Navigation URL, name: link, widget: string, required: false, hint: Changing "Navigation URL" require developer effort. Need to change file name in src/pages }
               - label: Nested Links
                 name: nested
                 widget: list
@@ -29,7 +29,7 @@ collections:
                 summary: '{{fields.label}}'
                 fields:
                 - { label: Nested Navigation Label, name: label, widget: string }
-                - { label: Nested Navigation URL, name: link, widget: string }
+                - { label: Nested Navigation URL, name: link, widget: string, hint: Changing "Nested Navigation URL" require developer effort. Need to change file name in src/pages }
                 - { label: Navigation Description, name: description, widget: string, required: false }
       - label: 'Footer'
         name: 'footer'
