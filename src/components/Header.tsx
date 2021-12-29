@@ -157,32 +157,25 @@ const styles = {
   },
 };
 
+const accordionStyles = {
+  background: `transparent`,
+  color: `inherit`,
+  padding: 0,
+};
+
+interface NavigationItem {
+  label: string;
+  description?: string;
+  link?: string;
+  nested?: NavigationItem[];
+}
+
 interface LayoutHeaderContent {
-  link1: string;
-  link2: string;
-  link3: string;
-  link4: string;
-  link5: string;
-  link6: string;
-  dropdownLinks: {
-    link1: string;
-    description1: string;
-    link2: string;
-    description2: string;
-    link3: string;
-    description3: string;
-    link4: string;
-    description4: string;
-    link5: string;
-    description5: string;
-    link6: string;
-    description6: string;
-  };
+  navigation: NavigationItem[];
 }
 
 const Header: React.FunctionComponent = () => {
-  const { link1, link2, link3, link4, link5, link6, dropdownLinks } =
-    headerContent as unknown as LayoutHeaderContent;
+  const { navigation } = headerContent as unknown as LayoutHeaderContent;
   return (
     <>
       <HeaderWrapper>
@@ -190,31 +183,28 @@ const Header: React.FunctionComponent = () => {
           <img src={logo} alt="company logo" />
         </ResponsiveLink>
         <BurgerMenu styles={styles} right width="80%">
-          <Accordion allowZeroExpanded>
-            <AccordionItem>
-              <AccordionItemHeading>
-                <AccordionItemButton
-                  style={{
-                    background: `transparent`,
-                    color: `inherit`,
-                    padding: 0,
-                  }}
-                >
-                  {link1}
-                </AccordionItemButton>
-              </AccordionItemHeading>
-              <AccordionItemPanel>
-                <AccordionLinkItem to="/">{link3}</AccordionLinkItem>
-                <AccordionLinkItem to="/">{link4}</AccordionLinkItem>
-                <AccordionLinkItem to="/">{link5}</AccordionLinkItem>
-              </AccordionItemPanel>
-            </AccordionItem>
-          </Accordion>
-          <Link to="/open-banking-data-apis">{link2}</Link>
-          <Link to="/">{link3}</Link>
-          <Link to="/">{link4}</Link>
-          <Link to="/">{link5}</Link>
-          <Link to="/">{link6}</Link>
+          {navigation.map(({ label, link, nested }) =>
+            link ? (
+              <Link to={link}>{label}</Link>
+            ) : (
+              <Accordion allowZeroExpanded>
+                <AccordionItem>
+                  <AccordionItemHeading>
+                    <AccordionItemButton style={accordionStyles}>
+                      {label}
+                    </AccordionItemButton>
+                  </AccordionItemHeading>
+                  <AccordionItemPanel>
+                    {nested.map((nestedEl) => (
+                      <AccordionLinkItem to={nestedEl.link}>
+                        {nestedEl.label}
+                      </AccordionLinkItem>
+                    ))}
+                  </AccordionItemPanel>
+                </AccordionItem>
+              </Accordion>
+            ),
+          )}
           <div>
             <LoginButton white>Login</LoginButton>
             <ButtonDefault>Register</ButtonDefault>
@@ -225,14 +215,18 @@ const Header: React.FunctionComponent = () => {
             <Link to="/">
               <img src={logo} alt="company logo" />
             </Link>
-            <NavItem>
-              <DropdownMenu buttonText={link1} dropdownLinks={dropdownLinks} />
-            </NavItem>
-            <StyledLink to="/open-banking-data-apis">{link2}</StyledLink>
-            <StyledLink to="/">{link3}</StyledLink>
-            <StyledLink to="/">{link4}</StyledLink>
-            <StyledLink to="/posts">{link5}</StyledLink>
-            <StyledLink to="/">{link6}</StyledLink>
+            {navigation.map((el) =>
+              el.link ? (
+                <StyledLink to={el.link}>{el.label}</StyledLink>
+              ) : (
+                <NavItem>
+                  <DropdownMenu
+                    buttonText={el.label}
+                    dropdownLinks={el.nested}
+                  />
+                </NavItem>
+              ),
+            )}
           </NavLeft>
           <NavRight>
             <LoginButton white small>
