@@ -23,6 +23,12 @@ const HeaderWrapper = styled.header`
   position: fixed;
   width: calc(100% - 5rem * 2);
   z-index: 6;
+  @media (max-width: 1200px) {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    width: calc(100% - 2rem * 2);
+  }
 `;
 
 const Nav = styled.nav`
@@ -38,6 +44,13 @@ const Nav = styled.nav`
 
 const HeaderCompensator = styled.div`
   height: 70px;
+`;
+
+const ResponsiveLink = styled(Link)`
+  display: none;
+  @media (max-width: 1200px) {
+    display: initial;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -178,6 +191,9 @@ const Header: React.FunctionComponent = () => {
   return (
     <>
       <HeaderWrapper>
+        <ResponsiveLink to="/">
+          <img src={logo} alt="company logo" />
+        </ResponsiveLink>
         <BurgerMenu styles={styles} right width="80%">
           <Link to="/">{link1}</Link>
           <Link to="/open-banking-data-apis">{link2}</Link>
