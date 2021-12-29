@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   @media (max-width: 1200px) {
     flex-grow: 1;
     margin-bottom: 2rem;
+    min-width: 300px;
   }
 `;
 const Img = styled.div`
