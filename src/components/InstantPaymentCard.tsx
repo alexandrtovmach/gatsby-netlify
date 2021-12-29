@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   border: 1px solid #dbe3eb;
   border-radius: 10px;
   padding: 3rem 2rem;
+  @media (max-width: 1200px) {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+  }
 `;
 const Img = styled.img`
   width: 2rem;

@@ -16,14 +16,8 @@ import gradientBg from '../assets/img/gradientBg.svg';
 import pg7Vp3Img from '../assets/img/pg7Vp3Img.svg';
 import bannerBg from '../assets/img/bannerInStorePaymentsBg.png';
 import InstantPaymentCard from '@/components/InstantPaymentCard';
+import Section from '@/components/Section';
 
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
 const FirstViewportWrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
@@ -49,17 +43,29 @@ const SecondViewport = styled(Section)`
 `;
 const TextWrapper = styled.div`
   width: 50%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+`;
+const ResponsiveH2 = styled(H2)`
+  @media (max-width: 1200px) {
+    margin-bottom: 1rem;
+  }
 `;
 const PluginCardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
+  flex-wrap: wrap;
 `;
 
 const VideoImg = styled.img`
   align-self: center;
   width: 80%;
   margin-top: 5rem;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 const ThirdViewport = styled(Section)`
@@ -126,7 +132,7 @@ const InStorePayments: React.FunctionComponent = () => {
       </FirstViewportWrapper>
       <SecondViewport>
         <TextWrapper>
-          <H2>{viewport2.title}</H2>
+          <ResponsiveH2>{viewport2.title}</ResponsiveH2>
           <P>{viewport2.description}</P>
         </TextWrapper>
         <PluginCardWrapper>
@@ -136,14 +142,14 @@ const InStorePayments: React.FunctionComponent = () => {
         </PluginCardWrapper>
         <VideoImg src={videoImg} alt="video" />
       </SecondViewport>
+      <FirstViewport withRightPadding img={pg7Vp3Img}>
+        <GreenP className="accent-text">{viewport3.label}</GreenP>
+        <H1>{viewport3.title}&nbsp;</H1>
+        <BoldDescription>{viewport3.description1}</BoldDescription>
+        <Description>{viewport3.description2}</Description>
+        <Description>{viewport3.description3}</Description>
+      </FirstViewport>
       <ThirdViewport resource={gradientBg}>
-        <FirstViewport withRightPadding img={pg7Vp3Img}>
-          <GreenP className="accent-text">{viewport3.label}</GreenP>
-          <H1>{viewport3.title}&nbsp;</H1>
-          <BoldDescription>{viewport3.description1}</BoldDescription>
-          <Description>{viewport3.description2}</Description>
-          <Description>{viewport3.description3}</Description>
-        </FirstViewport>
         <Banner
           bgSrc={bannerBg}
           label={viewport4.bannerLabel}

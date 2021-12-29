@@ -16,6 +16,9 @@ const PostsWrapper = styled.ol`
   gap: 2rem;
   justify-content: center;
   padding: 5rem 0;
+  @media (max-width: 1200px) {
+    padding: 5rem 1rem;
+  }
 `;
 
 const StyledLi = styled.li`
@@ -24,6 +27,9 @@ const StyledLi = styled.li`
   background-color: #ffff;
   width: 30%;
   padding: 1rem 2rem 0 2rem;
+  @media (max-width: 1200px) {
+    flex-grow: 1;
+  }
 `;
 
 const CoverImage = styled.img`
@@ -104,7 +110,9 @@ const BlogIndex: React.FunctionComponent<BlogIndexProps> = ({ data }) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <CoverImage src={post.frontmatter.coverImage} alt="cover" />
+                  {post.frontmatter.coverImage && (
+                    <CoverImage src={post.frontmatter.coverImage} alt="cover" />
+                  )}
                   <p>
                     <Title to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>

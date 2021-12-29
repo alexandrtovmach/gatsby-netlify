@@ -13,14 +13,8 @@ import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerQrCodePageBg.png';
 import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import Section from '@/components/Section';
 
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
 const FirstViewportWrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
@@ -41,6 +35,10 @@ const SecondViewport = styled(Section)`
 const CardWrapper = styled.div`
   display: flex;
   margin-top: 2rem;
+  flex-wrap: nowrap;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const ThirdViewport = styled(Section)``;
