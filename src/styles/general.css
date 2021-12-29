@@ -9,14 +9,14 @@
   line-height: inherit;
 }
 .accent-text-blue {
-  color: #38b6ff;
+  color: #38b6ff !important;
 }
 
 .accent-text-black {
-  color: #000000;
+  color: #000000 !important;
 }
 
 .accent-text-black-bold {
-  color: #000000;
+  color: #000000 !important;
   font-weight: 600;
 }
