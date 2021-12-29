@@ -32,10 +32,12 @@
   },
   "dependencies": {
     "@szhsin/react-menu": "2.3.0",
+    "babel-plugin-styled-components": "2.0.2",
     "gatsby": "4.3.0",
     "gatsby-plugin-google-fonts": "1.0.1",
     "gatsby-plugin-netlify-cms": "6.4.0",
     "gatsby-plugin-sharp": "4.4.0",
+    "gatsby-plugin-styled-components": "5.4.0",
     "gatsby-remark-images": "6.4.0",
     "gatsby-source-filesystem": "4.4.0",
     "gatsby-transformer-remark": "5.4.0",
