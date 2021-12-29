@@ -1,20 +1,32 @@
-link1: Accept payments
-link2: Open Banking Data APIs
-link3: Pricing
-link4: Company
-link5: Blog
-link6: Contact
-dropdownLinks:
-  link1: Account-To-Account Payment APIs
-  description1: Customer payments settled faster
-  link2: eCommerce and Online Payments
-  description2: Customer payments settled faster
-  link3: Payment Links
-  description3: Create & send links to collect money
-  link4: Invoice Payments
-  description4: Create & send compliant invoices
-  link5: QR Code Payments
-  description5: Customers can just scan and pay
-  link6: In-store Payments
-  description6: Get paid in-store or in-person
+navigation:
+  - label: Accept payments
+    nested:
+      - label: Account-To-Account Payment APIs
+        description: Customer payments settled faster
+        link: '/accept-payments-account-to-account-payment'
+      - label: eCommerce and Online Payments
+        description: Customer payments settled faster
+        link: '/accept-payments-ecommerce-and-online-payments'
+      - label: Payment Links
+        description: Create & send links to collect money
+        link: '/accept-payments-payment-links'
+      - label: Invoice Payments
+        description: Create & send compliant invoices
+        link: '/accept-payments-invoice-payments'
+      - label: QR Code Payments
+        description: Customers can just scan and pay
+        link: '/accept-payments-qr-code-payments'
+      - label: In-store Payments
+        description: Get paid in-store or in-person
+        link: '/accept-payments-in-store-payments'
+  - label: Open Banking Data APIs
+    link: '/'
+  - label: Pricing
+    link: '/'
+  - label: Company
+    link: '/'
+  - label: Blog
+    link: '/posts'
+  - label: Contact
+    link: '/'
 

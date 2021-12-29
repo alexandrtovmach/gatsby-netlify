@@ -14,28 +14,23 @@ collections:
         file: 'content/components/header.yml'
         widget: object
         fields:
-          - { label: link1, name: link1, widget: string }
-          - { label: link2, name: link2, widget: string }
-          - { label: link3, name: link3, widget: string }
-          - { label: link4, name: link4, widget: string }
-          - { label: link5, name: link5, widget: string }
-          - { label: link6, name: link6, widget: string }
-          - label: DropdownLinks
-            name: dropdownLinks
-            widget: object
+          - label: Navigation
+            name: navigation
+            widget: list
+            hint: If add "Navigation URL", than link will be rendered as a single link. If add some items (at least one) to "Nested Links", it'll be rendered as dropdown menu with items.
+            summary: '{{fields.label}}'
             fields:
-              - { label: link1, name: link1, widget: string }
-              - { label: description1, name: description1, widget: string }
-              - { label: link2, name: link2, widget: string }
-              - { label: description2, name: description2, widget: string }
-              - { label: link3, name: link3, widget: string }
-              - { label: description3, name: description3, widget: string }
-              - { label: link4, name: link4, widget: string }
-              - { label: description4, name: description4, widget: string }
-              - { label: link5, name: link5, widget: string }
-              - { label: description5, name: description5, widget: string }
-              - { label: link6, name: link6, widget: string }
-              - { label: description6, name: description6, widget: string }
+              - { label: Navigation Label, name: label, widget: string }
+              - { label: Navigation URL, name: link, widget: string, required: false, hint: Changing "Navigation URL" require developer effort. Need to change file name in src/pages }
+              - label: Nested Links
+                name: nested
+                widget: list
+                required: false
+                summary: '{{fields.label}}'
+                fields:
+                - { label: Nested Navigation Label, name: label, widget: string }
+                - { label: Nested Navigation URL, name: link, widget: string, hint: Changing "Nested Navigation URL" require developer effort. Need to change file name in src/pages }
+                - { label: Navigation Description, name: description, widget: string, required: false }
       - label: 'Footer'
         name: 'footer'
         file: 'content/components/footer.yml'

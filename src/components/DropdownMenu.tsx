@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Menu, MenuButton, MenuItem } from '@szhsin/react-menu';
 import { menuSelector } from '@szhsin/react-menu/style-utils';
 import { Link } from 'gatsby';
-// import dropdownIcon1 from '../assets/img/dropdownIcon1.svg';
 
 const DropdownLink = styled(Link)`
   text-decoration: none;
@@ -13,19 +12,10 @@ const StyledMenu = styled(Menu)`
   ${menuSelector.name} {
     box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    padding: 50px;
-    width: 30rem;
+    padding: 1rem;
+    min-width: 20rem;
   }
 `;
-// const Icon = styled.div`
-//   width: 5rem;
-//   height: 5rem;
-//   border-radius: 50%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: black;
-// `;
 
 const LinkTitle = styled.p`
   font-size: 13px;
@@ -57,19 +47,10 @@ const StyledMenuItem = styled(MenuItem)``;
 interface DropdownProps {
   buttonText: string;
   dropdownLinks: {
-    link1: string;
-    description1: string;
-    link2: string;
-    description2: string;
-    link3: string;
-    description3: string;
-    link4: string;
-    description4: string;
-    link5: string;
-    description5: string;
-    link6: string;
-    description6: string;
-  };
+    label: string;
+    description?: string;
+    link?: string;
+  }[];
 }
 
 const DropdownMenu: React.FunctionComponent<DropdownProps> = ({
@@ -81,45 +62,14 @@ const DropdownMenu: React.FunctionComponent<DropdownProps> = ({
       transition
       menuButton={<StyledMenuButton>{buttonText}</StyledMenuButton>}
     >
-      <StyledMenuItem>
-        <DropdownLink to="/accept-payments-account-to-account-payment">
-          {/* <Icon>
-          <img src={dropdownIcon1} alt="icon" />
-        </Icon> */}
-          <LinkTitle>{dropdownLinks.link1}</LinkTitle>
-          <LinkDescription>{dropdownLinks.description1}</LinkDescription>
-        </DropdownLink>
-      </StyledMenuItem>
-      <StyledMenuItem>
-        <DropdownLink to="/accept-payments-ecommerce-and-online-payments">
-          <LinkTitle>{dropdownLinks.link2}</LinkTitle>
-          <LinkDescription>{dropdownLinks.description2}</LinkDescription>
-        </DropdownLink>
-      </StyledMenuItem>
-      <StyledMenuItem>
-        <DropdownLink to="/accept-payments-payment-links">
-          <LinkTitle>{dropdownLinks.link3}</LinkTitle>
-          <LinkDescription>{dropdownLinks.description3}</LinkDescription>
-        </DropdownLink>
-      </StyledMenuItem>
-      <StyledMenuItem>
-        <DropdownLink to="/accept-payments-invoice-payments">
-          <LinkTitle>{dropdownLinks.link4}</LinkTitle>
-          <LinkDescription>{dropdownLinks.description4}</LinkDescription>
-        </DropdownLink>
-      </StyledMenuItem>
-      <StyledMenuItem>
-        <DropdownLink to="/accept-payments-qr-code-payments">
-          <LinkTitle>{dropdownLinks.link5}</LinkTitle>
-          <LinkDescription>{dropdownLinks.description5}</LinkDescription>
-        </DropdownLink>
-      </StyledMenuItem>
-      <StyledMenuItem>
-        <DropdownLink to="/accept-payments-in-store-payments">
-          <LinkTitle> {dropdownLinks.link6} </LinkTitle>
-          <LinkDescription>{dropdownLinks.description6}</LinkDescription>
-        </DropdownLink>
-      </StyledMenuItem>
+      {dropdownLinks.map(({ label, description, link }) => (
+        <StyledMenuItem>
+          <DropdownLink to={link}>
+            <LinkTitle>{label}</LinkTitle>
+            {description && <LinkDescription>{description}</LinkDescription>}
+          </DropdownLink>
+        </StyledMenuItem>
+      ))}
     </StyledMenu>
   </div>
 );
