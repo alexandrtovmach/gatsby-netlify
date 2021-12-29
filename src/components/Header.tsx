@@ -73,7 +73,7 @@ const StyledLink = styled(Link)`
   line-height: 30px;
   text-align: center;
   transition: 200ms;
-  margin-left: 3rem;
+  margin-left: 2rem;
   color: black;
   a:visited {
     color: inherit;
@@ -84,7 +84,7 @@ const StyledLink = styled(Link)`
 `;
 
 const NavItem = styled.div`
-  margin-left: 3rem;
+  margin-left: 2rem;
 `;
 
 const NavLeft = styled.div`
