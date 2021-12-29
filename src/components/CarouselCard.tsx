@@ -18,7 +18,7 @@ const Wrapper = styled.div`
     box-shadow: 0px 4px 30px rgba(194, 206, 219, 0.6);
   }
   @media (max-width: 1200px) {
-    flex-basis: 100%;
+    flex-grow: 1;
     margin-bottom: 2rem;
   }
 `;

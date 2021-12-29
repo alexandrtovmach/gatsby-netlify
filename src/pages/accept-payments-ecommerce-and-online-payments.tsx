@@ -51,7 +51,7 @@ const ThirdViewport = styled(Section)`
 const BenefitCardsLeft = styled.div`
   flex-basis: 35%;
   @media (max-width: 1200px) {
-    flex-basis: 100%;
+    flex-grow: 1;
   }
 `;
 const BenefitCardsRight = styled(BenefitCardsLeft)``;

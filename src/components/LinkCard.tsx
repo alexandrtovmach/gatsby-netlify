@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   border-radius: 10px;
   border: 1px solid #dbe3eb;
   @media (max-width: 1200px) {
-    flex-basis: 100%;
+    flex-grow: 1;
     margin-bottom: 2rem;
   }
 `;
