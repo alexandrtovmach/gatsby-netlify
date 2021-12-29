@@ -98,6 +98,7 @@ const AccordionLinkItem = styled(Link)`
   text-decoration: none;
   color: inherit;
   display: block;
+  margin-bottom: 1rem;
 `;
 
 const styles = {
@@ -157,10 +158,14 @@ const styles = {
   },
 };
 
-const accordionStyles = {
+const accordionButtonStyles = {
   background: `transparent`,
   color: `inherit`,
   padding: 0,
+};
+
+const accordionPanelStyles = {
+  padding: `0 20px`,
 };
 
 interface NavigationItem {
@@ -182,7 +187,7 @@ const Header: React.FunctionComponent = () => {
         <ResponsiveLink to="/">
           <img src={logo} alt="company logo" />
         </ResponsiveLink>
-        <BurgerMenu styles={styles} right width="80%">
+        <BurgerMenu styles={styles} right width="90%">
           {navigation.map(({ label, link, nested }) =>
             link ? (
               <Link to={link}>{label}</Link>
@@ -190,11 +195,11 @@ const Header: React.FunctionComponent = () => {
               <Accordion allowZeroExpanded>
                 <AccordionItem>
                   <AccordionItemHeading>
-                    <AccordionItemButton style={accordionStyles}>
+                    <AccordionItemButton style={accordionButtonStyles}>
                       {label}
                     </AccordionItemButton>
                   </AccordionItemHeading>
-                  <AccordionItemPanel>
+                  <AccordionItemPanel style={accordionPanelStyles}>
                     {nested.map((nestedEl) => (
                       <AccordionLinkItem to={nestedEl.link}>
                         {nestedEl.label}
