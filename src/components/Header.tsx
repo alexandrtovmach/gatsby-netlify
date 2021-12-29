@@ -190,9 +190,11 @@ const Header: React.FunctionComponent = () => {
         <BurgerMenu styles={styles} right width="90%">
           {navigation.map(({ label, link, nested }) =>
             link ? (
-              <Link to={link}>{label}</Link>
+              <Link key={label} to={link}>
+                {label}
+              </Link>
             ) : (
-              <Accordion allowZeroExpanded>
+              <Accordion key={label} allowZeroExpanded>
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton style={accordionButtonStyles}>
@@ -201,7 +203,10 @@ const Header: React.FunctionComponent = () => {
                   </AccordionItemHeading>
                   <AccordionItemPanel style={accordionPanelStyles}>
                     {nested.map((nestedEl) => (
-                      <AccordionLinkItem to={nestedEl.link}>
+                      <AccordionLinkItem
+                        key={nestedEl.label}
+                        to={nestedEl.link}
+                      >
                         {nestedEl.label}
                       </AccordionLinkItem>
                     ))}
@@ -222,9 +227,11 @@ const Header: React.FunctionComponent = () => {
             </Link>
             {navigation.map((el) =>
               el.link ? (
-                <StyledLink to={el.link}>{el.label}</StyledLink>
+                <StyledLink key={el.label} to={el.link}>
+                  {el.label}
+                </StyledLink>
               ) : (
-                <NavItem>
+                <NavItem key={el.label}>
                   <DropdownMenu
                     buttonText={el.label}
                     dropdownLinks={el.nested}

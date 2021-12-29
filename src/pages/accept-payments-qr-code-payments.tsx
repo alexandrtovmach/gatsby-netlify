@@ -13,14 +13,8 @@ import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerQrCodePageBg.png';
 import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import Section from '@/components/Section';
 
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
 const FirstViewportWrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
@@ -41,6 +35,10 @@ const SecondViewport = styled(Section)`
 const CardWrapper = styled.div`
   display: flex;
   margin-top: 2rem;
+  flex-wrap: nowrap;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const ThirdViewport = styled(Section)``;
@@ -122,6 +120,7 @@ const QrCodePayments: React.FunctionComponent = () => {
         <CardWrapper>
           {viewport2.viewport2Cards.map((item) => (
             <CarouselCard
+              key={item.title}
               title={item.title}
               text={item.text}
               cardImgSrc={item.image}
@@ -133,7 +132,12 @@ const QrCodePayments: React.FunctionComponent = () => {
         <H3>{viewport2.title}</H3>
         <CardWrapperVp3>
           {viewport3.viewport3Cards.map(({ title, text, image }) => (
-            <SolutionComponent title={title} text={text} cardImgSrc={image} />
+            <SolutionComponent
+              key={title}
+              title={title}
+              text={text}
+              cardImgSrc={image}
+            />
           ))}
         </CardWrapperVp3>
       </ThirdViewport>
@@ -142,7 +146,11 @@ const QrCodePayments: React.FunctionComponent = () => {
         <P>{viewport4.description}</P>
         <StepCardWrapper>
           {viewport4.stepCards.map((item) => (
-            <StepCard label={item.label} description={item.description} />
+            <StepCard
+              key={item.label}
+              label={item.label}
+              description={item.description}
+            />
           ))}
         </StepCardWrapper>
       </FourthViewport>

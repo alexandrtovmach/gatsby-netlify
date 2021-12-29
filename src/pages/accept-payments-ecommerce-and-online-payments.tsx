@@ -16,14 +16,7 @@ import Carousel from '../components/Carousel';
 import Banner from '@/components/Banner';
 import bannerBg from '../assets/img/bannerEcommercePageBg.png';
 import BottomMessage from '@/components/BottomMessage';
-
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
+import Section from '@/components/Section';
 
 const Description = styled(P)`
   margin: 1rem 0;
@@ -41,27 +34,50 @@ const SecondViewport = styled(Section)`
   background-size: cover;
   display: flex;
   padding-bottom: 0;
+  @media (max-width: 1200px) {
+    padding-bottom: 5rem;
+  }
 `;
-
+const Img = styled.img`
+  @media (max-width: 1200px) {
+    display: none;
+  }
+`;
 const ThirdViewport = styled(Section)`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
   background-size: cover;
 `;
-const BenefitCardsLeft = styled.div``;
+const BenefitCardsLeft = styled.div`
+  flex-basis: 35%;
+  @media (max-width: 1200px) {
+    flex-grow: 1;
+  }
+`;
 const BenefitCardsRight = styled(BenefitCardsLeft)``;
 const PluginCardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 5rem;
+  flex-wrap: wrap;
 `;
 
 const TextWrapper = styled.div`
-  width: 50%;
+  width: 60%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
-
+const Vp3H2 = styled(H2)`
+  @media (max-width: 1200px) {
+    margin-bottom: 1rem;
+  }
+`;
 const FourthViewport = styled(Section)`
   background-color: #ffff;
+  @media (max-width: 1200px) {
+    padding-bottom: 1rem;
+  }
 `;
 const FifthViewport = styled(Section)`
   padding-top: 0;
@@ -137,16 +153,18 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <BenefitCardsLeft>
           {benefitCards.slice(0, 2).map((item) => (
             <BenefitCard
+              key={item.title}
               title={item.title}
               description={item.description}
               icon={tickIconSrc}
             />
           ))}
         </BenefitCardsLeft>
-        <img src={bankingAppImg} alt="banking app" />
+        <Img src={bankingAppImg} alt="banking app" />
         <BenefitCardsRight>
           {benefitCards.slice(2).map((item) => (
             <BenefitCard
+              key={item.title}
               title={item.title}
               description={item.description}
               icon={tickIconSrc}
@@ -156,16 +174,20 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
       </SecondViewport>
       <ThirdViewport resource={page3Vp3Bg}>
         <TextWrapper>
-          <H2>
+          <Vp3H2>
             <span className="accent-text">{viewport3.title1}</span>
-            &nbsp;
+            {` `}
             {viewport3.title2}
-          </H2>
+          </Vp3H2>
           <P>{viewport3.description}</P>
         </TextWrapper>
         <PluginCardWrapper>
           {pluginCards.map((item) => (
-            <PluginCard title={item.title} imageSrc={item.image} />
+            <PluginCard
+              key={item.title}
+              title={item.title}
+              imageSrc={item.image}
+            />
           ))}
         </PluginCardWrapper>
       </ThirdViewport>

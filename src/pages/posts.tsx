@@ -10,20 +10,25 @@ const PageTitle = styled(H3)`
   font-size: 30px;
 `;
 
-const PostsWrapper = styled.ol`
+const PostsWrapper = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  list-style: none;
   justify-content: center;
-  padding: 5rem 0;
+  padding: 5rem 2rem;
 `;
 
 const StyledLi = styled.li`
   box-shadow: 0px 0px 6px rgba(19, 39, 63, 0.2);
   border-radius: 5px;
   background-color: #ffff;
-  width: 30%;
+  flex: 0 0 30%;
+  min-width: calc(300px - 1rem * 2);
+  margin: 0.5rem;
   padding: 1rem 2rem 0 2rem;
+  @media (max-width: 1200px) {
+    flex-grow: 1;
+  }
 `;
 
 const CoverImage = styled.img`
@@ -92,7 +97,7 @@ const BlogIndex: React.FunctionComponent<BlogIndexProps> = ({ data }) => {
       <PageTitle>
         Open Banking and beyond <span className="accent-text">by Fena</span>
       </PageTitle>
-      <PostsWrapper style={{ listStyle: `none` }}>
+      <PostsWrapper>
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
 
@@ -104,7 +109,9 @@ const BlogIndex: React.FunctionComponent<BlogIndexProps> = ({ data }) => {
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <CoverImage src={post.frontmatter.coverImage} alt="cover" />
+                  {post.frontmatter.coverImage && (
+                    <CoverImage src={post.frontmatter.coverImage} alt="cover" />
+                  )}
                   <p>
                     <Title to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>

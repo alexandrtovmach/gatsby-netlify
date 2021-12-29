@@ -20,7 +20,7 @@ navigation:
         description: Get paid in-store or in-person
         link: '/accept-payments-in-store-payments'
   - label: Open Banking Data APIs
-    link: '/'
+    link: '/open-banking-data-apis'
   - label: Pricing
     link: '/'
   - label: Company

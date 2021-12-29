@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Main from '../containers/Layout';
 import openBankingDataApisContent from '../../content/pages/open-banking-data-apis.yml';
-import { Body2, H1, H2, H3, P } from '@/components/Typography';
+import { P, H1, H2, H3 } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
 import page8Vp1 from '../assets/img/pg8Vp1Img.svg';
 import FirstViewport from '../components/FirstViewport';
@@ -13,14 +13,8 @@ import bannerBg from '../assets/img/bannerPaymentApisPageBg.png';
 import pg8Vp3Bg from '../assets/img/pg8Vp3Bg.svg';
 import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
 import OpenBankingCard from '@/components/OpenBankingCard';
+import Section from '@/components/Section';
 
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
 const FirstViewportWrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
@@ -48,17 +42,29 @@ const CardWrapper = styled.div`
   display: flex;
   margin-top: 2rem;
   margin-bottom: 5rem;
+  flex-wrap: nowrap;
+  @media (max-width: 1200px) {
+    width: 100%;
+    flex-wrap: wrap;
+  }
 `;
 const OpenBankingCardWrapper = styled(CardWrapper)`
   margin-bottom: 0;
+  flex-wrap: wrap;
 `;
-const GreenP = styled(Body2)`
+const GreenP = styled(P)`
   font-weight: bold;
   color: #2cd19e;
+  @media (max-width: 1200px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const TitleWrapper = styled.div`
   width: 50%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 const ThirdViewport = styled(Section)`

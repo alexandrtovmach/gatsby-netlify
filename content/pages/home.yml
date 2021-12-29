@@ -105,7 +105,7 @@ section6:
       }
     - {
         name: Mark Harper,
-        position: 'Manager, Deloitte,',
+        position: 'Manager, Deloitte',
         text: 'Great experience! This banking app work well with my phone. It feels like I am speaking directly to the bank via Fena app and get immediate answers, just as if they were talking to me in person.',
         image: /images/reviewer3Avatar.svg,
       }

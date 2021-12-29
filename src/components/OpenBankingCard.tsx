@@ -9,10 +9,18 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   background-color: #ffffff;
   border-radius: 10px;
+  min-width: 300px;
+  @media (max-width: 1200px) {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+  }
 `;
 const Img = styled.img`
   width: 15%;
   margin-bottom: 2rem;
+  @media (max-width: 1200px) {
+    width: 30%;
+  }
 `;
 const Info = styled.div``;
 const Title = styled(Subtitle5)`

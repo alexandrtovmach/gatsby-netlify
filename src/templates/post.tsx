@@ -9,7 +9,7 @@ const Article = styled.article`
   padding: 5rem calc((100vw - 700px) / 2);
 
   @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
+    padding: 2rem;
   }
 `;
 

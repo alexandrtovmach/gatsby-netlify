@@ -5,12 +5,17 @@ import { P, Subtitle5 } from './Typography';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   flex-basis: 30%;
   flex-grow: 1;
   justify-content: flex-start;
   border-radius: 10px;
   padding-top: 2rem;
   height: 100%;
+  min-width: 300px;
+  @media (max-width: 1200px) {
+    flex-grow: 1;
+  }
 `;
 
 const TopSection = styled.div`

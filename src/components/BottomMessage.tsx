@@ -10,12 +10,22 @@ const LowerTextBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: 1200px) {
+    height: auto;
+  }
+`;
+const TitleH2 = styled(H2)`
+  text-align: center;
 `;
 const LowerText = styled(P)`
   font-size: 18px;
   width: 60%;
   text-align: center;
   margin-bottom: 1rem;
+  @media (max-width: 1200px) {
+    margin: 2rem 0;
+    width: 100%;
+  }
 `;
 
 interface ComponentProps {
@@ -29,11 +39,11 @@ const BottomMessage: React.FunctionComponent<ComponentProps> = ({
   text,
 }) => (
   <LowerTextBox>
-    <H2>
+    <TitleH2>
       {title1}&nbsp;
       <span className="accent-text">{title2}</span>
       &nbsp;
-    </H2>
+    </TitleH2>
     <LowerText>{text}</LowerText>
     <ButtonDefault>GET IN TOUCH</ButtonDefault>
   </LowerTextBox>

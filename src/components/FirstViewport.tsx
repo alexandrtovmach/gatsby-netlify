@@ -21,7 +21,7 @@ const RightImage = styled.img`
   @media (max-width: 1200px) {
     height: auto;
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 `;
 interface ViewportProps {

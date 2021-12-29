@@ -6,6 +6,11 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 30%;
+  min-width: 300px;
+  @media (max-width: 1200px) {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+  }
 `;
 const ImgWrapper = styled.div`
   background-color: #ffffff;

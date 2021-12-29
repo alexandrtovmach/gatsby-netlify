@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Body3 } from './Typography';
+import { SecondaryP } from './Typography';
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   border: 1px solid #dbe3eb;
   border-radius: 10px;
   padding: 3rem 2rem;
+  @media (max-width: 1200px) {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+  }
 `;
 const Img = styled.img`
   width: 2rem;
@@ -28,7 +32,7 @@ const InstantPaymentCard: React.FunctionComponent<SolutionComponentProps> = ({
     <div>
       <Img src={imageSrc} alt="card logo" />
     </div>
-    <Body3>{text}</Body3>
+    <SecondaryP>{text}</SecondaryP>
   </Wrapper>
 );
 
