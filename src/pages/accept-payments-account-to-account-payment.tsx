@@ -90,13 +90,12 @@ const ButtonLink = styled(Link)`
 
 const ButtonContainer = styled.div`
   margin-top: 2rem;
+`;
+const Btn = styled.div`
   @media (max-width: 1200px) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    margin-bottom: 1rem;
   }
 `;
-
 const ThirdViewport = styled(Section)`
   background-color: #ffff;
 `;
@@ -240,7 +239,9 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           </P>
           <ButtonContainer>
             <ButtonLink to="/">
-              <ButtonDefault>GET STARTED</ButtonDefault>
+              <Btn>
+                <ButtonDefault>GET STARTED</ButtonDefault>
+              </Btn>
             </ButtonLink>
             <ButtonLink to="/">
               <ButtonDefault white>
