@@ -13,6 +13,7 @@ import logo from '../assets/img/logo.svg';
 import headerContent from '../../content/components/header.yml';
 import DropdownMenu from './DropdownMenu';
 import ButtonDefault from './ButtonDefault';
+import { SecondaryP } from './Typography';
 
 const responsiveCSS = css`
   .bm-burger-button {
@@ -165,7 +166,7 @@ const accordionButtonStyles = {
 };
 
 const accordionPanelStyles = {
-  padding: `0 20px`,
+  padding: `0.5rem 2rem`,
 };
 
 interface NavigationItem {
@@ -207,7 +208,7 @@ const Header: React.FunctionComponent = () => {
                         key={nestedEl.label}
                         to={nestedEl.link}
                       >
-                        {nestedEl.label}
+                        <SecondaryP>{nestedEl.label}</SecondaryP>
                       </AccordionLinkItem>
                     ))}
                   </AccordionItemPanel>
