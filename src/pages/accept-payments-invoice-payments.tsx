@@ -13,14 +13,8 @@ import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerInvoicePaymentPageBg.png';
 import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import Section from '@/components/Section';
 
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
 const FirstViewportWrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
@@ -52,6 +46,7 @@ const CardBox = styled.div`
 const ThirdViewport = styled(Section)``;
 const CardWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-top: 2rem;
 `;
 
@@ -72,6 +67,10 @@ const OfferCard = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5rem;
+  @media (max-width: 1200px) {
+    flex: 0 0 100%;
+    padding: 1rem;
+  }
 `;
 const OfferCardLeft = styled(OfferCard)`
   background: linear-gradient(#2cd19e, #00f3a8);

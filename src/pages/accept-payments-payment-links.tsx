@@ -12,14 +12,8 @@ import Carousel from '@/components/Carousel';
 import bannerBg from '../assets/img/bannerPaymentLinksPageBg.png';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
+import Section from '@/components/Section';
 
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
 const FirstViewportWrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
@@ -43,14 +37,21 @@ const SecondViewport = styled(Section)`
 `;
 const TitleWrapper = styled.div`
   width: 70%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 const LinkCardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 5rem;
 `;
 const ThirdViewport = styled(Section)`
   background-color: #ffff;
+  @media (max-width: 1200px) {
+    padding-bottom: 1rem;
+  }
 `;
 const FourthViewport = styled(Section)`
   background-color: #ffff;
@@ -97,7 +98,8 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
       <FirstViewportWrapper resource={page4Vp1Bg}>
         <FirstViewport withRightPadding img={viewport1Img}>
           <H1>
-            {viewport1.title1}&nbsp;
+            {viewport1.title1}
+            {` `}
             <span className="accent-text">{viewport1.title2}</span>
           </H1>
           <BoldDescription>{viewport1.description1}</BoldDescription>

@@ -10,6 +10,10 @@ const Wrapper = styled.div`
   background-color: #ffffff;
   border-radius: 10px;
   border: 1px solid #dbe3eb;
+  @media (max-width: 1200px) {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
 `;
 const Img = styled.div`
   width: 100%;

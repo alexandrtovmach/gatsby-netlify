@@ -2,7 +2,7 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 
-import { P, H1, H2, H3, Strong, Body2 } from '../components/Typography';
+import { P, H1, H2, H3, Strong } from '../components/Typography';
 
 const MarkdownH1 = (props) => <H1 {...props} />;
 const MarkdownH2 = (props) => <H2 {...props} />;
@@ -18,7 +18,7 @@ const MarkdownLink = (props) => (
 const MarkdownListItem = (props) => (
   <li {...props}>
     {/* eslint-disable-next-line react/destructuring-assignment */}
-    <Body2>{props.children}</Body2>
+    <P>{props.children}</P>
   </li>
 );
 

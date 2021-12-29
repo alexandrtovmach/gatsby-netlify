@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Body3, Body4, Body5 } from './Typography';
+import { SecondaryP, Strong } from './Typography';
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,13 +26,10 @@ const Top = styled.div`
   margin-bottom: 1rem;
 `;
 const Info = styled.div``;
-const Name = styled(Body5)`
+const Name = styled(Strong)`
   margin-bottom: 0.3rem;
 `;
-const Position = styled(Body4)`
-  color: gray;
-`;
-const Review = styled(Body3)`
+const Review = styled(SecondaryP)`
   line-height: 25px;
   font-weight: 500;
 `;
@@ -53,7 +50,7 @@ const ReviewCard: React.FunctionComponent<ReviewCardProps> = ({
       <Img src={avatar} alt="card logo" />
       <Info>
         <Name>{revierName}</Name>
-        <Position>{position}</Position>
+        <SecondaryP>{position}</SecondaryP>
       </Info>
     </Top>
     <Review>{text}</Review>

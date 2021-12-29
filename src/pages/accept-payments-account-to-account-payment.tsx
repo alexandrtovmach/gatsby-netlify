@@ -90,6 +90,8 @@ const ButtonLink = styled(Link)`
 
 const ButtonContainer = styled.div`
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 `;
 const Btn = styled.div`
   @media (max-width: 1200px) {
@@ -126,23 +128,35 @@ const FifthViewport = styled(Section)`
 
 const SixthViewport = styled(Section)`
   background-color: #ffff;
+  @media (max-width: 1200px) {
+    padding-bottom: 0;
+  }
 `;
 
 const Viewport6H3 = styled(H3)`
   width: 40%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 const BenefitCardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 5rem;
+  @media (max-width: 1200px) {
+    margin-top: 2rem;
+  }
 `;
 
 const SeventhViewport = styled(Section)`
   background-color: white;
   padding-top: 0;
+  @media (max-width: 1200px) {
+    background-color: inherit;
+    margin-top: 5rem;
+  }
 `;
 
 interface AcceptPaymentsAccountToAccountPageContent {

@@ -4,7 +4,8 @@
 @import 'node_modules/slick-carousel/slick/slick-theme.css';
 
 .accent-text {
-  color: #2cd19e;
+  color: #2cd19e !important;
+  line-height: inherit;
 }
 .accent-text-blue {
   color: #38b6ff;

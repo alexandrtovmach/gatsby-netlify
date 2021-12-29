@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Main from '../containers/Layout';
 import openBankingDataApisContent from '../../content/pages/open-banking-data-apis.yml';
-import { Body2, H1, H2, H3, P } from '@/components/Typography';
+import { P, H1, H2, H3 } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
 import page8Vp1 from '../assets/img/pg8Vp1Img.svg';
 import FirstViewport from '../components/FirstViewport';
@@ -52,7 +52,7 @@ const CardWrapper = styled.div`
 const OpenBankingCardWrapper = styled(CardWrapper)`
   margin-bottom: 0;
 `;
-const GreenP = styled(Body2)`
+const GreenP = styled(P)`
   font-weight: bold;
   color: #2cd19e;
 `;

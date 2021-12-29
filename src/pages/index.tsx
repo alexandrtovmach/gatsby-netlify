@@ -15,7 +15,7 @@ import section6Bg from '../assets/img/section6_bg.svg';
 import Carousel from '../components/Carousel';
 import SolutionComponent from '../components/SolutionCard';
 import {
-  Body3,
+  SecondaryP,
   H1,
   H2,
   H3,
@@ -297,13 +297,13 @@ const Home: React.FunctionComponent = () => {
         <Boxes>
           <Section2BoxLeft>
             <Subtitle1 className="accent-text">{section2.box1Label}</Subtitle1>
-            <Body3>{section2.box1Text}</Body3>
+            <SecondaryP>{section2.box1Text}</SecondaryP>
           </Section2BoxLeft>
           <Section2BoxRight>
             <Subtitle1 className="accent-text-blue">
               {section2.box2Label}
             </Subtitle1>
-            <Body3>{section2.box2Text}</Body3>
+            <SecondaryP>{section2.box2Text}</SecondaryP>
           </Section2BoxRight>
         </Boxes>
       </SecondSection>
