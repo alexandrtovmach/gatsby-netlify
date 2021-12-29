@@ -13,14 +13,8 @@ import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerInvoicePaymentPageBg.png';
 import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import Section from '@/components/Section';
 
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
 const FirstViewportWrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
   background-repeat: no-repeat;
@@ -52,7 +46,11 @@ const CardBox = styled.div`
 const ThirdViewport = styled(Section)``;
 const CardWrapper = styled.div`
   display: flex;
+  flex-wrap: nowrap;
   margin-top: 2rem;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const FourthViewport = styled(Section)`
@@ -65,16 +63,22 @@ const OfferCardsBox = styled.div`
   margin-top: 2rem;
 `;
 const OfferCard = styled.div`
-  background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 20px;
   flex-basis: 30%;
   display: flex;
   flex-direction: column;
   padding: 5rem;
+  min-width: 200px;
+  @media (max-width: 1200px) {
+    flex-grow: 1;
+    padding: 2rem 1rem;
+  }
 `;
 const OfferCardLeft = styled(OfferCard)`
   background: linear-gradient(#2cd19e, #00f3a8);
+  @media (max-width: 1200px) {
+    margin-bottom: 2rem;
+  }
 `;
 const OfferCardRight = styled(OfferCard)`
   background: linear-gradient(#e4e6f0, #8181a5);
@@ -93,10 +97,14 @@ const OfferCardDescription = styled.p`
   line-height: 22px;
   color: white;
   margin-bottom: 2rem;
+  flex-grow: 1;
 `;
 
 const BtnBox = styled.div`
   width: 60%;
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
 `;
 const StyledA = styled.a`
   text-decoration: none;
@@ -104,6 +112,9 @@ const StyledA = styled.a`
 `;
 const FifthViewport = styled(Section)`
   background-color: #ffff;
+  @media (max-width: 1200px) {
+    padding-bottom: 1rem;
+  }
 `;
 const SixthViewport = styled(Section)`
   background-color: #ffff;
@@ -179,7 +190,12 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
         <H3>{viewport2.title}</H3>
         <CardBox>
           {viewport2.viewport2Cards.map(({ title, text, image }) => (
-            <SolutionComponent title={title} text={text} cardImgSrc={image} />
+            <SolutionComponent
+              key={title}
+              title={title}
+              text={text}
+              cardImgSrc={image}
+            />
           ))}
         </CardBox>
       </SecondViewport>
@@ -188,6 +204,7 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
         <CardWrapper>
           {viewport3.viewport3Cards.map((item) => (
             <CarouselCard
+              key={item.title}
               title={item.title}
               text={item.text}
               cardImgSrc={item.image}

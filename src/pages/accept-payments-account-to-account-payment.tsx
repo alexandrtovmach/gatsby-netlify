@@ -17,14 +17,7 @@ import bannerBg from '../assets/img/bannerAccountToaccountPageBg.png';
 import tickIconSrc from '../assets/img/tickIcon.svg';
 import FirstViewport from '../components/FirstViewport';
 import BottomMessage from '@/components/BottomMessage';
-
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
+import Section from '@/components/Section';
 
 const Description = styled(P)`
   margin: 1rem 0;
@@ -49,7 +42,7 @@ const SecondViewport = styled(Section)`
 `;
 
 const Section2LeftSide = styled.div`
-  flex: 1 0 50%;
+  flex: 1 0 30%;
 `;
 
 const SectionTitle = styled(H2)`
@@ -70,7 +63,7 @@ const StyledLi = styled.li`
   }
 `;
 
-const Section2BoxLeft = styled.div`
+const Section2BoxRight = styled.div`
   padding: 3rem 0;
   background-color: white;
   border: 1px solid #dbe3eb;
@@ -83,6 +76,12 @@ const Section2BoxLeft = styled.div`
   flex: 0 1 50%;
   margin-bottom: -2rem;
   margin-left: 4rem;
+  @media (max-width: 1200px) {
+    flex: 1 1 50%;
+    margin-left: 0;
+    padding-left: 2rem;
+    margin-top: 2rem;
+  }
 `;
 
 const ButtonLink = styled(Link)`
@@ -91,8 +90,14 @@ const ButtonLink = styled(Link)`
 
 const ButtonContainer = styled.div`
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 `;
-
+const Btn = styled.div`
+  @media (max-width: 1200px) {
+    margin-bottom: 1rem;
+  }
+`;
 const ThirdViewport = styled(Section)`
   background-color: #ffff;
 `;
@@ -100,17 +105,17 @@ const ThirdViewport = styled(Section)`
 const CardWrapper = styled.div`
   display: flex;
   margin-top: 2rem;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 const FourthViewport = styled(ThirdViewport)`
   padding-top: 0;
 `;
 
-const Vport4Description = styled.p`
-  font-size: 20px;
-  line-height: 28px;
-  color: #13273f;
-`;
+const Vport4Description = styled(P)``;
 
 const StepCardWrapper = styled(CardWrapper)`
   width: 100%;
@@ -123,23 +128,35 @@ const FifthViewport = styled(Section)`
 
 const SixthViewport = styled(Section)`
   background-color: #ffff;
+  @media (max-width: 1200px) {
+    padding-bottom: 0;
+  }
 `;
 
 const Viewport6H3 = styled(H3)`
   width: 40%;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
 `;
 
 const BenefitCardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 4rem;
+  margin-top: 5rem;
+  @media (max-width: 1200px) {
+    margin-top: 2rem;
+  }
 `;
 
 const SeventhViewport = styled(Section)`
   background-color: white;
   padding-top: 0;
+  @media (max-width: 1200px) {
+    background-color: inherit;
+    margin-top: 5rem;
+  }
 `;
 
 interface AcceptPaymentsAccountToAccountPageContent {
@@ -236,7 +253,9 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           </P>
           <ButtonContainer>
             <ButtonLink to="/">
-              <ButtonDefault>GET STARTED</ButtonDefault>
+              <Btn>
+                <ButtonDefault>GET STARTED</ButtonDefault>
+              </Btn>
             </ButtonLink>
             <ButtonLink to="/">
               <ButtonDefault white>
@@ -246,7 +265,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             </ButtonLink>
           </ButtonContainer>
         </Section2LeftSide>
-        <Section2BoxLeft>
+        <Section2BoxRight>
           <Subtitle5>{viewport2.box1Title}</Subtitle5>
           <StyledUl>
             <StyledLi>{viewport2.boxListItem1}</StyledLi>
@@ -254,13 +273,14 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             <StyledLi>{viewport2.boxListItem3}</StyledLi>
             <StyledLi>{viewport2.boxListItem4}</StyledLi>
           </StyledUl>
-        </Section2BoxLeft>
+        </Section2BoxRight>
       </SecondViewport>
       <ThirdViewport>
         <H3>{viewport3.title}</H3>
         <CardWrapper>
           {viewport3.viewport3Cards.map((item) => (
             <CarouselCard
+              key={item.title}
               title={item.title}
               text={item.text}
               cardImgSrc={item.image}
@@ -274,6 +294,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <StepCardWrapper>
           {viewport4.stepCards.map((item) => (
             <StepCard
+              key={item.label}
               label={item.label}
               title={item.title}
               description={item.description}
@@ -287,6 +308,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <BenefitCardWrapper>
           {viewport5.benefitCards.map((item) => (
             <BenefitCard
+              key={item.title}
               title={item.title}
               description={item.description}
               icon={tickIconSrc}

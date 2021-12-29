@@ -76,6 +76,7 @@ const Carousel: React.FunctionComponent<CarouselProps> = ({ items }) => {
     <StyledSlider {...settings}>
       {items.map((item) => (
         <CarouselCard
+          key={item.title}
           title={item.title}
           text={item.text}
           cardImgSrc={item.image}

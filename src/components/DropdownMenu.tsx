@@ -63,7 +63,7 @@ const DropdownMenu: React.FunctionComponent<DropdownProps> = ({
       menuButton={<StyledMenuButton>{buttonText}</StyledMenuButton>}
     >
       {dropdownLinks.map(({ label, description, link }) => (
-        <StyledMenuItem>
+        <StyledMenuItem key={label}>
           <DropdownLink to={link}>
             <LinkTitle>{label}</LinkTitle>
             {description && <LinkDescription>{description}</LinkDescription>}

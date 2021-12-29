@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ButtonAppStore from './ButtonAppStore';
 import ButtonGooglePlay from './ButtonGooglePlay';
-import { Body2 } from './Typography';
+import { P } from './Typography';
 
 const Wrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
@@ -34,7 +34,7 @@ const Label = styled.p`
   line-height: 42px;
   margin-bottom: 2rem;
 `;
-const Description = styled(Body2)`
+const Description = styled(P)`
   color: white;
   margin-bottom: 2rem;
 `;
