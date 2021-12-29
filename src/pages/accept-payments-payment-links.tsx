@@ -117,6 +117,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <LinkCardWrapper>
           {viewport2.linkCards.map((item) => (
             <LinkCard
+              key={item.title}
               title={item.title}
               text={item.text}
               imageSrc={item.image}

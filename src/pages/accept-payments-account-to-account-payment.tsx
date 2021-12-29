@@ -280,6 +280,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <CardWrapper>
           {viewport3.viewport3Cards.map((item) => (
             <CarouselCard
+              key={item.title}
               title={item.title}
               text={item.text}
               cardImgSrc={item.image}
@@ -293,6 +294,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <StepCardWrapper>
           {viewport4.stepCards.map((item) => (
             <StepCard
+              key={item.label}
               label={item.label}
               title={item.title}
               description={item.description}
@@ -306,6 +308,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <BenefitCardWrapper>
           {viewport5.benefitCards.map((item) => (
             <BenefitCard
+              key={item.title}
               title={item.title}
               description={item.description}
               icon={tickIconSrc}

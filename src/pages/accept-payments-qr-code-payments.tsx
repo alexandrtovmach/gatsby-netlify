@@ -120,6 +120,7 @@ const QrCodePayments: React.FunctionComponent = () => {
         <CardWrapper>
           {viewport2.viewport2Cards.map((item) => (
             <CarouselCard
+              key={item.title}
               title={item.title}
               text={item.text}
               cardImgSrc={item.image}
@@ -131,7 +132,12 @@ const QrCodePayments: React.FunctionComponent = () => {
         <H3>{viewport2.title}</H3>
         <CardWrapperVp3>
           {viewport3.viewport3Cards.map(({ title, text, image }) => (
-            <SolutionComponent title={title} text={text} cardImgSrc={image} />
+            <SolutionComponent
+              key={title}
+              title={title}
+              text={text}
+              cardImgSrc={image}
+            />
           ))}
         </CardWrapperVp3>
       </ThirdViewport>
@@ -140,7 +146,11 @@ const QrCodePayments: React.FunctionComponent = () => {
         <P>{viewport4.description}</P>
         <StepCardWrapper>
           {viewport4.stepCards.map((item) => (
-            <StepCard label={item.label} description={item.description} />
+            <StepCard
+              key={item.label}
+              label={item.label}
+              description={item.description}
+            />
           ))}
         </StepCardWrapper>
       </FourthViewport>

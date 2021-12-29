@@ -311,7 +311,12 @@ const Home: React.FunctionComponent = () => {
         <H3>{section3.title}</H3>
         <CardBox>
           {section3.cards.map(({ title, text, image }) => (
-            <SolutionComponent title={title} text={text} cardImgSrc={image} />
+            <SolutionComponent
+              key={title}
+              title={title}
+              text={text}
+              cardImgSrc={image}
+            />
           ))}
         </CardBox>
         <H3>{section3.title2}</H3>
@@ -363,6 +368,7 @@ const Home: React.FunctionComponent = () => {
         <ReviewBox>
           {section6.reviews.map(({ name, position, text, image }) => (
             <ReviewCard
+              key={name}
               revierName={name}
               position={position}
               text={text}

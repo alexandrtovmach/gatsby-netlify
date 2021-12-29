@@ -137,7 +137,11 @@ const InStorePayments: React.FunctionComponent = () => {
         </TextWrapper>
         <PluginCardWrapper>
           {viewport2.instantPaymentCards.map((item) => (
-            <InstantPaymentCard text={item.text} imageSrc={tickIcon} />
+            <InstantPaymentCard
+              key={item.text}
+              text={item.text}
+              imageSrc={tickIcon}
+            />
           ))}
         </PluginCardWrapper>
         <VideoImg src={videoImg} alt="video" />

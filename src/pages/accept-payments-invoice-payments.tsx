@@ -190,7 +190,12 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
         <H3>{viewport2.title}</H3>
         <CardBox>
           {viewport2.viewport2Cards.map(({ title, text, image }) => (
-            <SolutionComponent title={title} text={text} cardImgSrc={image} />
+            <SolutionComponent
+              key={title}
+              title={title}
+              text={text}
+              cardImgSrc={image}
+            />
           ))}
         </CardBox>
       </SecondViewport>
@@ -199,6 +204,7 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
         <CardWrapper>
           {viewport3.viewport3Cards.map((item) => (
             <CarouselCard
+              key={item.title}
               title={item.title}
               text={item.text}
               cardImgSrc={item.image}

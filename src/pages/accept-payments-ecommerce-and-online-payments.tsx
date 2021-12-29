@@ -153,6 +153,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <BenefitCardsLeft>
           {benefitCards.slice(0, 2).map((item) => (
             <BenefitCard
+              key={item.title}
               title={item.title}
               description={item.description}
               icon={tickIconSrc}
@@ -163,6 +164,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         <BenefitCardsRight>
           {benefitCards.slice(2).map((item) => (
             <BenefitCard
+              key={item.title}
               title={item.title}
               description={item.description}
               icon={tickIconSrc}
@@ -181,7 +183,11 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         </TextWrapper>
         <PluginCardWrapper>
           {pluginCards.map((item) => (
-            <PluginCard title={item.title} imageSrc={item.image} />
+            <PluginCard
+              key={item.title}
+              title={item.title}
+              imageSrc={item.image}
+            />
           ))}
         </PluginCardWrapper>
       </ThirdViewport>
