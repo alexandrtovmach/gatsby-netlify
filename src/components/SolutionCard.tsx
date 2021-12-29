@@ -6,9 +6,9 @@ const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
   margin: 0 1rem 3rem 0;
-  flex: 1 0 30%;
+  flex: 0 0 30%;
   @media (max-width: 1200px) {
-    margin-bottom: 5;
+    flex-grow: 1;
   }
 `;
 const Img = styled.img`

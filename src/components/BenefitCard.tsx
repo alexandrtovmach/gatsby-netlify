@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   border-radius: 10px;
   padding: 2rem 0;
-  max-width: 300px;
+  min-width: 300px;
   @media (max-width: 1200px) {
     flex-grow: 1;
   }
