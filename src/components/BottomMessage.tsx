@@ -11,7 +11,6 @@ const LowerTextBox = styled.div`
   align-items: center;
   justify-content: space-around;
   @media (max-width: 1200px) {
-    margin-top: 5rem;
     height: auto;
   }
 `;
