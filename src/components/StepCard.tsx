@@ -11,6 +11,10 @@ const Wrapper = styled.div`
   border-radius: 10px;
   padding-top: 2rem;
   height: 100%;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    flex-basis: 100%;
+  }
 `;
 
 const TopSection = styled.div`

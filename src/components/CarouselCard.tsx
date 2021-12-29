@@ -17,6 +17,10 @@ const Wrapper = styled.div`
   &:hover {
     box-shadow: 0px 4px 30px rgba(194, 206, 219, 0.6);
   }
+  @media (max-width: 1200px) {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
 `;
 const Img = styled.img`
   width: 30%;

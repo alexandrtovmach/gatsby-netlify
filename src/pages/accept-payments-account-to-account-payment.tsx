@@ -17,14 +17,7 @@ import bannerBg from '../assets/img/bannerAccountToaccountPageBg.png';
 import tickIconSrc from '../assets/img/tickIcon.svg';
 import FirstViewport from '../components/FirstViewport';
 import BottomMessage from '@/components/BottomMessage';
-
-const Section = styled.section`
-  padding: 5rem calc((100vw - 1400px) / 2);
-
-  @media (max-width: 1440px) {
-    padding: 5rem calc((100vw - 900px) / 2);
-  }
-`;
+import Section from '@/components/Section';
 
 const Description = styled(P)`
   margin: 1rem 0;
@@ -49,7 +42,7 @@ const SecondViewport = styled(Section)`
 `;
 
 const Section2LeftSide = styled.div`
-  flex: 1 0 50%;
+  flex: 1 0 30%;
 `;
 
 const SectionTitle = styled(H2)`
@@ -70,7 +63,7 @@ const StyledLi = styled.li`
   }
 `;
 
-const Section2BoxLeft = styled.div`
+const Section2BoxRight = styled.div`
   padding: 3rem 0;
   background-color: white;
   border: 1px solid #dbe3eb;
@@ -83,6 +76,12 @@ const Section2BoxLeft = styled.div`
   flex: 0 1 50%;
   margin-bottom: -2rem;
   margin-left: 4rem;
+  @media (max-width: 1200px) {
+    flex: 1 1 50%;
+    margin-left: 0;
+    padding-left: 2rem;
+    margin-top: 2rem;
+  }
 `;
 
 const ButtonLink = styled(Link)`
@@ -91,6 +90,11 @@ const ButtonLink = styled(Link)`
 
 const ButtonContainer = styled.div`
   margin-top: 2rem;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 `;
 
 const ThirdViewport = styled(Section)`
@@ -100,17 +104,17 @@ const ThirdViewport = styled(Section)`
 const CardWrapper = styled.div`
   display: flex;
   margin-top: 2rem;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 `;
 
 const FourthViewport = styled(ThirdViewport)`
   padding-top: 0;
 `;
 
-const Vport4Description = styled.p`
-  font-size: 20px;
-  line-height: 28px;
-  color: #13273f;
-`;
+const Vport4Description = styled(P)``;
 
 const StepCardWrapper = styled(CardWrapper)`
   width: 100%;
@@ -246,7 +250,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             </ButtonLink>
           </ButtonContainer>
         </Section2LeftSide>
-        <Section2BoxLeft>
+        <Section2BoxRight>
           <Subtitle5>{viewport2.box1Title}</Subtitle5>
           <StyledUl>
             <StyledLi>{viewport2.boxListItem1}</StyledLi>
@@ -254,7 +258,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             <StyledLi>{viewport2.boxListItem3}</StyledLi>
             <StyledLi>{viewport2.boxListItem4}</StyledLi>
           </StyledUl>
-        </Section2BoxLeft>
+        </Section2BoxRight>
       </SecondViewport>
       <ThirdViewport>
         <H3>{viewport3.title}</H3>
