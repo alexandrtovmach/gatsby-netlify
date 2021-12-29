@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Menu, MenuButton, MenuItem } from '@szhsin/react-menu';
 import { menuSelector } from '@szhsin/react-menu/style-utils';
 import { Link } from 'gatsby';
-// import dropdownIcon1 from '../assets/img/dropdownIcon1.svg';
 
 const DropdownLink = styled(Link)`
   text-decoration: none;
@@ -13,19 +12,10 @@ const StyledMenu = styled(Menu)`
   ${menuSelector.name} {
     box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
-    padding: 50px;
-    width: 30rem;
+    padding: 1rem;
+    min-width: 20rem;
   }
 `;
-// const Icon = styled.div`
-//   width: 5rem;
-//   height: 5rem;
-//   border-radius: 50%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: black;
-// `;
 
 const LinkTitle = styled.p`
   font-size: 13px;
@@ -83,9 +73,6 @@ const DropdownMenu: React.FunctionComponent<DropdownProps> = ({
     >
       <StyledMenuItem>
         <DropdownLink to="/accept-payments-account-to-account-payment">
-          {/* <Icon>
-          <img src={dropdownIcon1} alt="icon" />
-        </Icon> */}
           <LinkTitle>{dropdownLinks.link1}</LinkTitle>
           <LinkDescription>{dropdownLinks.description1}</LinkDescription>
         </DropdownLink>

@@ -2,9 +2,17 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { slide as BurgerMenu } from 'react-burger-menu';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
 import logo from '../assets/img/logo.svg';
 import headerContent from '../../content/components/header.yml';
 import DropdownMenu from './DropdownMenu';
+import ButtonDefault from './ButtonDefault';
 
 const responsiveCSS = css`
   .bm-burger-button {
@@ -29,6 +37,10 @@ const HeaderWrapper = styled.header`
     padding: 0 2rem;
     width: calc(100% - 2rem * 2);
   }
+`;
+
+const LoginButton = styled(ButtonDefault)`
+  margin-right: 1rem;
 `;
 
 const Nav = styled.nav`
@@ -82,28 +94,12 @@ const NavLeft = styled.div`
 `;
 const NavRight = styled.div``;
 
-const LogInButton = styled.button`
-  background-color: rgb(255, 255, 255);
-  border: 1px solid #dbe3eb;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  font-size: 14px;
-  transition: 200ms;
-  cursor: pointer;
-  &:hover {
-    background-color: rgb(243, 243, 243);
-    filter: drop-shadow(0px 7px 20px rgba(108, 108, 138, 0.6));
-  }
+const AccordionLinkItem = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+  display: block;
 `;
 
-const RegisterButton = styled(LogInButton)`
-  background-color: rgb(19, 39, 63);
-  margin-left: 1rem;
-  color: white;
-  &:hover {
-    background-color: rgb(25, 56, 93);
-  }
-`;
 const styles = {
   bmBurgerButton: {
     position: `absolute`,
@@ -128,12 +124,11 @@ const styles = {
   bmMenuWrap: {
     position: `fixed`,
     height: `100%`,
-
     top: 0,
   },
   bmMenu: {
     background: `#f4f7f9`,
-    padding: `2.5em 0 0 0`,
+    padding: `1rem`,
     zIndex: 6,
   },
   bmMorphShape: {
@@ -141,7 +136,7 @@ const styles = {
   },
   bmItemList: {
     color: `#f4f7f9`,
-    padding: `1rem`,
+    padding: `0 1rem`,
     height: `calc(100% - 0.8em * 2)`,
     display: `flex`,
     flexDirection: `column`,
@@ -195,15 +190,34 @@ const Header: React.FunctionComponent = () => {
           <img src={logo} alt="company logo" />
         </ResponsiveLink>
         <BurgerMenu styles={styles} right width="80%">
-          <Link to="/">{link1}</Link>
+          <Accordion allowZeroExpanded>
+            <AccordionItem>
+              <AccordionItemHeading>
+                <AccordionItemButton
+                  style={{
+                    background: `transparent`,
+                    color: `inherit`,
+                    padding: 0,
+                  }}
+                >
+                  {link1}
+                </AccordionItemButton>
+              </AccordionItemHeading>
+              <AccordionItemPanel>
+                <AccordionLinkItem to="/">{link3}</AccordionLinkItem>
+                <AccordionLinkItem to="/">{link4}</AccordionLinkItem>
+                <AccordionLinkItem to="/">{link5}</AccordionLinkItem>
+              </AccordionItemPanel>
+            </AccordionItem>
+          </Accordion>
           <Link to="/open-banking-data-apis">{link2}</Link>
           <Link to="/">{link3}</Link>
           <Link to="/">{link4}</Link>
           <Link to="/">{link5}</Link>
           <Link to="/">{link6}</Link>
           <div>
-            <LogInButton>Login</LogInButton>
-            <RegisterButton>Register</RegisterButton>
+            <LoginButton white>Login</LoginButton>
+            <ButtonDefault>Register</ButtonDefault>
           </div>
         </BurgerMenu>
         <Nav>
@@ -221,8 +235,10 @@ const Header: React.FunctionComponent = () => {
             <StyledLink to="/">{link6}</StyledLink>
           </NavLeft>
           <NavRight>
-            <LogInButton>Login</LogInButton>
-            <RegisterButton>Register</RegisterButton>
+            <LoginButton white small>
+              Login
+            </LoginButton>
+            <ButtonDefault small>Register</ButtonDefault>
           </NavRight>
         </Nav>
       </HeaderWrapper>

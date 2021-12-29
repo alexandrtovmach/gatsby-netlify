@@ -2,6 +2,7 @@
 @import 'node_modules/@szhsin/react-menu/dist/transitions/slide.css';
 @import 'node_modules/slick-carousel/slick/slick.css';
 @import 'node_modules/slick-carousel/slick/slick-theme.css';
+@import 'node_modules/react-accessible-accordion/dist/fancy-example.css';
 
 .accent-text {
   color: #2cd19e;
