@@ -1,0 +1,8 @@
+viewport1:
+  title1: How can
+  title2: we help?
+  description: Got a question? Here’s where to find what you need.
+  helpCentreCards:
+    - { image: /images/purpleInvoice.svg, label: Open Banking }
+    - { image: /images/greenBag.svg, label: Merchants }
+    - { image: /images/crowd.svg, label: Consumers }
