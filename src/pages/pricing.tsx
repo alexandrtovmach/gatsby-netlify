@@ -83,6 +83,7 @@ const OpenBankingDataApis: React.FunctionComponent = () => {
         <PricingCards>
           {pricingCards.map((item) => (
             <PricingCard
+              key={item.label}
               label={item.label}
               title1={item.title1}
               title2={item.title2}
