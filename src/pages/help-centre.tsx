@@ -144,7 +144,7 @@ interface HelpCentrePageContent {
     lowerText2: string;
   };
 }
-const OpenBankingDataApis: React.FunctionComponent = () => {
+const HelpCenter: React.FunctionComponent = () => {
   const { viewport1, faq1, faq2, faq3, lowerText } =
     helpCentrePageContent as unknown as HelpCentrePageContent;
   return (
@@ -247,4 +247,4 @@ const OpenBankingDataApis: React.FunctionComponent = () => {
   );
 };
 
-export default OpenBankingDataApis;
+export default HelpCenter;
