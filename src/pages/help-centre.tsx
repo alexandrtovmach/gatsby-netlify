@@ -1,165 +1,248 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemState,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion';
 import Main from '../containers/Layout';
-import openBankingDataApisContent from '../../content/pages/open-banking-data-apis.yml';
-import { P, H1, H2, H3 } from '@/components/Typography';
-import ButtonDefault from '@/components/ButtonDefault';
-import page8Vp1 from '../assets/img/pg8Vp1Img.svg';
-import FirstViewport from '../components/FirstViewport';
-import CarouselCard from '@/components/CarouselCard';
-import Banner from '@/components/Banner';
-import BottomMessage from '@/components/BottomMessage';
-import bannerBg from '../assets/img/bannerPaymentApisPageBg.png';
-import pg8Vp3Bg from '../assets/img/pg8Vp3Bg.svg';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
-import OpenBankingCard from '@/components/OpenBankingCard';
+import helpCentrePageContent from '../../content/pages/help-centre.yml';
+import { P, H1, Subtitle5, Strong, H2 } from '@/components/Typography';
 import Section from '@/components/Section';
+import HelpCentreCard from '@/components/HelpCentreCard';
+import ButtonDefault from '@/components/ButtonDefault';
 
-const FirstViewportWrapper = styled.div`
-  background-image: ${(props) => `url(${props.resource})`};
-  background-repeat: no-repeat;
-  background-size: cover;
+const PageWrapper = styled.section`
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(244, 247, 249, 1) 100%
+  );
 `;
 
+const FirstViewport = styled(Section)`
+  text-align: center;
+`;
 const Description = styled(P)`
+  margin-top: 1rem;
+`;
+const Cards = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+`;
+const SecondViewport = styled(Section)`
+  @media (max-width: 1200px) {
+    padding-top: 0;
+  }
+`;
+const Vp2Title = styled(Subtitle5)`
+  text-align: center;
+  padding-top: 3rem;
+  &:first-of-type {
+    padding-top: 0;
+  }
+`;
+const StyledAccordion = styled(Accordion)`
+  border: none;
+  padding: 2rem 5rem;
+  @media (max-width: 1200px) {
+    padding: 1rem;
+  }
+`;
+const StyledAccordionItem = styled(AccordionItem)`
+  border-bottom: 1px solid #d9d9d9;
+  padding: 1rem 0;
+`;
+
+const StyledAccordionItemButton = styled(AccordionItemButton)`
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+`;
+const Plus = styled.p`
+  font-size: 30px;
+  font-weight: 600;
+  color: #13273f;
+`;
+const Cross = styled.p`
+  color: #2cd19e;
+  font-size: 30px;
+  font-weight: 600;
+`;
+const StyledAccordionItemPanel = styled(AccordionItemPanel)`
+  padding: 1rem 0;
+`;
+const ThirdViewport = styled(Section)`
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  @media (max-width: 1200px) {
+    height: auto;
+  }
+`;
+const LowerDescription = styled(P)`
   margin: 1rem 0;
+  width: 60%;
+  text-align: center;
   &:last-of-type {
     margin-bottom: 2em;
   }
   &:first-of-type {
     margin-top: 2em;
   }
-`;
-const BoldDescription = styled(Description)`
-  font-size: 17px;
-  font-weight: 600;
-`;
-const SecondViewport = styled(Section)`
-  background-color: #ffff;
-`;
-
-const CardWrapper = styled.div`
-  display: flex;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-  flex-wrap: nowrap;
-  @media (max-width: 1200px) {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-`;
-const OpenBankingCardWrapper = styled(CardWrapper)`
-  margin-bottom: 0;
-  flex-wrap: wrap;
-`;
-const GreenP = styled(P)`
-  font-weight: bold;
-  color: #2cd19e;
-  @media (max-width: 1200px) {
-    margin-bottom: 1rem;
-  }
-`;
-
-const TitleWrapper = styled.div`
-  width: 50%;
   @media (max-width: 1200px) {
     width: 100%;
   }
 `;
 
-const ThirdViewport = styled(Section)`
-  background-color: #ffff;
-  background-image: ${(props) => `url(${props.resource})`};
-  background-repeat: no-repeat;
-  background-size: cover;
-`;
-interface OpenBankingDataApisContent {
+interface HelpCentrePageContent {
   viewport1: {
     title1: string;
     title2: string;
-    description1: string;
-    description2: string;
-  };
-  viewport2: {
-    label: string;
-    title: string;
-    viewport2Cards: {
-      title: string;
-      text: string;
+    description: string;
+    helpCentreCards: {
       image: string;
+      label: string;
     }[];
   };
-  viewport3: {
+
+  faq1: {
     title: string;
-    viewport3Cards: {
-      title: string;
-      text: string;
-      image: string;
+    faq1Items: {
+      question: string;
+      answer: string;
     }[];
   };
-  viewport4: {
-    bannerLabel: string;
-    bannerDescription: string;
+  faq2: {
+    title: string;
+    faq2Items: {
+      question: string;
+      answer: string;
+    }[];
+  };
+  faq3: {
+    title: string;
+    faq3Items: {
+      question: string;
+      answer: string;
+    }[];
+  };
+  lowerText: {
     lowerTitle1: string;
     lowerTitle2: string;
-    lowerText: string;
+    lowerText1: string;
+    lowerText2: string;
   };
 }
 const OpenBankingDataApis: React.FunctionComponent = () => {
-  const { viewport1, viewport2, viewport3, viewport4 } =
-    openBankingDataApisContent as unknown as OpenBankingDataApisContent;
+  const { viewport1, faq1, faq2, faq3, lowerText } =
+    helpCentrePageContent as unknown as HelpCentrePageContent;
   return (
     <Main>
-      <FirstViewportWrapper resource={page4Vp1Bg}>
-        <FirstViewport withRightPadding img={page8Vp1}>
+      <PageWrapper>
+        <FirstViewport>
           <H1>
-            {viewport1.title1}&nbsp;
+            {viewport1.title1}
+            {` `}
             <span className="accent-text">{viewport1.title2}</span>
           </H1>
-          <BoldDescription>{viewport1.description1}</BoldDescription>
-          <Description>{viewport1.description2}</Description>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+          <Description>{viewport1.description}</Description>
+          <Cards>
+            {viewport1.helpCentreCards.map((item) => (
+              <HelpCentreCard
+                key={item.label}
+                imageSrc={item.image}
+                label={item.label}
+              />
+            ))}
+          </Cards>
         </FirstViewport>
-      </FirstViewportWrapper>
-      <SecondViewport>
-        <TitleWrapper>
-          <GreenP>{viewport2.label}</GreenP>
-          <H2>{viewport2.title}</H2>
-        </TitleWrapper>
-        <OpenBankingCardWrapper>
-          {viewport2.viewport2Cards.map((item) => (
-            <OpenBankingCard
-              title={item.title}
-              text={item.text}
-              cardImgSrc={item.image}
-            />
-          ))}
-        </OpenBankingCardWrapper>
-      </SecondViewport>
-      <ThirdViewport resource={pg8Vp3Bg}>
-        <TitleWrapper>
-          <H3>{viewport3.title}</H3>
-        </TitleWrapper>
-        <CardWrapper>
-          {viewport3.viewport3Cards.map((item) => (
-            <CarouselCard
-              title={item.title}
-              text={item.text}
-              cardImgSrc={item.image}
-            />
-          ))}
-        </CardWrapper>
-        <Banner
-          bgSrc={bannerBg}
-          label={viewport4.bannerLabel}
-          description={viewport4.bannerDescription}
-        />
-        <BottomMessage
-          title1={viewport4.lowerTitle1}
-          title2={viewport4.lowerTitle2}
-          text={viewport4.lowerText}
-        />
-      </ThirdViewport>
+        <SecondViewport>
+          <Vp2Title>{faq1.title}</Vp2Title>
+          <StyledAccordion allowZeroExpanded>
+            {faq1.faq1Items.map((item) => (
+              <StyledAccordionItem key={faq1.title}>
+                <AccordionItemHeading>
+                  <StyledAccordionItemButton>
+                    <Strong>{item.question}</Strong>
+                    <AccordionItemState>
+                      {({ expanded }) =>
+                        expanded ? <Cross>&#215;</Cross> : <Plus>&#43;</Plus>
+                      }
+                    </AccordionItemState>
+                  </StyledAccordionItemButton>
+                </AccordionItemHeading>
+                <StyledAccordionItemPanel>
+                  <P>{item.answer}</P>
+                </StyledAccordionItemPanel>
+              </StyledAccordionItem>
+            ))}
+          </StyledAccordion>
+          <Vp2Title>{faq2.title}</Vp2Title>
+          <StyledAccordion allowZeroExpanded>
+            {faq2.faq2Items.map((item) => (
+              <StyledAccordionItem key={faq2.title}>
+                <AccordionItemHeading>
+                  <StyledAccordionItemButton>
+                    <Strong>{item.question}</Strong>
+                    <AccordionItemState>
+                      {({ expanded }) =>
+                        expanded ? <Cross>&#215;</Cross> : <Plus>&#43;</Plus>
+                      }
+                    </AccordionItemState>
+                  </StyledAccordionItemButton>
+                </AccordionItemHeading>
+                <StyledAccordionItemPanel>
+                  <P>{item.answer}</P>
+                </StyledAccordionItemPanel>
+              </StyledAccordionItem>
+            ))}
+          </StyledAccordion>
+          <Vp2Title>{faq3.title}</Vp2Title>
+          <StyledAccordion allowZeroExpanded>
+            {faq3.faq3Items.map((item) => (
+              <StyledAccordionItem key={faq3.title}>
+                <AccordionItemHeading>
+                  <StyledAccordionItemButton>
+                    <Strong>{item.question}</Strong>
+                    <AccordionItemState>
+                      {({ expanded }) =>
+                        expanded ? <Cross>&#215;</Cross> : <Plus>&#43;</Plus>
+                      }
+                    </AccordionItemState>
+                  </StyledAccordionItemButton>
+                </AccordionItemHeading>
+                <StyledAccordionItemPanel>
+                  <P>{item.answer}</P>
+                </StyledAccordionItemPanel>
+              </StyledAccordionItem>
+            ))}
+          </StyledAccordion>
+        </SecondViewport>
+        <ThirdViewport>
+          <H2>
+            <span className="accent-text"> {lowerText.lowerTitle1}</span>&nbsp;
+            {lowerText.lowerTitle2}
+            &nbsp;
+          </H2>
+          <LowerDescription>
+            {lowerText.lowerText1}
+            {` `}
+            <span className="accent-text-blue">{lowerText.lowerText2}</span>
+          </LowerDescription>
+          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+        </ThirdViewport>
+      </PageWrapper>
     </Main>
   );
 };

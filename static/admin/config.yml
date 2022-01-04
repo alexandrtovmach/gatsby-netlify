@@ -682,7 +682,50 @@ collections:
             fields:
               - { label: Image, name: image, widget: string }
               - { label: Label, name: label, widget: string }
-
+          - label: FAQ 1
+            name: faq1
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+          - label: FAQ 1 Items
+            name: faq1Items
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer, name: answer, widget: string }
+          - label: FAQ 2
+            name: faq2
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+          - label: FAQ 2 Items
+            name: faq2Items
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer, name: answer, widget: string }
+          - label: FAQ 3
+            name: faq3
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+          - label: FAQ 3 Items
+            name: faq3Items
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer, name: answer, widget: string }
+          - label: Lower Text
+            name: lowerText
+            widget: object
+            fields:
+              - { label: lowerTitle1, name: lowerTitle1, widget: string }
+              - { label: lowerTitle2, name: lowerTitle2, widget: string }
+              - { label: lowerText1, name: lowerText1, widget: string }
+              - { label: lowerText2, name: lowerText2, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'
