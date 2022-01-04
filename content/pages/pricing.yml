@@ -1,0 +1,35 @@
+title:
+  title1: Always know
+  title2: how much
+  title3: you’ll pay.
+  description: Fena offers pricing that suits your needs.
+pricingCards:
+  - {
+      label: Intro,
+      title1: 0%,
+      title2: Starter In-Store and eCommerce,
+      description1: Up to £500 total value of transactions per month,
+      description2: Self-managed account,
+      description3: Online registration – the standard T&Cs apply,
+    }
+  - {
+      label: BAse,
+      title1: 0.3%,
+      title2: Scale-up In-Store and eCommerce,
+      description1: 0.3% of transaction value,
+      description2: 'Total monthly transaction value up to £100,000',
+      description3: Self-managed account,
+      description4: Online registration – the standard T&Cs apply,
+    }
+  - {
+      label: enterprise,
+      title1: Bespoke,
+      title2: Contact us for a quote,
+      description1: Account management,
+      description2: 'Total monthly transaction value above £50,000',
+      description3: Bespoke contract,
+    }
+lowerText:
+  lowerTitle1: We are eager to
+  lowerTitle2: help you
+  lowerText: Contact us and one of our payment experts will be in touch soon.
