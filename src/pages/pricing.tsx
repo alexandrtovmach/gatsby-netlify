@@ -7,6 +7,13 @@ import Section from '@/components/Section';
 import PricingCard from '@/components/PricingCard';
 import BottomMessage from '@/components/BottomMessage';
 
+const PageWrapper = styled.section`
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(244, 247, 249, 1) 100%
+  );
+`;
 const FirstViewport = styled(Section)`
   display: flex;
   justify-content: center;
@@ -62,36 +69,38 @@ const OpenBankingDataApis: React.FunctionComponent = () => {
     pricingPageContent as unknown as PricingPageContent;
   return (
     <Main>
-      <FirstViewport>
-        <Text>
-          <H1>
-            {title.title1} <span className="accent-text">{title.title2}</span>
-            {` `}
-            {title.title3}
-          </H1>
-          <Description>{title.description}</Description>
-        </Text>
-      </FirstViewport>
-      <PricingCards>
-        {pricingCards.map((item) => (
-          <PricingCard
-            label={item.label}
-            title1={item.title1}
-            title2={item.title2}
-            description1={item.description1}
-            description2={item.description2}
-            description3={item.description3}
-            description4={item.description4}
+      <PageWrapper>
+        <FirstViewport>
+          <Text>
+            <H1>
+              {title.title1} <span className="accent-text">{title.title2}</span>
+              {` `}
+              {title.title3}
+            </H1>
+            <Description>{title.description}</Description>
+          </Text>
+        </FirstViewport>
+        <PricingCards>
+          {pricingCards.map((item) => (
+            <PricingCard
+              label={item.label}
+              title1={item.title1}
+              title2={item.title2}
+              description1={item.description1}
+              description2={item.description2}
+              description3={item.description3}
+              description4={item.description4}
+            />
+          ))}
+        </PricingCards>
+        <ThirdViewport>
+          <BottomMessage
+            title1={lowerText.lowerTitle1}
+            title2={lowerText.lowerTitle2}
+            text={lowerText.lowerText}
           />
-        ))}
-      </PricingCards>
-      <ThirdViewport>
-        <BottomMessage
-          title1={lowerText.lowerTitle1}
-          title2={lowerText.lowerTitle2}
-          text={lowerText.lowerText}
-        />
-      </ThirdViewport>
+        </ThirdViewport>
+      </PageWrapper>
     </Main>
   );
 };
