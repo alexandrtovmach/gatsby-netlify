@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     margin-bottom: 2rem;
   }
 `;
-const ImgWrapper = styled.div`
+const Content = styled.div`
   background-color: #ffffff;
   border-radius: 10px;
   padding: 3rem;
@@ -45,10 +45,10 @@ const HelpCentreCard: React.FunctionComponent<SolutionComponentProps> = ({
   label,
 }) => (
   <Wrapper>
-    <ImgWrapper>
+    <Content>
       <Img src={imageSrc} alt="card logo" />
       <Title>{label}</Title>
-    </ImgWrapper>
+    </Content>
   </Wrapper>
 );
 
