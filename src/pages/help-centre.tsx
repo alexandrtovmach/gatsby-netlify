@@ -72,10 +72,8 @@ const Plus = styled.p`
   font-weight: 600;
   color: #13273f;
 `;
-const Cross = styled.p`
+const Cross = styled(Plus)`
   color: #2cd19e;
-  font-size: 30px;
-  font-weight: 600;
 `;
 const StyledAccordionItemPanel = styled(AccordionItemPanel)`
   padding: 1rem 0;
