@@ -29,17 +29,17 @@ viewport2:
   title2: Team
   teamCards:
     - {
-        avatar: /images/GosiaAvatar.svg,
+        avatar: /images/GosiaAvatar.png,
         name: Gosia Furmanik,
         position: 'CEO, Founder',
       }
     - {
-        avatar: /images/FaizAvatar.svg,
+        avatar: /images/FaizAvatar.png,
         name: Faiz Rasool,
         position: 'CTO, Founder',
       }
     - {
-        avatar: /images/StefanAvatar.svg,
+        avatar: /images/StefanAvatar.png,
         name: Stefan Binder,
         position: 'CSO, Founder',
       }
