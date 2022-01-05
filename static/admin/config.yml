@@ -21,16 +21,36 @@ collections:
             summary: '{{fields.label}}'
             fields:
               - { label: Navigation Label, name: label, widget: string }
-              - { label: Navigation URL, name: link, widget: string, required: false, hint: Changing "Navigation URL" require developer effort. Need to change file name in src/pages }
+              - {
+                  label: Navigation URL,
+                  name: link,
+                  widget: string,
+                  required: false,
+                  hint: Changing "Navigation URL" require developer effort. Need to change file name in src/pages,
+                }
               - label: Nested Links
                 name: nested
                 widget: list
                 required: false
                 summary: '{{fields.label}}'
                 fields:
-                - { label: Nested Navigation Label, name: label, widget: string }
-                - { label: Nested Navigation URL, name: link, widget: string, hint: Changing "Nested Navigation URL" require developer effort. Need to change file name in src/pages }
-                - { label: Navigation Description, name: description, widget: string, required: false }
+                  - {
+                      label: Nested Navigation Label,
+                      name: label,
+                      widget: string,
+                    }
+                  - {
+                      label: Nested Navigation URL,
+                      name: link,
+                      widget: string,
+                      hint: Changing "Nested Navigation URL" require developer effort. Need to change file name in src/pages,
+                    }
+                  - {
+                      label: Navigation Description,
+                      name: description,
+                      widget: string,
+                      required: false,
+                    }
       - label: 'Footer'
         name: 'footer'
         file: 'content/components/footer.yml'
@@ -388,7 +408,7 @@ collections:
                 }
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
-              - { label: lowerText, name: lowerText, widget: string }   
+              - { label: lowerText, name: lowerText, widget: string }
       - label: 'Accept payments invoice payments'
         name: 'acceptPaymentsInvoicePayments'
         file: 'content/pages/accept-payments-invoice-payments.yml'
@@ -584,10 +604,14 @@ collections:
             widget: object
             fields:
               - { label: bannerLabel, name: bannerLabel, widget: string }
-              - { label: bannerDescription, name: bannerDescription, widget: string }
+              - {
+                  label: bannerDescription,
+                  name: bannerDescription,
+                  widget: string,
+                }
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
-              - { label: lowerText, name: lowerText, widget: string }  
+              - { label: lowerText, name: lowerText, widget: string }
       - label: 'Open Banking Data APIs'
         name: 'openBankingDataApis'
         file: 'content/pages/open-banking-data-apis.yml'
@@ -639,7 +663,38 @@ collections:
                 }
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
-              - { label: lowerText, name: lowerText, widget: string }            
+              - { label: lowerText, name: lowerText, widget: string }
+      - label: 'Pricing'
+        name: 'pricing'
+        file: 'content/pages/pricing.yml'
+        fields:
+          - label: Title
+            name: title
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Title3, name: title3, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: Pricing Cards
+            name: pricingCards
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Description_1, name: description1, widget: string }
+              - { label: Description_2, name: description2, widget: string }
+              - { label: Description_3, name: description3, widget: string }
+              - { label: Description_4, name: description4, widget: string }
+          - label: Lower text
+            name: lowerText
+            widget: object
+            fields:
+              - { label: lowerTitle1, name: lowerTitle1, widget: string }
+              - { label: lowerTitle2, name: lowerTitle2, widget: string }
+              - { label: lowerText, name: lowerText, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'
