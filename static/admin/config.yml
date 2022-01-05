@@ -664,9 +664,9 @@ collections:
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerText, name: lowerText, widget: string }
-      - label: 'Help Centre'
-        name: 'helpCentre'
-        file: 'content/pages/help-centre.yml'
+      - label: 'Help Center'
+        name: 'helpCenter'
+        file: 'content/pages/help-center.yml'
         fields:
           - label: Viewport 1
             name: viewport1
@@ -675,8 +675,8 @@ collections:
               - { label: Title1, name: title1, widget: string }
               - { label: Title2, name: title2, widget: string }
               - { label: Description, name: description, widget: string }
-          - label: Help Centre Cards
-            name: helpCentreCards
+          - label: Help Center Cards
+            name: helpCenterCards
             widget: list
             summary: '{{fields.title}}'
             fields:

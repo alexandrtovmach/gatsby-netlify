@@ -40,7 +40,7 @@ interface SolutionComponentProps {
   imageSrc: string;
   label: string;
 }
-const HelpCentreCard: React.FunctionComponent<SolutionComponentProps> = ({
+const HelpCenterCard: React.FunctionComponent<SolutionComponentProps> = ({
   imageSrc,
   label,
 }) => (
@@ -52,4 +52,4 @@ const HelpCentreCard: React.FunctionComponent<SolutionComponentProps> = ({
   </Wrapper>
 );
 
-export default HelpCentreCard;
+export default HelpCenterCard;

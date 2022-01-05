@@ -9,10 +9,10 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 import Main from '../containers/Layout';
-import helpCentrePageContent from '../../content/pages/help-centre.yml';
+import helpCenterPageContent from '../../content/pages/help-center.yml';
 import { P, H1, Subtitle5, Strong, H2 } from '@/components/Typography';
 import Section from '@/components/Section';
-import HelpCentreCard from '@/components/HelpCentreCard';
+import HelpCenterCard from '@/components/HelpCenterCard';
 import ButtonDefault from '@/components/ButtonDefault';
 
 const PageWrapper = styled.section`
@@ -103,12 +103,12 @@ const LowerDescription = styled(P)`
   }
 `;
 
-interface HelpCentrePageContent {
+interface HelpCenterPageContent {
   viewport1: {
     title1: string;
     title2: string;
     description: string;
-    helpCentreCards: {
+    helpCenterCards: {
       image: string;
       label: string;
     }[];
@@ -144,7 +144,7 @@ interface HelpCentrePageContent {
 }
 const HelpCenter: React.FunctionComponent = () => {
   const { viewport1, faq1, faq2, faq3, lowerText } =
-    helpCentrePageContent as unknown as HelpCentrePageContent;
+    helpCenterPageContent as unknown as HelpCenterPageContent;
   return (
     <Main>
       <PageWrapper>
@@ -156,8 +156,8 @@ const HelpCenter: React.FunctionComponent = () => {
           </H1>
           <Description>{viewport1.description}</Description>
           <Cards>
-            {viewport1.helpCentreCards.map((item) => (
-              <HelpCentreCard
+            {viewport1.helpCenterCards.map((item) => (
+              <HelpCenterCard
                 key={item.label}
                 imageSrc={item.image}
                 label={item.label}
