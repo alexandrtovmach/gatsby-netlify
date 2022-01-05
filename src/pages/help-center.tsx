@@ -54,6 +54,7 @@ const StyledAccordion = styled(Accordion)`
     padding: 1rem;
   }
 `;
+const StyledAccordionItemHeading = styled(AccordionItemHeading)``;
 const StyledAccordionItem = styled(AccordionItem)`
   border-bottom: 1px solid #d9d9d9;
   padding: 1rem 0;
@@ -77,6 +78,9 @@ const Cross = styled(Plus)`
 `;
 const StyledAccordionItemPanel = styled(AccordionItemPanel)`
   padding: 1rem 0;
+  &:first-of-type {
+    display: none;
+  }
 `;
 const ThirdViewport = styled(Section)`
   padding-top: 0;
@@ -114,27 +118,11 @@ interface HelpCenterPageContent {
     }[];
   };
 
-  faq1: {
+  faqList: {
     title: string;
-    faq1Items: {
-      question: string;
-      answer: string;
-    }[];
-  };
-  faq2: {
-    title: string;
-    faq2Items: {
-      question: string;
-      answer: string;
-    }[];
-  };
-  faq3: {
-    title: string;
-    faq3Items: {
-      question: string;
-      answer: string;
-    }[];
-  };
+    question: string;
+    answer: string;
+  }[];
   lowerText: {
     lowerTitle1: string;
     lowerTitle2: string;
@@ -143,7 +131,7 @@ interface HelpCenterPageContent {
   };
 }
 const HelpCenter: React.FunctionComponent = () => {
-  const { viewport1, faq1, faq2, faq3, lowerText } =
+  const { viewport1, faqList, lowerText } =
     helpCenterPageContent as unknown as HelpCenterPageContent;
   return (
     <Main>
@@ -166,11 +154,11 @@ const HelpCenter: React.FunctionComponent = () => {
           </Cards>
         </FirstViewport>
         <SecondViewport>
-          <Vp2Title>{faq1.title}</Vp2Title>
           <StyledAccordion allowZeroExpanded>
-            {faq1.faq1Items.map((item) => (
-              <StyledAccordionItem key={faq1.title}>
-                <AccordionItemHeading>
+            {faqList.map((item) => (
+              <StyledAccordionItem key={item.title}>
+                <Vp2Title>{item.title}</Vp2Title>
+                <StyledAccordionItemHeading>
                   <StyledAccordionItemButton>
                     <Strong>{item.question}</Strong>
                     <AccordionItemState>
@@ -179,47 +167,7 @@ const HelpCenter: React.FunctionComponent = () => {
                       }
                     </AccordionItemState>
                   </StyledAccordionItemButton>
-                </AccordionItemHeading>
-                <StyledAccordionItemPanel>
-                  <P>{item.answer}</P>
-                </StyledAccordionItemPanel>
-              </StyledAccordionItem>
-            ))}
-          </StyledAccordion>
-          <Vp2Title>{faq2.title}</Vp2Title>
-          <StyledAccordion allowZeroExpanded>
-            {faq2.faq2Items.map((item) => (
-              <StyledAccordionItem key={faq2.title}>
-                <AccordionItemHeading>
-                  <StyledAccordionItemButton>
-                    <Strong>{item.question}</Strong>
-                    <AccordionItemState>
-                      {({ expanded }) =>
-                        expanded ? <Cross>&#215;</Cross> : <Plus>&#43;</Plus>
-                      }
-                    </AccordionItemState>
-                  </StyledAccordionItemButton>
-                </AccordionItemHeading>
-                <StyledAccordionItemPanel>
-                  <P>{item.answer}</P>
-                </StyledAccordionItemPanel>
-              </StyledAccordionItem>
-            ))}
-          </StyledAccordion>
-          <Vp2Title>{faq3.title}</Vp2Title>
-          <StyledAccordion allowZeroExpanded>
-            {faq3.faq3Items.map((item) => (
-              <StyledAccordionItem key={faq3.title}>
-                <AccordionItemHeading>
-                  <StyledAccordionItemButton>
-                    <Strong>{item.question}</Strong>
-                    <AccordionItemState>
-                      {({ expanded }) =>
-                        expanded ? <Cross>&#215;</Cross> : <Plus>&#43;</Plus>
-                      }
-                    </AccordionItemState>
-                  </StyledAccordionItemButton>
-                </AccordionItemHeading>
+                </StyledAccordionItemHeading>
                 <StyledAccordionItemPanel>
                   <P>{item.answer}</P>
                 </StyledAccordionItemPanel>

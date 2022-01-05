@@ -6,31 +6,26 @@ viewport1:
     - { image: /images/purpleInvoice.svg, label: Open Banking }
     - { image: /images/greenBag.svg, label: Merchants }
     - { image: /images/crowd.svg, label: Consumers }
-faq1:
-  title: Open Banking FAQ
-  faq1Items:
-    - { question: What is Open Banking?, answer:  }
-    - { question: What is a third party provider?, answer:  }
-    - {
-        question: Does fena see my banking login details?,
-        answer: 'No. With Open Banking,
-          your login details are safe,
-          as you don’t share them with us. fena (formerly FaizPay) will always direct you to your mobile banking app or your bank’s secure website which allows you to make a payment without sharing any of your details with us.',
-      }
-    - { question: Is my payment secure?, answer:  }
-    - { question: What if fena gets hacked?, answer:  }
-faq2:
-  title: Merchants FAQ
-  faq2Items:
-    - {
-        question: How do I sign up for a merchant account?,
-        answer: ,
-      }
-    - { question: How do I take payments as a merchant?, answer: }
-faq3:
-  title: Consumers FAQ
-  faq3Items:
-    - { question: What is a third party provider?, answer:  }
+faqList:
+  - { title: Open Banking FAQ }
+  - { question: What is Open Banking?, answer: , }
+  - { question: What is a third party provider?, answer: , }
+  - {
+      question: Does fena see my banking login details?,
+      answer: 'No. With Open Banking,
+        your login details are safe,
+        as you don’t share them with us. fena (formerly FaizPay) will always direct you to your mobile banking app or your bank’s secure website which allows you to make a payment without sharing any of your details with us.',
+    }
+  - { question: Is my payment secure?, answer: , }
+  - { question: What if fena gets hacked?, answer: , }
+
+  - { title: Merchants FAQ }
+  - { question: How do I sign up for a merchant account?, answer: , }
+  - { question: How do I take payments as a merchant?, answer: , }
+
+  
+  - { title: Consumers FAQ }
+  - { question: What is a third party provider?, answer }
 lowerText:
   lowerTitle1: Can’t find
   lowerTitle2: your answer above?
