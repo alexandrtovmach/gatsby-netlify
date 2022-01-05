@@ -13,6 +13,7 @@ import Section from '@/components/Section';
 import bannerBg from '../assets/img/aboutPageBanner.png';
 import linkedIn from '../assets/img/linkedIn.svg';
 import email from '../assets/img/envelope.svg';
+import ButtonDefault from '@/components/ButtonDefault';
 
 const FirstViewport = styled(Section)`
   background: linear-gradient(
@@ -45,17 +46,27 @@ const PageTitle = styled(Subtitle2)`
 const TextWrapper = styled.div`
   display: flex;
   margin-top: 5rem;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 const LeftSide = styled.div`
   padding-right: 3rem;
 `;
-const RightSide = styled.div``;
+const RightSide = styled.div`
+  @media (max-width: 1200px) {
+    margin-top: 2rem;
+  }
+`;
 const Description = styled(P)`
   margin-bottom: 2rem;
 `;
 const Cards = styled.div`
   display: flex;
   margin-top: 3rem;
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 `;
 const Card1 = styled.div`
   background-color: #ffff;
@@ -63,9 +74,14 @@ const Card1 = styled.div`
   border-radius: 10px;
   padding: 4rem 3rem;
   flex-basis: 30%;
+  flex-grow: 1;
   margin-right: 2rem;
   &:last-of-type {
     margin-right: 0;
+  }
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    margin: 0 0 2rem 0;
   }
 `;
 const OtherCards = styled(Card1)``;
@@ -79,14 +95,27 @@ const SecondViewport = styled(Section)`
 `;
 const TeamCards = styled.div`
   display: flex;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  @media (max-width: 1200px) {
+  }
 `;
 
 const TeamCard = styled.div`
   margin-right: 2rem;
   border: 1px solid #dbe3eb;
   border-radius: 10px;
+
+  @media (max-width: 1200px) {
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+  }
 `;
-const Avatar = styled.img``;
+const Avatar = styled.img`
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+`;
 const CardContent = styled.div`
   padding: 2rem;
   display: flex;
@@ -100,7 +129,25 @@ const Contacts = styled.div`
 const Link = styled.a``;
 const LinkedIn = styled.img``;
 const Email = styled(LinkedIn)``;
-
+const LowerTextBox = styled.div`
+  margin-top: 5rem;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+`;
+const LowerTitle = styled(H2)`
+  text-align: center;
+`;
+const LowerDescription = styled(P)`
+  width: 60%;
+  text-align: center;
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin: 2rem 0;
+  }
+`;
 interface AboutPageContent {
   viewport1: {
     pageTitle: string;
@@ -126,16 +173,15 @@ interface AboutPageContent {
       position: string;
     }[];
   };
-  viewport4: {
-    bannerLabel: string;
-    bannerDescription: string;
+  lowerText: {
     lowerTitle1: string;
     lowerTitle2: string;
-    lowerText: string;
+    lowerText1: string;
+    lowerText2: string;
   };
 }
 const About: React.FunctionComponent = () => {
-  const { viewport1, viewport2 } =
+  const { viewport1, viewport2, lowerText } =
     aboutPageContent as unknown as AboutPageContent;
   return (
     <Main>
@@ -205,6 +251,18 @@ const About: React.FunctionComponent = () => {
             </TeamCard>
           ))}
         </TeamCards>
+        <LowerTextBox>
+          <LowerTitle>
+            {lowerText.lowerTitle1}&nbsp;
+            <span className="accent-text">{lowerText.lowerTitle2}</span>
+          </LowerTitle>
+          <LowerDescription>
+            {lowerText.lowerText1}
+            {` `}
+            <span className="accent-text-blue">{lowerText.lowerText2}</span>
+          </LowerDescription>
+          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+        </LowerTextBox>
       </SecondViewport>
     </Main>
   );
