@@ -678,7 +678,8 @@ collections:
               - { label: Description, name: description, widget: string }
           - label: Pricing Cards
             name: pricingCards
-            widget: object
+            widget: list
+            summary: '{{fields.title}}'
             fields:
               - { label: Label, name: label, widget: string }
               - { label: Title1, name: title1, widget: string }
