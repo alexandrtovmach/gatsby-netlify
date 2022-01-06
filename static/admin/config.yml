@@ -664,6 +664,37 @@ collections:
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerText, name: lowerText, widget: string }
+      - label: 'Pricing'
+        name: 'pricing'
+        file: 'content/pages/pricing.yml'
+        fields:
+          - label: Title
+            name: title
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Title3, name: title3, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: Pricing Cards
+            name: pricingCards
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Description_1, name: description1, widget: string }
+              - { label: Description_2, name: description2, widget: string }
+              - { label: Description_3, name: description3, widget: string }
+              - { label: Description_4, name: description4, widget: string }
+          - label: Lower text
+            name: lowerText
+            widget: object
+            fields:
+              - { label: lowerTitle1, name: lowerTitle1, widget: string }
+              - { label: lowerTitle2, name: lowerTitle2, widget: string }
+              - { label: lowerText, name: lowerText, widget: string }
       - label: 'Help Center'
         name: 'helpCenter'
         file: 'content/pages/help-center.yml'
@@ -707,9 +738,48 @@ collections:
         name: 'about'
         file: 'content/pages/about.yml'
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-
+          - label: Viewport 1
+            name: viewport1
+            widget: object
+            fields:
+              - { label: PageTitle, name: pageTitle, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Title3, name: title3, widget: string }
+              - { label: Title4, name: title4, widget: string }
+              - { label: Description1, name: description1, widget: string }
+              - { label: Description2, name: description2, widget: string }
+              - { label: Description3, name: description3, widget: string }
+              - label: Viewport 1 Cards
+                name: viewport1Cards
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Title1, name: title1, widget: string }
+                  - { label: Title2, name: title2, widget: string }
+                  - { label: Title3, name: title3, widget: string }
+                  - { label: Description, name: description, widget: string }
+          - label: Viewport 2
+            name: viewport2
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - label: Team Cards
+                name: teamCards
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Avatar, name: avatar, widget: string }
+                  - { label: Name, name: name, widget: string }
+                  - { label: Position, name: position, widget: string }
+          - label: Lower Text
+            name: lowerText
+            widget: object
+            fields:
+              - { label: lowerTitle1, name: lowerTitle1, widget: string }
+              - { label: lowerTitle2, name: lowerTitle2, widget: string }
+              - { label: lowerText1, name: lowerText1, widget: string }    
+              - { label: lowerText2, name: lowerText2, widget: string }  
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'

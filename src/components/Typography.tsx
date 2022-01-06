@@ -37,6 +37,11 @@ export const Subtitle1 = styled(P)`
   line-height: 56px;
   font-weight: 700;
 `;
+export const Subtitle2 = styled(P)`
+  font-size: 34px;
+  line-height: 43px;
+  font-weight: 700;
+`;
 export const Subtitle5 = styled(P)`
   font-size: 18px;
   line-height: 28px;

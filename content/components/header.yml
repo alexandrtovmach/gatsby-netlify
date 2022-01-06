@@ -22,7 +22,7 @@ navigation:
   - label: Open Banking Data APIs
     link: '/open-banking-data-apis'
   - label: Pricing
-    link: '/'
+    link: '/pricing'
   - label: Company
     link: '/'
   - label: Blog
