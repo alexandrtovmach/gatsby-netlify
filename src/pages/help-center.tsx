@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import {
   Accordion,
@@ -159,8 +159,8 @@ const HelpCenter: React.FunctionComponent = () => {
         <SecondViewport>
           <StyledAccordion allowZeroExpanded>
             {faqList.map((item) => (
-              <>
-                <Vp2Title key={item.title}>{item.title}</Vp2Title>
+              <Fragment key={`accordion-${item.title}`}>
+                <Vp2Title>{item.title}</Vp2Title>
                 {item.items.map((items) => (
                   <StyledAccordionItem key={items.question}>
                     <StyledAccordionItemHeading>
@@ -182,7 +182,7 @@ const HelpCenter: React.FunctionComponent = () => {
                     </StyledAccordionItemPanel>
                   </StyledAccordionItem>
                 ))}
-              </>
+              </Fragment>
             ))}
           </StyledAccordion>
         </SecondViewport>
