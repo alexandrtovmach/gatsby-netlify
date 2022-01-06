@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import styled from 'styled-components';
 
 import Header from '../components/Header';
@@ -9,11 +9,11 @@ const Main = styled.main`
 `;
 
 const Layout: React.FunctionComponent = ({ children }) => (
-  <>
+  <StrictMode>
     <Header />
     <Main>{children}</Main>
     <Footer />
-  </>
+  </StrictMode>
 );
 
 export default Layout;

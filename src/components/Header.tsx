@@ -195,7 +195,10 @@ const Header: React.FunctionComponent = () => {
                 {label}
               </Link>
             ) : (
-              <Accordion key={label} allowZeroExpanded>
+              <Accordion
+                key={`header-nav-accordion-item-${label}`}
+                allowZeroExpanded
+              >
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton style={accordionButtonStyles}>
@@ -205,7 +208,7 @@ const Header: React.FunctionComponent = () => {
                   <AccordionItemPanel style={accordionPanelStyles}>
                     {nested.map((nestedEl) => (
                       <AccordionLinkItem
-                        key={nestedEl.label}
+                        key={`header-nested-nav-accordion-item-${nestedEl.label}`}
                         to={nestedEl.link}
                       >
                         <SecondaryP>{nestedEl.label}</SecondaryP>
