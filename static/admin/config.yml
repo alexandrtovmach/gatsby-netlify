@@ -688,8 +688,13 @@ collections:
             summary: '{{fields.title}}'
             fields:
               - { label: Title, name: title, widget: string }
-              - { label: Question, name: question, widget: string }
-              - { label: Answer, name: answer, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Question, name: question, widget: string }
+                  - { label: Answer, name: answer, widget: string }
           - label: Lower Text
             name: lowerText
             widget: object
