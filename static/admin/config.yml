@@ -695,6 +695,45 @@ collections:
               - { label: lowerTitle1, name: lowerTitle1, widget: string }
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerText, name: lowerText, widget: string }
+      - label: 'Help Center'
+        name: 'helpCenter'
+        file: 'content/pages/help-center.yml'
+        fields:
+          - label: Viewport 1
+            name: viewport1
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: Help Center Cards
+            name: helpCenterCards
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Image, name: image, widget: string }
+              - { label: Label, name: label, widget: string }
+          - label: FAQ List
+            name: faqList
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Question, name: question, widget: string }
+                  - { label: Answer, name: answer, widget: string }
+          - label: Lower Text
+            name: lowerText
+            widget: object
+            fields:
+              - { label: lowerTitle1, name: lowerTitle1, widget: string }
+              - { label: lowerTitle2, name: lowerTitle2, widget: string }
+              - { label: lowerText1, name: lowerText1, widget: string }
+              - { label: lowerText2, name: lowerText2, widget: string }
       - label: 'About Page'
         name: 'about'
         file: 'content/pages/about.yml'
