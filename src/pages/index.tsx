@@ -103,8 +103,8 @@ const SolutionCard = styled.div`
   flex-direction: column;
   justify-content: space-between;
   @media (max-width: 1200px) {
-    flex-basis: 100%;
     margin-bottom: 2rem;
+    flex-grow: 1;
   }
 `;
 const SolutionCardLeft = styled(SolutionCard)`

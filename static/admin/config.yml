@@ -451,8 +451,8 @@ collections:
             name: viewport4
             widget: object
             fields:
-              - { label: LeftTitle1, name: leftTitle1, widget: string }
-              - { label: LeftTitle2, name: leftTitle2, widget: string }
+              - { label: LeftTiRight, name: leftTiright, widget: string }
+              - { lRbel: right, name: right, widget: string }
               - {
                   label: LeftDescription,
                   name: leftDescription,
@@ -741,6 +741,37 @@ collections:
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerText1, name: lowerText1, widget: string }    
               - { label: lowerText2, name: lowerText2, widget: string }  
+      - label: 'Partnership Page'
+        name: 'partnership'
+        file: 'content/pages/partnership.yml'
+        fields:
+          - label: Viewport 1
+            name: viewport1
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Title3, name: title3, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: Viewport 1
+            name: viewport1
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+              - { label: Title3, name: title3, widget: string }
+              - { label: Description, name: description, widget: string }
+          - label: Partnership Cards
+            name: partnershipCards
+            widget: object
+            fields:
+              - { label: LeftTitle1, name: leftTitle1, widget: string }
+              - { label: LeftTitle2, name: leftTitle2, widget: string }
+              - { label: LeftTitle3, name: leftTitle3, widget: string }
+              - { label: LeftDescription, name: leftDescription, widget: string }
+              - { label: RightTitle1, name: rightTitle1, widget: string }
+              - { label: RightTitle2, name: rightTitle2, widget: string }
+              - { label: RightDescription, name: rightDescription, widget: string }
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
