@@ -23,9 +23,9 @@ const InputStyles = css`
   border: none;
   border-bottom: 1px solid #dbe3eb;
   padding: 0.5rem;
-  font-size: 16px;
-  font-family: 'montserrat';
-  margin-top: 5px;
+  font-size: inherit;
+  font-family: inherit;
+  margin-top: 0.5rem;
 `;
 const Input = styled.input`
   ${InputStyles}
@@ -50,26 +50,34 @@ const FormCard: React.FunctionComponent = () => {
     <Wrapper>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FormTitle>Contact us</FormTitle>
-        <Input type="text" placeholder="Name" id="name" {...register(`name`)} />
+        <Input
+          type="text"
+          placeholder="Name"
+          id="name"
+          required
+          {...register(`name`)}
+        />
         <Input
           type="text"
           placeholder="Email"
           id="email"
+          required
           {...register(`email`)}
         />
         <Input
           type="text"
           placeholder="Subject"
           id="email"
+          required
           {...register(`subject`)}
         />
         <Textarea
           placeholder="Type a message"
           id="message"
+          required
           {...register(`message`)}
         />
-
-        <ButtonDefault>Send a message</ButtonDefault>
+        <ButtonDefault type="submit">Send a message</ButtonDefault>
       </Form>
     </Wrapper>
   );
