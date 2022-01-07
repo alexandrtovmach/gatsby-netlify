@@ -1,0 +1,19 @@
+pageTitle:
+  title1: We are eager to 
+  title2: help you
+contactsList:
+  - title: Phone
+    contactItems:
+      - { contact: +44 2080 640 595 }
+  - title: Email
+    contactItems:
+      - { contact: support@fena.co }
+  - title: Address
+    contactItems:
+      - { contact: 87 Leonard St }
+      - { contact: London }
+      - { contact: EC2A 4QW }
+followLinks:
+  title: Follow us
+
+
