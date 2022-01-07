@@ -25,7 +25,7 @@ export const StyledButtonWhite = styled(StyledButton)`
     background-color: rgb(245, 245, 245);
   }
 `;
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<any> {
   white?: boolean;
   small?: boolean;
 }

@@ -831,6 +831,38 @@ collections:
               - { label: RightTitle1, name: rightTitle1, widget: string }
               - { label: RightTitle2, name: rightTitle2, widget: string }
               - { label: RightDescription, name: rightDescription, widget: string }
+      - label: 'Contact Us Page'
+        name: 'contacts'
+        file: 'content/pages/contacts.yml'
+        fields:
+          - label: Page Title
+            name: pageTitle
+            widget: object
+            fields:
+              - { label: Title1, name: title1, widget: string }
+              - { label: Title2, name: title2, widget: string }
+          - label: Contacts List
+            name: contactsList
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Contact Items
+                name: contactItems
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - { label: Contact, name: contact, widget: string }
+          - label: Follow Links
+            name: followLinks
+            widget: object
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Title, name: title, widget: string }
+        
+
+
+                
   - name: 'blog'
     label: 'Blog'
     folder: 'content/blog'
