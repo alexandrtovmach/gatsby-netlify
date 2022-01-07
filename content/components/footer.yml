@@ -1,26 +1,29 @@
-label1: Call us
-phone: +44 20 3190 8798
-label2: Email us
-email: sales@fena.co
+mainSection:
+  label1: Call us
+  phone: +44 20 3190 8798
+  label2: Email us
+  email: sales@fena.co
 productsSection:
   title: Products
-  link1: Pricing
-  link2: Payment APIs
-  link3: Data APIs 
-  link4: In-Store & In-Person
-  link5: eCommerce
-  link6: Invoice Payments
-
+  links:
+    - { label: Pricing, url: '/pricing' }
+    - { label: Payment APIs }
+    - { label: Data APIs }
+    - { label: In-Store & In-Person }
+    - { label: eCommerce }
+    - { label: Invoice Payments }
 resourcesSection:
   title: Resources
-  link1: Blog
-  link2: Help Centre
-  link3: How to pay with fena
-  link4: How fena terminal works
-  link5: Order fena NFC card
+  links:
+    - { label: Blog }
+    - { label: Help Centre }
+    - { label: How to pay with fena }
+    - { label: How fena terminal works }
+    - { label: Order fena NFC card }
 
-legalSection: 
+legalSection:
   title: Legal
-  link1: Privacy policy
-  link2: Terms and conditions
-  link3: Security 
+  links:
+    - { label: Privacy policy }
+    - { label: Terms and conditions }
+    - { label: Security }
