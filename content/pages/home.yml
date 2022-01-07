@@ -4,16 +4,19 @@ section1:
   title2: Open Banking
   title3: for your business
   description: Incorporate Open Banking into your payment checkout.
-  description2: Receive payments directly into your bank account with instant fund settlement.
+  description2: >-
+    Receive payments directly into your bank account with instant fund
+    settlement.
   description3: Get access to aggregated financial data with a single API.
   button:
     label: register now
-    url: https://merchant.faizpay.com/register
-
+    url: 'https://merchant.faizpay.com/register'
 section2:
   label: Affordable payments
   title: Seamless Access to Open Banking via APIs
-  description: Quickly and easily integrate account-to-account payments and data APIs into any app or website.
+  description: >-
+    Quickly and easily integrate account-to-account payments and data APIs into
+    any app or website.
   box1Label: £0
   box1Text: Monthly costs
   box2Label: 0.3%
@@ -23,37 +26,40 @@ section3:
   title2: Business solutions
   labelLeft: Open Banking
   labelLeft2: Data APIs
-  descriptionLeft: User insights through Open Banking APIs, powered by fena. Get access to enriched data that fuels informed business decisions.
+  descriptionLeft: >-
+    User insights through Open Banking APIs, powered by fena. Get access to
+    enriched data that fuels informed business decisions.
   labelRight: Invoice APIs
   labelRight2: payments
-  descriptionRight: Place the Fena payment QR code on your invoices and get paid in just a few taps. Up the ante with fena Invoice QR Code Payments.
+  descriptionRight: >-
+    Place the Fena payment QR code on your invoices and get paid in just a few
+    taps. Up the ante with fena Invoice QR Code Payments.
   cards:
-    - {
-        title: Payments APP,
-        text: Initiate payments within your app or website using Open Banking payments.,
-        image: /images/card1Img.svg,
-      }
-    - {
-        title: In-store and in-person payments,
-        text: Accept bank transfers as seamlessly as card payments from just 0.3% per transaction.,
-        image: /images/card2Img.svg,
-      }
-    - {
-        title: eCommerce payments,
-        text: Initiate payments within your app or website using Open Banking payments.,
-        image: /images/card3Img.svg,
-      }
-    - {
-        title: QR code payments,
-        text: Simple contactless payments with QR codes. Take payments from anywhere – scan and pay.,
-        image: /images/card4Img.svg,
-      }
-    - {
-        title: Invoice payments,
-        text: Place the fena payment QR code on your invoices and get paid in just a few taps.,
-        image: /images/card5Img.svg,
-      }
-
+    - title: Payments APP
+      text: >-
+        Initiate payments within your app or website using Open Banking
+        payments.
+      image: /images/card1Img.svg
+    - title: In-store and in-person payments
+      text: >-
+        Accept bank transfers as seamlessly as card payments from just 0.3% per
+        transaction.
+      image: /images/card2Img.svg
+    - title: eCommerce payments
+      text: >-
+        Initiate payments within your app or website using Open Banking
+        payments.
+      image: /images/card3Img.svg
+    - title: QR code payments
+      text: >-
+        Simple contactless payments with QR codes. Take payments from anywhere –
+        scan and pay.
+      image: /images/card4Img.svg
+    - title: Invoice payments
+      text: >-
+        Place the fena payment QR code on your invoices and get paid in just a
+        few taps.
+      image: /images/card5Img.svg
 section4:
   title: Accept
   title2: account-to-account
@@ -61,66 +67,63 @@ section4:
   description: Sign up in minutes
   button:
     label: get started
-    url: https://merchant.faizpay.com/register
-
+    url: 'https://merchant.faizpay.com/register'
 section5:
   title: Give your business a boost with Open Banking payments and data
   carouselItems:
-    - {
-        title: Marketplaces,
-        text: 'Reduce basket drop-outs with seamless bank transfer payments powered by fena.',
-        image: /images/carouselImg1.svg,
-      }
-    - {
-        title: eCommerce,
-        text: "Minimise friction with 'Instant Bank Transfers' at checkout, saving up to 85% on payment processing fees.",
-        image: /images/carouselImg2.svg,
-      }
-    - {
-        title: iGaming,
-        text: 'Provide seamless payments for low-cost top ups.',
-        image: /images/carouselImg3.svg,
-      }
-    - {
-        title: Digital wallets,
-        text: 'Easy top-ups by instant bank transfer for digital wallets',
-        image: /images/carouselImg4.svg,
-      }
-    - {
-        title: Crypto exchanges,
-        text: 'Low-cost, easy top ups with account-to-account payments.',
-        image: /images/carouselImg5.svg,
-      }
-
+    - title: Marketplaces
+      text: >-
+        Reduce basket drop-outs with seamless bank transfer payments powered by
+        fena.
+      image: /images/carouselImg1.svg
+    - title: eCommerce
+      text: >-
+        Minimise friction with 'Instant Bank Transfers' at checkout, saving up
+        to 85% on payment processing fees.
+      image: /images/carouselImg2.svg
+    - title: iGaming
+      text: Provide seamless payments for low-cost top ups.
+      image: /images/carouselImg3.svg
+    - title: Digital wallets
+      text: Easy top-ups by instant bank transfer for digital wallets
+      image: /images/carouselImg4.svg
+    - title: Crypto exchanges
+      text: 'Low-cost, easy top ups with account-to-account payments.'
+      image: /images/carouselImg5.svg
 section6:
   label: What our clients say about us
-  description: "Don't take our word for it – here's what our clients say:"
+  description: 'Don''t take our word for it – here''s what our clients say:'
   reviews:
-    - {
-        name: Hari Ramamurthy,
-        position: 'CTO, Kuflink',
-        text: 'I was looking for an easier and affordable way of topping up the Kuflink account. fena sounded like a no-brainer to integrate it with our platform.',
-        image: /images/reviewer1Avatar.svg,
-      }
-    - {
-        name: Yotam Spenser,
-        position: 'Data Engineer, WalkMe',
-        text: 'Banking apps that offer fantastic “first impressions” and establish customer trust within daily routines. Customer experience is the heart of innovative digital business, and apps that create useful, enjoyable experiences for people will always win out.',
-        image: /images/reviewer2Avatar.svg,
-      }
-    - {
-        name: Mark Harper,
-        position: 'Manager, Deloitte',
-        text: 'Great experience! This banking app work well with my phone. It feels like I am speaking directly to the bank via Fena app and get immediate answers, just as if they were talking to me in person.',
-        image: /images/reviewer3Avatar.svg,
-      }
-
+    - name: Hari Ramamurthy
+      position: 'CTO, Kuflink'
+      text: >-
+        I was looking for an easier and affordable way of topping up the Kuflink
+        account. fena sounded like a no-brainer to integrate it with our
+        platform.
+      image: /images/reviewer1Avatar.svg
+    - name: Yotam Spenser
+      position: 'Data Engineer, WalkMe'
+      text: >-
+        Banking apps that offer fantastic “first impressions” and establish
+        customer trust within daily routines. Customer experience is the heart
+        of innovative digital business, and apps that create useful, enjoyable
+        experiences for people will always win out.
+      image: /images/reviewer2Avatar.svg
+    - name: Mark Harper
+      position: 'Manager, Deloitte'
+      text: >-
+        Great experience! This banking app work well with my phone. It feels
+        like I am speaking directly to the bank via Fena app and get immediate
+        answers, just as if they were talking to me in person.
+      image: /images/reviewer3Avatar.svg
   bannerLabel: Get paid fast and fair with Fena
   bannerDescription: Download the Fena merchant app to take in-store or in-person payments
   lowerTitle1: Do you process more than
-  lowerTitle2: £100,000
+  lowerTitle2: '£100,000'
   lowerTitle3: a year?
-  lowerText: "If so, we'd love to have a chat with you about how we could tailor our service to you."
+  lowerText: >-
+    If so, we'd love to have a chat with you about how we could tailor our
+    service to you.
   button:
     label: get in touch
-    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp
+    url: 'https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp'

@@ -1,43 +1,49 @@
 viewport1:
-  title1: Open Banking 
+  title1: Open Banking
   title2: Data APIs
-  description1: Access user insight data with Open Banking APIs, powered by fena.
+  description1: 'Access user insight data with Open Banking APIs, powered by fena.'
   description2: Get access to enriched data that fuels informed business decisions.
 viewport2:
   label: Securely access financial data
   title: Unleash the power of Open Banking data
   viewport2Cards:
-    - {
-        title: Financial data in real time,
-        text: 'Open Banking has unlocked a world of possibilities and third party providers can securely access financial data in real time, enabling them to build or power better financial products and services.',
-        image: /images/guardImg.svg,
-      }
-    - {
-        title: Redefining financial services,
-        text: 'From accurate credit and risk assessments, streamlined onboarding and user verification, to transaction data analysis and reconciliation, open banking is redefining financial services.',
-        image: /images/bluePoundGear.svg,
-      }
+    - title: Financial data in real time
+      text: >-
+        Open Banking has unlocked a world of possibilities and third party
+        providers can securely access financial data in real time, enabling them
+        to build or power better financial products and services.
+      image: /images/guardImg.svg
+    - title: Redefining financial services
+      text: >-
+        From accurate credit and risk assessments, streamlined onboarding and
+        user verification, to transaction data analysis and reconciliation, open
+        banking is redefining financial services.
+      image: /images/bluePoundGear.svg
 viewport3:
   title: Easy access with Open Banking Data APIs for your sector
   viewport3Cards:
-    - {
-        title: Accounting,
-        text: Connect and analyse multiple bank accounts for unrivalled insight into financial data.,
-        image: /images/blueProfileCard.svg,
-      }
-    - {
-        title: Lending and credit,
-        text: Power up your lending team to make better lending decisions with open banking data.,
-        image: /images/poundBill.svg,
-      }
-    - {
-        title: Wealth management,
-        text: Cost-effective way to power instant payments for SIPPs, investment apps or other investment products.,
-        image: /images/poundExchange.svg,
-      }
+    - title: Accounting
+      text: >-
+        Connect and analyse multiple bank accounts for unrivalled insight into
+        financial data.
+      image: /images/blueProfileCard.svg
+    - title: Lending and credit
+      text: >-
+        Power up your lending team to make better lending decisions with open
+        banking data.
+      image: /images/poundBill.svg
+    - title: Wealth management
+      text: Cost-effective way to power instant payments for SIPPs
+      investment apps or other investment products.: null
+      image: /images/poundExchange.svg
 viewport4:
   bannerLabel: Download the App to get started
-  bannerDescription: Take payments from anywhere in your business – customers can just scan and pay.
+  bannerDescription: >-
+    Take payments from anywhere in your business – customers can just scan and
+    pay.
   lowerTitle1: Integration with fena is
   lowerTitle2: hassle-free
-  lowerText: 'Whether you prefer a plug’n’play solution, or if you want to build your own through our APIs, we’ll support you all the way through your integration journey.'
+  lowerText: >-
+    Whether you prefer a plug’n’play solution, or if you want to build your own
+    through our APIs, we’ll support you all the way through your integration
+    journey.

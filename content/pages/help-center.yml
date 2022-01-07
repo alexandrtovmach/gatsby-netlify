@@ -3,34 +3,43 @@ viewport1:
   title2: we help?
   description: Got a question? Here’s where to find what you need.
   helpCenterCards:
-    - { image: /images/purpleInvoice.svg, label: Open Banking }
-    - { image: /images/greenBag.svg, label: Merchants }
-    - { image: /images/crowd.svg, label: Consumers }
+    - image: /images/purpleInvoice.svg
+      label: Open Banking
+    - image: /images/greenBag.svg
+      label: Merchants
+    - image: /images/crowd.svg
+      label: Consumers
 faqList:
-  - title: Open Banking FAQ 
+  - title: Open Banking FAQ
     items:
-      - { question: What is Open Banking?, answer: , }
-      - { question: What is a third party provider?, answer: , }
-      - {
-          question: Does fena see my banking login details?,
-          answer: 'No. With Open Banking,
-          your login details are safe,
-        as you don’t share them with us. fena (formerly FaizPay) will always direct you to your mobile banking app or your bank’s secure website which allows you to make a payment without sharing any of your details with us.',
-      }
-      - { question: Is my payment secure?, answer: , }
-      - { question: What if fena gets hacked?, answer: , }
-
-  - title: Merchants FAQ 
+      - question: What is Open Banking?
+        answer: null
+      - question: What is a third party provider?
+        answer: null
+      - question: Does fena see my banking login details?
+        answer: >-
+          No. With Open Banking, your login details are safe, as you don’t share
+          them with us. fena (formerly FaizPay) will always direct you to your
+          mobile banking app or your bank’s secure website which allows you to
+          make a payment without sharing any of your details with us.
+      - question: Is my payment secure?
+        answer: null
+      - question: What if fena gets hacked?
+        answer: null
+  - title: Merchants FAQ
     items:
-      - { question: How do I sign up for a merchant account?, answer: , }
-      - { question: How do I take payments as a merchant?, answer: , }
-
-  
-  - title: Consumers FAQ 
-    items: 
-      - { question: What is a third party provider?, answer }
+      - question: How do I sign up for a merchant account?
+        answer: null
+      - question: How do I take payments as a merchant?
+        answer: null
+  - title: Consumers FAQ
+    items:
+      - question: What is a third party provider?
+        answer: null
 lowerText:
   lowerTitle1: Can’t find
   lowerTitle2: your answer above?
-  lowerText1: We want to answer all of your queries. Get in touch and we’ll get back to you as soon as we can. Email us on
+  lowerText1: >-
+    We want to answer all of your queries. Get in touch and we’ll get back to
+    you as soon as we can. Email us on
   lowerText2: support@fena.co

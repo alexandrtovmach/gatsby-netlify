@@ -1,33 +1,39 @@
 viewport1:
-  title1: Get paid 
+  title1: Get paid
   title2: in-store
   title3: or
   title4: in-person
-  description1: Accept bank transfers as seamlessly as card payments for just 0.3% per transaction.
-  description2: You’ll save up to 85% on your transaction costs when compared to standard card transactions.
+  description1: >-
+    Accept bank transfers as seamlessly as card payments for just 0.3% per
+    transaction.
+  description2: >-
+    You’ll save up to 85% on your transaction costs when compared to standard
+    card transactions.
   description3: Download the fena Merchant app
 viewport2:
   title: Start accepting instant payments
-  description: Let your customers choose how to pay, from scanning a QR code, tapping on an NFC card, or via a web browser.
+  description: >-
+    Let your customers choose how to pay, from scanning a QR code, tapping on an
+    NFC card, or via a web browser.
   instantPaymentCards:
-    - {
-        text: 'Offer customers a payment method convenient to them',
-      }
-    - {
-        text: 'Get paid on-the-go or or in-store with a mobile device',
-      }
-    - {
-        text: 'We are constantly improving our services',
-      }
+    - text: Offer customers a payment method convenient to them
+    - text: Get paid on-the-go or or in-store with a mobile device
+    - text: We are constantly improving our services
 viewport3:
-  label: Payments within seconds 
+  label: Payments within seconds
   title: Get paid instantly
-  description1: With fena, you will receive payments straight to your bank account within seconds.
-  description2: As fena supports account-to-account transactions, a payment between you and your customer is facilitated as a fast bank transfer.
+  description1: >-
+    With fena, you will receive payments straight to your bank account within
+    seconds.
+  description2: >-
+    As fena supports account-to-account transactions, a payment between you and
+    your customer is facilitated as a fast bank transfer.
   description3: Instant access to your funds will help improve your cash flow.
 viewport4:
   bannerLabel: Download the App to get started
-  bannerDescription: Take payments from anywhere in your business – customers can just scan and pay.
-  lowerTitle1: We are eager to 
+  bannerDescription: >-
+    Take payments from anywhere in your business – customers can just scan and
+    pay.
+  lowerTitle1: We are eager to
   lowerTitle2: help you
   lowerText: Contact us and one of our payment experts will be in touch soon.
