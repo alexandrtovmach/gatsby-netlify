@@ -48,7 +48,6 @@ const RightSide = styled.div`
   flex-basis: 70%;
   height: 100vh;
   @media (max-width: 1200px) {
-    justify-content: center;
     background-image: none;
     padding-right: 0;
   }
