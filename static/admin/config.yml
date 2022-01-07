@@ -17,17 +17,17 @@ collections:
           - label: Navigation
             name: navigation
             widget: list
-            hint: If add "Navigation URL", than link will be rendered as a single link. If add some items (at least one) to "Nested Links", it'll be rendered as dropdown menu with items.
+            hint: If add "Navigation URL", then link will be rendered as a single link. If add some items (at least one) to "Nested Links", it'll be rendered as dropdown menu with items.
             summary: '{{fields.label}}'
             fields:
-              - { label: Navigation Label, name: label, widget: string }
-              - {
-                  label: Navigation URL,
-                  name: link,
-                  widget: string,
-                  required: false,
-                  hint: Changing "Navigation URL" require developer effort. Need to change file name in src/pages,
-                }
+              - label: Navigation Label
+                name: label
+                widget: string
+              - label: Navigation URL
+                name: link
+                widget: string
+                required: false
+                hint: Changing "Navigation URL" require developer effort. Need to change file name in src/pages
               - label: Nested Links
                 name: nested
                 widget: list
@@ -56,39 +56,59 @@ collections:
         file: 'content/components/footer.yml'
         widget: object
         fields:
-          - { label: label1, name: label1, widget: string }
-          - { label: phone, name: phone, widget: string }
-          - { label: label2, name: label2, widget: string }
-          - { label: email, name: email, widget: string }
+          - label: 'Main Section'
+            name: 'mainSection'
+            widget: object
+            fields:
+              - { label: label1, name: label1, widget: string }
+              - { label: phone, name: phone, widget: string }
+              - { label: label2, name: label2, widget: string }
+              - { label: email, name: email, widget: string }
           - label: 'Products Section'
             name: 'productsSection'
             widget: object
             fields:
-              - { label: title, name: title, widget: string }
-              - { label: link1, name: link1, widget: string }
-              - { label: link2, name: link2, widget: string }
-              - { label: link3, name: link3, widget: string }
-              - { label: link4, name: link4, widget: string }
-              - { label: link5, name: link5, widget: string }
-              - { label: link6, name: link6, widget: string }
+              - { label: Title, name: title, widget: string }
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                  - label: Label
+                    name: linkLabel
+                    widget: string
+                  - label: URL
+                    name: linkUrl
+                    widget: string
           - label: 'Resources Section'
             name: 'resourcesSection'
             widget: object
             fields:
               - { label: title, name: title, widget: string }
-              - { label: link1, name: link1, widget: string }
-              - { label: link2, name: link2, widget: string }
-              - { label: link3, name: link3, widget: string }
-              - { label: link4, name: link4, widget: string }
-              - { label: link5, name: link5, widget: string }
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                  - label: Label
+                    name: linkLabel
+                    widget: string
+                  - label: URL
+                    name: linkUrl
+                    widget: string
           - label: 'Legal Section'
             name: 'legalSection'
             widget: object
             fields:
               - { label: title, name: title, widget: string }
-              - { label: link1, name: link1, widget: string }
-              - { label: link2, name: link2, widget: string }
-              - { label: link3, name: link3, widget: string }
+              - label: Links
+                name: links
+                widget: list
+                fields:
+                  - label: Label
+                    name: linkLabel
+                    widget: string
+                  - label: URL
+                    name: linkUrl
+                    widget: string
 
   - name: 'pages'
     label: 'Pages'
