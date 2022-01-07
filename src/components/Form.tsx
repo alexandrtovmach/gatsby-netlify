@@ -9,6 +9,8 @@ const Wrapper = styled.div`
   box-shadow: 0px 6px 70px rgba(0, 54, 124, 0.2);
   border-radius: 10px;
   padding: 3rem 2rem;
+  flex-basis: 100%;
+  width: calc(100% - 2rem * 2);
 `;
 const Form = styled.form`
   display: flex;

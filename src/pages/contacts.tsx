@@ -44,7 +44,7 @@ const RightSide = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-basis: 70%;
   height: 100vh;
   @media (max-width: 1200px) {
@@ -54,8 +54,9 @@ const RightSide = styled.div`
 `;
 const FormWrapper = styled.div`
   padding-top: 5rem;
-  padding-right: calc((100vw - 1200px) / 2);
-  flex-basis: 35%;
+  /* padding-right: calc((100vw - 1200px) / 2); */
+  flex-basis: 50%;
+  /* flex-grow: 1; */
 `;
 
 interface ContactsPageContent {
