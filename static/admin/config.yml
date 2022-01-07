@@ -89,34 +89,7 @@ collections:
               - { label: link1, name: link1, widget: string }
               - { label: link2, name: link2, widget: string }
               - { label: link3, name: link3, widget: string }
-          - label: 'Social Media Links'
-            name: 'socialLinks'
-            widget: object
-            fields:
-              - { label: facebook, name: facebook, widget: string }
-              - { label: twitter, name: twitter, widget: string }
-              - { label: linkedIn, name: linkedIn, widget: string }
-              - { label: instagram, name: instagram, widget: string }
-          - label: 'Navigation Links'
-            name: 'navLinks'
-            widget: object
-            fields:
-              - { label: Pricing, name: pricing, widget: string }
-              - { label: Payment_APIs, name: paymentApis, widget: string }
-              - { label: Data_APIs, name: dataApis, widget: string }
-              - { label: In_Store_&_In_Person, name: inStoreInPerson, widget: string }
-              - { label: eCommerce, name: eCommerce, widget: string }
-              - { label: Invoice_Payments, name: invoicePayments, widget: string }
-              - { label: Blog, name: blog, widget: string }
-              - { label: Help_Centre, name: helpCentre, widget: string }
-              - { label: How_to_pay_with_fena, name: howToPayWithFena, widget: string }
-              - { label: How_fena_terminal_works, name: howFenaTerminalWorks, widget: string }
-              - { label: Order_fena_NFC_card, name: orderFenaNfcCard, widget: string }
-              - { label: Privacy_policy, name: privacyPolicy, widget: string }
-              - { label: Terms_and_conditions, name: termsAndConditions, widget: string }
-              - { label: Security, name: security, widget: string }
               
-
   - name: 'pages'
     label: 'Pages'
     files:
@@ -135,6 +108,12 @@ collections:
               - { label: Description, name: description, widget: string }
               - { label: Description_2, name: description2, widget: string }
               - { label: Description_3, name: description3, widget: string }
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Url, name: url, widget: string }
           - label: Section 2
             name: section2
             widget: object
@@ -190,6 +169,12 @@ collections:
               - { label: title2, name: title2, widget: string }
               - { label: title3, name: title3, widget: string }
               - { label: description, name: description, widget: string }
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Url, name: url, widget: string }
           - label: Section 5
             name: section5
             widget: object
@@ -233,18 +218,13 @@ collections:
               - { label: lowerTitle2, name: lowerTitle2, widget: string }
               - { label: lowerTitle3, name: lowerTitle3, widget: string }
               - { label: lowerText, name: lowerText, widget: string }
-          - label: Button Links
-            name: buttonLinks
-            widget: object
-            fields:
-              - { label: Register_Now, name: registerNow, widget: string }
-              - { label: Register_Link, name: registerLink, widget: string }
-              - { label: Get_Started, name: getStarted, widget: string }
-              - { label: Get_Started_Link, name: getStartedLink, widget: string }
-              - { label: Get_In_Touch, name: getInTouch, widget: string }
-              - { label: Get_In_Touch_Link, name: getInTouchLink, widget: string }
-
-              - { label: lowerTitle2, name: lowerTitle2, widget: string }
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: Url, name: url, widget: string }
+        
       - label: 'Accept payments account-to-account payment'
         name: 'acceptPaymentsAccountToAccountPayment'
         file: 'content/pages/accept-payments-account-to-account-payment.yml'

@@ -3,6 +3,9 @@ viewport1:
   title2: for instant payments
   description1: No cards, reduced fraud, no chargebacks, low fees.
   description2: Initiate payments within your app or website using Open Banking payments.
+  button:
+    label: register now 
+    url: https://merchant.faizpay.com/register
 viewport2:
   label: Save your money
   title: Low fees, instant deposits
@@ -14,6 +17,12 @@ viewport2:
   boxListItem2: Biometric authentication supported
   boxListItem3: Instant settlement
   boxListItem4: Easy reconciliation
+  getStartedButton:
+    label: get started  
+    url: https://merchant.faizpay.com/register
+  docButton:
+    label: read the documentation  
+    url: 
 viewport3:
   title: Use cases
   viewport3Cards:

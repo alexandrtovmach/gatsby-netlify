@@ -219,6 +219,10 @@ interface HomePageContent {
     description: string;
     description2: string;
     description3: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   section2: {
     label: string;
@@ -245,6 +249,10 @@ interface HomePageContent {
     title2: string;
     title3: string;
     description: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   section5: {
     title: string;
@@ -269,6 +277,10 @@ interface HomePageContent {
     lowerTitle2: string;
     lowerTitle3: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 
@@ -286,7 +298,9 @@ const Home: React.FunctionComponent = () => {
         <Description>{section1.description}</Description>
         <Description>{section1.description2}</Description>
         <Description>{section1.description3}</Description>
-        <ButtonDefault>REGISTER NOW</ButtonDefault>
+        <a target="_blank" href={section1.button.url} rel="noreferrer">
+          <ButtonDefault>{section1.button.label}</ButtonDefault>
+        </a>
       </FirstViewport>
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
@@ -354,7 +368,9 @@ const Home: React.FunctionComponent = () => {
             {section4.title3}
           </H2>
           <Description>{section4.description}</Description>
-          <ButtonDefault>GET STARTED</ButtonDefault>
+          <a target="_blank" href={section4.button.url} rel="noreferrer">
+            <ButtonDefault>{section4.button.label}</ButtonDefault>
+          </a>
         </Section4LeftSide>
         <Section4Img src={section4Img} alt="section4 screenshot1" />
       </FourthSection>
@@ -389,7 +405,9 @@ const Home: React.FunctionComponent = () => {
             {section6.lowerTitle3}
           </H2>
           <Description>{section6.lowerText}</Description>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+          <a target="_blank" href={section6.button.url} rel="noreferrer">
+            <ButtonDefault>{section6.button.label}</ButtonDefault>
+          </a>
         </LowerTextBox>
       </SixthSection>
     </Main>

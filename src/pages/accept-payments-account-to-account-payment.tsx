@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import Main from '../containers/Layout';
 import accountToAccountPaymentsContent from '../../content/pages/accept-payments-account-to-account-payment.yml';
 import { H1, H2, H3, P, Strong, Subtitle5 } from '@/components/Typography';
@@ -84,7 +83,7 @@ const Section2BoxRight = styled.div`
   }
 `;
 
-const ButtonLink = styled(Link)`
+const ButtonLink = styled.a`
   margin-right: 1rem;
 `;
 
@@ -165,6 +164,10 @@ interface AcceptPaymentsAccountToAccountPageContent {
     title2: string;
     description1: string;
     description2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   viewport2: {
     label: string;
@@ -236,7 +239,9 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         </H1>
         <BoldDescription>{viewport1.description1}</BoldDescription>
         <Description>{viewport1.description2}</Description>
-        <ButtonDefault>REGISTER NOW</ButtonDefault>
+        <a target="_blank" href={viewport1.button.url} rel="noreferrer">
+          <ButtonDefault>{viewport1.button.label}</ButtonDefault>
+        </a>
       </FirstViewport>
 
       <SecondViewport resource={section2Bg}>
@@ -252,12 +257,12 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             {viewport2.description3}
           </P>
           <ButtonContainer>
-            <ButtonLink to="/">
+            <ButtonLink>
               <Btn>
                 <ButtonDefault>GET STARTED</ButtonDefault>
               </Btn>
             </ButtonLink>
-            <ButtonLink to="/">
+            <ButtonLink>
               <ButtonDefault white>
                 Read the documentation&nbsp;
                 <img src={arrowIcon} alt="button icon" />
