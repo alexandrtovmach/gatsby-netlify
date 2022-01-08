@@ -32,14 +32,23 @@ viewport2:
     - avatar: /images/GosiaAvatar.png
       name: Gosia Furmanik
       position: 'CEO, Founder'
+      linkedIn:
+      email: 
     - avatar: /images/FaizAvatar.png
       name: Faiz Rasool
       position: 'CTO, Founder'
+      linkedIn:
+      email: 
     - avatar: /images/StefanAvatar.png
       name: Stefan Binder
       position: 'CSO, Founder'
+      linkedIn:
+      email: 
 lowerText:
   lowerTitle1: We are eager to
   lowerTitle2: help you
   lowerText1: 'If you would like to get in touch with our CEO and cofounder, please email'
   lowerText2: support@fena.co
+  button:
+    label: get in touch  
+    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp

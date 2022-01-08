@@ -50,19 +50,27 @@ interface BannerProps {
   bgSrc: string;
   label: string;
   description: string;
+  appStoreButtonUrl: string;
+  googlePlayButtonUrl: string;
 }
 const Banner: React.FunctionComponent<BannerProps> = ({
   bgSrc,
   label,
   description,
+  appStoreButtonUrl,
+  googlePlayButtonUrl,
 }) => (
   <Wrapper resource={bgSrc}>
     <Content>
       <Label>{label}</Label>
       <Description>{description}</Description>
       <Buttons>
-        <ButtonAppStore />
-        <ButtonGooglePlay />
+        <a target="_blank" href={appStoreButtonUrl} rel="noreferrer">
+          <ButtonAppStore />
+        </a>
+        <a target="_blank" href={googlePlayButtonUrl} rel="noreferrer">
+          <ButtonGooglePlay />
+        </a>
       </Buttons>
     </Content>
   </Wrapper>

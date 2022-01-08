@@ -7,6 +7,9 @@ viewport1:
   description2: >-
     Up the ante with fena Invoice QR Code Payments. Unleash the power of Open
     Banking for your payment collection.
+  button:
+    label: register now
+    url: https://merchant.faizpay.com/register
 viewport2:
   title: Why use Fena Invoice Payments?
   viewport2Cards:
@@ -57,12 +60,18 @@ viewport4:
   leftDescription: >-
     Ready to embrace the payment revolution? Register for a fena Merchant
     Account to try out fena Invoice payments.
+  createAccountButton:
+    label: create an account
+    url: https://merchant.faizpay.com/register
   rightTitle1: For enterprises
   rightDescription1: Drop us a line on
   rightDescription2: api@fena.co
   rightDescription3: >-
     to set up an initial call to explore how we can help you gain access to Open
     Banking payments and data.
+  getInTouchButton:
+    label: get in touch
+    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp
 viewport5:
   title: Seamless payment services for your industry
   carouselItems:
@@ -88,6 +97,13 @@ viewport5:
 viewport6:
   bannerLabel: Get paid fast and fair with Fena
   bannerDescription: Download the Fena merchant app to take in-store or in-person payments
+  appStoreButton:
+    url: https://apps.apple.com/gb/app/fenamerchant/id1586556024
+  googlePlayButton: 
+    url: https://play.google.com/store/apps/details?id=co.fena.merchant
   lowerTitle1: We are eager to
   lowerTitle2: help you
   lowerText: Contact us and one of our payment experts will be in touch soon.
+  button:
+    label: get in touch  
+    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp

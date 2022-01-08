@@ -1,11 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-
-import fbIcon from '../assets/img/fbIcon.svg';
-import twitterIcon from '../assets/img/twitterIcon.svg';
-import linkedInIcon from '../assets/img/linkedInIcon.svg';
-import instagramIcon from '../assets/img/instagramIcon.svg';
 import logo from '../assets/img/logo.svg';
 import footerContent from '../../content/components/footer.yml';
 import ButtonAppStore from '@/components/ButtonAppStore';
@@ -73,8 +68,15 @@ const ButtonFooterLink = styled.a`
   margin-top: 1rem;
 `;
 
+const ContactLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
 interface NavSection {
   title: string;
+  appStoreButton: string;
+  googlePlayButton: string;
   links: {
     label: string;
     url: string;
@@ -83,10 +85,14 @@ interface NavSection {
 
 interface LayoutFooterContent {
   mainSection: {
-    label1: string;
-    phone: string;
-    label2: string;
-    email: string;
+    contacts: {
+      label: string;
+      contact: string;
+    }[];
+    socialMediaLinks: {
+      image: string;
+      link: string;
+    }[];
   };
   productsSection: NavSection;
   resourcesSection: NavSection;
@@ -100,23 +106,27 @@ const Footer: React.FunctionComponent = () => {
     <FooterWrapper>
       <div>
         <img src={logo} alt="logo" />
-        <FooterContactLabel>{mainSection.label1}</FooterContactLabel>
-        <FooterContact>{mainSection.phone}</FooterContact>
-        <FooterContactLabel>{mainSection.label2}</FooterContactLabel>
-        <FooterContact>{mainSection.email}</FooterContact>
+        {mainSection.contacts.map((item) => (
+          <>
+            <FooterContactLabel>{item.label}</FooterContactLabel>
+            {item.contact.includes(`+`) ? (
+              <ContactLink href={`tel:${item.contact}`}>
+                <FooterContact>{item.contact}</FooterContact>
+              </ContactLink>
+            ) : (
+              <ContactLink href={`mailto:${item.contact}`}>
+                <FooterContact>{item.contact}</FooterContact>
+              </ContactLink>
+            )}
+          </>
+        ))}
+
         <div>
-          <a href="/">
-            <ContactIcon src={fbIcon} alt="facebook icon" />
-          </a>
-          <a href="/">
-            <ContactIcon src={twitterIcon} alt="facebook icon" />
-          </a>
-          <a href="/">
-            <ContactIcon src={linkedInIcon} alt="facebook icon" />
-          </a>
-          <a href="/">
-            <ContactIcon src={instagramIcon} alt="facebook icon" />
-          </a>
+          {mainSection.socialMediaLinks.map((item) => (
+            <a target="_blank" href={item.link} rel="noreferrer">
+              <ContactIcon src={item.image} alt="media icon" />
+            </a>
+          ))}
         </div>
       </div>
       <FooterSection>
@@ -137,10 +147,13 @@ const Footer: React.FunctionComponent = () => {
           <FooterLink to={url}>{label}</FooterLink>
         ))}
         <FooterButtons>
-          <ButtonFooterLink href="/">
+          <ButtonFooterLink
+            target="_blank"
+            href={legalSection.googlePlayButton}
+          >
             <ButtonGooglePlay white />
           </ButtonFooterLink>
-          <ButtonFooterLink href="/">
+          <ButtonFooterLink target="_blank" href={legalSection.appStoreButton}>
             <ButtonAppStore white />
           </ButtonFooterLink>
         </FooterButtons>

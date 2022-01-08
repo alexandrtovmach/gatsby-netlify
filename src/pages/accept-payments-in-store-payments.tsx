@@ -86,6 +86,12 @@ interface InStorePaymentsContent {
     description1: string;
     description2: string;
     description3: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
   };
   viewport2: {
     title: string;
@@ -104,9 +110,19 @@ interface InStorePaymentsContent {
   viewport4: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 
@@ -126,8 +142,20 @@ const InStorePayments: React.FunctionComponent = () => {
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
           <BoldDescription>{viewport1.description3}</BoldDescription>
-          <ButtonAppStore />
-          <ButtonGooglePlay />
+          <a
+            target="_blank"
+            href={viewport1.appStoreButton.url}
+            rel="noreferrer"
+          >
+            <ButtonAppStore />
+          </a>
+          <a
+            target="_blank"
+            href={viewport1.googlePlayButton.url}
+            rel="noreferrer"
+          >
+            <ButtonGooglePlay />
+          </a>
         </FirstViewport>
       </FirstViewportWrapper>
       <SecondViewport>
@@ -158,11 +186,14 @@ const InStorePayments: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport4.bannerLabel}
           description={viewport4.bannerDescription}
+          appStoreButtonUrl={viewport4.appStoreButton.url}
+          googlePlayButtonUrl={viewport4.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport4.lowerTitle1}
           title2={viewport4.lowerTitle2}
           text={viewport4.lowerText}
+          button={viewport4.button}
         />
       </ThirdViewport>
     </Main>

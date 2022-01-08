@@ -10,6 +10,10 @@ viewport1:
     You’ll save up to 85% on your transaction costs when compared to standard
     card transactions.
   description3: Download the fena Merchant app
+  appStoreButton:
+    url: https://apps.apple.com/gb/app/fenamerchant/id1586556024
+  googlePlayButton: 
+    url: https://play.google.com/store/apps/details?id=co.fena.merchant
 viewport2:
   title: Start accepting instant payments
   description: >-
@@ -34,6 +38,13 @@ viewport4:
   bannerDescription: >-
     Take payments from anywhere in your business – customers can just scan and
     pay.
+  appStoreButton:
+    url: https://apps.apple.com/gb/app/fenamerchant/id1586556024
+  googlePlayButton: 
+    url: https://play.google.com/store/apps/details?id=co.fena.merchant
   lowerTitle1: We are eager to
   lowerTitle2: help you
   lowerText: Contact us and one of our payment experts will be in touch soon.
+  button:
+    label: get in touch  
+    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp

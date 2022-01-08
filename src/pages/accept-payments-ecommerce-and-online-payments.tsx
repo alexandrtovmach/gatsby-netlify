@@ -91,6 +91,10 @@ interface AcceptPaymentsAccountToAccountPageContent {
     description2: string;
     description3: string;
     description4: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   benefitCards: {
     title: string;
@@ -116,9 +120,19 @@ interface AcceptPaymentsAccountToAccountPageContent {
   viewport5: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
@@ -147,7 +161,9 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           &nbsp;
           {viewport1.description4}
         </Description>
-        <ButtonDefault>REGISTER NOW</ButtonDefault>
+        <a target="_blank" href={viewport1.button.url} rel="noreferrer">
+          <ButtonDefault>{viewport1.button.label}</ButtonDefault>
+        </a>
       </FirstViewport>
       <SecondViewport resource={section2Bg}>
         <BenefitCardsLeft>
@@ -200,11 +216,14 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport5.bannerLabel}
           description={viewport5.bannerDescription}
+          appStoreButtonUrl={viewport5.appStoreButton.url}
+          googlePlayButtonUrl={viewport5.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport5.lowerTitle1}
           title2={viewport5.lowerTitle2}
           text={viewport5.lowerText}
+          button={viewport5.button}
         />
       </FifthViewport>
     </Main>

@@ -126,6 +126,10 @@ interface InvoicePaymentsPageContent {
     title2: string;
     description1: string;
     description2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   viewport2: {
     title: string;
@@ -147,10 +151,18 @@ interface InvoicePaymentsPageContent {
     leftTitle1: string;
     leftTitle2: string;
     leftDescription: string;
+    createAccountButton: {
+      label: string;
+      url: string;
+    };
     rightTitle1: string;
     rightDescription1: string;
     rightDescription2: string;
     rightDescription3: string;
+    getInTouchButton: {
+      label: string;
+      url: string;
+    };
   };
   viewport5: {
     title: string;
@@ -163,9 +175,19 @@ interface InvoicePaymentsPageContent {
   viewport6: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 
@@ -182,7 +204,9 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
           </H1>
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
-          <ButtonDefault>REGISTER NOW</ButtonDefault>
+          <a target="_blank" href={viewport1.button.url} rel="noreferrer">
+            <ButtonDefault>{viewport1.button.label}</ButtonDefault>
+          </a>
         </FirstViewport>
       </FirstViewportWrapper>
 
@@ -223,7 +247,15 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
               {viewport4.leftDescription}
             </OfferCardDescription>
             <BtnBox>
-              <ButtonDefault>Create an account</ButtonDefault>
+              <a
+                target="_blank"
+                href={viewport4.createAccountButton.url}
+                rel="noreferrer"
+              >
+                <ButtonDefault>
+                  {viewport4.createAccountButton.label}
+                </ButtonDefault>
+              </a>
             </BtnBox>
           </OfferCardLeft>
           <OfferCardRight>
@@ -237,7 +269,15 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
               {viewport4.rightDescription3}
             </OfferCardDescription>
             <BtnBox>
-              <ButtonDefault>Get in touch</ButtonDefault>
+              <a
+                target="_blank"
+                href={viewport4.getInTouchButton.url}
+                rel="noreferrer"
+              >
+                <ButtonDefault>
+                  {viewport4.getInTouchButton.label}
+                </ButtonDefault>
+              </a>
             </BtnBox>
           </OfferCardRight>
         </OfferCardsBox>
@@ -251,11 +291,14 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport6.bannerLabel}
           description={viewport6.bannerDescription}
+          appStoreButtonUrl={viewport6.appStoreButton.url}
+          googlePlayButtonUrl={viewport6.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport6.lowerTitle1}
           title2={viewport6.lowerTitle2}
           text={viewport6.lowerText}
+          button={viewport6.button}
         />
       </SixthViewport>
     </Main>

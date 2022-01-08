@@ -124,6 +124,10 @@ interface PartnershipPageContent {
     rightTitle1: string;
     rightTitle2: string;
     rightDescription: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 
@@ -176,7 +180,13 @@ const Partnership: React.FunctionComponent = () => {
           </PartnershipCardRight>
         </ImgBox>
         <Button>
-          <ButtonDefault>Get in touch</ButtonDefault>
+          <a
+            target="_blank"
+            href={partnershipCards.button.url}
+            rel="noreferrer"
+          >
+            <ButtonDefault>{partnershipCards.button.label}</ButtonDefault>
+          </a>
         </Button>
       </FirstViewport>
     </Main>

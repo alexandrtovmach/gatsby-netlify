@@ -148,6 +148,9 @@ const LowerDescription = styled(P)`
     margin: 2rem 0;
   }
 `;
+const Mail = styled.a`
+  text-decoration: none;
+`;
 interface AboutPageContent {
   viewport1: {
     pageTitle: string;
@@ -171,6 +174,8 @@ interface AboutPageContent {
       avatar: string;
       name: string;
       position: string;
+      linkedIn: string;
+      email: string;
     }[];
   };
   lowerText: {
@@ -178,6 +183,10 @@ interface AboutPageContent {
     lowerTitle2: string;
     lowerText1: string;
     lowerText2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const About: React.FunctionComponent = () => {
@@ -259,9 +268,13 @@ const About: React.FunctionComponent = () => {
           <LowerDescription>
             {lowerText.lowerText1}
             {` `}
-            <span className="accent-text-blue">{lowerText.lowerText2}</span>
+            <Mail href={`mailto:${lowerText.lowerText2}`}>
+              <span className="accent-text-blue">{lowerText.lowerText2}</span>
+            </Mail>
           </LowerDescription>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+          <a target="_blank" href={lowerText.button.url} rel="noreferrer">
+            <ButtonDefault>{lowerText.button.label}</ButtonDefault>
+          </a>
         </LowerTextBox>
       </SecondViewport>
     </Main>

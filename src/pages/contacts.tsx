@@ -1,13 +1,10 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import styled from 'styled-components';
 import Main from '../containers/Layout';
 import contactsPageContent from '../../content/pages/contacts.yml';
 import { Subtitle1, Strong, SecondaryP } from '@/components/Typography';
 import background from '../assets/img/contactsBg.png';
-import fbIcon from '../assets/img/fbIcon.svg';
-import twitterIcon from '../assets/img/twitterIcon.svg';
-import linkedInIcon from '../assets/img/linkedInIcon.svg';
-import instagramIcon from '../assets/img/instagramIcon.svg';
 import Section from '@/components/Section';
 import FormCard from '@/components/Form';
 
@@ -58,7 +55,9 @@ const FormWrapper = styled.div`
   flex-basis: 50%;
   /* flex-grow: 1; */
 `;
-
+const ContactLink = styled.a`
+  text-decoration: none;
+`;
 interface ContactsPageContent {
   pageTitle: {
     title1: string;
@@ -72,6 +71,10 @@ interface ContactsPageContent {
   }[];
   followLinks: {
     title: string;
+    socialMediaLinks: {
+      link: string;
+      image: string;
+    }[];
   };
 }
 const Contacts: React.FunctionComponent = () => {
@@ -91,27 +94,41 @@ const Contacts: React.FunctionComponent = () => {
               <Fragment key={item.title}>
                 <Strong>{item.title}</Strong>
                 {item.contactItems.map((items) => (
-                  <StyledSecondaryP key={items.contact}>
-                    {items.contact}
-                  </StyledSecondaryP>
+                  <div key={items.contact}>
+                    {items.contact.includes(`+`) ? (
+                      <ContactLink href={`tel:${items.contact}`}>
+                        <StyledSecondaryP key={items.contact}>
+                          {items.contact}
+                        </StyledSecondaryP>
+                      </ContactLink>
+                    ) : items.contact.includes(`@`) ? (
+                      <ContactLink href={`mailto:${items.contact}`}>
+                        <StyledSecondaryP key={items.contact}>
+                          {items.contact}
+                        </StyledSecondaryP>
+                      </ContactLink>
+                    ) : (
+                      <StyledSecondaryP key={items.contact}>
+                        {items.contact}
+                      </StyledSecondaryP>
+                    )}
+                  </div>
                 ))}
               </Fragment>
             ))}
 
             <FollowLinks>
               <SecondaryP>{followLinks.title}</SecondaryP>
-              <a href="/">
-                <ContactIcon src={fbIcon} alt="facebook icon" />
-              </a>
-              <a href="/">
-                <ContactIcon src={twitterIcon} alt="facebook icon" />
-              </a>
-              <a href="/">
-                <ContactIcon src={linkedInIcon} alt="facebook icon" />
-              </a>
-              <a href="/">
-                <ContactIcon src={instagramIcon} alt="facebook icon" />
-              </a>
+              {followLinks.socialMediaLinks.map((item) => (
+                <a
+                  key={item.link}
+                  target="_blank"
+                  href={item.link}
+                  rel="noreferrer"
+                >
+                  <ContactIcon src={item.image} alt="media icon" />
+                </a>
+              ))}
             </FollowLinks>
           </ContactItems>
         </LeftSide>

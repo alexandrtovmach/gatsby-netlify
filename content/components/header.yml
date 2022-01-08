@@ -1,5 +1,5 @@
 navigation:
-  - label: Accept payments
+  - label: Accept payments 
     nested:
       - label: Account-To-Account Payment APIs
         description: Customer payments settled faster
@@ -19,13 +19,22 @@ navigation:
       - label: In-store Payments
         description: Get paid in-store or in-person
         link: /accept-payments-in-store-payments
-  - label: Open Banking Data APIs
-    link: /open-banking-data-apis
+  - label: Manage your Business
+    nested:
+      - label: Open Banking Data APIs
+        description: Get access to enriched data
+        link: /open-banking-data-apis
   - label: Pricing
     link: /pricing
   - label: Company
-    link: /
+    nested:
+      - label: About us
+        link: /about
+      - label: Partnership
+        link: /partnership
+      - label: Help Centre
+        link: /help-center
   - label: Blog
     link: /posts
   - label: Contact
-    link: /
+    link: /contacts

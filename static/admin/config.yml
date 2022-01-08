@@ -59,18 +59,16 @@ collections:
             name: mainSection
             widget: object
             fields:
-              - label: label1
-                name: label1
-                widget: string
-              - label: phone
-                name: phone
-                widget: string
-              - label: label2
-                name: label2
-                widget: string
-              - label: email
-                name: email
-                widget: string
+              - label: Contacts
+                name: contacts
+                widget: list
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Contact
+                    name: contact
+                    widget: string
           - label: Products Section
             name: productsSection
             widget: object
@@ -109,8 +107,14 @@ collections:
             name: legalSection
             widget: object
             fields:
-              - label: title
+              - label: Title
                 name: title
+                widget: string
+              - label: AppStore Button
+                name: appStoreButton
+                widget: string
+              - label: GooglePlay Button
+                name: googlePlayButton
                 widget: string
               - label: Links
                 name: links
@@ -122,6 +126,7 @@ collections:
                   - label: URL
                     name: linkUrl
                     widget: string
+              
   - name: pages
     label: Pages
     files:
@@ -308,6 +313,20 @@ collections:
               - label: bannerDescription
                 name: bannerDescription
                 widget: string
+              - label: App_Store_Button
+                name: appStoreButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Google_Play_Button
+                name: googlePlayButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string    
               - label: lowerTitle1
                 name: lowerTitle1
                 widget: string
@@ -350,6 +369,16 @@ collections:
               - label: Description_2
                 name: description2
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
           - label: Viewport 2
             name: viewport2
             widget: object
@@ -384,6 +413,26 @@ collections:
               - label: BoxListItem4
                 name: boxListItem4
                 widget: string
+              - label: Get_Started_Button
+                name: getStartedButton
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Read_Doc_Button
+                name: docButton
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
           - label: Viewport 3
             name: viewport3
             widget: object
@@ -481,6 +530,20 @@ collections:
               - label: bannerDescription
                 name: bannerDescription
                 widget: string
+              - label: App_Store_Button
+                name: appStoreButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Google_Play_Button
+                name: googlePlayButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string    
               - label: lowerTitle1
                 name: lowerTitle1
                 widget: string
@@ -490,6 +553,16 @@ collections:
               - label: lowerText
                 name: lowerText
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Accept payments-ecommerce and online payments
         name: AcceptPaymentsEcommerceAndOnlinePayments
         file: content/pages/accept-payments-ecommerce-and-online-payments.yml
@@ -510,6 +583,16 @@ collections:
               - label: Description_2
                 name: description2
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
           - label: Benefit Cards
             name: benefitCards
             widget: list
@@ -576,6 +659,20 @@ collections:
               - label: bannerDescription
                 name: bannerDescription
                 widget: string
+              - label: App_Store_Button
+                name: appStoreButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Google_Play_Button
+                name: googlePlayButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string    
               - label: lowerTitle1
                 name: lowerTitle1
                 widget: string
@@ -585,6 +682,16 @@ collections:
               - label: lowerText
                 name: lowerText
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Accept payments payment-links
         name: acceptPaymentsPaymentLinks
         file: content/pages/accept-payments-payment-links.yml
@@ -605,6 +712,16 @@ collections:
               - label: Description_2
                 name: description2
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
           - label: Viewport 2
             name: viewport2
             widget: object
@@ -660,6 +777,20 @@ collections:
               - label: bannerDescription
                 name: bannerDescription
                 widget: string
+              - label: App_Store_Button
+                name: appStoreButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Google_Play_Button
+                name: googlePlayButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string    
               - label: lowerTitle1
                 name: lowerTitle1
                 widget: string
@@ -669,6 +800,16 @@ collections:
               - label: lowerText
                 name: lowerText
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Accept payments invoice payments
         name: acceptPaymentsInvoicePayments
         file: content/pages/accept-payments-invoice-payments.yml
@@ -689,6 +830,16 @@ collections:
               - label: Description_2
                 name: description2
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
           - label: Viewport 2
             name: viewport2
             widget: object
@@ -744,6 +895,26 @@ collections:
               - label: LeftDescription
                 name: leftDescription
                 widget: string
+              - label: Create_Account_Button
+                name: createAccountButton
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Get_In_Touch_Button
+                name: getInTouchButton
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
               - label: RightTitle1
                 name: rightTitle1
                 widget: string
@@ -787,6 +958,20 @@ collections:
               - label: bannerDescription
                 name: bannerDescription
                 widget: string
+              - label: App_Store_Button
+                name: appStoreButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Google_Play_Button
+                name: googlePlayButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string    
               - label: lowerTitle1
                 name: lowerTitle1
                 widget: string
@@ -796,6 +981,16 @@ collections:
               - label: lowerText
                 name: lowerText
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Accept payments - QR code Payments
         name: acceptPaymentsQrCodePyments
         file: content/pages/accept-payments-qr-code-payments.yml
@@ -813,6 +1008,16 @@ collections:
               - label: Description
                 name: description
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
           - label: Viewport 2
             name: viewport2
             widget: object
@@ -886,6 +1091,20 @@ collections:
               - label: bannerDescription
                 name: bannerDescription
                 widget: string
+              - label: App_Store_Button
+                name: appStoreButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Google_Play_Button
+                name: googlePlayButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string    
               - label: lowerTitle1
                 name: lowerTitle1
                 widget: string
@@ -895,6 +1114,16 @@ collections:
               - label: lowerText
                 name: lowerText
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Accept payments-In-store payments
         name: acceptPaymentsInStorePayments
         file: content/pages/accept-payments-in-store-payments.yml
@@ -924,6 +1153,20 @@ collections:
               - label: Description_3
                 name: description3
                 widget: string
+              - label: App_Store_Button
+                name: appStoreButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Google_Play_Button
+                name: googlePlayButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string    
           - label: Viewport 2
             name: viewport2
             widget: object
@@ -971,6 +1214,20 @@ collections:
               - label: bannerDescription
                 name: bannerDescription
                 widget: string
+              - label: App_Store_Button
+                name: appStoreButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Google_Play_Button
+                name: googlePlayButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string    
               - label: lowerTitle1
                 name: lowerTitle1
                 widget: string
@@ -980,6 +1237,16 @@ collections:
               - label: lowerText
                 name: lowerText
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Open Banking Data APIs
         name: openBankingDataApis
         file: content/pages/open-banking-data-apis.yml
@@ -1000,6 +1267,16 @@ collections:
               - label: Description_2
                 name: description2
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
           - label: Viewport 2
             name: viewport2
             widget: object
@@ -1055,6 +1332,20 @@ collections:
               - label: bannerDescription
                 name: bannerDescription
                 widget: string
+              - label: App_Store_Button
+                name: appStoreButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string
+              - label: Google_Play_Button
+                name: googlePlayButton
+                widget: object
+                fields:
+                  - label: Url
+                    name: url
+                    widget: string    
               - label: lowerTitle1
                 name: lowerTitle1
                 widget: string
@@ -1064,6 +1355,16 @@ collections:
               - label: lowerText
                 name: lowerText
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Pricing
         name: pricing
         file: content/pages/pricing.yml
@@ -1123,6 +1424,16 @@ collections:
               - label: lowerText
                 name: lowerText
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Help Center
         name: helpCenter
         file: content/pages/help-center.yml
@@ -1186,6 +1497,16 @@ collections:
               - label: lowerText2
                 name: lowerText2
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: About Page
         name: about
         file: content/pages/about.yml
@@ -1256,6 +1577,12 @@ collections:
                   - label: Position
                     name: position
                     widget: string
+                  - label: LinkedIn
+                    name: linkedIn
+                    widget: string
+                  - label: Email
+                    name: email
+                    widget: string
           - label: Lower Text
             name: lowerText
             widget: object
@@ -1272,6 +1599,16 @@ collections:
               - label: lowerText2
                 name: lowerText2
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Partnership Page
         name: partnership
         file: content/pages/partnership.yml
@@ -1333,6 +1670,16 @@ collections:
               - label: RightDescription
                 name: rightDescription
                 widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Url
+                    name: url
+                    widget: string
       - label: Contact Us Page
         name: contacts
         file: content/pages/contacts.yml
@@ -1366,11 +1713,21 @@ collections:
           - label: Follow Links
             name: followLinks
             widget: object
-            summary: '{{fields.title}}'
             fields:
               - label: Title
                 name: title
                 widget: string
+              - label: Social Media Links
+                name: socialMediaLinks
+                widget: list
+                summary: '{{fields.title}}'
+                fields:
+                  - label: Link
+                    name: link
+                    widget: string
+                  - label: Image
+                    name: image
+                    widget: string
   - name: blog
     label: Blog
     folder: content/blog

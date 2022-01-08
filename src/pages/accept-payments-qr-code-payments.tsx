@@ -65,6 +65,10 @@ interface QrCodePaymentsContent {
     title1: string;
     title2: string;
     description: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   viewport2: {
     title: string;
@@ -94,9 +98,19 @@ interface QrCodePaymentsContent {
   viewport5: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const QrCodePayments: React.FunctionComponent = () => {
@@ -111,7 +125,9 @@ const QrCodePayments: React.FunctionComponent = () => {
             <span className="accent-text">{viewport1.title2}</span>
           </H1>
           <Description>{viewport1.description}</Description>
-          <ButtonDefault>REGISTER NOW</ButtonDefault>
+          <a target="_blank" href={viewport1.button.url} rel="noreferrer">
+            <ButtonDefault>{viewport1.button.label}</ButtonDefault>
+          </a>
         </FirstViewport>
       </FirstViewportWrapper>
 
@@ -159,11 +175,14 @@ const QrCodePayments: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport5.bannerLabel}
           description={viewport5.bannerDescription}
+          appStoreButtonUrl={viewport5.appStoreButton.url}
+          googlePlayButtonUrl={viewport5.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport5.lowerTitle1}
           title2={viewport5.lowerTitle2}
           text={viewport5.lowerText}
+          button={viewport5.button}
         />
       </FifthViewport>
     </Main>

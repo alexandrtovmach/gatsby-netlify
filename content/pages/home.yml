@@ -118,6 +118,10 @@ section6:
       image: /images/reviewer3Avatar.svg
   bannerLabel: Get paid fast and fair with Fena
   bannerDescription: Download the Fena merchant app to take in-store or in-person payments
+  appStoreButton:
+    url: https://apps.apple.com/gb/app/fenamerchant/id1586556024
+  googlePlayButton: 
+    url: https://play.google.com/store/apps/details?id=co.fena.merchant
   lowerTitle1: Do you process more than
   lowerTitle2: '£100,000'
   lowerTitle3: a year?

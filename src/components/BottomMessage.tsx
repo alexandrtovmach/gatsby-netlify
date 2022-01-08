@@ -32,11 +32,16 @@ interface ComponentProps {
   title1: string;
   title2: string;
   text: string;
+  button: {
+    label: string;
+    url: string;
+  };
 }
 const BottomMessage: React.FunctionComponent<ComponentProps> = ({
   title1,
   title2,
   text,
+  button,
 }) => (
   <LowerTextBox>
     <TitleH2>
@@ -45,7 +50,9 @@ const BottomMessage: React.FunctionComponent<ComponentProps> = ({
       &nbsp;
     </TitleH2>
     <LowerText>{text}</LowerText>
-    <ButtonDefault>GET IN TOUCH</ButtonDefault>
+    <a target="_blank" href={button.url} rel="noreferrer">
+      <ButtonDefault>{button.label}</ButtonDefault>
+    </a>
   </LowerTextBox>
 );
 

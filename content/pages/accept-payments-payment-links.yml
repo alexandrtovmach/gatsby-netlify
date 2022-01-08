@@ -7,6 +7,9 @@ viewport1:
   description2: >-
     Share fena Payment Links with your customers via email, SMS, WhatsApp or any
     other messaging platform and get paid in seconds.
+  button:
+    label: try it now
+    url: 
 viewport2:
   title: What are payment links?
   description: >-
@@ -54,6 +57,13 @@ viewport3:
 viewport4:
   bannerLabel: Get paid fast and fair with Fena
   bannerDescription: Download the Fena merchant app to take in-store or in-person payments
+  appStoreButton:
+    url: https://apps.apple.com/gb/app/fenamerchant/id1586556024
+  googlePlayButton: 
+    url: https://play.google.com/store/apps/details?id=co.fena.merchant
   lowerTitle1: We are eager to
   lowerTitle2: help you
   lowerText: Contact us and one of our payment experts will be in touch soon.
+  button:
+    label: get in touch  
+    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp

@@ -106,7 +106,9 @@ const LowerDescription = styled(P)`
     width: 100%;
   }
 `;
-
+const Mail = styled.a`
+  text-decoration: none;
+`;
 interface HelpCenterPageContent {
   viewport1: {
     title1: string;
@@ -131,6 +133,10 @@ interface HelpCenterPageContent {
     lowerTitle2: string;
     lowerText1: string;
     lowerText2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const HelpCenter: React.FunctionComponent = () => {
@@ -195,9 +201,13 @@ const HelpCenter: React.FunctionComponent = () => {
           <LowerDescription>
             {lowerText.lowerText1}
             {` `}
-            <span className="accent-text-blue">{lowerText.lowerText2}</span>
+            <Mail href={`mailto:${lowerText.lowerText2}`}>
+              <span className="accent-text-blue">{lowerText.lowerText2}</span>
+            </Mail>
           </LowerDescription>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+          <a target="_blank" href={lowerText.button.url} rel="noreferrer">
+            <ButtonDefault>{lowerText.button.label}</ButtonDefault>
+          </a>
         </ThirdViewport>
       </PageWrapper>
     </Main>

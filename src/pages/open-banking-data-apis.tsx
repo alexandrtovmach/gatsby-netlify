@@ -79,6 +79,10 @@ interface OpenBankingDataApisContent {
     title2: string;
     description1: string;
     description2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   viewport2: {
     label: string;
@@ -100,9 +104,19 @@ interface OpenBankingDataApisContent {
   viewport4: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const OpenBankingDataApis: React.FunctionComponent = () => {
@@ -118,7 +132,9 @@ const OpenBankingDataApis: React.FunctionComponent = () => {
           </H1>
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+          <a target="_blank" href={viewport1.button.url} rel="noreferrer">
+            <ButtonDefault>{viewport1.button.label}</ButtonDefault>
+          </a>
         </FirstViewport>
       </FirstViewportWrapper>
       <SecondViewport>
@@ -153,11 +169,14 @@ const OpenBankingDataApis: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport4.bannerLabel}
           description={viewport4.bannerDescription}
+          appStoreButtonUrl={viewport4.appStoreButton.url}
+          googlePlayButtonUrl={viewport4.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport4.lowerTitle1}
           title2={viewport4.lowerTitle2}
           text={viewport4.lowerText}
+          button={viewport4.button}
         />
       </ThirdViewport>
     </Main>

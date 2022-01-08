@@ -273,6 +273,12 @@ interface HomePageContent {
     }[];
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerTitle3: string;
@@ -396,6 +402,8 @@ const Home: React.FunctionComponent = () => {
           bgSrc={bannerHomePageBg}
           label={section6.bannerLabel}
           description={section6.bannerDescription}
+          appStoreButtonUrl={section6.appStoreButton.url}
+          googlePlayButtonUrl={section6.googlePlayButton.url}
         />
         <LowerTextBox>
           <H2>

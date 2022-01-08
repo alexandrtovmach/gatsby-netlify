@@ -3,6 +3,9 @@ viewport1:
   title2: Data APIs
   description1: 'Access user insight data with Open Banking APIs, powered by fena.'
   description2: Get access to enriched data that fuels informed business decisions.
+  button:
+    label: get in touch
+    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp
 viewport2:
   label: Securely access financial data
   title: Unleash the power of Open Banking data
@@ -41,9 +44,17 @@ viewport4:
   bannerDescription: >-
     Take payments from anywhere in your business – customers can just scan and
     pay.
+  appStoreButton:
+    url: https://apps.apple.com/gb/app/fenamerchant/id1586556024
+  googlePlayButton: 
+    url: https://play.google.com/store/apps/details?id=co.fena.merchant
   lowerTitle1: Integration with fena is
   lowerTitle2: hassle-free
   lowerText: >-
     Whether you prefer a plug’n’play solution, or if you want to build your own
     through our APIs, we’ll support you all the way through your integration
     journey.
+  button:
+    label: contact us  
+    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp
+

@@ -180,6 +180,14 @@ interface AcceptPaymentsAccountToAccountPageContent {
     boxListItem2: string;
     boxListItem3: string;
     boxListItem4: string;
+    getStartedButton: {
+      label: string;
+      url: string;
+    };
+    docButton: {
+      label: string;
+      url: string;
+    };
   };
   viewport3: {
     title: string;
@@ -215,9 +223,19 @@ interface AcceptPaymentsAccountToAccountPageContent {
   viewport7: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
@@ -257,14 +275,24 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             {viewport2.description3}
           </P>
           <ButtonContainer>
-            <ButtonLink>
+            <ButtonLink
+              target="_blank"
+              href={viewport2.getStartedButton.url}
+              rel="noreferrer"
+            >
               <Btn>
-                <ButtonDefault>GET STARTED</ButtonDefault>
+                <ButtonDefault>
+                  {viewport2.getStartedButton.label}
+                </ButtonDefault>
               </Btn>
             </ButtonLink>
-            <ButtonLink>
+            <ButtonLink
+              target="_blank"
+              href={viewport2.docButton.url}
+              rel="noreferrer"
+            >
               <ButtonDefault white>
-                Read the documentation&nbsp;
+                {viewport2.docButton.label}&nbsp;
                 <img src={arrowIcon} alt="button icon" />
               </ButtonDefault>
             </ButtonLink>
@@ -330,11 +358,14 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport7.bannerLabel}
           description={viewport7.bannerDescription}
+          appStoreButtonUrl={viewport7.appStoreButton.url}
+          googlePlayButtonUrl={viewport7.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport7.lowerTitle1}
           title2={viewport7.lowerTitle2}
           text={viewport7.lowerText}
+          button={viewport7.button}
         />
       </SeventhViewport>
     </Main>

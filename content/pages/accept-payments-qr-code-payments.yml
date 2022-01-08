@@ -4,6 +4,9 @@ viewport1:
   description: >-
     Take payments from anywhere in your business – customers can just scan and
     pay.
+  button:
+    label: register now
+    url: https://merchant.faizpay.com/register
 viewport2:
   title: Why use Fena QR code Payments?
   viewport2Cards:
@@ -73,6 +76,13 @@ viewport5:
   bannerDescription: >-
     Take payments from anywhere in your business – customers can just scan and
     pay.
+  appStoreButton:
+    url: https://apps.apple.com/gb/app/fenamerchant/id1586556024
+  googlePlayButton: 
+    url: https://play.google.com/store/apps/details?id=co.fena.merchant
   lowerTitle1: We are eager to
   lowerTitle2: help you
   lowerText: Contact us and one of our payment experts will be in touch soon.
+  button:
+    label: get in touch  
+    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp

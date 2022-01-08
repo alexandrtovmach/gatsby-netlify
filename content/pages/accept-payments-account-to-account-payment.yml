@@ -113,11 +113,7 @@ viewport7:
     url: https://play.google.com/store/apps/details?id=co.fena.merchant
   lowerTitle1: We are eager to
   lowerTitle2: help you
-<<<<<<< HEAD
   lowerText: 'Contact us and one of our payment experts will be in touch soon.'
   button:
     label: get in touch  
     url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp
-=======
-  lowerText: Contact us and one of our payment experts will be in touch soon.
->>>>>>> 83f16e7571dff96a7e85c1a47fb180412adce01d
