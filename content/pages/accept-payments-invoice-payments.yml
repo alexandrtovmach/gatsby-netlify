@@ -1,104 +1,93 @@
 viewport1:
   title1: Invoice
   title2: Payments
-  description1: Place the fena payment QR code on your invoices and get paid in just a few taps.
-  description2: Up the ante with fena Invoice QR Code Payments. Unleash the power of Open Banking for your payment collection.
+  description1: >-
+    Place the fena payment QR code on your invoices and get paid in just a few
+    taps.
+  description2: >-
+    Up the ante with fena Invoice QR Code Payments. Unleash the power of Open
+    Banking for your payment collection.
 viewport2:
   title: Why use Fena Invoice Payments?
   viewport2Cards:
-    - {
-        title: Accurate payments,
-        text: No more errors with the amount paid or invoice reference number.,
-        image: /images/moneyImg.svg,
-      }
-    - {
-        title: Easy reference matching,
-        text: Set your own reference per invoice for easy reconciliation.,
-        image: /images/invoiceImg.svg,
-      }
-    - {
-        title: Automatic reminders,
-        text: Set up automatic reminders for unpaid invoices. Save time for your finance team.,
-        image: /images/bellImg.svg,
-      }
-    - {
-        title: Easy API integration,
-        text: Integrate with our Invoice system using super easy API connections and get paid instantly by ‘Pay by link’ or ‘Pay by QR code’.,
-        image: /images/redGearImg.svg,
-      }
-    - {
-        title: Integration with your accounts,
-        text: Connect your accounting system with fena Invoice payments.,
-        image: /images/yellowPhoneImg.svg,
-      }
-
-    - {
-        title: Pay by link,
-        text: Taking payments over the phone? Try our Pay by Link feature. Simply send a payment link via text or email.,
-        image: /images/greenPaymentCardImg.svg,
-      }
+    - title: Accurate payments
+      text: No more errors with the amount paid or invoice reference number.
+      image: /images/moneyImg.svg
+    - title: Easy reference matching
+      text: Set your own reference per invoice for easy reconciliation.
+      image: /images/invoiceImg.svg
+    - title: Automatic reminders
+      text: >-
+        Set up automatic reminders for unpaid invoices. Save time for your
+        finance team.
+      image: /images/bellImg.svg
+    - title: Easy API integration
+      text: >-
+        Integrate with our Invoice system using super easy API connections and
+        get paid instantly by ‘Pay by link’ or ‘Pay by QR code’.
+      image: /images/redGearImg.svg
+    - title: Integration with your accounts
+      text: Connect your accounting system with fena Invoice payments.
+      image: /images/yellowPhoneImg.svg
+    - title: Pay by link
+      text: >-
+        Taking payments over the phone? Try our Pay by Link feature. Simply send
+        a payment link via text or email.
+      image: /images/greenPaymentCardImg.svg
 viewport3:
   title: Why Open Banking payments for your invoices?
   viewport3Cards:
-    - {
-        title: Bank-level security,
-        text: All payments are processed by banks; guaranteeing bank-level security.,
-        image: /images/guardImg.svg,
-      }
-    - {
-        title: Instant settlements,
-        text: Instant settlement and reconciliation of payments.,
-        image: /images/dollarImg.svg,
-      }
-    - {
-        title: Security and fraud,
-        text: With Open Banking payments no bank or personal details are stored.,
-        image: /images/personImg.svg,
-      }
-    - {
-        title: Low fees,
-        text: Transaction fees starting from 0.3%. Save up 85% on your card payment fees.,
-        image: /images/sectionImg.svg,
-      }
+    - title: Bank-level security
+      text: All payments are processed by banks; guaranteeing bank-level security.
+      image: /images/guardImg.svg
+    - title: Instant settlements
+      text: Instant settlement and reconciliation of payments.
+      image: /images/dollarImg.svg
+    - title: Security and fraud
+      text: With Open Banking payments no bank or personal details are stored.
+      image: /images/personImg.svg
+    - title: Low fees
+      text: >-
+        Transaction fees starting from 0.3%. Save up 85% on your card payment
+        fees.
+      image: /images/sectionImg.svg
 viewport4:
   leftTitle1: For small
   leftTitle2: businesses
-  leftDescription: Ready to embrace the payment revolution? Register for a fena Merchant Account to try out fena Invoice payments.
+  leftDescription: >-
+    Ready to embrace the payment revolution? Register for a fena Merchant
+    Account to try out fena Invoice payments.
   rightTitle1: For enterprises
   rightDescription1: Drop us a line on
   rightDescription2: api@fena.co
-  rightDescription3: to set up an initial call to explore how we can help you gain access to Open Banking payments and data.
+  rightDescription3: >-
+    to set up an initial call to explore how we can help you gain access to Open
+    Banking payments and data.
 viewport5:
   title: Seamless payment services for your industry
   carouselItems:
-    - {
-        title: Marketplaces,
-        text: 'Reduce basket drop-outs with seamless bank transfer payments powered by fena.',
-        image: /images/carouselImg1.svg,
-      }
-    - {
-        title: eCommerce,
-        text: "Minimise friction with 'Instant Bank Transfers' at checkout, saving up to 85% on payment processing fees.",
-        image: /images/carouselImg2.svg,
-      }
-    - {
-        title: iGaming,
-        text: 'Provide seamless payments for low-cost top ups.',
-        image: /images/carouselImg3.svg,
-      }
-    - {
-        title: Digital wallets,
-        text: 'Easy top-ups by instant bank transfer for digital wallets',
-        image: /images/carouselImg4.svg,
-      }
-    - {
-        title: Crypto exchanges,
-        text: 'Low-cost, easy top ups with account-to-account payments.',
-        image: /images/carouselImg5.svg,
-      }
+    - title: Marketplaces
+      text: >-
+        Reduce basket drop-outs with seamless bank transfer payments powered by
+        fena.
+      image: /images/carouselImg1.svg
+    - title: eCommerce
+      text: >-
+        Minimise friction with 'Instant Bank Transfers' at checkout, saving up
+        to 85% on payment processing fees.
+      image: /images/carouselImg2.svg
+    - title: iGaming
+      text: Provide seamless payments for low-cost top ups.
+      image: /images/carouselImg3.svg
+    - title: Digital wallets
+      text: Easy top-ups by instant bank transfer for digital wallets
+      image: /images/carouselImg4.svg
+    - title: Crypto exchanges
+      text: 'Low-cost, easy top ups with account-to-account payments.'
+      image: /images/carouselImg5.svg
 viewport6:
   bannerLabel: Get paid fast and fair with Fena
   bannerDescription: Download the Fena merchant app to take in-store or in-person payments
   lowerTitle1: We are eager to
   lowerTitle2: help you
-  lowerText: 'Contact us and one of our payment experts will be in touch soon.'
+  lowerText: Contact us and one of our payment experts will be in touch soon.

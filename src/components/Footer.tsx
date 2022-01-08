@@ -73,54 +73,37 @@ const ButtonFooterLink = styled.a`
   margin-top: 1rem;
 `;
 
+interface NavSection {
+  title: string;
+  links: {
+    label: string;
+    url: string;
+  }[];
+}
+
 interface LayoutFooterContent {
-  label1: string;
-  phone: string;
-  label2: string;
-  email: string;
-  productsSection: {
-    title: string;
-    link1: string;
-    link2: string;
-    link3: string;
-    link4: string;
-    link5: string;
-    link6: string;
+  mainSection: {
+    label1: string;
+    phone: string;
+    label2: string;
+    email: string;
   };
-  resourcesSection: {
-    title: string;
-    link1: string;
-    link2: string;
-    link3: string;
-    link4: string;
-    link5: string;
-  };
-  legalSection: {
-    title: string;
-    link1: string;
-    link2: string;
-    link3: string;
-  };
+  productsSection: NavSection;
+  resourcesSection: NavSection;
+  legalSection: NavSection;
 }
 
 const Footer: React.FunctionComponent = () => {
-  const {
-    label1,
-    phone,
-    label2,
-    email,
-    productsSection,
-    resourcesSection,
-    legalSection,
-  } = footerContent as unknown as LayoutFooterContent;
+  const { mainSection, productsSection, resourcesSection, legalSection } =
+    footerContent as unknown as LayoutFooterContent;
   return (
     <FooterWrapper>
       <div>
         <img src={logo} alt="logo" />
-        <FooterContactLabel>{label1}</FooterContactLabel>
-        <FooterContact>{phone}</FooterContact>
-        <FooterContactLabel>{label2}</FooterContactLabel>
-        <FooterContact>{email}</FooterContact>
+        <FooterContactLabel>{mainSection.label1}</FooterContactLabel>
+        <FooterContact>{mainSection.phone}</FooterContact>
+        <FooterContactLabel>{mainSection.label2}</FooterContactLabel>
+        <FooterContact>{mainSection.email}</FooterContact>
         <div>
           <a href="/">
             <ContactIcon src={fbIcon} alt="facebook icon" />
@@ -138,26 +121,21 @@ const Footer: React.FunctionComponent = () => {
       </div>
       <FooterSection>
         <FooterTitle>{productsSection.title}</FooterTitle>
-        <FooterLink to="/">{productsSection.link1}</FooterLink>
-        <FooterLink to="/">{productsSection.link2}</FooterLink>
-        <FooterLink to="/">{productsSection.link3}</FooterLink>
-        <FooterLink to="/">{productsSection.link4}</FooterLink>
-        <FooterLink to="/">{productsSection.link5}</FooterLink>
-        <FooterLink to="/">{productsSection.link6}</FooterLink>
+        {productsSection.links.map(({ label, url }) => (
+          <FooterLink to={url}>{label}</FooterLink>
+        ))}
       </FooterSection>
       <FooterSection>
         <FooterTitle>{resourcesSection.title}</FooterTitle>
-        <FooterLink to="/">{resourcesSection.link1}</FooterLink>
-        <FooterLink to="/">{resourcesSection.link2}</FooterLink>
-        <FooterLink to="/">{resourcesSection.link3}</FooterLink>
-        <FooterLink to="/">{resourcesSection.link4}</FooterLink>
-        <FooterLink to="/">{resourcesSection.link5}</FooterLink>
+        {resourcesSection.links.map(({ label, url }) => (
+          <FooterLink to={url}>{label}</FooterLink>
+        ))}
       </FooterSection>
       <FooterSection>
         <FooterTitle>{legalSection.title}</FooterTitle>
-        <FooterLink to="/">{legalSection.link1}</FooterLink>
-        <FooterLink to="/">{legalSection.link2}</FooterLink>
-        <FooterLink to="/">{legalSection.link3}</FooterLink>
+        {legalSection.links.map(({ label, url }) => (
+          <FooterLink to={url}>{label}</FooterLink>
+        ))}
         <FooterButtons>
           <ButtonFooterLink href="/">
             <ButtonGooglePlay white />
