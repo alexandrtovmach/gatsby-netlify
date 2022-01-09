@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ButtonDefault from './ButtonDefault';
 import { H2, P, Subtitle5 } from './Typography';
-import tick from '../assets/icons/blackTick.svg';
+import TickSvg from '../assets/icons/blackTick.svg';
 
 const Wrapper = styled.div`
   flex-basis: 25%;
@@ -48,7 +48,7 @@ const Description = styled(P)`
   display: flex;
   align-items: center;
 `;
-const Tick = styled.img`
+const Tick = styled(TickSvg)`
   margin-right: 1rem;
 `;
 interface SolutionComponentProps {
@@ -75,20 +75,20 @@ const PricingCard: React.FunctionComponent<SolutionComponentProps> = ({
     <Title2>{title2}</Title2>
     <Info>
       <Description>
-        <Tick src={tick} alt="tick" />
+        <Tick />
         {description1}
       </Description>
       <Description>
-        <Tick src={tick} alt="tick" />
+        <Tick />
         {description2}
       </Description>
       <Description>
-        <Tick src={tick} alt="tick" />
+        <Tick />
         {description3}
       </Description>
       {description4 && (
         <Description>
-          <Tick src={tick} alt="tick" />
+          <Tick />
           {description4}
         </Description>
       )}

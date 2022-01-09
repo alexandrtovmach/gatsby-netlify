@@ -9,7 +9,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-import logo from '../assets/icons/logo.svg';
+import LogoSvg from '../assets/icons/logo.svg';
 import headerContent from '../../content/components/header.yml';
 import DropdownMenu from './DropdownMenu';
 import ButtonDefault from './ButtonDefault';
@@ -186,7 +186,7 @@ const Header: React.FunctionComponent = () => {
     <>
       <HeaderWrapper>
         <ResponsiveLink to="/">
-          <img src={logo} alt="company logo" />
+          <LogoSvg />
         </ResponsiveLink>
         <BurgerMenu styles={styles} right width="90%">
           {navigation.map(({ label, link, nested }) =>
@@ -227,7 +227,7 @@ const Header: React.FunctionComponent = () => {
         <Nav>
           <NavLeft>
             <Link to="/">
-              <img src={logo} alt="company logo" />
+              <LogoSvg />
             </Link>
             {navigation.map((el) =>
               el.link ? (

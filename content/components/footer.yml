@@ -36,19 +36,19 @@ resourcesSection:
     - label: Help Centre
       url: /help-center
     - label: How to pay with fena
-      url: /pricing
+      url: https://www.fena.co/how-to-pay-with-fena/
     - label: How fena terminal works
-      url: /pricing
+      url: https://www.fena.co/how-does-the-fena-terminal-work/
     - label: Order fena NFC card
-      url: /pricing
+      url: https://www.fena.co/order-nfc-card/
 legalSection:
   title: Legal
   appStoreButton: https://apps.apple.com/gb/app/fenamerchant/id1586556024
   googlePlayButton: https://play.google.com/store/apps/details?id=co.fena.merchant
   links:
     - label: Privacy policy
-      url: /pricing
+      url: https://www.fena.co/privacy-policy/
     - label: Terms and conditions
-      url: /pricing
+      url: https://www.fena.co/terms-and-conditions/
     - label: Security
-      url: /pricing
+      url: https://www.fena.co/security/

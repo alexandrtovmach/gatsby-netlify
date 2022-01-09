@@ -16,7 +16,7 @@ const StyledMenu = styled(Menu)`
     padding: 1rem;
     min-width: 20rem;
     flex-wrap: wrap;
-    min-height: 10rem;
+    min-height: 2rem;
   }
 `;
 const Icon = styled.img`

@@ -1,10 +1,11 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../assets/icons/logo.svg';
+import LogoSvg from '../assets/icons/logo.svg';
 import footerContent from '../../content/components/footer.yml';
-import ButtonAppStore from '@/components/ButtonAppStore';
-import ButtonGooglePlay from '@/components/ButtonGooglePlay';
+import ButtonDefault from './ButtonDefault';
+import GooglePlayBg from '../assets/icons/googlePlayBgWhite.svg';
+import AppleStoreBg from '../assets/icons/appStoreBgWhite.svg';
 
 const FooterWrapper = styled.div`
   padding: 5rem;
@@ -61,11 +62,17 @@ const ContactIcon = styled.img`
 
 const FooterButtons = styled.div`
   display: flex;
+  gap: 0.5rem;
 `;
 
-const ButtonFooterLink = styled.a`
-  margin-right: 1rem;
-  margin-top: 1rem;
+const AppStore = styled(AppleStoreBg)`
+  height: 100%;
+  width: 100%;
+`;
+
+const GooglePlay = styled(GooglePlayBg)`
+  height: 100%;
+  width: 100%;
 `;
 
 const ContactLink = styled.a`
@@ -106,7 +113,7 @@ const Footer: React.FunctionComponent = () => {
     <FooterWrapper>
       <div>
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <LogoSvg />
         </Link>
         {mainSection.contacts.map((item) => (
           <>
@@ -149,15 +156,12 @@ const Footer: React.FunctionComponent = () => {
           <FooterLink to={url}>{label}</FooterLink>
         ))}
         <FooterButtons>
-          <ButtonFooterLink
-            target="_blank"
-            href={legalSection.googlePlayButton}
-          >
-            <ButtonGooglePlay white />
-          </ButtonFooterLink>
-          <ButtonFooterLink target="_blank" href={legalSection.appStoreButton}>
-            <ButtonAppStore white />
-          </ButtonFooterLink>
+          <ButtonDefault withImage to={legalSection.googlePlayButton}>
+            <GooglePlay />
+          </ButtonDefault>
+          <ButtonDefault withImage to={legalSection.appStoreButton}>
+            <AppStore />
+          </ButtonDefault>
         </FooterButtons>
       </FooterSection>
     </FooterWrapper>

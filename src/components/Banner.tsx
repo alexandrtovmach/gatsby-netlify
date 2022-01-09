@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import ButtonAppStore from './ButtonAppStore';
-import ButtonGooglePlay from './ButtonGooglePlay';
+
 import { P } from './Typography';
+import GooglePlayBg from '../assets/icons/googlePlayBg.svg';
+import AppleStoreBg from '../assets/icons/appStoreBg.svg';
+import ButtonDefault from './ButtonDefault';
 
 const Wrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
@@ -40,10 +42,10 @@ const Description = styled(P)`
 `;
 
 const Buttons = styled.div`
+  display: flex;
+  gap: 0.5rem;
   @media (max-width: 1200px) {
-    display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
   }
 `;
 interface BannerProps {
@@ -65,12 +67,12 @@ const Banner: React.FunctionComponent<BannerProps> = ({
       <Label>{label}</Label>
       <Description>{description}</Description>
       <Buttons>
-        <a target="_blank" href={appStoreButtonUrl} rel="noreferrer">
-          <ButtonAppStore />
-        </a>
-        <a target="_blank" href={googlePlayButtonUrl} rel="noreferrer">
-          <ButtonGooglePlay />
-        </a>
+        <ButtonDefault withImage to={appStoreButtonUrl}>
+          <AppleStoreBg />
+        </ButtonDefault>
+        <ButtonDefault withImage to={googlePlayButtonUrl}>
+          <GooglePlayBg />
+        </ButtonDefault>
       </Buttons>
     </Content>
   </Wrapper>

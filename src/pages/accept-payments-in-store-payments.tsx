@@ -7,8 +7,6 @@ import page7Vp1 from '../assets/img/page7Vp1.svg';
 import FirstViewport from '../components/FirstViewport';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
-import ButtonGooglePlay from '@/components/ButtonGooglePlay';
-import ButtonAppStore from '@/components/ButtonAppStore';
 import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
 import tickIcon from '../assets/icons/tickIcon.svg';
 import videoImg from '../assets/img/videoImg.svg';
@@ -17,6 +15,9 @@ import pg7Vp3Img from '../assets/img/pg7Vp3Img.svg';
 import bannerBg from '../assets/img/bannerInStorePaymentsBg.png';
 import InstantPaymentCard from '@/components/InstantPaymentCard';
 import Section from '@/components/Section';
+import ButtonDefault from '../components/ButtonDefault';
+import GooglePlayBg from '../assets/icons/googlePlayBg.svg';
+import AppleStoreBg from '../assets/icons/appStoreBg.svg';
 
 const FirstViewportWrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
@@ -142,20 +143,13 @@ const InStorePayments: React.FunctionComponent = () => {
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
           <BoldDescription>{viewport1.description3}</BoldDescription>
-          <a
-            target="_blank"
-            href={viewport1.appStoreButton.url}
-            rel="noreferrer"
-          >
-            <ButtonAppStore />
-          </a>
-          <a
-            target="_blank"
-            href={viewport1.googlePlayButton.url}
-            rel="noreferrer"
-          >
-            <ButtonGooglePlay />
-          </a>
+          <ButtonDefault withImage to={viewport1.googlePlayButton.url}>
+            <GooglePlayBg />
+          </ButtonDefault>
+          {` `}
+          <ButtonDefault withImage to={viewport1.appStoreButton.url}>
+            <AppleStoreBg />
+          </ButtonDefault>
         </FirstViewport>
       </FirstViewportWrapper>
       <SecondViewport>
