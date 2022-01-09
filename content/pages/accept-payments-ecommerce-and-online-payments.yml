@@ -20,7 +20,8 @@ benefitCards:
       Payments are instantaneous.Your funds are deposited into your account the
       moment payments are made.
   - title: Easy setup
-    description: null
+    description: >- 
+      Set up your account in a few minutes with ecommerce plug-ins and SDKs.
   - title: Bank-level security
     description: >-
       Our APIs are Open Banking and PSD2 compliant, ensuring secure access to

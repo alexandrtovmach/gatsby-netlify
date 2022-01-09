@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/icons/logo.svg';
 import footerContent from '../../content/components/footer.yml';
 import ButtonAppStore from '@/components/ButtonAppStore';
 import ButtonGooglePlay from '@/components/ButtonGooglePlay';

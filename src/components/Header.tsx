@@ -9,7 +9,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/icons/logo.svg';
 import headerContent from '../../content/components/header.yml';
 import DropdownMenu from './DropdownMenu';
 import ButtonDefault from './ButtonDefault';

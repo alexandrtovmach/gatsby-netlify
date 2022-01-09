@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ButtonDefault from './ButtonDefault';
 import { H2, P, Subtitle5 } from './Typography';
-import tick from '../assets/img/blackTick.svg';
+import tick from '../assets/icons/blackTick.svg';
 
 const Wrapper = styled.div`
   flex-basis: 25%;

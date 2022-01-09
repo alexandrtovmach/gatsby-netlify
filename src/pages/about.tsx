@@ -11,8 +11,8 @@ import {
 } from '@/components/Typography';
 import Section from '@/components/Section';
 import bannerBg from '../assets/img/aboutPageBanner.png';
-import linkedIn from '../assets/img/linkedIn.svg';
-import email from '../assets/img/envelope.svg';
+import linkedIn from '../assets/icons/linkedIn.svg';
+import email from '../assets/icons/envelope.svg';
 import ButtonDefault from '@/components/ButtonDefault';
 
 const FirstViewport = styled(Section)`

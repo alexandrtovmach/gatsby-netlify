@@ -8,7 +8,7 @@ import page3viewport1 from '../assets/img/page3viewport1.svg';
 import FirstViewport from '../components/FirstViewport';
 import section2Bg from '../assets/img/section2_bg.svg';
 import BenefitCard from '@/components/BenefitCard';
-import tickIconSrc from '../assets/img/tickIcon.svg';
+import tickIconSrc from '../assets/icons/tickIcon.svg';
 import bankingAppImg from '../assets/img/bankingAppImg.svg';
 import page3Vp3Bg from '../assets/img/page3Vp3Bg.svg';
 import PluginCard from '@/components/PluginCard';

@@ -10,7 +10,7 @@ import BottomMessage from '@/components/BottomMessage';
 import ButtonGooglePlay from '@/components/ButtonGooglePlay';
 import ButtonAppStore from '@/components/ButtonAppStore';
 import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
-import tickIcon from '../assets/img/tickIcon.svg';
+import tickIcon from '../assets/icons/tickIcon.svg';
 import videoImg from '../assets/img/videoImg.svg';
 import gradientBg from '../assets/img/gradientBg.svg';
 import pg7Vp3Img from '../assets/img/pg7Vp3Img.svg';
