@@ -21,8 +21,7 @@ viewport2:
         create an account.
       image: /images/greenPhonePound.svg
     - title: Track your payments
-      text: Check the status of your payments. If one’s outstanding
-      you can resend the link to remind your customer to pay.: null
+      text: Check the status of your payments. If one’s outstanding you can resend the link to remind your customer to pay.
       image: /images/yellowList.svg
 viewport3:
   title: Why use Fena Invoice Payments?

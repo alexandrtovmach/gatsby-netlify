@@ -19,10 +19,10 @@ viewport2:
   linkCards:
     - title: Sell anywhere
       text: >-
-        Share links with your customers via SMS, WhatApp, email or other
+        Share links with your customers via SMS, WhatsApp, email or other
         messaging apps and get paid.
       image: /images/messenger.svg
-    - title: Customer-friendly
+    - title: Customer friendly
       text: >-
         Customers pay using a secure url – no need to download an app or create
         an account.
@@ -46,13 +46,13 @@ viewport3:
         to 85% on payment processing fees.
       image: /images/carouselImg2.svg
     - title: iGaming
-      text: Provide seamless payments for low-cost top ups.
+      text: Provide seamless payments for low-cost top-ups.
       image: /images/carouselImg3.svg
     - title: Digital wallets
-      text: Easy top-ups by instant bank transfer for digital wallets
+      text: Easy top-ups by instant bank transfer for digital wallets.
       image: /images/carouselImg4.svg
     - title: Crypto exchanges
-      text: 'Low-cost, easy top ups with account-to-account payments.'
+      text: 'Low-cost, easy top-ups with account-to-account payments.'
       image: /images/carouselImg5.svg
 viewport4:
   bannerLabel: Get paid fast and fair with Fena

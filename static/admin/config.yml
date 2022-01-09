@@ -50,6 +50,10 @@ collections:
                     name: description
                     widget: string
                     required: false
+                  - label: Navigation Icon
+                    name: icon
+                    widget: string
+                    required: false
       - label: Footer
         name: footer
         file: content/components/footer.yml
@@ -363,8 +367,8 @@ collections:
               - label: Title2
                 name: title2
                 widget: string
-              - label: Description
-                name: description
+              - label: Description_1
+                name: description1
                 widget: string
               - label: Description_2
                 name: description2

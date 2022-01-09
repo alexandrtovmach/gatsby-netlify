@@ -29,13 +29,13 @@ section3:
   descriptionLeft: >-
     User insights through Open Banking APIs, powered by fena. Get access to
     enriched data that fuels informed business decisions.
-  labelRight: Invoice APIs
+  labelRight: Invoice
   labelRight2: payments
   descriptionRight: >-
     Place the Fena payment QR code on your invoices and get paid in just a few
     taps. Up the ante with fena Invoice QR Code Payments.
   cards:
-    - title: Payments APP
+    - title: Payments app
       text: >-
         Initiate payments within your app or website using Open Banking
         payments.
@@ -82,13 +82,13 @@ section5:
         to 85% on payment processing fees.
       image: /images/carouselImg2.svg
     - title: iGaming
-      text: Provide seamless payments for low-cost top ups.
+      text: Provide seamless payments for low-cost top-ups.
       image: /images/carouselImg3.svg
     - title: Digital wallets
-      text: Easy top-ups by instant bank transfer for digital wallets
+      text: Easy top-ups by instant bank transfer for digital wallets.
       image: /images/carouselImg4.svg
     - title: Crypto exchanges
-      text: 'Low-cost, easy top ups with account-to-account payments.'
+      text: 'Low-cost, easy top-ups with account-to-account payments.'
       image: /images/carouselImg5.svg
 section6:
   label: What our clients say about us
@@ -97,7 +97,7 @@ section6:
     - name: Hari Ramamurthy
       position: 'CTO, Kuflink'
       text: >-
-        I was looking for an easier and affordable way of topping up the Kuflink
+        I was looking for an easier and affordable way of topping-up the Kuflink
         account. fena sounded like a no-brainer to integrate it with our
         platform.
       image: /images/reviewer1Avatar.svg

@@ -114,7 +114,9 @@ const FourthViewport = styled(ThirdViewport)`
   padding-top: 0;
 `;
 
-const Vport4Description = styled(P)``;
+const Vport4Description = styled(P)`
+  margin-top: 1rem;
+`;
 
 const StepCardWrapper = styled(CardWrapper)`
   width: 100%;
