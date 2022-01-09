@@ -4,7 +4,7 @@ import Main from '../containers/Layout';
 import qrCodePaymentsContent from '../../content/pages/accept-payments-qr-code-payments.yml';
 import { H1, H2, H3, P } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import page6Vp1 from '../assets/img/page6Vp1.svg';
+import page6Vp1 from '../assets/img/page6Vp1.png';
 import FirstViewport from '../components/FirstViewport';
 import CarouselCard from '@/components/CarouselCard';
 import SolutionComponent from '@/components/SolutionCard';
@@ -12,7 +12,7 @@ import StepCard from '@/components/StepCard';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerQrCodePageBg.png';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
 import Section from '@/components/Section';
 
 const FirstViewportWrapper = styled.div`

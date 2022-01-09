@@ -4,7 +4,7 @@ import Main from '../containers/Layout';
 import invoicePaymentsPageContent from '../../content/pages/accept-payments-invoice-payments.yml';
 import { H1, H3, P } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import page5Vp1 from '../assets/img/page5Vp1.svg';
+import page5Vp1 from '../assets/img/page5Vp1.png';
 import FirstViewport from '../components/FirstViewport';
 import SolutionComponent from '@/components/SolutionCard';
 import CarouselCard from '@/components/CarouselCard';
@@ -12,7 +12,7 @@ import Carousel from '@/components/Carousel';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerInvoicePaymentPageBg.png';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
 import Section from '@/components/Section';
 
 const FirstViewportWrapper = styled.div`

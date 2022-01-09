@@ -3,15 +3,15 @@ import styled from 'styled-components';
 import Main from '../containers/Layout';
 import inStorePaymentsContent from '../../content/pages/accept-payments-in-store-payments.yml';
 import { H1, H2, P, Strong } from '@/components/Typography';
-import page7Vp1 from '../assets/img/page7Vp1.svg';
+import page7Vp1 from '../assets/img/page7Vp1.png';
 import FirstViewport from '../components/FirstViewport';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
 import tickIcon from '../assets/icons/tickIcon.svg';
-import videoImg from '../assets/img/videoImg.svg';
-import gradientBg from '../assets/img/gradientBg.svg';
-import pg7Vp3Img from '../assets/img/pg7Vp3Img.svg';
+import videoImg from '../assets/img/videoImg.png';
+import gradientBg from '../assets/img/gradientBg.png';
+import pg7Vp3Img from '../assets/img/pg7Vp3Img.png';
 import bannerBg from '../assets/img/bannerInStorePaymentsBg.png';
 import InstantPaymentCard from '@/components/InstantPaymentCard';
 import Section from '@/components/Section';
@@ -59,9 +59,13 @@ const PluginCardWrapper = styled.div`
   margin-top: 3rem;
   flex-wrap: wrap;
 `;
-
+const VideoLink = styled.a`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+`;
 const VideoImg = styled.img`
-  align-self: center;
   width: 80%;
   margin-top: 5rem;
   @media (max-width: 1200px) {
@@ -97,6 +101,7 @@ interface InStorePaymentsContent {
   viewport2: {
     title: string;
     description: string;
+    videoUrl: string;
     instantPaymentCards: {
       text: string;
     }[];
@@ -166,7 +171,9 @@ const InStorePayments: React.FunctionComponent = () => {
             />
           ))}
         </PluginCardWrapper>
-        <VideoImg src={videoImg} alt="video" />
+        <VideoLink target="_blank" href={viewport2.videoUrl} rel="noreferrer">
+          <VideoImg src={videoImg} alt="video" />
+        </VideoLink>
       </SecondViewport>
       <FirstViewport withRightPadding img={pg7Vp3Img}>
         <GreenP className="accent-text">{viewport3.label}</GreenP>

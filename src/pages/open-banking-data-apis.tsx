@@ -4,14 +4,14 @@ import Main from '../containers/Layout';
 import openBankingDataApisContent from '../../content/pages/open-banking-data-apis.yml';
 import { P, H1, H2, H3 } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import page8Vp1 from '../assets/img/pg8Vp1Img.svg';
+import page8Vp1 from '../assets/img/pg8Vp1Img.png';
 import FirstViewport from '../components/FirstViewport';
 import CarouselCard from '@/components/CarouselCard';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerPaymentApisPageBg.png';
-import pg8Vp3Bg from '../assets/img/pg8Vp3Bg.svg';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import pg8Vp3Bg from '../assets/img/pg8Vp3Bg.png';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
 import OpenBankingCard from '@/components/OpenBankingCard';
 import Section from '@/components/Section';
 

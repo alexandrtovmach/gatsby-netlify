@@ -1184,6 +1184,12 @@ collections:
               - label: Description
                 name: description
                 widget: string
+              - label: Description
+                name: description
+                widget: string
+              - label: Video URL
+                name: videoUrl
+                widget: string
           - label: Instant Payment Cards
             name: instantPaymentCards
             widget: list

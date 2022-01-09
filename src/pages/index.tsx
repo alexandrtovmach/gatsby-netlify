@@ -6,12 +6,12 @@ import ButtonDefault from '../components/ButtonDefault';
 import ReviewCard from '../components/ReviewCard';
 import homeContent from '../../content/pages/home.yml';
 import bannerHomePageBg from '../assets/img/bannerHomePageBg.png';
-import imgItem1 from '../assets/img/imgItem1.svg';
-import section2Bg from '../assets/img/section2_bg.svg';
-import solutionCardLeft from '../assets/img/solutionCardLeft.svg';
-import solutionCardRight from '../assets/img/solutionCardRight.svg';
-import section4Img from '../assets/img/section4Img.svg';
-import section6Bg from '../assets/img/section6_bg.svg';
+import imgItem1 from '../assets/img/imgItem1.png';
+import section2Bg from '../assets/img/section2_bg.png';
+import solutionCardLeft from '../assets/img/solutionCardLeft.png';
+import solutionCardRight from '../assets/img/solutionCardRight.png';
+import section4Img from '../assets/img/section4Img.png';
+import section6Bg from '../assets/img/section6_bg.png';
 import Carousel from '../components/Carousel';
 import SolutionComponent from '../components/SolutionCard';
 import {
@@ -164,7 +164,7 @@ const Section4LeftSide = styled.div`
   flex: 1 1 50%;
 `;
 const Section4Img = styled.img`
-  height: 100%;
+  width: 50%;
   @media (max-width: 1200px) {
     height: auto;
     width: 100%;

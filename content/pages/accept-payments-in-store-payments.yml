@@ -19,6 +19,7 @@ viewport2:
   description: >-
     Let your customers choose how to pay, from scanning a QR code, tapping on an
     NFC card, or via a web browser.
+  videoUrl: https://youtu.be/eoZcVfaNbLs
   instantPaymentCards:
     - text: Offer customers a payment method convenient to them
     - text: Get paid on-the-go or or in-store with a mobile device
