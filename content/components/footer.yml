@@ -37,9 +37,9 @@ resourcesSection:
       url: /help-center
     - label: How to pay with fena
       url: https://www.fena.co/how-to-pay-with-fena/
-    - label: How fena terminal works
+    - label: How Fena terminal works
       url: https://www.fena.co/how-does-the-fena-terminal-work/
-    - label: Order fena NFC card
+    - label: Order Fena NFC card
       url: https://www.fena.co/order-nfc-card/
 legalSection:
   title: Legal

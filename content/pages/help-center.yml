@@ -16,15 +16,15 @@ faqList:
         answer: null
       - question: What is a third party provider?
         answer: null
-      - question: Does fena see my banking login details?
+      - question: Does Fena see my banking login details?
         answer: >-
           No. With Open Banking, your login details are safe, as you don’t share
-          them with us. fena (formerly FaizPay) will always direct you to your
+          them with us. Fena (formerly FaizPay) will always direct you to your
           mobile banking app or your bank’s secure website which allows you to
           make a payment without sharing any of your details with us.
       - question: Is my payment secure?
         answer: null
-      - question: What if fena gets hacked?
+      - question: What if Fena gets hacked?
         answer: null
   - title: Merchants FAQ
     items:

@@ -66,7 +66,7 @@ viewport5:
         No card number or personal details required.
     - title: Reduce costs
       description: >-
-        Slash the costs of card and interchange fees. fena uses the Open Banking
+        Slash the costs of card and interchange fees. Fena uses the Open Banking
         framework to reduce payment processing fees by 0.85%.
     - title: Customisable design
       description: >-
@@ -81,7 +81,7 @@ viewport5:
         Our APIs are Open Banking and PSD2 compliant, ensuring secure access to
         the financial system.
     - title: Quick and easy implementation
-      description: Integrate with fena Open Banking Payment APIs using SDKs or direct APIs.
+      description: Integrate with Fena Open Banking Payment APIs using SDKs or direct APIs.
 viewport6:
   title: Seamless payment services for your industry
   carouselItems:

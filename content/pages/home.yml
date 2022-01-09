@@ -33,7 +33,7 @@ section3:
   labelRight2: payments
   descriptionRight: >-
     Place the Fena payment QR code on your invoices and get paid in just a few
-    taps. Up the ante with fena Invoice QR Code Payments.
+    taps. Up the ante with Fena Invoice QR Code Payments.
   cards:
     - title: Payments app
       text: >-
@@ -57,7 +57,7 @@ section3:
       image: /images/card4Img.svg
     - title: Invoice payments
       text: >-
-        Place the fena payment QR code on your invoices and get paid in just a
+        Place the Fena payment QR code on your invoices and get paid in just a
         few taps.
       image: /images/card5Img.svg
 section4:
@@ -98,7 +98,7 @@ section6:
       position: 'CTO, Kuflink'
       text: >-
         I was looking for an easier and affordable way of topping-up the Kuflink
-        account. fena sounded like a no-brainer to integrate it with our
+        account. Fena sounded like a no-brainer to integrate it with our
         platform.
       image: /images/reviewer1Avatar.svg
     - name: Yotam Spenser

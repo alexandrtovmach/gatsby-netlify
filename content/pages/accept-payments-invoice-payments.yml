@@ -2,10 +2,10 @@ viewport1:
   title1: Invoice
   title2: Payments
   description1: >-
-    Place the fena payment QR code on your invoices and get paid in just a few
+    Place the Fena payment QR code on your invoices and get paid in just a few
     taps.
   description2: >-
-    Up the ante with fena Invoice QR Code Payments. Unleash the power of Open
+    Up the ante with Fena Invoice QR Code Payments. Unleash the power of Open
     Banking for your payment collection.
   button:
     label: register now
@@ -30,7 +30,7 @@ viewport2:
         get paid instantly by ‘Pay by link’ or ‘Pay by QR code’.
       image: /images/redGearImg.svg
     - title: Integration with your accounts
-      text: Connect your accounting system with fena Invoice payments.
+      text: Connect your accounting system with Fena Invoice payments.
       image: /images/yellowPhoneImg.svg
     - title: Pay by link
       text: >-
@@ -58,8 +58,8 @@ viewport4:
   leftTitle1: For small
   leftTitle2: businesses
   leftDescription: >-
-    Ready to embrace the payment revolution? Register for a fena Merchant
-    Account to try out fena Invoice payments.
+    Ready to embrace the payment revolution? Register for a Fena Merchant
+    Account to try out Fena Invoice payments.
   createAccountButton:
     label: create an account
     url: https://merchant.faizpay.com/register

@@ -32,7 +32,7 @@ viewport3:
   description: >-
     We support plug-ins for popular e-commerce solutions. The plugins can be
     added to your website via the respective marketplaces and linked to your
-    fena account.
+    Fena account.
 pluginCards:
   - title: WooCommerce
     image: /images/wooComerceLogo.svg
