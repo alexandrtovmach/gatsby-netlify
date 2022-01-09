@@ -1636,22 +1636,6 @@ collections:
               - label: Description
                 name: description
                 widget: string
-          - label: Viewport 1
-            name: viewport1
-            widget: object
-            fields:
-              - label: Title1
-                name: title1
-                widget: string
-              - label: Title2
-                name: title2
-                widget: string
-              - label: Title3
-                name: title3
-                widget: string
-              - label: Description
-                name: description
-                widget: string
           - label: Partnership Cards
             name: partnershipCards
             widget: object
