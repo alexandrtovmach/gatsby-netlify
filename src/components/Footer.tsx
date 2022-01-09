@@ -105,7 +105,9 @@ const Footer: React.FunctionComponent = () => {
   return (
     <FooterWrapper>
       <div>
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
         {mainSection.contacts.map((item) => (
           <>
             <FooterContactLabel>{item.label}</FooterContactLabel>

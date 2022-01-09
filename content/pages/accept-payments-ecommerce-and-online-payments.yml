@@ -35,10 +35,13 @@ viewport3:
 pluginCards:
   - title: WooCommerce
     image: /images/wooComerceLogo.svg
+    link:  https://wordpress.org/plugins/faizpay-commerce/
   - title: Instant settlement
     image: /images/magentoLogo.svg
+    link:
   - title: Easy setup
     image: /images/opencartLogo.svg
+    link:
 viewport4:
   title: Seamless payment services for your industry
   carouselItems:

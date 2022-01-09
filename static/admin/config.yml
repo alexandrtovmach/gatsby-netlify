@@ -628,6 +628,9 @@ collections:
               - label: Image
                 name: image
                 widget: string
+              - label: Link
+                name: link
+                widget: string
           - label: Viewport 4
             name: viewport4
             widget: object

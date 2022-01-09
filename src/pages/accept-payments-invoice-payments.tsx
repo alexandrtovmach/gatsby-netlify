@@ -264,7 +264,10 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
             </OfferCardLabel>
             <OfferCardDescription>
               {viewport4.rightDescription1}
-              &nbsp;<StyledA href="/">{viewport4.rightDescription2}</StyledA>
+              &nbsp;
+              <StyledA href={`mailto:${viewport4.rightDescription2}`}>
+                {viewport4.rightDescription2}
+              </StyledA>
               &nbsp;
               {viewport4.rightDescription3}
             </OfferCardDescription>

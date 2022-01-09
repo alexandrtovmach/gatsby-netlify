@@ -12,6 +12,9 @@ const Wrapper = styled.div`
     margin-bottom: 2rem;
   }
 `;
+const Link = styled.a`
+  height: 30%;
+`;
 const ImgWrapper = styled.div`
   background-color: #ffffff;
   border-radius: 10px;
@@ -32,16 +35,20 @@ const Title = styled(Subtitle5)`
 interface SolutionComponentProps {
   title: string;
   imageSrc: string;
+  link: string;
 }
 const PluginCard: React.FunctionComponent<SolutionComponentProps> = ({
   title,
   imageSrc,
+  link,
 }) => (
   <Wrapper>
     <Title>{title}</Title>
-    <ImgWrapper>
-      <Img src={imageSrc} alt="card logo" />
-    </ImgWrapper>
+    <Link target="_blank" href={link} rel="noreferrer">
+      <ImgWrapper>
+        <Img src={imageSrc} alt="card logo" />
+      </ImgWrapper>
+    </Link>
   </Wrapper>
 );
 

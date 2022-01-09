@@ -108,6 +108,7 @@ interface AcceptPaymentsAccountToAccountPageContent {
   pluginCards: {
     title: string;
     image: string;
+    link: string;
   }[];
   viewport4: {
     title: string;
@@ -203,6 +204,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               key={item.title}
               title={item.title}
               imageSrc={item.image}
+              link={item.link}
             />
           ))}
         </PluginCardWrapper>
