@@ -21,7 +21,7 @@ benefitCards:
       moment payments are made.
   - title: Easy setup
     description: >- 
-      Set up your account in a few minutes with ecommerce plug-ins and SDKs.
+      Set up your account in a few minutes with ecommerce plugins and SDKs.
   - title: Bank-level security
     description: >-
       Our APIs are Open Banking and PSD2 compliant, ensuring secure access to
@@ -30,7 +30,7 @@ viewport3:
   title1: Plug’n’Play
   title2: Solution for ecommerce businesses
   description: >-
-    We support plug-ins for popular e-commerce solutions. The plugins can be
+    We support plugins for popular e-commerce solutions. The plugins can be
     added to your website via the respective marketplaces and linked to your
     Fena account.
 pluginCards:

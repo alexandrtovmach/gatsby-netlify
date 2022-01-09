@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 const TopSection = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
 const Img = styled.img`
   width: 7%;

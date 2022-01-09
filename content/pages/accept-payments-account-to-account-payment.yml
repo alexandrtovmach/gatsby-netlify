@@ -1,7 +1,7 @@
 viewport1:
   title1: Payments API
   title2: for instant payments
-  description1: 'No cards, reduced fraud, no chargebacks, low fees.'
+  description1: 'No cards, reduced fraud, low fees.'
   description2: Initiate payments within your app or website using Open Banking payments.
   button:
     label: register now
