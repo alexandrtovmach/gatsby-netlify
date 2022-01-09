@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import TickIcon from '../assets/icons/tickIcon.svg';
 import { SecondaryP } from './Typography';
 
 const Wrapper = styled.div`
@@ -16,21 +17,19 @@ const Wrapper = styled.div`
     margin-bottom: 2rem;
   }
 `;
-const Img = styled.img`
+const Tick = styled(TickIcon)`
   width: 2rem;
   margin-right: 1rem;
 `;
 interface SolutionComponentProps {
   text: string;
-  imageSrc: string;
 }
 const InstantPaymentCard: React.FunctionComponent<SolutionComponentProps> = ({
   text,
-  imageSrc,
 }) => (
   <Wrapper>
     <div>
-      <Img src={imageSrc} alt="card logo" />
+      <Tick />
     </div>
     <SecondaryP>{text}</SecondaryP>
   </Wrapper>

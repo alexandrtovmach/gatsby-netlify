@@ -8,7 +8,6 @@ import page3viewport1 from '../assets/img/page3viewport1.png';
 import FirstViewport from '../components/FirstViewport';
 import section2Bg from '../assets/img/section2_bg.png';
 import BenefitCard from '@/components/BenefitCard';
-import tickIconSrc from '../assets/icons/tickIcon.svg';
 import bankingAppImg from '../assets/img/bankingAppImg.png';
 import page3Vp3Bg from '../assets/img/page3Vp3Bg.png';
 import PluginCard from '@/components/PluginCard';
@@ -173,7 +172,6 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               key={item.title}
               title={item.title}
               description={item.description}
-              icon={tickIconSrc}
             />
           ))}
         </BenefitCardsLeft>
@@ -184,7 +182,6 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               key={item.title}
               title={item.title}
               description={item.description}
-              icon={tickIconSrc}
             />
           ))}
         </BenefitCardsRight>

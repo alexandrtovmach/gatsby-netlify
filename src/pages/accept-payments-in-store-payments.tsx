@@ -8,7 +8,6 @@ import FirstViewport from '../components/FirstViewport';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
-import tickIcon from '../assets/icons/tickIcon.svg';
 import videoImg from '../assets/img/videoImg.png';
 import gradientBg from '../assets/img/gradientBg.png';
 import pg7Vp3Img from '../assets/img/pg7Vp3Img.png';
@@ -164,11 +163,7 @@ const InStorePayments: React.FunctionComponent = () => {
         </TextWrapper>
         <PluginCardWrapper>
           {viewport2.instantPaymentCards.map((item) => (
-            <InstantPaymentCard
-              key={item.text}
-              text={item.text}
-              imageSrc={tickIcon}
-            />
+            <InstantPaymentCard key={item.text} text={item.text} />
           ))}
         </PluginCardWrapper>
         <VideoLink target="_blank" href={viewport2.videoUrl} rel="noreferrer">

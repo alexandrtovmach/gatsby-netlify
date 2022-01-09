@@ -6,14 +6,13 @@ import { H1, H2, H3, P, Strong, Subtitle5 } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
 import page2viewport1 from '../assets/img/page2viewport1.png';
 import section2Bg from '../assets/img/section2_bg.png';
-import arrowIcon from '../assets/icons/arrowIcon.svg';
+import ArrowIcon from '../assets/icons/arrowIcon.svg';
 import CarouselCard from '@/components/CarouselCard';
 import StepCard from '@/components/StepCard';
 import BenefitCard from '@/components/BenefitCard';
 import Carousel from '@/components/Carousel';
 import Banner from '@/components/Banner';
 import bannerBg from '../assets/img/bannerAccountToaccountPageBg.png';
-import tickIconSrc from '../assets/icons/tickIcon.svg';
 import FirstViewport from '../components/FirstViewport';
 import BottomMessage from '@/components/BottomMessage';
 import Section from '@/components/Section';
@@ -97,6 +96,8 @@ const Btn = styled.div`
     margin-bottom: 1rem;
   }
 `;
+const Arrow = styled(ArrowIcon)``;
+
 const ThirdViewport = styled(Section)`
   background-color: #ffff;
 `;
@@ -293,7 +294,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             >
               <ButtonDefault white>
                 {viewport2.docButton.label}&nbsp;
-                <img src={arrowIcon} alt="button icon" />
+                <Arrow />
               </ButtonDefault>
             </ButtonLink>
           </ButtonContainer>
@@ -344,7 +345,6 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               key={item.title}
               title={item.title}
               description={item.description}
-              icon={tickIconSrc}
             />
           ))}
         </BenefitCardWrapper>
