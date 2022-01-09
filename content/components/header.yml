@@ -4,36 +4,46 @@ navigation:
       - label: Account-To-Account Payment APIs
         description: Customer payments settled faster
         link: /accept-payments-account-to-account-payment
+        icon: /images/twoArrowsDropdown.svg
       - label: eCommerce and Online Payments
         description: Customer payments settled faster
         link: /accept-payments-ecommerce-and-online-payments
+        icon: /images/bagDropdown.svg
       - label: Payment Links
         description: Create & send links to collect money
         link: /accept-payments-payment-links
+        icon: /images/linkDropdown.svg
       - label: Invoice Payments
         description: Create & send compliant invoices
         link: /accept-payments-invoice-payments
+        icon: /images/invoiceDropdown.svg
       - label: QR Code Payments
         description: Customers can just scan and pay
         link: /accept-payments-qr-code-payments
+        icon: /images/appDropdown.svg
       - label: In-store Payments
         description: Get paid in-store or in-person
         link: /accept-payments-in-store-payments
+        icon: /images/boxDropdown.svg
   - label: Manage your Business
     nested:
       - label: Open Banking Data APIs
         description: Get access to enriched data
         link: /open-banking-data-apis
+        icon: /images/tagDropdown.svg
   - label: Pricing
     link: /pricing
   - label: Company
     nested:
       - label: About us
         link: /about
+        icon: /images/facebookDropdown.svg
       - label: Partnership
         link: /partnership
+        icon: /images/caseDropdown.svg
       - label: Help Centre
         link: /help-center
+        icon: /images/dialogueDropdown.svg
   - label: Blog
     link: /posts
   - label: Contact
