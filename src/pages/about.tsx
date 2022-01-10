@@ -272,9 +272,9 @@ const About: React.FunctionComponent = () => {
               <span className="accent-text-blue">{lowerText.lowerText2}</span>
             </Mail>
           </LowerDescription>
-          <a target="_blank" href={lowerText.button.url} rel="noreferrer">
-            <ButtonDefault>{lowerText.button.label}</ButtonDefault>
-          </a>
+          <ButtonDefault to={lowerText.button.url}>
+            {lowerText.button.label}
+          </ButtonDefault>
         </LowerTextBox>
       </SecondViewport>
     </Main>

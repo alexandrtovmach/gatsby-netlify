@@ -304,9 +304,9 @@ const Home: React.FunctionComponent = () => {
         <Description>{section1.description}</Description>
         <Description>{section1.description2}</Description>
         <Description>{section1.description3}</Description>
-        <a target="_blank" href={section1.button.url} rel="noreferrer">
-          <ButtonDefault>{section1.button.label}</ButtonDefault>
-        </a>
+        <ButtonDefault to={section1.button.url}>
+          {section1.button.label}
+        </ButtonDefault>
       </FirstViewport>
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
@@ -374,9 +374,9 @@ const Home: React.FunctionComponent = () => {
             {section4.title3}
           </H2>
           <Description>{section4.description}</Description>
-          <a target="_blank" href={section4.button.url} rel="noreferrer">
-            <ButtonDefault>{section4.button.label}</ButtonDefault>
-          </a>
+          <ButtonDefault to={section4.button.url}>
+            {section4.button.label}
+          </ButtonDefault>
         </Section4LeftSide>
         <Section4Img src={section4Img} alt="section4 screenshot1" />
       </FourthSection>
@@ -413,9 +413,9 @@ const Home: React.FunctionComponent = () => {
             {section6.lowerTitle3}
           </H2>
           <Description>{section6.lowerText}</Description>
-          <a target="_blank" href={section6.button.url} rel="noreferrer">
-            <ButtonDefault>{section6.button.label}</ButtonDefault>
-          </a>
+          <ButtonDefault to={section6.button.url}>
+            {section6.button.label}
+          </ButtonDefault>
         </LowerTextBox>
       </SixthSection>
     </Main>

@@ -220,8 +220,12 @@ const Header: React.FunctionComponent = () => {
             ),
           )}
           <div>
-            <LoginButton white>Login</LoginButton>
-            <ButtonDefault>Register</ButtonDefault>
+            <LoginButton white to="https://merchant.faizpay.com/login">
+              Login
+            </LoginButton>
+            <ButtonDefault to="https://merchant.faizpay.com/register">
+              Register
+            </ButtonDefault>
           </div>
         </BurgerMenu>
         <Nav>
@@ -245,10 +249,12 @@ const Header: React.FunctionComponent = () => {
             )}
           </NavLeft>
           <NavRight>
-            <LoginButton white small>
+            <LoginButton small white to="https://merchant.faizpay.com/login">
               Login
             </LoginButton>
-            <ButtonDefault small>Register</ButtonDefault>
+            <ButtonDefault small to="https://merchant.faizpay.com/register">
+              Register
+            </ButtonDefault>
           </NavRight>
         </Nav>
       </HeaderWrapper>

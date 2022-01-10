@@ -125,9 +125,9 @@ const QrCodePayments: React.FunctionComponent = () => {
             <span className="accent-text">{viewport1.title2}</span>
           </H1>
           <Description>{viewport1.description}</Description>
-          <a target="_blank" href={viewport1.button.url} rel="noreferrer">
-            <ButtonDefault>{viewport1.button.label}</ButtonDefault>
-          </a>
+          <ButtonDefault to={viewport1.button.url}>
+            {viewport1.button.label}
+          </ButtonDefault>
         </FirstViewport>
       </FirstViewportWrapper>
 

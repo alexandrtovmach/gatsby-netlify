@@ -49,9 +49,7 @@ const BottomMessage: React.FunctionComponent<ComponentProps> = ({
       &nbsp;
     </TitleH2>
     <LowerText>{text}</LowerText>
-    <a target="_blank" href={button.url} rel="noreferrer">
-      <ButtonDefault>{button.label}</ButtonDefault>
-    </a>
+    <ButtonDefault to={button.url}>{button.label}</ButtonDefault>
   </LowerTextBox>
 );
 

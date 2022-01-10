@@ -100,7 +100,7 @@ const OfferCardDescription = styled.p`
   flex-grow: 1;
 `;
 
-const BtnBox = styled.div`
+const StyledButtonDefault = styled(ButtonDefault)`
   width: 60%;
   @media (max-width: 1200px) {
     width: 80%;
@@ -204,9 +204,9 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
           </H1>
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
-          <a target="_blank" href={viewport1.button.url} rel="noreferrer">
-            <ButtonDefault>{viewport1.button.label}</ButtonDefault>
-          </a>
+          <ButtonDefault to={viewport1.button.url}>
+            {viewport1.button.label}
+          </ButtonDefault>
         </FirstViewport>
       </FirstViewportWrapper>
 
@@ -246,17 +246,9 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
             <OfferCardDescription>
               {viewport4.leftDescription}
             </OfferCardDescription>
-            <BtnBox>
-              <a
-                target="_blank"
-                href={viewport4.createAccountButton.url}
-                rel="noreferrer"
-              >
-                <ButtonDefault>
-                  {viewport4.createAccountButton.label}
-                </ButtonDefault>
-              </a>
-            </BtnBox>
+            <StyledButtonDefault to={viewport4.createAccountButton.url}>
+              {viewport4.createAccountButton.label}
+            </StyledButtonDefault>
           </OfferCardLeft>
           <OfferCardRight>
             <OfferCardLabel>
@@ -271,17 +263,9 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
               &nbsp;
               {viewport4.rightDescription3}
             </OfferCardDescription>
-            <BtnBox>
-              <a
-                target="_blank"
-                href={viewport4.getInTouchButton.url}
-                rel="noreferrer"
-              >
-                <ButtonDefault>
-                  {viewport4.getInTouchButton.label}
-                </ButtonDefault>
-              </a>
-            </BtnBox>
+            <StyledButtonDefault to={viewport4.getInTouchButton.url}>
+              {viewport4.getInTouchButton.label}
+            </StyledButtonDefault>
           </OfferCardRight>
         </OfferCardsBox>
       </FourthViewport>

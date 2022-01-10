@@ -161,9 +161,9 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           &nbsp;
           {viewport1.description4}
         </Description>
-        <a target="_blank" href={viewport1.button.url} rel="noreferrer">
-          <ButtonDefault>{viewport1.button.label}</ButtonDefault>
-        </a>
+        <ButtonDefault to={viewport1.button.url}>
+          {viewport1.button.label}
+        </ButtonDefault>
       </FirstViewport>
       <SecondViewport resource={section2Bg}>
         <BenefitCardsLeft>

@@ -91,7 +91,7 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-const Btn = styled.div`
+const StyledButtonDefault = styled(ButtonDefault)`
   @media (max-width: 1200px) {
     margin-bottom: 1rem;
   }
@@ -258,9 +258,9 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
         </H1>
         <BoldDescription>{viewport1.description1}</BoldDescription>
         <Description>{viewport1.description2}</Description>
-        <a target="_blank" href={viewport1.button.url} rel="noreferrer">
-          <ButtonDefault>{viewport1.button.label}</ButtonDefault>
-        </a>
+        <ButtonDefault to={viewport1.button.url}>
+          {viewport1.button.label}
+        </ButtonDefault>
       </FirstViewport>
 
       <SecondViewport resource={section2Bg}>
@@ -281,11 +281,9 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               href={viewport2.getStartedButton.url}
               rel="noreferrer"
             >
-              <Btn>
-                <ButtonDefault>
-                  {viewport2.getStartedButton.label}
-                </ButtonDefault>
-              </Btn>
+              <StyledButtonDefault>
+                {viewport2.getStartedButton.label}
+              </StyledButtonDefault>
             </ButtonLink>
             <ButtonLink
               target="_blank"

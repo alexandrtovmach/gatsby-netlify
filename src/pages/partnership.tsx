@@ -180,13 +180,9 @@ const Partnership: React.FunctionComponent = () => {
           </PartnershipCardRight>
         </ImgBox>
         <Button>
-          <a
-            target="_blank"
-            href={partnershipCards.button.url}
-            rel="noreferrer"
-          >
-            <ButtonDefault>{partnershipCards.button.label}</ButtonDefault>
-          </a>
+          <ButtonDefault to={partnershipCards.button.url}>
+            {partnershipCards.button.label}
+          </ButtonDefault>
         </Button>
       </FirstViewport>
     </Main>

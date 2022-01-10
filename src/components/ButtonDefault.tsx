@@ -29,11 +29,11 @@ export const StyledButtonWhite = styled(StyledButton)`
 `;
 
 export const StyledLink = styled(Link)`
+  text-decoration: none;
   display: inline-block;
   background-color: rgb(19, 39, 63);
   border-radius: 5px;
-  padding: ${(props) =>
-    props[`aria-atomic`] ? `0.5rem 1rem` : `0.75rem 2rem`};
+  font-size: 14px;
   padding: ${(props) =>
     props[`aria-atomic`] ? `0.5rem 1rem` : `0.75rem 2rem`};
   color: white;
