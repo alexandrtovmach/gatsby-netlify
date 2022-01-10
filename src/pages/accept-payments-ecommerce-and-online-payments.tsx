@@ -146,10 +146,10 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
   } = eCommercePaymentsContent as unknown as AcceptPaymentsAccountToAccountPageContent;
   return (
     <Main>
-      <FirstViewport withRightPadding img={page3viewport1}>
+      <FirstViewport img={page3viewport1}>
         <H1>
           {viewport1.title1}&nbsp;
-          <span className="accent-text"> {viewport1.title2}</span>
+          <span className="accent-text">{viewport1.title2}</span>
         </H1>
         <Description>{viewport1.description1}</Description>
         <Description>
