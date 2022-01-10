@@ -22,7 +22,7 @@ const PageTitle = styled(H3)`
   padding-top: 5rem;
   font-size: 33px;
 `;
-const Date = styled.p`
+const Meta = styled.p`
   font-size: 14px;
   margin: 2rem 0;
 `;
@@ -56,8 +56,14 @@ const BlogPostTemplate = ({ data }) => {
       <Article>
         <Header>
           <PageTitle itemProp="headline">{post.frontmatter.title}</PageTitle>
-          <Date>{post.frontmatter.date}</Date>
-          <CoverImage src={post.frontmatter.coverImage} alt="cover" />
+          <Meta>
+            by <strong>{post.frontmatter.author}</strong>
+            {` `}
+            on <strong>{post.frontmatter.date}</strong>
+          </Meta>
+          {post.frontmatter.coverImage && (
+            <CoverImage src={post.frontmatter.coverImage} alt="cover" />
+          )}
         </Header>
         <Markdown>{post.rawMarkdownBody}</Markdown>
       </Article>
@@ -110,6 +116,7 @@ export const pageQuery = graphql`
       frontmatter {
         coverImage
         title
+        author
         date(formatString: "MMMM DD, YYYY")
         description
       }
