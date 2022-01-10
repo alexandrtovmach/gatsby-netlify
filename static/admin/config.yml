@@ -3,6 +3,8 @@ backend:
   branch: main
 media_folder: static/images
 public_folder: /images
+editor:
+    preview: false
 collections:
   - name: components
     label: Components
