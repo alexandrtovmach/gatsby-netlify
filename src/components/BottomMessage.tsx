@@ -16,13 +16,11 @@ const LowerTextBox = styled.div`
 const TitleH2 = styled(H2)`
   text-align: center;
 `;
-const LowerText = styled(P)`
-  font-size: 18px;
+const Description = styled(P)`
   width: 60%;
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
   @media (max-width: 1200px) {
-    margin: 2rem 0;
     width: 100%;
   }
 `;
@@ -48,7 +46,7 @@ const BottomMessage: React.FunctionComponent<ComponentProps> = ({
       <span className="accent-text">{title2}</span>
       &nbsp;
     </TitleH2>
-    <LowerText>{text}</LowerText>
+    <Description>{text}</Description>
     <ButtonDefault to={button.url}>{button.label}</ButtonDefault>
   </LowerTextBox>
 );
