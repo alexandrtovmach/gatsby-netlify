@@ -32,18 +32,21 @@ viewport2:
     - avatar: /images/GosiaAvatar.png
       name: Gosia Furmanik
       position: 'CEO, Founder'
-      linkedIn:
-      email: 
+      socials:
+        - url: https://www.linkedin.com/company/faizpay-fena
+          type: linkedin
     - avatar: /images/FaizAvatar.png
       name: Faiz Rasool
       position: 'CTO, Founder'
-      linkedIn:
-      email: 
+      socials:
+        - url: https://www.linkedin.com/company/faizpay-fena
+          type: linkedin
     - avatar: /images/StefanAvatar.png
       name: Stefan Binder
       position: 'CSO, Founder'
-      linkedIn:
-      email: 
+      socials:
+        - url: https://www.linkedin.com/company/faizpay-fena
+          type: linkedin
 lowerText:
   lowerTitle1: We are eager to
   lowerTitle2: help you

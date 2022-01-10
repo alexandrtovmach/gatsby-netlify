@@ -7,6 +7,7 @@ import { Subtitle1, Strong, SecondaryP } from '@/components/Typography';
 import background from '../assets/img/contactsBg.png';
 import Section from '@/components/Section';
 import FormCard from '@/components/Form';
+import ContactIcon from '../components/ContactIcon';
 
 const Content = styled(Section)`
   display: flex;
@@ -31,10 +32,6 @@ const StyledSecondaryP = styled(SecondaryP)`
 `;
 const FollowLinks = styled.div`
   margin-top: 2rem;
-`;
-const ContactIcon = styled.img`
-  margin-top: 1rem;
-  margin-right: 0.5rem;
 `;
 const RightSide = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
@@ -71,9 +68,9 @@ interface ContactsPageContent {
   }[];
   followLinks: {
     title: string;
-    socialMediaLinks: {
-      link: string;
-      image: string;
+    socials: {
+      url: string;
+      type: SocialType;
     }[];
   };
 }
@@ -119,14 +116,14 @@ const Contacts: React.FunctionComponent = () => {
 
             <FollowLinks>
               <SecondaryP>{followLinks.title}</SecondaryP>
-              {followLinks.socialMediaLinks.map((item) => (
+              {followLinks.socials.map((item) => (
                 <a
-                  key={item.link}
+                  key={item.url}
                   target="_blank"
-                  href={item.link}
+                  href={item.url}
                   rel="noreferrer"
                 >
-                  <ContactIcon src={item.image} alt="media icon" />
+                  <ContactIcon type={item.type} />
                 </a>
               ))}
             </FollowLinks>

@@ -15,14 +15,14 @@ contactsList:
       - { contact: EC2A 4QW }
 followLinks:
   title: Follow us
-  socialMediaLinks:
-    - link: https://www.facebook.com/fenapayment
-      image: /images/fbIcon.svg
-    - link: https://twitter.com/fenapayment
-      image: /images/twitterIcon.svg
-    - link: https://www.linkedin.com/company/faizpay-fena
-      image: /images/linkedInIcon.svg
-    - link:  https://www.instagram.com/fenapayments/
-      image: /images/instagramIcon.svg
+  socials:
+    - url: https://www.facebook.com/fenapayment
+      type: facebook
+    - url: https://twitter.com/fenapayment
+      type: twitter
+    - url: https://www.linkedin.com/company/faizpay-fena
+      type: linkedin
+    - url:  https://www.instagram.com/fenapayments/
+      type: instagram
 
 

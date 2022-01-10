@@ -11,9 +11,8 @@ import {
 } from '@/components/Typography';
 import Section from '@/components/Section';
 import bannerBg from '../assets/img/aboutPageBanner.png';
-import linkedIn from '../assets/icons/linkedIn.svg';
-import email from '../assets/icons/envelope.svg';
 import ButtonDefault from '@/components/ButtonDefault';
+import ContactIcon from '../components/ContactIcon';
 
 const FirstViewport = styled(Section)`
   background: linear-gradient(
@@ -117,25 +116,21 @@ const Avatar = styled.img`
   width: 100%;
 `;
 const CardContent = styled.div`
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 const Contacts = styled.div`
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 `;
-const Link = styled.a``;
-const LinkedIn = styled.img``;
-const Email = styled(LinkedIn)``;
 const LowerTextBox = styled.div`
   margin-top: 5rem;
   height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 `;
 const LowerTitle = styled(H2)`
   text-align: center;
@@ -143,9 +138,9 @@ const LowerTitle = styled(H2)`
 const LowerDescription = styled(P)`
   width: 60%;
   text-align: center;
+  margin: 2rem 0;
   @media (max-width: 1200px) {
     width: 100%;
-    margin: 2rem 0;
   }
 `;
 const Mail = styled.a`
@@ -174,8 +169,10 @@ interface AboutPageContent {
       avatar: string;
       name: string;
       position: string;
-      linkedIn: string;
-      email: string;
+      socials: {
+        url: string;
+        type: SocialType;
+      }[];
     }[];
   };
   lowerText: {
@@ -249,12 +246,22 @@ const About: React.FunctionComponent = () => {
                 <P className="accent-text-black-bold">{item.name}</P>
                 <SecondaryP>{item.position}</SecondaryP>
                 <Contacts>
-                  <Link href="/">
+                  {item.socials.map((socialItem) => (
+                    <a
+                      key={socialItem.url}
+                      target="_blank"
+                      href={socialItem.url}
+                      rel="noreferrer"
+                    >
+                      <ContactIcon type={socialItem.type} />
+                    </a>
+                  ))}
+                  {/* <Link href="/">
                     <LinkedIn src={linkedIn} alt="linkedIn" />
                   </Link>
                   <Link href="/">
                     <Email src={email} alt="email" />
-                  </Link>
+                  </Link> */}
                 </Contacts>
               </CardContent>
             </TeamCard>

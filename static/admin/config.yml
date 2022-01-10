@@ -73,6 +73,18 @@ collections:
                   - label: Contact
                     name: contact
                     widget: string
+              - label: Socials
+                name: socials
+                widget: list
+                summary: '{{fields.type}}'
+                fields:
+                  - label: Type
+                    name: type
+                    widget: select
+                    options: ["instagram", "linkedin", "facebook", "twitter"]
+                  - label: URL
+                    name: url
+                    widget: string
           - label: Products Section
             name: productsSection
             widget: object
@@ -1590,12 +1602,18 @@ collections:
                   - label: Position
                     name: position
                     widget: string
-                  - label: LinkedIn
-                    name: linkedIn
-                    widget: string
-                  - label: Email
-                    name: email
-                    widget: string
+                  - label: Socials
+                    name: socials
+                    widget: list
+                    summary: '{{fields.type}}'
+                    fields:
+                      - label: Type
+                        name: type
+                        widget: select
+                        options: ["instagram", "linkedin", "facebook", "twitter"]
+                      - label: URL
+                        name: url
+                        widget: string
           - label: Lower Text
             name: lowerText
             widget: object
@@ -1714,16 +1732,17 @@ collections:
               - label: Title
                 name: title
                 widget: string
-              - label: Social Media Links
-                name: socialMediaLinks
+              - label: Socials
+                name: socials
                 widget: list
-                summary: '{{fields.title}}'
+                summary: '{{fields.type}}'
                 fields:
-                  - label: Link
-                    name: link
-                    widget: string
-                  - label: Image
-                    name: image
+                  - label: Type
+                    name: type
+                    widget: select
+                    options: ["instagram", "linkedin", "facebook", "twitter"]
+                  - label: URL
+                    name: url
                     widget: string
   - name: blog
     label: Blog

@@ -6,6 +6,7 @@ import footerContent from '../../content/components/footer.yml';
 import ButtonDefault from './ButtonDefault';
 import GooglePlayBg from '../assets/icons/googlePlayBgWhite.svg';
 import AppleStoreBg from '../assets/icons/appStoreBgWhite.svg';
+import ContactIcon from './ContactIcon';
 
 const FooterWrapper = styled.div`
   padding: 5rem;
@@ -55,11 +56,6 @@ const FooterContact = styled.p`
   line-height: 25px;
 `;
 
-const ContactIcon = styled.img`
-  margin-right: 0.5rem;
-  margin-top: 1rem;
-`;
-
 const FooterButtons = styled.div`
   display: flex;
   gap: 0.5rem;
@@ -80,6 +76,8 @@ const ContactLink = styled.a`
   color: inherit;
 `;
 
+const Socials = styled.div``;
+
 interface NavSection {
   title: string;
   appStoreButton: string;
@@ -96,9 +94,9 @@ interface LayoutFooterContent {
       label: string;
       contact: string;
     }[];
-    socialMediaLinks: {
-      image: string;
-      link: string;
+    socials: {
+      type: SocialType;
+      url: string;
     }[];
   };
   productsSection: NavSection;
@@ -130,18 +128,14 @@ const Footer: React.FunctionComponent = () => {
           </Fragment>
         ))}
 
-        <div>
-          {mainSection.socialMediaLinks.map((item) => (
-            <a
-              key={item.link}
-              target="_blank"
-              href={item.link}
-              rel="noreferrer"
-            >
-              <ContactIcon src={item.image} alt="media icon" />
+        <Socials>
+          <FooterContactLabel>Socials</FooterContactLabel>
+          {mainSection.socials.map((item) => (
+            <a key={item.url} target="_blank" href={item.url} rel="noreferrer">
+              <ContactIcon type={item.type} />
             </a>
           ))}
-        </div>
+        </Socials>
       </div>
       <FooterSection>
         <FooterTitle>{productsSection.title}</FooterTitle>
