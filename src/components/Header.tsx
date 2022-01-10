@@ -139,7 +139,7 @@ const styles = {
   bmItemList: {
     color: `#f4f7f9`,
     padding: `0 1rem`,
-    height: `calc(100% - 0.8em * 2)`,
+    height: `calc(100% - 0.8rem * 2)`,
     display: `flex`,
     flexDirection: `column`,
   },
@@ -148,7 +148,7 @@ const styles = {
     textDecoration: `none`,
     color: `#13273f`,
     fontSize: `20px`,
-    lineHeight: `2em`,
+    lineHeight: `2rem`,
     textAlign: `left`,
   },
   bmOverlay: {

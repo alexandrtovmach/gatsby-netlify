@@ -97,10 +97,10 @@ const LowerDescription = styled(P)`
   width: 60%;
   text-align: center;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
   @media (max-width: 1200px) {
     width: 100%;
