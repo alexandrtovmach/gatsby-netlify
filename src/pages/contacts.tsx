@@ -95,7 +95,7 @@ const Contacts: React.FunctionComponent = () => {
                 <Strong>{item.title}</Strong>
                 {item.contactItems.map((items) => (
                   <div key={items.contact}>
-                    {items.contact.includes(`+`) ? (
+                    {/[+\d\s()]/.test(items.contact) ? (
                       <ContactLink href={`tel:${items.contact}`}>
                         <StyledSecondaryP key={items.contact}>
                           {items.contact}
