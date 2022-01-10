@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import solutionCardLeft from '../assets/img/solutionCardLeft.png';
 import solutionCardRight from '../assets/img/partnershipPhone.png';
-import { H1, P, Subtitle5 } from './Typography';
+import { H1, P, Subtitle5 } from '@/components/Typography';
 import Section from '@/components/Section';
-import ButtonDefault from './ButtonDefault';
+import ButtonDefault from '@/components/ButtonDefault';
 import { PartnershipPageContent } from '@/pages/partnership';
 
 const FirstViewport = styled(Section)`

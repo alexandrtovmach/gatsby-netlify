@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import invoicePaymentsPageContent from '../../content/pages/accept-payments-invoice-payments.yml';
-import AcceptPaymentsInvoicePaymentsContainer from '@/components/Accept-payments-invoice-payments';
+import AcceptPaymentsInvoicePaymentsContainer from '@/containers/Accept-payments-invoice-payments';
 
 export interface InvoicePaymentsPageContent {
   viewport1: {

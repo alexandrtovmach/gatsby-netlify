@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import contactsPageContent from '../../content/pages/contacts.yml';
-import ContactsContainer from '@/components/Contacts';
+import ContactsContainer from '@/containers/Contacts';
 
 export interface ContactsPageContent {
   pageTitle: {

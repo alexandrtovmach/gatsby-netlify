@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import openBankingDataApisContent from '../../content/pages/open-banking-data-apis.yml';
-import OpenBankingDataApisContainer from '@/components/Open-banking-data-apis';
+import OpenBankingDataApisContainer from '@/containers/Open-banking-data-apis';
 
 export interface OpenBankingDataApisContent {
   viewport1: {

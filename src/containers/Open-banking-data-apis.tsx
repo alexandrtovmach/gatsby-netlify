@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { P, H1, H2, H3 } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
 import page8Vp1 from '../assets/img/pg8Vp1Img.png';
-import FirstViewport from './FirstViewport';
+import FirstViewport from '@/components/FirstViewport';
 import CarouselCard from '@/components/CarouselCard';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';

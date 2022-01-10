@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { H1, H2, H3, P } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
 import page6Vp1 from '../assets/img/page6Vp1.png';
-import FirstViewport from './FirstViewport';
+import FirstViewport from '@/components/FirstViewport';
 import CarouselCard from '@/components/CarouselCard';
 import SolutionComponent from '@/components/SolutionCard';
 import StepCard from '@/components/StepCard';

@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import inStorePaymentsContent from '../../content/pages/accept-payments-in-store-payments.yml';
-import InStorePaymentsContainer from '@/components/Accept-payments-in-store-payments';
+import InStorePaymentsContainer from '@/containers/Accept-payments-in-store-payments';
 
 export interface InStorePaymentsContent {
   viewport1: {

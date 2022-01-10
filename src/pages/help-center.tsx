@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import helpCenterPageContent from '../../content/pages/help-center.yml';
-import HelpCenterContainer from '@/components/Help-center';
+import HelpCenterContainer from '@/containers/Help-center';
 
 export interface HelpCenterPageContent {
   viewport1: {

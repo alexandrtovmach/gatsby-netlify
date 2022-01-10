@@ -1,7 +1,7 @@
 import React from 'react';
 import homeContent from '../../content/pages/home.yml';
 import Main from '../containers/Layout';
-import HomeContainer from '@/components/Home';
+import HomeContainer from '@/containers/Home';
 
 export interface HomePageContent {
   section1: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import eCommercePaymentsContent from '../../content/pages/accept-payments-ecommerce-and-online-payments.yml';
-import AcceptPaymentsEcommerceContainer from '@/components/Accept-payments-ecommerce-and-online-payments';
+import AcceptPaymentsEcommerceContainer from '@/containers/Accept-payments-ecommerce-and-online-payments';
 
 export interface AcceptPaymentsEcommerceContent {
   viewport1: {

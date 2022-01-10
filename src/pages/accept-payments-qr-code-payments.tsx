@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import qrCodePaymentsContent from '../../content/pages/accept-payments-qr-code-payments.yml';
-import QrCodePaymentsContainer from '@/components/Accept-payments-qr-code-payments';
+import QrCodePaymentsContainer from '@/containers/Accept-payments-qr-code-payments';
 
 export interface QrCodePaymentsContent {
   viewport1: {

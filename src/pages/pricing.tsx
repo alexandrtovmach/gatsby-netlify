@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import pricingPageContent from '../../content/pages/pricing.yml';
-import PricingContainer from '@/components/Pricing';
+import PricingContainer from '@/containers/Pricing';
 
 export interface PricingPageContent {
   title: {

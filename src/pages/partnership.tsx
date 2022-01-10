@@ -1,7 +1,7 @@
 import React from 'react';
 import partnershipPageContent from '../../content/pages/partnership.yml';
 import Main from '../containers/Layout';
-import PartnershipContainer from '@/components/Partnership';
+import PartnershipContainer from '@/containers/Partnership';
 
 export interface PartnershipPageContent {
   viewport1: {

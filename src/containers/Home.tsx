@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Banner from './Banner';
-import ButtonDefault from './ButtonDefault';
-import ReviewCard from './ReviewCard';
+import Banner from '@/components/Banner';
+import ButtonDefault from '@/components/ButtonDefault';
+import ReviewCard from '@/components/ReviewCard';
 import bannerHomePageBg from '../assets/img/bannerHomePageBg.png';
 import imgItem1 from '../assets/img/imgItem1.png';
 import section2Bg from '../assets/img/section2_bg.png';
@@ -10,9 +10,17 @@ import solutionCardLeft from '../assets/img/solutionCardLeft.png';
 import solutionCardRight from '../assets/img/solutionCardRight.png';
 import section4Img from '../assets/img/section4Img.png';
 import section6Bg from '../assets/img/section6_bg.png';
-import Carousel from './Carousel';
-import SolutionComponent from './SolutionCard';
-import { SecondaryP, H1, H2, H3, P, Strong, Subtitle1 } from './Typography';
+import Carousel from '@/components/Carousel';
+import SolutionComponent from '@/components/SolutionCard';
+import {
+  SecondaryP,
+  H1,
+  H2,
+  H3,
+  P,
+  Strong,
+  Subtitle1,
+} from '@/components/Typography';
 import FirstViewport from '@/components/FirstViewport';
 import Section from '@/components/Section';
 import { HomePageContent } from '@/pages';

@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import paymentLinksContent from '../../content/pages/accept-payments-payment-links.yml';
-import AcceptPaymentsPaymentLinksContainer from '@/components/Accept-payments-payment-links';
+import AcceptPaymentsPaymentLinksContainer from '@/containers/Accept-payments-payment-links';
 
 export interface PaymentLinksContent {
   viewport1: {

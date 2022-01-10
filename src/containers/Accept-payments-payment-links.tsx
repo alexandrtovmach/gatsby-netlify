@@ -4,7 +4,7 @@ import { H1, H3, P } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
 import viewport1Img from '../assets/img/page4viewport1Img.png';
 import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
-import FirstViewport from './FirstViewport';
+import FirstViewport from '@/components/FirstViewport';
 import LinkCard from '@/components/LinkCard';
 import Carousel from '@/components/Carousel';
 import bannerBg from '../assets/img/bannerPaymentLinksPageBg.png';

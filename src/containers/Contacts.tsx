@@ -5,7 +5,7 @@ import { Subtitle1, Strong, SecondaryP } from '@/components/Typography';
 import background from '../assets/img/contactsBg.png';
 import Section from '@/components/Section';
 import FormCard from '@/components/Form';
-import ContactIcon from './ContactIcon';
+import ContactIcon from '@/components/ContactIcon';
 import { ContactsPageContent } from '@/pages/contacts';
 
 const Content = styled(Section)`

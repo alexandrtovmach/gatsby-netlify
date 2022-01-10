@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../containers/Layout';
 import accountToAccountPaymentsContent from '../../content/pages/accept-payments-account-to-account-payment.yml';
-import AcceptPaymentsAccountToAccountPaymentContainer from '@/components/Accept-payments-account-to-account-payment';
+import AcceptPaymentsAccountToAccountPaymentContainer from '@/containers/Accept-payments-account-to-account-payment';
 
 export interface AcceptPaymentsAccountToAccountPageContent {
   viewport1: {
