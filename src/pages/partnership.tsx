@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import partnershipPageContent from '../../content/pages/partnership.yml';
-import solutionCardLeft from '../assets/img/solutionCardLeft.svg';
-import solutionCardRight from '../assets/img/partnershipPhone.svg';
+import solutionCardLeft from '../assets/img/solutionCardLeft.png';
+import solutionCardRight from '../assets/img/partnershipPhone.png';
 import { H1, P, Subtitle5 } from '../components/Typography';
 import Main from '../containers/Layout';
 import Section from '@/components/Section';
@@ -124,6 +124,10 @@ interface PartnershipPageContent {
     rightTitle1: string;
     rightTitle2: string;
     rightDescription: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 
@@ -176,7 +180,9 @@ const Partnership: React.FunctionComponent = () => {
           </PartnershipCardRight>
         </ImgBox>
         <Button>
-          <ButtonDefault>Get in touch</ButtonDefault>
+          <ButtonDefault to={partnershipCards.button.url}>
+            {partnershipCards.button.label}
+          </ButtonDefault>
         </Button>
       </FirstViewport>
     </Main>

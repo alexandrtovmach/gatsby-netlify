@@ -5,3 +5,5 @@ declare module '*.yml' {
 }
 declare module '*.svg';
 declare module '*.png';
+
+type SocialType = 'instagram' | 'linkedin' | 'facebook' | 'twitter';

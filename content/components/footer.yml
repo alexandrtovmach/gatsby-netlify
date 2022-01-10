@@ -1,29 +1,54 @@
 mainSection:
-  label1: Call us
-  phone: +44 20 3190 8798
-  label2: Email us
-  email: sales@fena.co
+  contacts:
+    - label: Call us
+      contact: +44 2080 640 595
+    - label: Email us
+      contact: sales@fena.co
+  socials:
+    - url: https://www.facebook.com/fenapayment
+      type: facebook
+    - url: https://twitter.com/fenapayment
+      type: twitter
+    - url: https://www.linkedin.com/company/faizpay-fena
+      type: linkedin
+    - url:  https://www.instagram.com/fenapayments/
+      type: instagram
 productsSection:
   title: Products
   links:
-    - { label: Pricing, url: '/pricing' }
-    - { label: Payment APIs }
-    - { label: Data APIs }
-    - { label: In-Store & In-Person }
-    - { label: eCommerce }
-    - { label: Invoice Payments }
+    - label: Pricing
+      url: /pricing
+    - label: Payment APIs
+      url: /accept-payments-account-to-account-payment
+    - label: Data APIs
+      url: /open-banking-data-apis
+    - label: In-Store & In-Person
+      url: /accept-payments-in-store-payments
+    - label: eCommerce
+      url: /accept-payments-ecommerce-and-online-payments
+    - label: Invoice Payments
+      url: /accept-payments-invoice-payments
 resourcesSection:
   title: Resources
   links:
-    - { label: Blog }
-    - { label: Help Centre }
-    - { label: How to pay with fena }
-    - { label: How fena terminal works }
-    - { label: Order fena NFC card }
-
+    - label: Blog
+      url: /posts
+    - label: Help Centre
+      url: /help-center
+    - label: How to pay with fena
+      url: https://www.fena.co/how-to-pay-with-fena/
+    - label: How Fena terminal works
+      url: https://www.fena.co/how-does-the-fena-terminal-work/
+    - label: Order Fena NFC card
+      url: https://www.fena.co/order-nfc-card/
 legalSection:
   title: Legal
+  appStoreButton: https://apps.apple.com/gb/app/fenamerchant/id1586556024
+  googlePlayButton: https://play.google.com/store/apps/details?id=co.fena.merchant
   links:
-    - { label: Privacy policy }
-    - { label: Terms and conditions }
-    - { label: Security }
+    - label: Privacy policy
+      url: https://www.fena.co/privacy-policy/
+    - label: Terms and conditions
+      url: https://www.fena.co/terms-and-conditions/
+    - label: Security
+      url: https://www.fena.co/security/

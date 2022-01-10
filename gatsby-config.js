@@ -4,6 +4,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-netlify-cms`,
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: ['Montserrat:wght@400,500,600,700,800'],
@@ -26,14 +34,14 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 1000,
             },
           },
         ],
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
   ],
 };

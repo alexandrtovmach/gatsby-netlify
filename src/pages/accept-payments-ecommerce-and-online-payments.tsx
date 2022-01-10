@@ -4,13 +4,12 @@ import Main from '../containers/Layout';
 import eCommercePaymentsContent from '../../content/pages/accept-payments-ecommerce-and-online-payments.yml';
 import { H1, H2, H3, P } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import page3viewport1 from '../assets/img/page3viewport1.svg';
+import page3viewport1 from '../assets/img/page3viewport1.png';
 import FirstViewport from '../components/FirstViewport';
-import section2Bg from '../assets/img/section2_bg.svg';
+import section2Bg from '../assets/img/section2_bg.png';
 import BenefitCard from '@/components/BenefitCard';
-import tickIconSrc from '../assets/img/tickIcon.svg';
-import bankingAppImg from '../assets/img/bankingAppImg.svg';
-import page3Vp3Bg from '../assets/img/page3Vp3Bg.svg';
+import bankingAppImg from '../assets/img/bankingAppImg.png';
+import page3Vp3Bg from '../assets/img/page3Vp3Bg.png';
 import PluginCard from '@/components/PluginCard';
 import Carousel from '../components/Carousel';
 import Banner from '@/components/Banner';
@@ -21,10 +20,10 @@ import Section from '@/components/Section';
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 `;
 
@@ -91,6 +90,10 @@ interface AcceptPaymentsAccountToAccountPageContent {
     description2: string;
     description3: string;
     description4: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   benefitCards: {
     title: string;
@@ -104,6 +107,7 @@ interface AcceptPaymentsAccountToAccountPageContent {
   pluginCards: {
     title: string;
     image: string;
+    link: string;
   }[];
   viewport4: {
     title: string;
@@ -116,9 +120,19 @@ interface AcceptPaymentsAccountToAccountPageContent {
   viewport5: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
@@ -132,10 +146,10 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
   } = eCommercePaymentsContent as unknown as AcceptPaymentsAccountToAccountPageContent;
   return (
     <Main>
-      <FirstViewport withRightPadding img={page3viewport1}>
+      <FirstViewport img={page3viewport1}>
         <H1>
           {viewport1.title1}&nbsp;
-          <span className="accent-text"> {viewport1.title2}</span>
+          <span className="accent-text">{viewport1.title2}</span>
         </H1>
         <Description>{viewport1.description1}</Description>
         <Description>
@@ -147,7 +161,9 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           &nbsp;
           {viewport1.description4}
         </Description>
-        <ButtonDefault>REGISTER NOW</ButtonDefault>
+        <ButtonDefault to={viewport1.button.url}>
+          {viewport1.button.label}
+        </ButtonDefault>
       </FirstViewport>
       <SecondViewport resource={section2Bg}>
         <BenefitCardsLeft>
@@ -156,7 +172,6 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               key={item.title}
               title={item.title}
               description={item.description}
-              icon={tickIconSrc}
             />
           ))}
         </BenefitCardsLeft>
@@ -167,7 +182,6 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               key={item.title}
               title={item.title}
               description={item.description}
-              icon={tickIconSrc}
             />
           ))}
         </BenefitCardsRight>
@@ -187,6 +201,7 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               key={item.title}
               title={item.title}
               imageSrc={item.image}
+              link={item.link}
             />
           ))}
         </PluginCardWrapper>
@@ -200,11 +215,14 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport5.bannerLabel}
           description={viewport5.bannerDescription}
+          appStoreButtonUrl={viewport5.appStoreButton.url}
+          googlePlayButtonUrl={viewport5.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport5.lowerTitle1}
           title2={viewport5.lowerTitle2}
           text={viewport5.lowerText}
+          button={viewport5.button}
         />
       </FifthViewport>
     </Main>

@@ -97,16 +97,18 @@ const LowerDescription = styled(P)`
   width: 60%;
   text-align: center;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
   @media (max-width: 1200px) {
     width: 100%;
   }
 `;
-
+const Mail = styled.a`
+  text-decoration: none;
+`;
 interface HelpCenterPageContent {
   viewport1: {
     title1: string;
@@ -131,6 +133,10 @@ interface HelpCenterPageContent {
     lowerTitle2: string;
     lowerText1: string;
     lowerText2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const HelpCenter: React.FunctionComponent = () => {
@@ -195,9 +201,13 @@ const HelpCenter: React.FunctionComponent = () => {
           <LowerDescription>
             {lowerText.lowerText1}
             {` `}
-            <span className="accent-text-blue">{lowerText.lowerText2}</span>
+            <Mail href={`mailto:${lowerText.lowerText2}`}>
+              <span className="accent-text-blue">{lowerText.lowerText2}</span>
+            </Mail>
           </LowerDescription>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+          <ButtonDefault to={lowerText.button.url}>
+            {lowerText.button.label}
+          </ButtonDefault>
         </ThirdViewport>
       </PageWrapper>
     </Main>

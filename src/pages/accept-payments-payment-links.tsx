@@ -4,8 +4,8 @@ import Main from '../containers/Layout';
 import paymentLinksContent from '../../content/pages/accept-payments-payment-links.yml';
 import { H1, H3, P } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import viewport1Img from '../assets/img/viewport1Img.svg';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import viewport1Img from '../assets/img/page4viewport1Img.png';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
 import FirstViewport from '../components/FirstViewport';
 import LinkCard from '@/components/LinkCard';
 import Carousel from '@/components/Carousel';
@@ -22,10 +22,10 @@ const FirstViewportWrapper = styled.div`
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 `;
 const BoldDescription = styled(Description)`
@@ -64,6 +64,10 @@ interface PaymentLinksContent {
     title2: string;
     description1: string;
     description2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   viewport2: {
     title: string;
@@ -85,9 +89,19 @@ interface PaymentLinksContent {
   viewport4: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
@@ -104,7 +118,9 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           </H1>
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
-          <ButtonDefault>Try it now</ButtonDefault>
+          <ButtonDefault to={viewport1.button.url}>
+            {viewport1.button.label}
+          </ButtonDefault>
         </FirstViewport>
       </FirstViewportWrapper>
 
@@ -134,11 +150,14 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport4.bannerLabel}
           description={viewport4.bannerDescription}
+          appStoreButtonUrl={viewport4.appStoreButton.url}
+          googlePlayButtonUrl={viewport4.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport4.lowerTitle1}
           title2={viewport4.lowerTitle2}
           text={viewport4.lowerText}
+          button={viewport4.button}
         />
       </FourthViewport>
     </Main>

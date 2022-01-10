@@ -4,7 +4,7 @@ import Main from '../containers/Layout';
 import invoicePaymentsPageContent from '../../content/pages/accept-payments-invoice-payments.yml';
 import { H1, H3, P } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import page5Vp1 from '../assets/img/page5Vp1.svg';
+import page5Vp1 from '../assets/img/page5Vp1.png';
 import FirstViewport from '../components/FirstViewport';
 import SolutionComponent from '@/components/SolutionCard';
 import CarouselCard from '@/components/CarouselCard';
@@ -12,7 +12,7 @@ import Carousel from '@/components/Carousel';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerInvoicePaymentPageBg.png';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
 import Section from '@/components/Section';
 
 const FirstViewportWrapper = styled.div`
@@ -23,10 +23,10 @@ const FirstViewportWrapper = styled.div`
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 `;
 const BoldDescription = styled(Description)`
@@ -100,7 +100,7 @@ const OfferCardDescription = styled.p`
   flex-grow: 1;
 `;
 
-const BtnBox = styled.div`
+const StyledButtonDefault = styled(ButtonDefault)`
   width: 60%;
   @media (max-width: 1200px) {
     width: 80%;
@@ -126,6 +126,10 @@ interface InvoicePaymentsPageContent {
     title2: string;
     description1: string;
     description2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   viewport2: {
     title: string;
@@ -147,10 +151,18 @@ interface InvoicePaymentsPageContent {
     leftTitle1: string;
     leftTitle2: string;
     leftDescription: string;
+    createAccountButton: {
+      label: string;
+      url: string;
+    };
     rightTitle1: string;
     rightDescription1: string;
     rightDescription2: string;
     rightDescription3: string;
+    getInTouchButton: {
+      label: string;
+      url: string;
+    };
   };
   viewport5: {
     title: string;
@@ -163,9 +175,19 @@ interface InvoicePaymentsPageContent {
   viewport6: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 
@@ -182,7 +204,9 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
           </H1>
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
-          <ButtonDefault>REGISTER NOW</ButtonDefault>
+          <ButtonDefault to={viewport1.button.url}>
+            {viewport1.button.label}
+          </ButtonDefault>
         </FirstViewport>
       </FirstViewportWrapper>
 
@@ -222,9 +246,9 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
             <OfferCardDescription>
               {viewport4.leftDescription}
             </OfferCardDescription>
-            <BtnBox>
-              <ButtonDefault>Create an account</ButtonDefault>
-            </BtnBox>
+            <StyledButtonDefault to={viewport4.createAccountButton.url}>
+              {viewport4.createAccountButton.label}
+            </StyledButtonDefault>
           </OfferCardLeft>
           <OfferCardRight>
             <OfferCardLabel>
@@ -232,13 +256,16 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
             </OfferCardLabel>
             <OfferCardDescription>
               {viewport4.rightDescription1}
-              &nbsp;<StyledA href="/">{viewport4.rightDescription2}</StyledA>
+              &nbsp;
+              <StyledA href={`mailto:${viewport4.rightDescription2}`}>
+                {viewport4.rightDescription2}
+              </StyledA>
               &nbsp;
               {viewport4.rightDescription3}
             </OfferCardDescription>
-            <BtnBox>
-              <ButtonDefault>Get in touch</ButtonDefault>
-            </BtnBox>
+            <StyledButtonDefault to={viewport4.getInTouchButton.url}>
+              {viewport4.getInTouchButton.label}
+            </StyledButtonDefault>
           </OfferCardRight>
         </OfferCardsBox>
       </FourthViewport>
@@ -251,11 +278,14 @@ const AcceptPaymentsInvoicePayments: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport6.bannerLabel}
           description={viewport6.bannerDescription}
+          appStoreButtonUrl={viewport6.appStoreButton.url}
+          googlePlayButtonUrl={viewport6.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport6.lowerTitle1}
           title2={viewport6.lowerTitle2}
           text={viewport6.lowerText}
+          button={viewport6.button}
         />
       </SixthViewport>
     </Main>

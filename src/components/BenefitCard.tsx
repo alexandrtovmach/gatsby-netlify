@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { P, Subtitle5 } from './Typography';
+import TickIcon from '../assets/icons/tickIcon.svg';
 
 const Wrapper = styled.div`
   display: flex;
@@ -18,26 +19,23 @@ const Wrapper = styled.div`
 const TopSection = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `;
-const Img = styled.img`
-  width: 7%;
+const Tick = styled(TickIcon)`
   margin-right: 1rem;
 `;
 const Title = styled(Subtitle5)``;
 interface SolutionComponentProps {
   title: string;
   description: string;
-  icon: string;
 }
 const BenefitCard: React.FunctionComponent<SolutionComponentProps> = ({
   title,
   description,
-  icon,
 }) => (
   <Wrapper>
     <TopSection>
-      <Img src={icon} alt="card logo" />
+      <Tick />
       <Title>{title}</Title>
     </TopSection>
     <P>{description}</P>

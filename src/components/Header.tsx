@@ -9,7 +9,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-import logo from '../assets/img/logo.svg';
+import LogoSvg from '../assets/icons/logo.svg';
 import headerContent from '../../content/components/header.yml';
 import DropdownMenu from './DropdownMenu';
 import ButtonDefault from './ButtonDefault';
@@ -139,7 +139,7 @@ const styles = {
   bmItemList: {
     color: `#f4f7f9`,
     padding: `0 1rem`,
-    height: `calc(100% - 0.8em * 2)`,
+    height: `calc(100% - 0.8rem * 2)`,
     display: `flex`,
     flexDirection: `column`,
   },
@@ -148,7 +148,7 @@ const styles = {
     textDecoration: `none`,
     color: `#13273f`,
     fontSize: `20px`,
-    lineHeight: `2em`,
+    lineHeight: `2rem`,
     textAlign: `left`,
   },
   bmOverlay: {
@@ -186,7 +186,7 @@ const Header: React.FunctionComponent = () => {
     <>
       <HeaderWrapper>
         <ResponsiveLink to="/">
-          <img src={logo} alt="company logo" />
+          <LogoSvg />
         </ResponsiveLink>
         <BurgerMenu styles={styles} right width="90%">
           {navigation.map(({ label, link, nested }) =>
@@ -220,14 +220,18 @@ const Header: React.FunctionComponent = () => {
             ),
           )}
           <div>
-            <LoginButton white>Login</LoginButton>
-            <ButtonDefault>Register</ButtonDefault>
+            <LoginButton white to="https://merchant.faizpay.com/login">
+              Login
+            </LoginButton>
+            <ButtonDefault to="https://merchant.faizpay.com/register">
+              Register
+            </ButtonDefault>
           </div>
         </BurgerMenu>
         <Nav>
           <NavLeft>
             <Link to="/">
-              <img src={logo} alt="company logo" />
+              <LogoSvg />
             </Link>
             {navigation.map((el) =>
               el.link ? (
@@ -245,10 +249,12 @@ const Header: React.FunctionComponent = () => {
             )}
           </NavLeft>
           <NavRight>
-            <LoginButton white small>
+            <LoginButton small white to="https://merchant.faizpay.com/login">
               Login
             </LoginButton>
-            <ButtonDefault small>Register</ButtonDefault>
+            <ButtonDefault small to="https://merchant.faizpay.com/register">
+              Register
+            </ButtonDefault>
           </NavRight>
         </Nav>
       </HeaderWrapper>

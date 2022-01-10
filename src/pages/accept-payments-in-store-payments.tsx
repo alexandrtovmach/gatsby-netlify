@@ -3,20 +3,20 @@ import styled from 'styled-components';
 import Main from '../containers/Layout';
 import inStorePaymentsContent from '../../content/pages/accept-payments-in-store-payments.yml';
 import { H1, H2, P, Strong } from '@/components/Typography';
-import page7Vp1 from '../assets/img/page7Vp1.svg';
+import page7Vp1 from '../assets/img/page7Vp1.png';
 import FirstViewport from '../components/FirstViewport';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
-import ButtonGooglePlay from '@/components/ButtonGooglePlay';
-import ButtonAppStore from '@/components/ButtonAppStore';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
-import tickIcon from '../assets/img/tickIcon.svg';
-import videoImg from '../assets/img/videoImg.svg';
-import gradientBg from '../assets/img/gradientBg.svg';
-import pg7Vp3Img from '../assets/img/pg7Vp3Img.svg';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
+import videoImg from '../assets/img/videoImg.png';
+import gradientBg from '../assets/img/gradientBg.png';
+import pg7Vp3Img from '../assets/img/pg7Vp3Img.png';
 import bannerBg from '../assets/img/bannerInStorePaymentsBg.png';
 import InstantPaymentCard from '@/components/InstantPaymentCard';
 import Section from '@/components/Section';
+import ButtonDefault from '../components/ButtonDefault';
+import GooglePlayBg from '../assets/icons/googlePlayBg.svg';
+import AppleStoreBg from '../assets/icons/appStoreBg.svg';
 
 const FirstViewportWrapper = styled.div`
   background-image: ${(props) => `url(${props.resource})`};
@@ -26,10 +26,10 @@ const FirstViewportWrapper = styled.div`
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 `;
 const BoldDescription = styled(Description)`
@@ -58,9 +58,13 @@ const PluginCardWrapper = styled.div`
   margin-top: 3rem;
   flex-wrap: wrap;
 `;
-
+const VideoLink = styled.a`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+`;
 const VideoImg = styled.img`
-  align-self: center;
   width: 80%;
   margin-top: 5rem;
   @media (max-width: 1200px) {
@@ -86,10 +90,17 @@ interface InStorePaymentsContent {
     description1: string;
     description2: string;
     description3: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
   };
   viewport2: {
     title: string;
     description: string;
+    videoUrl: string;
     instantPaymentCards: {
       text: string;
     }[];
@@ -104,9 +115,19 @@ interface InStorePaymentsContent {
   viewport4: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 
@@ -126,8 +147,13 @@ const InStorePayments: React.FunctionComponent = () => {
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
           <BoldDescription>{viewport1.description3}</BoldDescription>
-          <ButtonAppStore />
-          <ButtonGooglePlay />
+          <ButtonDefault withImage to={viewport1.googlePlayButton.url}>
+            <GooglePlayBg />
+          </ButtonDefault>
+          {` `}
+          <ButtonDefault withImage to={viewport1.appStoreButton.url}>
+            <AppleStoreBg />
+          </ButtonDefault>
         </FirstViewport>
       </FirstViewportWrapper>
       <SecondViewport>
@@ -137,14 +163,12 @@ const InStorePayments: React.FunctionComponent = () => {
         </TextWrapper>
         <PluginCardWrapper>
           {viewport2.instantPaymentCards.map((item) => (
-            <InstantPaymentCard
-              key={item.text}
-              text={item.text}
-              imageSrc={tickIcon}
-            />
+            <InstantPaymentCard key={item.text} text={item.text} />
           ))}
         </PluginCardWrapper>
-        <VideoImg src={videoImg} alt="video" />
+        <VideoLink target="_blank" href={viewport2.videoUrl} rel="noreferrer">
+          <VideoImg src={videoImg} alt="video" />
+        </VideoLink>
       </SecondViewport>
       <FirstViewport withRightPadding img={pg7Vp3Img}>
         <GreenP className="accent-text">{viewport3.label}</GreenP>
@@ -158,11 +182,14 @@ const InStorePayments: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport4.bannerLabel}
           description={viewport4.bannerDescription}
+          appStoreButtonUrl={viewport4.appStoreButton.url}
+          googlePlayButtonUrl={viewport4.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport4.lowerTitle1}
           title2={viewport4.lowerTitle2}
           text={viewport4.lowerText}
+          button={viewport4.button}
         />
       </ThirdViewport>
     </Main>

@@ -4,7 +4,7 @@ import Main from '../containers/Layout';
 import qrCodePaymentsContent from '../../content/pages/accept-payments-qr-code-payments.yml';
 import { H1, H2, H3, P } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import page6Vp1 from '../assets/img/page6Vp1.svg';
+import page6Vp1 from '../assets/img/page6Vp1.png';
 import FirstViewport from '../components/FirstViewport';
 import CarouselCard from '@/components/CarouselCard';
 import SolutionComponent from '@/components/SolutionCard';
@@ -12,7 +12,7 @@ import StepCard from '@/components/StepCard';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerQrCodePageBg.png';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
 import Section from '@/components/Section';
 
 const FirstViewportWrapper = styled.div`
@@ -23,10 +23,10 @@ const FirstViewportWrapper = styled.div`
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 `;
 const SecondViewport = styled(Section)`
@@ -65,6 +65,10 @@ interface QrCodePaymentsContent {
     title1: string;
     title2: string;
     description: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   viewport2: {
     title: string;
@@ -94,9 +98,19 @@ interface QrCodePaymentsContent {
   viewport5: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const QrCodePayments: React.FunctionComponent = () => {
@@ -111,7 +125,9 @@ const QrCodePayments: React.FunctionComponent = () => {
             <span className="accent-text">{viewport1.title2}</span>
           </H1>
           <Description>{viewport1.description}</Description>
-          <ButtonDefault>REGISTER NOW</ButtonDefault>
+          <ButtonDefault to={viewport1.button.url}>
+            {viewport1.button.label}
+          </ButtonDefault>
         </FirstViewport>
       </FirstViewportWrapper>
 
@@ -159,11 +175,14 @@ const QrCodePayments: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport5.bannerLabel}
           description={viewport5.bannerDescription}
+          appStoreButtonUrl={viewport5.appStoreButton.url}
+          googlePlayButtonUrl={viewport5.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport5.lowerTitle1}
           title2={viewport5.lowerTitle2}
           text={viewport5.lowerText}
+          button={viewport5.button}
         />
       </FifthViewport>
     </Main>

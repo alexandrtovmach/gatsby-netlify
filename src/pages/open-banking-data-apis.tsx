@@ -4,14 +4,14 @@ import Main from '../containers/Layout';
 import openBankingDataApisContent from '../../content/pages/open-banking-data-apis.yml';
 import { P, H1, H2, H3 } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import page8Vp1 from '../assets/img/pg8Vp1Img.svg';
+import page8Vp1 from '../assets/img/pg8Vp1Img.png';
 import FirstViewport from '../components/FirstViewport';
 import CarouselCard from '@/components/CarouselCard';
 import Banner from '@/components/Banner';
 import BottomMessage from '@/components/BottomMessage';
 import bannerBg from '../assets/img/bannerPaymentApisPageBg.png';
-import pg8Vp3Bg from '../assets/img/pg8Vp3Bg.svg';
-import page4Vp1Bg from '../assets/img/page4Vp1Bg.svg';
+import pg8Vp3Bg from '../assets/img/pg8Vp3Bg.png';
+import page4Vp1Bg from '../assets/img/page4Vp1Bg.png';
 import OpenBankingCard from '@/components/OpenBankingCard';
 import Section from '@/components/Section';
 
@@ -24,10 +24,10 @@ const FirstViewportWrapper = styled.div`
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 `;
 const BoldDescription = styled(Description)`
@@ -79,6 +79,10 @@ interface OpenBankingDataApisContent {
     title2: string;
     description1: string;
     description2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   viewport2: {
     label: string;
@@ -100,9 +104,19 @@ interface OpenBankingDataApisContent {
   viewport4: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const OpenBankingDataApis: React.FunctionComponent = () => {
@@ -118,7 +132,9 @@ const OpenBankingDataApis: React.FunctionComponent = () => {
           </H1>
           <BoldDescription>{viewport1.description1}</BoldDescription>
           <Description>{viewport1.description2}</Description>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+          <ButtonDefault to={viewport1.button.url}>
+            {viewport1.button.label}
+          </ButtonDefault>
         </FirstViewport>
       </FirstViewportWrapper>
       <SecondViewport>
@@ -153,11 +169,14 @@ const OpenBankingDataApis: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport4.bannerLabel}
           description={viewport4.bannerDescription}
+          appStoreButtonUrl={viewport4.appStoreButton.url}
+          googlePlayButtonUrl={viewport4.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport4.lowerTitle1}
           title2={viewport4.lowerTitle2}
           text={viewport4.lowerText}
+          button={viewport4.button}
         />
       </ThirdViewport>
     </Main>

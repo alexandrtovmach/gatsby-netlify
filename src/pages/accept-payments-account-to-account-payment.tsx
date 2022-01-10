@@ -1,20 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 import Main from '../containers/Layout';
 import accountToAccountPaymentsContent from '../../content/pages/accept-payments-account-to-account-payment.yml';
 import { H1, H2, H3, P, Strong, Subtitle5 } from '@/components/Typography';
 import ButtonDefault from '@/components/ButtonDefault';
-import page2viewport1 from '../assets/img/page2viewport1.svg';
-import section2Bg from '../assets/img/section2_bg.svg';
-import arrowIcon from '../assets/img/arrowIcon.svg';
+import page2viewport1 from '../assets/img/page2viewport1.png';
+import section2Bg from '../assets/img/section2_bg.png';
+import ArrowIcon from '../assets/icons/arrowIcon.svg';
 import CarouselCard from '@/components/CarouselCard';
 import StepCard from '@/components/StepCard';
 import BenefitCard from '@/components/BenefitCard';
 import Carousel from '@/components/Carousel';
 import Banner from '@/components/Banner';
 import bannerBg from '../assets/img/bannerAccountToaccountPageBg.png';
-import tickIconSrc from '../assets/img/tickIcon.svg';
 import FirstViewport from '../components/FirstViewport';
 import BottomMessage from '@/components/BottomMessage';
 import Section from '@/components/Section';
@@ -22,10 +20,10 @@ import Section from '@/components/Section';
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 `;
 const BoldDescription = styled(Description)`
@@ -56,10 +54,10 @@ const StyledLi = styled.li`
   list-style: initial;
   &::marker {
     color: #2cd19e;
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   &:first-of-type {
-    margin-top: 1em;
+    margin-top: 1rem;
   }
 `;
 
@@ -84,7 +82,7 @@ const Section2BoxRight = styled.div`
   }
 `;
 
-const ButtonLink = styled(Link)`
+const ButtonLink = styled.a`
   margin-right: 1rem;
 `;
 
@@ -93,11 +91,13 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-const Btn = styled.div`
+const StyledButtonDefault = styled(ButtonDefault)`
   @media (max-width: 1200px) {
     margin-bottom: 1rem;
   }
 `;
+const Arrow = styled(ArrowIcon)``;
+
 const ThirdViewport = styled(Section)`
   background-color: #ffff;
 `;
@@ -165,6 +165,10 @@ interface AcceptPaymentsAccountToAccountPageContent {
     title2: string;
     description1: string;
     description2: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   viewport2: {
     label: string;
@@ -177,6 +181,14 @@ interface AcceptPaymentsAccountToAccountPageContent {
     boxListItem2: string;
     boxListItem3: string;
     boxListItem4: string;
+    getStartedButton: {
+      label: string;
+      url: string;
+    };
+    docButton: {
+      label: string;
+      url: string;
+    };
   };
   viewport3: {
     title: string;
@@ -212,9 +224,19 @@ interface AcceptPaymentsAccountToAccountPageContent {
   viewport7: {
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
@@ -229,14 +251,16 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
   } = accountToAccountPaymentsContent as unknown as AcceptPaymentsAccountToAccountPageContent;
   return (
     <Main>
-      <FirstViewport img={page2viewport1}>
+      <FirstViewport withRightPadding img={page2viewport1}>
         <H1>
           <span className="accent-text"> {viewport1.title1}</span>&nbsp;
           {viewport1.title2}
         </H1>
         <BoldDescription>{viewport1.description1}</BoldDescription>
         <Description>{viewport1.description2}</Description>
-        <ButtonDefault>REGISTER NOW</ButtonDefault>
+        <ButtonDefault to={viewport1.button.url}>
+          {viewport1.button.label}
+        </ButtonDefault>
       </FirstViewport>
 
       <SecondViewport resource={section2Bg}>
@@ -252,15 +276,23 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
             {viewport2.description3}
           </P>
           <ButtonContainer>
-            <ButtonLink to="/">
-              <Btn>
-                <ButtonDefault>GET STARTED</ButtonDefault>
-              </Btn>
+            <ButtonLink
+              target="_blank"
+              href={viewport2.getStartedButton.url}
+              rel="noreferrer"
+            >
+              <StyledButtonDefault>
+                {viewport2.getStartedButton.label}
+              </StyledButtonDefault>
             </ButtonLink>
-            <ButtonLink to="/">
+            <ButtonLink
+              target="_blank"
+              href={viewport2.docButton.url}
+              rel="noreferrer"
+            >
               <ButtonDefault white>
-                Read the documentation&nbsp;
-                <img src={arrowIcon} alt="button icon" />
+                {viewport2.docButton.label}&nbsp;
+                <Arrow />
               </ButtonDefault>
             </ButtonLink>
           </ButtonContainer>
@@ -311,7 +343,6 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
               key={item.title}
               title={item.title}
               description={item.description}
-              icon={tickIconSrc}
             />
           ))}
         </BenefitCardWrapper>
@@ -325,11 +356,14 @@ const AcceptPaymentsAccountToAccount: React.FunctionComponent = () => {
           bgSrc={bannerBg}
           label={viewport7.bannerLabel}
           description={viewport7.bannerDescription}
+          appStoreButtonUrl={viewport7.appStoreButton.url}
+          googlePlayButtonUrl={viewport7.googlePlayButton.url}
         />
         <BottomMessage
           title1={viewport7.lowerTitle1}
           title2={viewport7.lowerTitle2}
           text={viewport7.lowerText}
+          button={viewport7.button}
         />
       </SeventhViewport>
     </Main>

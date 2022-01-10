@@ -6,12 +6,12 @@ import ButtonDefault from '../components/ButtonDefault';
 import ReviewCard from '../components/ReviewCard';
 import homeContent from '../../content/pages/home.yml';
 import bannerHomePageBg from '../assets/img/bannerHomePageBg.png';
-import imgItem1 from '../assets/img/imgItem1.svg';
-import section2Bg from '../assets/img/section2_bg.svg';
-import solutionCardLeft from '../assets/img/solutionCardLeft.svg';
-import solutionCardRight from '../assets/img/solutionCardRight.svg';
-import section4Img from '../assets/img/section4Img.svg';
-import section6Bg from '../assets/img/section6_bg.svg';
+import imgItem1 from '../assets/img/imgItem1.png';
+import section2Bg from '../assets/img/section2_bg.png';
+import solutionCardLeft from '../assets/img/solutionCardLeft.png';
+import solutionCardRight from '../assets/img/solutionCardRight.png';
+import section4Img from '../assets/img/section4Img.png';
+import section6Bg from '../assets/img/section6_bg.png';
 import Carousel from '../components/Carousel';
 import SolutionComponent from '../components/SolutionCard';
 import {
@@ -30,10 +30,10 @@ import Section from '@/components/Section';
 const Description = styled(P)`
   margin: 1rem 0;
   &:last-of-type {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
   }
   &:first-of-type {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 `;
 
@@ -164,7 +164,7 @@ const Section4LeftSide = styled.div`
   flex: 1 1 50%;
 `;
 const Section4Img = styled.img`
-  height: 100%;
+  width: 50%;
   @media (max-width: 1200px) {
     height: auto;
     width: 100%;
@@ -204,7 +204,6 @@ const LowerTextBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   @media (max-width: 1200px) {
     height: auto;
   }
@@ -219,6 +218,10 @@ interface HomePageContent {
     description: string;
     description2: string;
     description3: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   section2: {
     label: string;
@@ -245,6 +248,10 @@ interface HomePageContent {
     title2: string;
     title3: string;
     description: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
   section5: {
     title: string;
@@ -265,10 +272,20 @@ interface HomePageContent {
     }[];
     bannerLabel: string;
     bannerDescription: string;
+    appStoreButton: {
+      url: string;
+    };
+    googlePlayButton: {
+      url: string;
+    };
     lowerTitle1: string;
     lowerTitle2: string;
     lowerTitle3: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 
@@ -286,7 +303,9 @@ const Home: React.FunctionComponent = () => {
         <Description>{section1.description}</Description>
         <Description>{section1.description2}</Description>
         <Description>{section1.description3}</Description>
-        <ButtonDefault>REGISTER NOW</ButtonDefault>
+        <ButtonDefault to={section1.button.url}>
+          {section1.button.label}
+        </ButtonDefault>
       </FirstViewport>
       <SecondSection resource={section2Bg}>
         <Section2LeftSide>
@@ -354,7 +373,9 @@ const Home: React.FunctionComponent = () => {
             {section4.title3}
           </H2>
           <Description>{section4.description}</Description>
-          <ButtonDefault>GET STARTED</ButtonDefault>
+          <ButtonDefault to={section4.button.url}>
+            {section4.button.label}
+          </ButtonDefault>
         </Section4LeftSide>
         <Section4Img src={section4Img} alt="section4 screenshot1" />
       </FourthSection>
@@ -380,6 +401,8 @@ const Home: React.FunctionComponent = () => {
           bgSrc={bannerHomePageBg}
           label={section6.bannerLabel}
           description={section6.bannerDescription}
+          appStoreButtonUrl={section6.appStoreButton.url}
+          googlePlayButtonUrl={section6.googlePlayButton.url}
         />
         <LowerTextBox>
           <H2>
@@ -389,7 +412,9 @@ const Home: React.FunctionComponent = () => {
             {section6.lowerTitle3}
           </H2>
           <Description>{section6.lowerText}</Description>
-          <ButtonDefault>GET IN TOUCH</ButtonDefault>
+          <ButtonDefault to={section6.button.url}>
+            {section6.button.label}
+          </ButtonDefault>
         </LowerTextBox>
       </SixthSection>
     </Main>

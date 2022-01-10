@@ -7,6 +7,7 @@ import { Link } from 'gatsby';
 const DropdownLink = styled(Link)`
   text-decoration: none;
   text-transform: none;
+  display: flex;
 `;
 const StyledMenu = styled(Menu)`
   ${menuSelector.name} {
@@ -14,9 +15,14 @@ const StyledMenu = styled(Menu)`
     border-radius: 6px;
     padding: 1rem;
     min-width: 20rem;
+    flex-wrap: wrap;
+    min-height: 2rem;
   }
 `;
-
+const Icon = styled.img`
+  margin-right: 1rem;
+`;
+const Text = styled.div``;
 const LinkTitle = styled.p`
   font-size: 13px;
   line-height: 30px;
@@ -50,6 +56,7 @@ interface DropdownProps {
     label: string;
     description?: string;
     link?: string;
+    icon?: string;
   }[];
 }
 
@@ -62,11 +69,14 @@ const DropdownMenu: React.FunctionComponent<DropdownProps> = ({
       transition
       menuButton={<StyledMenuButton>{buttonText}</StyledMenuButton>}
     >
-      {dropdownLinks.map(({ label, description, link }) => (
+      {dropdownLinks.map(({ label, description, link, icon }) => (
         <StyledMenuItem key={label}>
           <DropdownLink to={link}>
-            <LinkTitle>{label}</LinkTitle>
-            {description && <LinkDescription>{description}</LinkDescription>}
+            <Icon src={icon} alt="dropdown icon" />
+            <Text>
+              <LinkTitle>{label}</LinkTitle>
+              {description && <LinkDescription>{description}</LinkDescription>}
+            </Text>
           </DropdownLink>
         </StyledMenuItem>
       ))}

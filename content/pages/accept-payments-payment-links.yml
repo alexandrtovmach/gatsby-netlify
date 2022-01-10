@@ -1,58 +1,69 @@
 viewport1:
   title1: Fena payment
   title2: links
-  description1: Get paid no matter what your business or where you are – in your shop, at home or on the go.
-  description2: Share fena Payment Links with your customers via email, SMS, WhatsApp or any other messaging platform and get paid in seconds.
+  description1: >-
+    Get paid no matter what your business or where you are – in your shop, at
+    home or on the go.
+  description2: >-
+    Share Fena Payment Links with your customers via email, SMS, WhatsApp or any
+    other messaging platform and get paid in seconds.
+  button:
+    label: try it now
+    url: https://merchant.faizpay.com/register
 viewport2:
   title: What are payment links?
-  description: You can generate a payment link to easily request payments. Simply share them as you would any other link – and your customers can pay securely via instant bank transfer in seconds.
+  description: >-
+    You can generate a payment link to easily request payments. Simply share
+    them as you would any other link – and your customers can pay securely via
+    instant bank transfer in seconds.
   linkCards:
-    - {
-        title: 'Sell anywhere',
-        text: 'Share links with your customers via SMS, WhatApp, email or other messaging apps and get paid.',
-        image: /images/messenger.svg,
-      }
-    - {
-        title: 'Customer-friendly',
-        text: 'Customers pay using a secure url – no need to download an app or create an account.',
-        image: /images/card.svg,
-      }
-    - {
-        title: 'Track your payments',
-        text: 'Check the status of your payments. If one’s outstanding, you can resend the link to remind your customer to pay.',
-        image: /images/order.svg,
-      }
+    - title: Sell anywhere
+      text: >-
+        Share links with your customers via SMS, WhatsApp, email or other
+        messaging apps and get paid.
+      image: /images/messenger.svg
+    - title: Customer friendly
+      text: >-
+        Customers pay using a secure url – no need to download an app or create
+        an account.
+      image: /images/card.svg
+    - title: Track your payments
+      text: >-
+        Check the status of your payments. If one’s outstanding, you can resend
+        the link to remind your customer to pay.
+      image: /images/order.svg
 viewport3:
   title: Seamless payment services for your industry
   carouselItems:
-    - {
-        title: Marketplaces,
-        text: 'Reduce basket drop-outs with seamless bank transfer payments powered by fena.',
-        image: /images/carouselImg1.svg,
-      }
-    - {
-        title: eCommerce,
-        text: "Minimise friction with 'Instant Bank Transfers' at checkout, saving up to 85% on payment processing fees.",
-        image: /images/carouselImg2.svg,
-      }
-    - {
-        title: iGaming,
-        text: 'Provide seamless payments for low-cost top ups.',
-        image: /images/carouselImg3.svg,
-      }
-    - {
-        title: Digital wallets,
-        text: 'Easy top-ups by instant bank transfer for digital wallets',
-        image: /images/carouselImg4.svg,
-      }
-    - {
-        title: Crypto exchanges,
-        text: 'Low-cost, easy top ups with account-to-account payments.',
-        image: /images/carouselImg5.svg,
-      }
+    - title: Marketplaces
+      text: >-
+        Reduce basket drop-outs with seamless bank transfer payments powered by
+        fena.
+      image: /images/carouselImg1.svg
+    - title: eCommerce
+      text: >-
+        Minimise friction with 'Instant Bank Transfers' at checkout, saving up
+        to 85% on payment processing fees.
+      image: /images/carouselImg2.svg
+    - title: iGaming
+      text: Provide seamless payments for low-cost top-ups.
+      image: /images/carouselImg3.svg
+    - title: Digital wallets
+      text: Easy top-ups by instant bank transfer for digital wallets.
+      image: /images/carouselImg4.svg
+    - title: Crypto exchanges
+      text: 'Low-cost, easy top-ups with account-to-account payments.'
+      image: /images/carouselImg5.svg
 viewport4:
   bannerLabel: Get paid fast and fair with Fena
   bannerDescription: Download the Fena merchant app to take in-store or in-person payments
+  appStoreButton:
+    url: https://apps.apple.com/gb/app/fenamerchant/id1586556024
+  googlePlayButton: 
+    url: https://play.google.com/store/apps/details?id=co.fena.merchant
   lowerTitle1: We are eager to
   lowerTitle2: help you
-  lowerText: 'Contact us and one of our payment experts will be in touch soon.'
+  lowerText: Contact us and one of our payment experts will be in touch soon.
+  button:
+    label: get in touch  
+    url: https://share.hsforms.com/1rS1brTNUQqanxCwocZbdeAby3vp

@@ -62,6 +62,10 @@ interface PricingPageContent {
     lowerTitle1: string;
     lowerTitle2: string;
     lowerText: string;
+    button: {
+      label: string;
+      url: string;
+    };
   };
 }
 const OpenBankingDataApis: React.FunctionComponent = () => {
@@ -99,6 +103,7 @@ const OpenBankingDataApis: React.FunctionComponent = () => {
             title1={lowerText.lowerTitle1}
             title2={lowerText.lowerTitle2}
             text={lowerText.lowerText}
+            button={lowerText.button}
           />
         </ThirdViewport>
       </PageWrapper>

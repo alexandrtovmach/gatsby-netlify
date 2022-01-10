@@ -1,15 +1,12 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
-
-import fbIcon from '../assets/img/fbIcon.svg';
-import twitterIcon from '../assets/img/twitterIcon.svg';
-import linkedInIcon from '../assets/img/linkedInIcon.svg';
-import instagramIcon from '../assets/img/instagramIcon.svg';
-import logo from '../assets/img/logo.svg';
+import LogoSvg from '../assets/icons/logo.svg';
 import footerContent from '../../content/components/footer.yml';
-import ButtonAppStore from '@/components/ButtonAppStore';
-import ButtonGooglePlay from '@/components/ButtonGooglePlay';
+import ButtonDefault from './ButtonDefault';
+import GooglePlayBg from '../assets/icons/googlePlayBgWhite.svg';
+import AppleStoreBg from '../assets/icons/appStoreBgWhite.svg';
+import ContactIcon from './ContactIcon';
 
 const FooterWrapper = styled.div`
   padding: 5rem;
@@ -59,22 +56,32 @@ const FooterContact = styled.p`
   line-height: 25px;
 `;
 
-const ContactIcon = styled.img`
-  margin-right: 0.5rem;
-  margin-top: 1rem;
-`;
-
 const FooterButtons = styled.div`
   display: flex;
+  gap: 0.5rem;
 `;
 
-const ButtonFooterLink = styled.a`
-  margin-right: 1rem;
-  margin-top: 1rem;
+const AppStore = styled(AppleStoreBg)`
+  height: 100%;
+  width: 100%;
 `;
+
+const GooglePlay = styled(GooglePlayBg)`
+  height: 100%;
+  width: 100%;
+`;
+
+const ContactLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
+const Socials = styled.div``;
 
 interface NavSection {
   title: string;
+  appStoreButton: string;
+  googlePlayButton: string;
   links: {
     label: string;
     url: string;
@@ -83,10 +90,14 @@ interface NavSection {
 
 interface LayoutFooterContent {
   mainSection: {
-    label1: string;
-    phone: string;
-    label2: string;
-    email: string;
+    contacts: {
+      label: string;
+      contact: string;
+    }[];
+    socials: {
+      type: SocialType;
+      url: string;
+    }[];
   };
   productsSection: NavSection;
   resourcesSection: NavSection;
@@ -99,50 +110,63 @@ const Footer: React.FunctionComponent = () => {
   return (
     <FooterWrapper>
       <div>
-        <img src={logo} alt="logo" />
-        <FooterContactLabel>{mainSection.label1}</FooterContactLabel>
-        <FooterContact>{mainSection.phone}</FooterContact>
-        <FooterContactLabel>{mainSection.label2}</FooterContactLabel>
-        <FooterContact>{mainSection.email}</FooterContact>
-        <div>
-          <a href="/">
-            <ContactIcon src={fbIcon} alt="facebook icon" />
-          </a>
-          <a href="/">
-            <ContactIcon src={twitterIcon} alt="facebook icon" />
-          </a>
-          <a href="/">
-            <ContactIcon src={linkedInIcon} alt="facebook icon" />
-          </a>
-          <a href="/">
-            <ContactIcon src={instagramIcon} alt="facebook icon" />
-          </a>
-        </div>
+        <Link to="/">
+          <LogoSvg />
+        </Link>
+        {mainSection.contacts.map((item) => (
+          <Fragment key={item.label}>
+            <FooterContactLabel>{item.label}</FooterContactLabel>
+            {item.contact.includes(`+`) ? (
+              <ContactLink href={`tel:${item.contact}`}>
+                <FooterContact>{item.contact}</FooterContact>
+              </ContactLink>
+            ) : (
+              <ContactLink href={`mailto:${item.contact}`}>
+                <FooterContact>{item.contact}</FooterContact>
+              </ContactLink>
+            )}
+          </Fragment>
+        ))}
+
+        <Socials>
+          <FooterContactLabel>Socials</FooterContactLabel>
+          {mainSection.socials.map((item) => (
+            <a key={item.url} target="_blank" href={item.url} rel="noreferrer">
+              <ContactIcon type={item.type} />
+            </a>
+          ))}
+        </Socials>
       </div>
       <FooterSection>
         <FooterTitle>{productsSection.title}</FooterTitle>
         {productsSection.links.map(({ label, url }) => (
-          <FooterLink to={url}>{label}</FooterLink>
+          <FooterLink key={url} to={url}>
+            {label}
+          </FooterLink>
         ))}
       </FooterSection>
       <FooterSection>
         <FooterTitle>{resourcesSection.title}</FooterTitle>
         {resourcesSection.links.map(({ label, url }) => (
-          <FooterLink to={url}>{label}</FooterLink>
+          <FooterLink key={url} to={url}>
+            {label}
+          </FooterLink>
         ))}
       </FooterSection>
       <FooterSection>
         <FooterTitle>{legalSection.title}</FooterTitle>
         {legalSection.links.map(({ label, url }) => (
-          <FooterLink to={url}>{label}</FooterLink>
+          <FooterLink key={url} to={url}>
+            {label}
+          </FooterLink>
         ))}
         <FooterButtons>
-          <ButtonFooterLink href="/">
-            <ButtonGooglePlay white />
-          </ButtonFooterLink>
-          <ButtonFooterLink href="/">
-            <ButtonAppStore white />
-          </ButtonFooterLink>
+          <ButtonDefault withImage to={legalSection.googlePlayButton}>
+            <GooglePlay />
+          </ButtonDefault>
+          <ButtonDefault withImage to={legalSection.appStoreButton}>
+            <AppStore />
+          </ButtonDefault>
         </FooterButtons>
       </FooterSection>
     </FooterWrapper>
