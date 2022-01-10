@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import LogoSvg from '../assets/icons/logo.svg';
 import footerContent from '../../content/components/footer.yml';
@@ -116,7 +116,7 @@ const Footer: React.FunctionComponent = () => {
           <LogoSvg />
         </Link>
         {mainSection.contacts.map((item) => (
-          <>
+          <Fragment key={item.label}>
             <FooterContactLabel>{item.label}</FooterContactLabel>
             {item.contact.includes(`+`) ? (
               <ContactLink href={`tel:${item.contact}`}>
@@ -127,12 +127,17 @@ const Footer: React.FunctionComponent = () => {
                 <FooterContact>{item.contact}</FooterContact>
               </ContactLink>
             )}
-          </>
+          </Fragment>
         ))}
 
         <div>
           {mainSection.socialMediaLinks.map((item) => (
-            <a target="_blank" href={item.link} rel="noreferrer">
+            <a
+              key={item.link}
+              target="_blank"
+              href={item.link}
+              rel="noreferrer"
+            >
               <ContactIcon src={item.image} alt="media icon" />
             </a>
           ))}
@@ -141,19 +146,25 @@ const Footer: React.FunctionComponent = () => {
       <FooterSection>
         <FooterTitle>{productsSection.title}</FooterTitle>
         {productsSection.links.map(({ label, url }) => (
-          <FooterLink to={url}>{label}</FooterLink>
+          <FooterLink key={url} to={url}>
+            {label}
+          </FooterLink>
         ))}
       </FooterSection>
       <FooterSection>
         <FooterTitle>{resourcesSection.title}</FooterTitle>
         {resourcesSection.links.map(({ label, url }) => (
-          <FooterLink to={url}>{label}</FooterLink>
+          <FooterLink key={url} to={url}>
+            {label}
+          </FooterLink>
         ))}
       </FooterSection>
       <FooterSection>
         <FooterTitle>{legalSection.title}</FooterTitle>
         {legalSection.links.map(({ label, url }) => (
-          <FooterLink to={url}>{label}</FooterLink>
+          <FooterLink key={url} to={url}>
+            {label}
+          </FooterLink>
         ))}
         <FooterButtons>
           <ButtonDefault withImage to={legalSection.googlePlayButton}>
