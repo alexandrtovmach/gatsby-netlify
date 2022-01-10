@@ -3,11 +3,17 @@ import styled from 'styled-components';
 import { Menu, MenuButton, MenuItem } from '@szhsin/react-menu';
 import { menuSelector } from '@szhsin/react-menu/style-utils';
 import { Link } from 'gatsby';
+import CustomIcon from './CustomIcon';
+import { Strong, SecondaryP } from './Typography';
 
 const DropdownLink = styled(Link)`
   text-decoration: none;
   text-transform: none;
   display: flex;
+
+  &:hover {
+    color: #2cd19e;
+  }
 `;
 const StyledMenu = styled(Menu)`
   ${menuSelector.name} {
@@ -19,19 +25,20 @@ const StyledMenu = styled(Menu)`
     min-height: 2rem;
   }
 `;
-const Icon = styled.img`
-  margin-right: 1rem;
+const Texts = styled.div`
+  margin-left: 1rem;
+  color: black;
 `;
-const Text = styled.div``;
-const LinkTitle = styled.p`
-  font-size: 13px;
-  line-height: 30px;
+const ItemTitle = styled(Strong)`
   font-weight: 600;
-  color: #13273f;
+  font-size: 14px;
+  color: inherit;
+  cursor: pointer;
 `;
-const LinkDescription = styled(LinkTitle)`
-  font-weight: 500;
-  color: #495b6c;
+const ItemSubTitle = styled(SecondaryP)`
+  color: inherit;
+  opacity: 0.7;
+  cursor: pointer;
 `;
 const StyledMenuButton = styled(MenuButton)`
   font-family: 'montserrat';
@@ -49,7 +56,19 @@ const StyledMenuButton = styled(MenuButton)`
     color: #2cd19e;
   }
 `;
-const StyledMenuItem = styled(MenuItem)``;
+
+const StyledMenuItem = styled(MenuItem)`
+  span > img {
+    background-color: #13273f;
+    border-radius: 50%;
+    transition: 0.2s;
+  }
+  &:hover {
+    span > img {
+      background-color: #2cd19e;
+    }
+  }
+`;
 interface DropdownProps {
   buttonText: string;
   dropdownLinks: {
@@ -72,11 +91,11 @@ const DropdownMenu: React.FunctionComponent<DropdownProps> = ({
       {dropdownLinks.map(({ label, description, link, icon }) => (
         <StyledMenuItem key={label}>
           <DropdownLink to={link}>
-            <Icon src={icon} alt="dropdown icon" />
-            <Text>
-              <LinkTitle>{label}</LinkTitle>
-              {description && <LinkDescription>{description}</LinkDescription>}
-            </Text>
+            <CustomIcon src={icon} />
+            <Texts>
+              <ItemTitle>{label}</ItemTitle>
+              {description && <ItemSubTitle>{description}</ItemSubTitle>}
+            </Texts>
           </DropdownLink>
         </StyledMenuItem>
       ))}
