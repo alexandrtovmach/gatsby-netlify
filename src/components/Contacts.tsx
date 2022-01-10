@@ -1,7 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import styled from 'styled-components';
-import Main from '../containers/Layout';
 import { Subtitle1, Strong, SecondaryP } from '@/components/Typography';
 import background from '../assets/img/contactsBg.png';
 import Section from '@/components/Section';
@@ -59,64 +58,57 @@ interface ContactsPageProps {
 const ContactsContainer: React.FunctionComponent<ContactsPageProps> = ({
   content: { pageTitle, contactsList, followLinks },
 }) => (
-  <Main>
-    <Content>
-      <LeftSide>
-        <Subtitle1>
-          {pageTitle.title1}
-          {` `}
-          <span className="accent-text">{pageTitle.title2}</span>
-        </Subtitle1>
-        <ContactItems>
-          {contactsList.map((item) => (
-            <Fragment key={item.title}>
-              <Strong>{item.title}</Strong>
-              {item.contactItems.map((items) => (
-                <div key={items.contact}>
-                  {/[+\d\s()]/.test(items.contact) ? (
-                    <ContactLink href={`tel:${items.contact}`}>
-                      <StyledSecondaryP key={items.contact}>
-                        {items.contact}
-                      </StyledSecondaryP>
-                    </ContactLink>
-                  ) : items.contact.includes(`@`) ? (
-                    <ContactLink href={`mailto:${items.contact}`}>
-                      <StyledSecondaryP key={items.contact}>
-                        {items.contact}
-                      </StyledSecondaryP>
-                    </ContactLink>
-                  ) : (
+  <Content>
+    <LeftSide>
+      <Subtitle1>
+        {pageTitle.title1}
+        {` `}
+        <span className="accent-text">{pageTitle.title2}</span>
+      </Subtitle1>
+      <ContactItems>
+        {contactsList.map((item) => (
+          <Fragment key={item.title}>
+            <Strong>{item.title}</Strong>
+            {item.contactItems.map((items) => (
+              <div key={items.contact}>
+                {/[+\d\s()]/.test(items.contact) ? (
+                  <ContactLink href={`tel:${items.contact}`}>
                     <StyledSecondaryP key={items.contact}>
                       {items.contact}
                     </StyledSecondaryP>
-                  )}
-                </div>
-              ))}
-            </Fragment>
-          ))}
-
-          <FollowLinks>
-            <SecondaryP>{followLinks.title}</SecondaryP>
-            {followLinks.socials.map((item) => (
-              <a
-                key={item.url}
-                target="_blank"
-                href={item.url}
-                rel="noreferrer"
-              >
-                <ContactIcon type={item.type} />
-              </a>
+                  </ContactLink>
+                ) : items.contact.includes(`@`) ? (
+                  <ContactLink href={`mailto:${items.contact}`}>
+                    <StyledSecondaryP key={items.contact}>
+                      {items.contact}
+                    </StyledSecondaryP>
+                  </ContactLink>
+                ) : (
+                  <StyledSecondaryP key={items.contact}>
+                    {items.contact}
+                  </StyledSecondaryP>
+                )}
+              </div>
             ))}
-          </FollowLinks>
-        </ContactItems>
-      </LeftSide>
-      <RightSide resource={background}>
-        <FormWrapper>
-          <FormCard />
-        </FormWrapper>
-      </RightSide>
-    </Content>
-  </Main>
+          </Fragment>
+        ))}
+
+        <FollowLinks>
+          <SecondaryP>{followLinks.title}</SecondaryP>
+          {followLinks.socials.map((item) => (
+            <a key={item.url} target="_blank" href={item.url} rel="noreferrer">
+              <ContactIcon type={item.type} />
+            </a>
+          ))}
+        </FollowLinks>
+      </ContactItems>
+    </LeftSide>
+    <RightSide resource={background}>
+      <FormWrapper>
+        <FormCard />
+      </FormWrapper>
+    </RightSide>
+  </Content>
 );
 
 export default ContactsContainer;
