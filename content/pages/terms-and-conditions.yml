@@ -4,10 +4,10 @@ header:
   title2: terms
   subtitle1: "Last changes:"
 body: |-
-  \# Header 1\
-  \
-  - one
+  # Header 1
 
-  \- two
+  * one
+  * two
+  * three
 
-  \- three
+  **bold text** + *italic text*
